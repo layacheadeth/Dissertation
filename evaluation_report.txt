@@ -1,0 +1,110 @@
+=================================================================
+  RAG EVALUATION REPORT
+  Generated : 2026-07-21 21:53:02
+  Output    : inputs_and_outputs/output_qa.json
+  Benchmark : data/benchmark_qa.json
+=================================================================
+=================================================================
+  RAG PIPELINE EVALUATION
+=================================================================
+
+[Setup] Loading models …
+[Setup] Done.
+
+
+=================================================================
+  RESULTS SUMMARY
+=================================================================
+
+── GENERATION METRICS ──────────────────────────────────────
+  BLEU (nltk)          : 0.0568
+  ROUGE-1 F1           : 0.2680
+  ROUGE-1 Precision    : 0.3942
+  ROUGE-1 Recall       : 0.2843
+  SacreBLEU            : 7.04
+  ChrF3++              : 29.32
+  BERTScore F1         : 0.8716
+
+── RETRIEVAL METRICS ───────────────────────────────────────
+  Keyword Recall       : 78.40%
+  Semantic Similarity  : 0.5994
+  Precision@K          : 0.2423
+  Recall@K             : 0.5881
+  MRR                  : 0.7481
+
+  Scored 52 / 52 queries.
+
+=================================================================
+
+=================================================================
+  PER-QUERY RESULTS
+=================================================================
+                                                                                                                                   query    bleu_nltk  rouge1_f1  rouge1_precision  rouge1_recall    sacrebleu   chrf3++  bert_f1  kw_recall  semantic_sim  ret_precision  ret_recall      mrr
+                                                                             What kind of attention do decoder-only language models use? 1.581262e-03   0.117647          0.333333       0.071429 6.402527e-01 14.213186 0.868950   0.611111      0.313386            0.0    0.000000 0.000000
+                                                   Which word2vec model uses the context words to predict the single word in the middle? 2.708316e-09   0.105263          1.000000       0.055556 1.388794e-09  5.734285 0.851569   0.928571      0.692920            0.2    0.500000 0.500000
+                                                                                                              How is COMP64702 assessed? 3.655294e-03   0.105263          0.061404       0.368421 6.470336e-01 27.778491 0.856607   0.750000      0.485538            0.2    0.500000 1.000000
+                                              What repeating cycle does an autonomous LLM-driven assistant follow while using its tools? 1.119102e-02   0.190476          0.166667       0.222222 1.919265e+00 18.864465 0.850501   1.000000      0.585867            0.4    0.666667 0.500000
+                                                                  What are the three architectural components of vision-language models? 8.209568e-02   0.281250          0.250000       0.321429 1.113632e+01 47.233484 0.898897   0.714286      0.650780            0.2    1.000000 1.000000
+                                                 What is the total size in terabytes of the raw web crawl data provided by Common Crawl? 6.434235e-05   0.222222          1.000000       0.125000 1.234098e-02  8.995963 0.868877   1.000000      0.723494            0.4    1.000000 0.500000
+                   Which Vector Store indices or databases are explicitly mentioned as options for Approximate Nearest Neighbour search? 1.139244e-01   0.461538          0.750000       0.333333 3.678794e+01 42.135055 0.935101   0.666667      0.233229            0.2    1.000000 1.000000
+                                     Does the MinHash algorithm use 13-gram overlaps to remove test sets from common benchmark datasets? 2.558094e-02   0.217391          0.333333       0.161290 7.661479e+00 19.644697 0.892456   0.850000      0.690476            0.4    0.500000 1.000000
+                                                                                          When and where do the lab sessions take place? 6.952583e-01   0.787879          0.722222       0.866667 7.954369e+01 86.396305 0.976835   1.000000      0.149372            0.4    1.000000 1.000000
+ Which strategy gives the model the instruction and the data but no demonstrations, relying on pretraining and instruction tuning alone? 0.000000e+00   0.000000          0.000000       0.000000 0.000000e+00  0.178444 0.803196   0.351351      0.503942            0.0    0.000000 0.000000
+                                                                                             What is a word-word or term-context matrix? 2.295703e-01   0.589744          0.511111       0.696970 2.596353e+01 65.546305 0.918738   0.960000      0.745582            0.2    0.500000 1.000000
+   Nothing gets written back into the network, and whatever it picked up vanishes the moment the exchange ends. What is being described? 1.016142e-02   0.119403          0.153846       0.097561 1.661924e+00 15.071673 0.839309   0.125000      0.376272            0.0    0.000000 0.000000
+                                                                        What hazard do legal LLM applications face regarding precedents? 6.735255e-02   0.400000          0.437500       0.368421 1.148333e+01 40.928882 0.909284   0.562500      0.364397            0.2    1.000000 1.000000
+                         What makes vector-based databases scale efficiently instead of comparing query vectors to every corpus element? 1.143597e-02   0.205882          0.145833       0.350000 4.351401e+00 38.624781 0.882876   0.789474      0.573614            0.2    1.000000 1.000000
+                                                                                                   What corpora was BERT pre-trained on? 2.044801e-01   0.384615          0.384615       0.384615 9.587305e+00 42.618130 0.914395   0.777778      0.496797            0.2    0.500000 0.200000
+One written form, several possible real-world categories depending on the sentence around it — which property of named entities is this? 9.551644e-03   0.195122          0.250000       0.160000 9.943455e-01 15.250592 0.847568   0.318182      0.433354            0.0    0.000000 0.000000
+                                    How do we check that two people tagging the same examples end up broadly consistent with each other? 2.299989e-03   0.083333          0.047619       0.333333 3.612985e-01 24.909190 0.830579   0.625000      0.518131            0.0    0.000000 0.000000
+                                                   What is the label word mapping in the masked language model formulation of prompting? 7.749598e-02   0.317073          0.433333       0.250000 3.330803e+00 26.966420 0.837714   0.941176      0.439549            0.6    0.750000 1.000000
+                                                                        What is add-k smoothing and why is k chosen to be less than one? 8.960937e-02   0.311688          0.315789       0.307692 1.056221e+01 37.165453 0.881386   0.827586      0.861076            0.2    0.500000 1.000000
+            How can several parts of the same attention mechanism look at different kinds of relationships among the same words at once? 9.008401e-02   0.375000          0.375000       0.375000 9.194664e+00 44.258743 0.894290   0.916667      0.604731            0.4    0.666667 1.000000
+                                                                               What does POS tagging assign to each token in a sentence? 9.227339e-02   0.523810          0.846154       0.379310 1.015572e+01 29.872456 0.924592   0.884615      0.749163            0.2    0.500000 1.000000
+                         Which analysis bundles words into nested groups such as noun and verb clusters instead of linking single words? 4.822043e-06   0.153846          1.000000       0.083333 4.269211e-05  9.817830 0.865092   1.000000      0.839160            0.4    1.000000 1.000000
+                                                             Which datasets made up the GPT-3 training mix and what weight did each get? 2.249641e-02   0.216867          0.209302       0.225000 2.881689e+00 25.398817 0.832301   0.933333      0.625092            0.4    0.666667 0.333333
+                                                                                    How many layers and parameters does BERT-large have? 3.858935e-02   0.400000          0.714286       0.277778 5.724525e+00 30.595717 0.932946   1.000000      0.784448            0.2    0.500000 1.000000
+                                        Does this inversion method need access to logits or gradients like earlier prompt-recovery work? 1.771415e-03   0.202899          0.437500       0.132075 3.993657e-01 12.290213 0.869595   0.659091      0.627389            0.2    0.333333 0.333333
+                                                          What three major bottlenecks hinder wide scale deployment of LLMs in industry? 3.726240e-03   0.088889          0.062500       0.153846 1.728999e+00 41.993318 0.868454   0.750000      0.579923            0.2    0.500000 0.500000
+                                                          What is the difference between the white-box and black-box inversion settings? 1.792565e-01   0.344262          0.338710       0.350000 1.356744e+01 45.772671 0.865909   0.673469      0.691459            0.2    0.333333 1.000000
+                                                                                          In word2vec, what does the CBOW model predict? 3.591593e-02   0.514286          0.642857       0.428571 9.123730e+00 39.693296 0.900679   0.928571      0.650873            0.2    0.500000 0.333333
+                                                                           What loss function is used to train the reward model in RLHF? 5.687658e-03   0.266667          0.533333       0.177778 1.749564e-01 13.543608 0.843685   1.000000      0.589834            0.2    0.250000 0.500000
+                                  What score divides all correct decisions, positives and negatives alike, by the total number of items? 0.000000e+00   0.000000          0.000000       0.000000 0.000000e+00  2.102397 0.827927   0.733333      0.651905            0.2    0.500000 1.000000
+                                     Once you have good numeric vectors for words, what kinds of downstream language jobs become easier? 1.784101e-02   0.322581          0.270270       0.400000 2.380649e+00 50.691701 0.886239   0.826087      0.654501            0.2    0.500000 1.000000
+                                            How does keeping a portion of the preceding segment help prevent losing facts at boundaries? 3.250805e-02   0.312500          0.250000       0.416667 1.219885e+01 43.229329 0.900117   0.705882      0.578319            0.2    1.000000 1.000000
+                       In the decoder, which attention mechanism reads from the encoder's outputs rather than the decoder's own history? 2.469664e-12   0.086957          1.000000       0.045455 2.543666e-11  8.156672 0.866032   0.944444      0.674851            0.4    1.000000 1.000000
+                                                   Which dependency relation links a determiner to the noun it belongs to — det or nmod? 0.000000e+00   0.000000          0.000000       0.000000 1.053062e-18  1.038085 0.789899   0.823529      0.723676            0.4    0.666667 1.000000
+                                                                How did the shift from BERT to LLMs change text summarization paradigms? 9.787208e-03   0.238095          0.263158       0.217391 1.668473e+00 21.545215 0.870025   0.833333      0.704140            0.2    1.000000 1.000000
+                                                                       What is the formula for the cross-entropy loss on a single token? 1.078697e-01   0.351351          0.309524       0.406250 9.744505e+00 45.346520 0.862714   1.000000      0.490654            0.2    0.500000 0.200000
+                  Which prompting method generates several candidate next steps, judges its own branches, and reverses out of dead ends? 1.048907e-03   0.160920          0.388889       0.101449 4.498585e-01 13.718385 0.874718   0.800000      0.771329            0.4    0.666667 1.000000
+                                                                                   What is the Markov assumption used in a bigram model? 1.354889e-01   0.444444          0.631579       0.342857 4.128300e+00 32.104702 0.871280   1.000000      0.918283            0.4    1.000000 1.000000
+                                                                  How does the model know which of two sentences a given word came from? 1.409891e-02   0.269231          0.233333       0.318182 2.532661e+00 24.973552 0.846674   0.333333      0.260049            0.0    0.000000 0.000000
+                                                                   In 'The student from Leeds solved the puzzle', name two noun phrases. 5.415315e-02   0.357143          0.333333       0.384615 7.289334e+00 51.488505 0.879050   1.000000      0.601558            0.4    1.000000 1.000000
+                                           Why can a model state something untrue even though it was only ever trained to continue text? 4.413714e-03   0.126126          0.080460       0.291667 8.102759e-01 29.910515 0.840601   0.315789      0.470102            0.0    0.000000 0.000000
+      Which specific mathematical framework helps AI teams determine optimal domain weights before launching large scale model training? 1.006892e-01   0.366197          0.302326       0.464286 7.903320e+00 43.541740 0.886364   0.760000      0.483189            0.2    0.500000 1.000000
+                  Why bother stripping out common filler words and folding everything to lower case before tallying up word occurrences? 3.344219e-03   0.101010          0.069444       0.185185 6.961345e-01 28.182182 0.855920   0.565217      0.672462            0.2    0.500000 1.000000
+                                                                                           What does add-1 smoothing add to every count? 2.277413e-09   0.062500          0.500000       0.033333 2.299528e-08  1.202214 0.800458   0.923077      0.842405            0.2    0.500000 1.000000
+                                               What are the specific dataset allocations and token counts for the training mix of GPT-3? 9.802039e-03   0.388889          0.297872       0.560000 4.770145e+00 45.755807 0.878414   1.000000      0.848109            0.2    0.500000 1.000000
+                                                                                                    State the formula for Cohen's Kappa. 1.047749e-01   0.486486          0.339623       0.857143 1.950000e+01 60.248474 0.878604   1.000000      0.729331            0.2    0.500000 1.000000
+                                                Why does a base model go wrong on a helpdesk even when it writes perfectly nice English? 1.567073e-04   0.164384          0.666667       0.093750 4.667544e-02 13.308966 0.867592   0.792453      0.664784            0.6    0.750000 1.000000
+                                                            In the balanced F-score, what value is beta set to and what formula results? 4.998836e-03   0.219178          0.148148       0.421053 7.904574e-01 21.613965 0.818811   0.750000      0.656034            0.4    1.000000 1.000000
+                                                                              What does the [CLS] token stand for and where does it sit? 2.069011e-01   0.571429          0.769231       0.454545 2.605118e+01 38.682063 0.933294   0.923077      0.437990            0.4    1.000000 1.000000
+                                                                                              How many parameters do the T5 models have? 3.711648e-03   0.205128          0.571429       0.125000 4.178046e-01 15.257918 0.889633   0.777778      0.484670            0.2    0.333333 1.000000
+                                                          What are the stages of the online inference pipeline in a standard RAG system? 6.510139e-03   0.140845          0.090909       0.312500 8.991451e-01 36.838305 0.842012   0.785714      0.576781            0.2    1.000000 1.000000
+                                                                             What does the accuracy metric measure for a language model? 3.010310e-02   0.377358          0.526316       0.294118 4.058284e+00 24.419240 0.893661   0.629630      0.692198            0.2    0.500000 1.000000
+
+=================================================================
+  COLUMN AVERAGES
+=================================================================
+bleu_nltk            0.056795
+rouge1_f1            0.267982
+rouge1_precision     0.394207
+rouge1_recall        0.284271
+sacrebleu            7.037147
+chrf3++             29.324018
+bert_f1              0.871585
+kw_recall            0.783983
+semantic_sim         0.599369
+ret_precision        0.242308
+ret_recall           0.588141
+mrr                  0.748077

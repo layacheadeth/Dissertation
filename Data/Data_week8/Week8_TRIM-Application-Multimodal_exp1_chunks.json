@@ -1,0 +1,412 @@
+[
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p1",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 1,
+    "char_count": 133,
+    "word_count": 18,
+    "content": "Applications of LLMs\nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p2",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 2,
+    "char_count": 615,
+    "word_count": 84,
+    "content": "Agenda\n Agenda:\n\u2013 The Transition from Foundation Models to Applications\n\u2013 Core NLP and Text-Based Applications\n\u2013 Domain-Specific Transformations (Code, Healthcare, Law)\n\u2013 LLMs as Autonomous Agents (Tool Use and Reasoning)\n\u2013 Deployment Challenges and Ethical Considerations\n Learning Outcomes:\n\u2013 Map core LLM capabilities to specific real-world industry use cases.\n\u2013 Evaluate the appropriate adaptation strategy (Prompting vs. RAG vs. Fine-\nTuning) for different applications.\n\u2013 Analyze the architecture of LLM agents and tool-augmented systems.\n\u2013 Critique current limitations regarding deployment, cost, and safety."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p3",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 3,
+    "char_count": 736,
+    "word_count": 101,
+    "content": "Core Application 1: Advanced Text Summarization\n The Evolution of Summarization:\n\u2013 Pre-LLM Era: Extractive summarization (copying sentences) via smaller \nencoder models (like BERT).\n\u2013 LLM Era: Highly abstractive summarization, capable of synthesizing \nmeaning.\n Key Application Patterns:\n\u2013 Meeting Transcripts: Converting raw speech-to-text logs into structured \naction items.\n\u2013 Document Routing: Summarizing customer support tickets to categorize \nand route to the correct human agent.\n Evaluation Connection:\n\u2013 How do we know the summary is good? As discussed in Week 6, we use \nmetrics like ROUGE, but increasingly rely on LLM-as-a-judge (using strict \nevaluation prompts) to check for factual consistency and prevent \nhallucination."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p4",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 4,
+    "char_count": 674,
+    "word_count": 91,
+    "content": "Core Application 2: Structured Data Extraction\n The Problem: 80% of enterprise data is unstructured (emails, PDFs, reports).\n The LLM Solution: Using LLMs for Zero-Shot or Few-Shot Information Extraction (IE).\n\u2013 Named Entity Recognition (NER): Extracting companies, monetary values, and dates without training \ncustom BERT models.\n\u2013 Relation Extraction: Identifying the relationship between entities (e.g., Company A [ACQUIRED] \nCompany B).\n Implementation Strategy:\n\u2013 Use structural prompting (e.g., instructing the model to output strict JSON).\n\u2013 Challenge: Output parsing errors. Models may append conversational text (\"Here is your JSON:\") which \nbreaks downstream code."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p5",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 5,
+    "char_count": 574,
+    "word_count": 86,
+    "content": "Mini-Quiz 1: Application Architecture\n Scenario: You are building an internal company tool to help HR \ninstantly answer employee questions about the 200-page company \nbenefits handbook.\n Which architecture is the most appropriate and cost-effective?\n\u2013 A) Pretrain a new foundational model from scratch on HR \ndocuments.\n\u2013 B) Use a general Instruction-Tuned LLM and Retrieval-Augmented \nGeneration (RAG) with the handbook.\n\u2013 C) Use a standard Zero-Shot Prompt asking the model to guess \nthe company policies.\n\u2013 D) Supervised Fine-Tune (SFT) an LLM solely on the HR \nhandbook."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p6",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 6,
+    "char_count": 662,
+    "word_count": 89,
+    "content": "Domain-Specific Application: Software \nEngineering\n Code Generation and Copilots:\n\u2013 LLMs trained heavily on GitHub/StackOverflow (e.g., GitHub Copilot, \nCodeLlama).\n\u2013 Tasks:Autocompletion, writing unit tests, translating code between languages \n(e.g., Python to Rust).\n Code Review and Bug Fixing:\n\u2013 Using LLMs to detect security vulnerabilities or suggest performance \noptimizations.\n Why LLMs excel at Code:\n\u2013 Code has strict syntax and logic, reducing the ambiguity present in natural \nlanguage.\n\u2013 Evaluation: Extremely objective. We don't need human graders; we evaluate \ngenerated code by simply running it through compiler/unit test suites (Pass@k\nmetric)."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p7",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 7,
+    "char_count": 54,
+    "word_count": 5,
+    "content": "Domain-Specific Application: Healthcare \n& Biomedicine"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p8",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 8,
+    "char_count": 523,
+    "word_count": 70,
+    "content": "Class Discussion (5 Minutes)\n Topic: The Generalist vs. Specialist Debate\n Currently, state-of-the-art general models (like GPT-4) often \noutperform smaller, domain-specific fine-tuned models (like a \n7B parameter legal-specific model) even on domain-specific \ntasks.\n Discussion Question: * Will the future of LLM applications be \ndominated by a few massive \"God-models\" accessed via API, \nor by thousands of smaller, locally hosted, highly specialized \nmodels?\n\u2013 Hint: Consider data privacy, inference costs, and latency."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p9",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 9,
+    "char_count": 666,
+    "word_count": 88,
+    "content": "Domain-Specific Application: Law and Finance\n Legal Sector:\n\u2013 E-Discovery: Scanning millions of documents for relevance to a subpoena.\n\u2013 Contract Analysis: Identifying risky clauses, non-standard terms, or missing \nindemnifications.\n\u2013 Risk: The \"hallucinated legal cases\" problem (models inventing fake \nprecedent).\n Finance Sector:\n\u2013 Algorithmic Trading: Real-time sentiment analysis of financial news and \nSEC filings.\n\u2013 Automated Reporting: Synthesizing quarterly earnings calls into executive \nsummaries.\n\u2013 Adaptation technique: Often heavily relies on RAG to ensure real-time data \naccess (stock prices change by the second; parametric memory is useless \nhere)."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p10",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 10,
+    "char_count": 504,
+    "word_count": 75,
+    "content": "Application Paradigm Shift: LLMs as Agents\n From Passive Responders to Active \nAgents:\n\u2013 Standard LLM: Takes text, outputs text.\n\u2013 Agentic LLM: Takes a high-level goal, \nreasons about steps, interacts with external \nenvironments, and executes actions.\n The Core Components of an LLM \nAgent:\n\u2013 1. Brain: The LLM itself (handling reasoning \nand planning).\n\u2013 2. Memory: Short-term (context window) and \nLong-term (vector databases).\n\u2013 3. Tools: Functions the LLM can call (APIs, \ncalculators, web browsers)."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p11",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 11,
+    "char_count": 589,
+    "word_count": 93,
+    "content": "How Agents Work: ReAct Prompting\n ReAct (Reasoning and Acting):\n\u2013 A specific prompting paradigm that \nintertwines Chain-of-Thought reasoning with \nenvironmental actions.\n The Loop:\n\u2013 Thought: Model reasons about what to do \nnext based on the user prompt.\n\u2013 Action: Model decides to call an external tool \n(e.g., SearchWikipedia(\"Eiffel Tower\")).\n\u2013 Observation: The tool returns data to the \nmodel.\n\u2013 (Loop repeats until the goal is achieved).\n Why this is powerful: It overcomes the LLM's inability to do math or know current \nevents by allowing it to use a calculator and a search engine."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p12",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 12,
+    "char_count": 564,
+    "word_count": 82,
+    "content": "Multi-Agent Systems\n The Concept:\n\u2013 Instead of one massive prompt trying to do everything, instantiate multiple \nLLM agents with distinct personas and tools, and let them communicate.\n Example System (Software Development):\n\u2013 Agent 1 (Product Manager): Writes the system requirements.\n\u2013 Agent 2 (Software Engineer): Writes the Python code based on Agent 1's \nrequirements.\n\u2013 Agent 3 (QA Tester):Reviews Agent 2's code, finds bugs, and sends it \nback for revision.\n Benefits:\n\u2013 Separation of concerns.\n\u2013 Self-reflection and self-correction through simulated debate."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p13",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 13,
+    "char_count": 490,
+    "word_count": 74,
+    "content": "Mini-Quiz 2: Agents and Hallucinations\n Question: You ask an LLM Agent to calculate $345,678 \\times \n987,654$. Which of the following describes the safest \"Agentic\" \napproach?\n A) Prompt the LLM with \"Let's think step-by-step\" to calculate \nthe math token-by-token.\n B) Provide the LLM with a Python interpreter tool, instruct it to \nwrite a Python script to multiply the numbers, execute it, and \nreturn the printed observation.\n C) Fine-tune the LLM on thousands of multiplication tables."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p14",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 14,
+    "char_count": 738,
+    "word_count": 97,
+    "content": "Deployment Bottlenecks: Why isn't LLM \neverywhere yet?\n Despite the amazing capabilities, real-world deployment faces severe \nengineering hurdles:\n 1. Inference Cost:\n\u2013 Running a 70B parameter model costs significant GPU compute per token. \nGenerative AI is structurally more expensive than traditional software.\n 2. Latency:\n\u2013 Autoregressive generation (token-by-token) is slow. High latency degrades \nuser experience in real-time applications (like voice assistants).\n 3. Reliability & Evaluation:\n\u2013 Traditional software is deterministic (Input A always yields Output B).\n\u2013 LLMs are probabilistic. Continuous monitoring and robust evaluation \npipelines (like the Inversion Prompting techniques covered in Week 6) are \nstrictly required."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p15",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 15,
+    "char_count": 508,
+    "word_count": 68,
+    "content": "Ethical and Safety Considerations in Applications\n Bias and Fairness:\n\u2013 Models amplify biases present in their training data (e.g., screening \nresumes and unfairly penalizing certain demographics).\n Security (Prompt Injection):\n\u2013 User-facing applications (like customer service bots) are highly \nvulnerable to malicious users altering the system prompt to leak data \nor output profanity.\n Copyright and IP:\n\u2013 Generative applications risk reproducing copyrighted code or text \nfrom their pretraining datasets."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p16",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 16,
+    "char_count": 465,
+    "word_count": 62,
+    "content": "Discussion: The Future of Applications\n Topic: Human-in-the-loop vs. Full Autonomy\n Currently, most successful LLM applications act as \"Copilots\" \n(augmenting a human worker who reviews the final output).\n However, the industry is pushing toward \"Agents\" (full \nautonomy, executing workflows while humans sleep).\n Discussion Prompt:\n\u2013 In which industries is full LLM autonomy acceptable today?\n\u2013 Where must we permanently maintain a \"human-in-the-loop\" \nconstraint?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p17",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 17,
+    "char_count": 515,
+    "word_count": 75,
+    "content": "Summary & Q&A\n Summary:\n\u2013 LLM Applications extend base models using Prompting, RAG, and \nTool-use to solve real business problems.\n\u2013 Core NLP tasks (Summarization, Extraction) are now largely solved \nby prompting.\n\u2013 Domain applications (Code, Medical, Legal) require strict adherence \nto facts, often leveraging RAG.\n\u2013 Agents represent the frontier: models that use tools, reason via \nReAct, and interact with the environment.\n\u2013 Deployment is currently constrained by compute costs, latency, and \nsafety evaluation."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p18",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 18,
+    "char_count": 128,
+    "word_count": 17,
+    "content": "Multimodal LLMs\nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p19",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 19,
+    "char_count": 583,
+    "word_count": 78,
+    "content": "Agenda & Learning Outcomes\n Agenda:\n\u2013 The Motivation for Multimodality\n\u2013 Core MLLM Architecture & The \"Modality Gap\"\n\u2013 Landmark Models (CLIP, Flamingo, BLIP-2, LLaVA)\n\u2013 Training Pipelines: Visual Instruction Tuning\n\u2013 Multimodal Prompting & Evaluation\n Learning Outcomes:\n\u2013 Understand the structural components of an MLLM (Encoder, Projector, LLM \nBackbone).\n\u2013 Analyze the two-stage training pipeline for modern vision-language models.\n\u2013 Apply multimodal prompting techniques (interleaved text/image).\n\u2013 Evaluate MLLMs using modern benchmarks and identify visual hallucination \nrisks."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p20",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 20,
+    "char_count": 486,
+    "word_count": 74,
+    "content": "What is a Multimodal LLM (MLLM)?\n Definition: * An MLLM is a language model capable of \nreceiving, reasoning over, and (sometimes) generating multiple \ndata modalities (text, images, audio, video).\n The Goal:\n\u2013 Retain the advanced reasoning and instruction-following capabilities \nof the LLM.\n\u2013 Grant the LLM \"eyes\" and \"ears\" to perceive the real world.\n Focus of this Lecture:\n\u2013 Vision-Language Models (VLMs), as they are currently the most \nresearched and deployed subclass of MLLMs."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p21",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 21,
+    "char_count": 521,
+    "word_count": 75,
+    "content": "Core Architecture of an MLLM\n Virtually all modern MLLMs share a tripartite (three-part) architecture:\n 1. The Vision Encoder:\n\u2013 Extracts high-dimensional feature representations from raw image pixels.\n\u2013 Example: Vision Transformer (ViT).\n 2. The Connector (Projection Layer):\n\u2013 Translates the visual features into the \"language\" (embedding space) of \nthe LLM.\n 3. The LLM Backbone:\n\u2013 The brain. Processes the translated visual tokens alongside standard text \ntokens to generate a text response.\n\u2013 Example: LLaMA, Vicuna."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p22",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 22,
+    "char_count": 710,
+    "word_count": 112,
+    "content": "Component 1: The Vision Encoder (CLIP)\n Contrastive Language-Image Pretraining (CLIP):\n\u2013 A foundational model by OpenAI that maps images and text into the \nsame vector space.\n How it works:\n\u2013 Trained on 400 million (Image, Caption) pairs.\n\u2013 Uses a Contrastive Loss function: maximizes the cosine similarity \nbetween the embedding of an image (e.g., a dog) and its correct text \ndescription (\"a picture of a dog\").\n Why it matters for MLLMs:\n\u2013 We freeze the CLIP Vision Encoder and use it as the \"eyes\" for our \nLLMs, because its visual features are already semantically aligned \nwith human language.\nReference: Radford et al., \"Learning Transferable Visual Models From Natural Language Supervision\" (ICML 2021)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p23",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 23,
+    "char_count": 26,
+    "word_count": 3,
+    "content": "CLIP Architecture Overview"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p24",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 24,
+    "char_count": 609,
+    "word_count": 92,
+    "content": "Component 2: The Connector / Modality Gap\n The Problem:\n\u2013 The CLIP Vision Encoder outputs vectors of size $D_{vision}$.\n\u2013 The LLM expects word embeddings of size $D_{text}$.\n\u2013 These two spaces do not naturally communicate (The \"Modality Gap\").\n The Solution:\n\u2013 We introduce a lightweight, trainable neural network layer between them.\n Connector Types:\n\u2013 Linear Projection: A simple weight matrix (used in early LLaVA).\n\u2013 MLP (Multi-Layer Perceptron): A 2-layer network for better translation.\n\u2013 Q-Former / Perceiver Resampler: Compresses visual tokens to save \ncontext window space (used in BLIP-2, Flamingo)."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p25",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 25,
+    "char_count": 353,
+    "word_count": 48,
+    "content": "Mini-Quiz 1: Architecture Check\n Question: In a standard vision-language MLLM like \nLLaVA, which component is primarily responsible for \nperforming complex logic, math, and generating the final \nconversational response?\n A) The Vision Transformer (ViT)\n B) The Contrastive Loss Function\n C) The LLM Backbone (e.g., Vicuna/LLaMA)\n D) The Projection Layer"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p26",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 26,
+    "char_count": 679,
+    "word_count": 96,
+    "content": "Landmark Model 1: Flamingo\n The Breakthrough: DeepMind's Flamingo was the first model \nto demonstrate highly effective interleaved image-text \nprompting.\n Architecture Innovation:\n\u2013 Perceiver Resampler: Compresses thousands of image tokens down \nto just 64 tokens, saving massive computational cost.\n\u2013 Cross-Attention Layers: Instead of feeding the image at the very \nbeginning of the prompt, Flamingo injects visual information directly \ninto the deep layers of the LLM.\n Impact: Proved that MLLMs could perform Few-Shot In-\nContext Learning (just like GPT-3), but with images.\nReference: Alayrac et al., \"Flamingo: a Visual Language Model for Few -Shot Learning\" (NeurIPS 2022)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p27",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 27,
+    "char_count": 61,
+    "word_count": 6,
+    "content": "Flamingo Architecture Overview\nFlamingo Architecture Overview"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p28",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 28,
+    "char_count": 25,
+    "word_count": 3,
+    "content": "Flamingo Results Overview"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p29",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 29,
+    "char_count": 573,
+    "word_count": 76,
+    "content": "Landmark Model 2: BLIP-2\n Reference: Li et al., \"BLIP-2: Bootstrapping Language-Image Pre-\ntraining...\" (ICML 2023)\n The Efficiency Breakthrough:\n\u2013 Training massive LLMs from scratch is expensive.\n\u2013 BLIP-2 completely freezes both the Vision Encoder and the LLM \nBackbone.\n The Q-Former (Querying Transformer):\n\u2013 A lightweight, trainable module that learns to extract only the most relevant \nvisual features required by the LLM.\n Result: Achieved state-of-the-art performance using significantly \nfewer trainable parameters, democratizing MLLM research for \nuniversity labs."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p31",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 31,
+    "char_count": 476,
+    "word_count": 72,
+    "content": "Landmark Model 3: LLaVA\n Large Language-and-Vision Assistant (LLaVA):\n\u2013 The open-source pioneer of Visual Instruction Tuning.\n Simplicity is Key:\n\u2013 Uses a frozen CLIP encoder.\n\u2013 Uses a simple Linear/MLP projection layer.\n\u2013 Uses a frozen Vicuna (LLaMA-based) LLM.\n Why did it win? The magic wasn't in the architecture; it \nwas in the data generation pipeline (using GPT-4 to \ngenerate multimodal training data).\nReference: Liu et al., \"Visual Instruction Tuning\" (NeurIPS 2023)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p32",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 32,
+    "char_count": 26,
+    "word_count": 2,
+    "content": "LLaVAArchitecture Overview"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p33",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 33,
+    "char_count": 482,
+    "word_count": 74,
+    "content": "The MLLM Training Pipeline (Stage 1)\n Training an MLLM like LLaVA happens in two distinct stages.\n Stage 1: Feature Alignment Pretraining\n\u2013 Goal: Teach the LLM to understand the Vision Encoder's \"language\".\n\u2013 Data: Millions of simple (Image, Caption) pairs (e.g., CC3M dataset).\n\u2013 Frozen: Vision Encoder and LLM Backbone.\n\u2013 Trainable: Only the Projection Layer.\n\u2013 Analogy: Teaching an English speaker (LLM) to read a French \ndictionary (Vision features) by mapping words one-to-one."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p34",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 34,
+    "char_count": 526,
+    "word_count": 76,
+    "content": "The MLLM Training Pipeline (Stage 2)\n Stage 2: Visual Instruction Tuning (Multimodal SFT)\n\u2013 Goal: Teach the model to follow complex human instructions about \nimages (e.g., \"Why is this meme funny?\").\n\u2013 Data: ~150k highly detailed, instruction-following multimodal \nconversations.\n\u2013 Frozen: Vision Encoder.\n\u2013 Trainable: Projection Layer and LLM Backbone.\n Connecting to Week 6: Just like standard Supervised Fine-\nTuning (SFT) taught text LLMs to be assistants, Visual \nInstruction Tuning teaches MLLMs to be visual assistants."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p35",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 35,
+    "char_count": 530,
+    "word_count": 84,
+    "content": "Class Discussion: Data Generation (5 mins)\n Topic: How do we get Visual Instruction Data?\n In 2023, the LLaVA authors needed 150,000 conversational \nQ&A pairs about images, but human labeling was too \nexpensive.\n They used a text-only model (GPT-4) to generate data for their \nmultimodal model.\n Discussion Question:\n\u2013 If GPT-4 (at the time) was text-only and couldn't see images, how did \nthe authors use it to generate highly accurate, detailed visual Q&A \ndata to train LLaVA?\n\u2013 (Hint: Think about bounding boxes and captions)."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p36",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 36,
+    "char_count": 557,
+    "word_count": 85,
+    "content": "Beyond Images: Audio and Video\n Video as a Sequence of Images:\n\u2013 Video MLLMs (like Video-LLaVA) treat video as a sequence of frames.\n\u2013 Challenge: Context window exhaustion. 30 frames of video = 30x the \nvisual tokens.\n Audio Encoders:\n\u2013 Architectures like Whisper (Audio Transformer) can be projected into the \nLLM just like CLIP.\n Any-to-Any Models:\n\u2013 Emerging models (like GPT-4o or Gemini 1.5 Pro) are trained natively on \nmultiple modalities from scratch, bypassing the strict \"Encoder -> \nProjector\" pipeline for more organic cross-modal understanding."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p37",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 37,
+    "char_count": 493,
+    "word_count": 78,
+    "content": "Evaluating MLLMs: Traditional \nBenchmarks\n How do we know if an MLLM is good?\n 1. VQAv2 (Visual Question Answering):\n\u2013 Short, factual questions (e.g., \"What color is the car?\").\n\u2013 Drawback: Too simple for modern MLLMs.\n 2. OK-VQA (Outside Knowledge VQA):\n\u2013 Requires world knowledge not present in the image.\n\u2013 Example: `` + \"Which political party does this person belong to?\"\n 3. Image Captioning (COCO):\n\u2013 Generating descriptive text. Evaluated via n-gram overlap metrics \nlike CIDEr or BLEU."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p38",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 38,
+    "char_count": 480,
+    "word_count": 61,
+    "content": "Evaluating MLLMs: Comprehensive \nBenchmarks\n Because modern MLLMs are conversational, old benchmarks \nfail to capture their abilities.\n 1. MME (Multimodal Evaluation):\n\u2013 Tests perception (color, position, count) and cognition \n(commonsense, math, code).\n\u2013 Evaluates robustness using Yes/No prompts.\n 2. MM-Vet:\n\u2013 Evaluates complex, multi-turn multimodal dialogue.\n\u2013 Uses LLM-as-a-Judge (usually GPT-4V) to grade the MLLM's \nresponses based on accuracy, helpfulness, and reasoning."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p39",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 39,
+    "char_count": 538,
+    "word_count": 80,
+    "content": "Mini-Quiz 2: Evaluation Constraints\n Scenario: You evaluate your new MLLM on VQAv2.\n Ground Truth Answer: \"Red\"\n Your Model's Answer: \"The car shown in the image is red.\"\n Question: What happens to your evaluation score under strict \ntraditional string-matching metrics (like Exact Match)?\n\u2013 A) Score is 100% (Correct).\n\u2013 B) Score is 0% (Incorrect).\n Answer: B. * Insight: Instruction-tuned MLLMs are \"chatty\". \nTraditional benchmarks penalize them for full sentences. This \nis why LLM-as-a-judge is now the standard for MLLM \nevaluation."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p40",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 40,
+    "char_count": 500,
+    "word_count": 75,
+    "content": "The Hallucination Problem in MLLMs\n Visual Hallucination: * When an MLLM confidently \ndescribes objects, attributes, or relationships that do not\nexist in the provided image.\n Why does it happen?\n\u2013 Language Prior: The LLM backbone is so powerful that it \noverrides the visual encoder. (e.g., It sees a dining table and \nhallucinates \"chairs\" because textually, chairs usually \naccompany tables).\n\u2013 Connector Compression: Small details get lost when reducing \nmegapixel images to a few hundred tokens."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p41",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 41,
+    "char_count": 574,
+    "word_count": 78,
+    "content": "Evaluating Hallucinations: POPE\n Polling-based Object Probing Evaluation (POPE):\n\u2013 A benchmark specifically designed to expose visual hallucinations.\n Methodology:\n\u2013 Frames evaluation as binary Yes/No questions.\n\u2013 Adversarial Probing: Asks about objects that frequently co-occur but \nare missing from the specific image (e.g., `` -> \"Is there a mouse in \nthe image?\").\n Finding: Many early MLLMs failed POPE catastrophically, \ndefaulting to \"Yes\" due to statistical priors.\nReference: Li et al., \"Evaluating Object Hallucination in Large Vision-Language Models\" (EMNLP 2023)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week8_p42",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_number": 42,
+    "char_count": 533,
+    "word_count": 95,
+    "content": "Class Discussion: The \"Clever Hans\" \nEffect\n Context: Clever Hans was a horse who appeared to do math, \nbut was actually just reading the subtle body language of his \ntrainer.\n Discussion Question:\n\u2013 Are MLLMs truly \"seeing\" the image, or are they experiencing a \nClever Hans effect where the user's prompt gives away the answer?\n\u2013 Example: If I prompt: \"What is the man holding in his left hand?\", \ndoes the model know there is a man, or does it just assume there is \nbased on my question? How can we design prompts to prevent this?"
+  }
+]

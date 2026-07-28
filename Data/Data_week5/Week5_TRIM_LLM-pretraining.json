@@ -1,0 +1,112 @@
+{
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "raw_total_pages": 26,
+    "deduplicated_total_pages": 26,
+    "pages": [
+        {
+            "page_number": 1,
+            "content": "Pretraining Large Language Models\nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester"
+        },
+        {
+            "page_number": 2,
+            "content": "Learning Outcomes\nDefine LLM pretraining and explain why it is self-supervised.\nCompare Transformer variants (encoder-only, encoder–decoder, decoder-\nonly) and explain why modern LLMs use decoder-only with causal \nattention.\nFormulate the training objective: autoregressive probability factorisation, \ncross-entropy loss, and the difference between training vs inference.\nEvaluate implications: limitations (e.g., hallucinations/bias), the impact of \nscale/compute, and how pretraining connects to adaptation and instruction \ntuning."
+        },
+        {
+            "page_number": 3,
+            "content": "Where We Are in the Pipeline\n Previously:\n– Transformers\n– BERT\n– Training data for LLMs\n Today:\n– How large language models are pretrained"
+        },
+        {
+            "page_number": 4,
+            "content": "Transformer\nEncoder Only\nUses: NLU, classification, feature extraction\nExamples: BERT, RoBERTa, DeBERTa\nEncoder-Decoder\nUses: NLG, translation, summarisation, seq2seq \nmapping\nExamples: T5, Flan-T5, BART\nDecoder Only\nUses: NLG, translation, summarisation, completion\nExamples: GPT-x, LLaMa, every other new model today"
+        },
+        {
+            "page_number": 5,
+            "content": "Decoder-Only Architecture\n Modern LLMs:\n– Transformer decoder blocks\n– Causal attention (no access to future tokens)\n– Left-to-right generation\n Contrast with BERT:\n– Bidirectional\n– Masked LM"
+        },
+        {
+            "page_number": 6,
+            "content": "GPT series\nGenerative Pretrained Transformer series of models from OpenAI\nThese are decoder transfer language models and can be used for generative tasks.\nGPT (2018)"
+        },
+        {
+            "page_number": 7,
+            "content": "GPT-2 (Radford et al., 2019)\n– Decoder-only\n– Pretrained on more data:\n WebText from Reddit (40GB)\n– Good at Generation Tasks"
+        },
+        {
+            "page_number": 8,
+            "content": "GPT-3 (Brown et al., 2020)\n– Decoder-only\n– Pretrained on even more data (45TB)"
+        },
+        {
+            "page_number": 9,
+            "content": "– Zero-Shot\n– One-Shot\n– Few-Shot\nTraditional Fine-Tuning\nGPT-3 ”In-Context” Learning"
+        },
+        {
+            "page_number": 10,
+            "content": "Autoregressive Models and Self-supervised \nLearning\n Autoregressive Models\n– Naturally generative\n– Can produce long coherent text\n– Supports in-context learning\n Self-supervised Learning\n– No manual labels needed.\n– Training signal comes from: (1) text itself; (2) next-token \nprediction\n– This scales easily to massive datasets."
+        },
+        {
+            "page_number": 11,
+            "content": "Why Decoder-Only?\n– Modern LLMs are \npredominantly decoder-only:\n GPT-4o\n Qwen3\n Deepseek-R1\n Llama4\n …\n– Efficiency\n Easier to scale and train\n– Strong Pretraining\n Excel in unsupervised pretraining\n– Scalability\n Handles longer contexts and complex tasks"
+        },
+        {
+            "page_number": 12,
+            "content": "What Is Pretraining?\n Pretraining:\n– Large-scale self-supervised training\n– Uses raw text (no human labels)\n– Learns general language modelling capability\n Goal: Learn to model the probability of text."
+        },
+        {
+            "page_number": 13,
+            "content": "Language Modelling as Probability Estimation\n Goal of pretraining: Learn the probability distribution over text.\n Formally: \n Key idea: Model learns to predict each token given previous tokens."
+        },
+        {
+            "page_number": 14,
+            "content": "Autoregressive Objective\n Autoregressive training objective:\n At each step:\n– See previous tokens (i.e. generation history)\n– Predict next token\n– Compute cross-entropy loss \n– Backpropagate gradients\n The model learns by minimising: Cross-entropy between \npredicted and true tokens."
+        },
+        {
+            "page_number": 15,
+            "content": "What Does This Mean Practically?\n Input: “The capital of France is [ ]”\n Target: “Paris”\n The model learns by:\n– Predicting next tokens\n– Over trillions of examples"
+        },
+        {
+            "page_number": 16,
+            "content": "Cross-Entropy Loss\n For each token:\n– yi= one-hot true token\n– pi= predicted probability\n This penalises: Assigning low probability to correct token\n Intuition: Reward correct next-token predictions."
+        },
+        {
+            "page_number": 17,
+            "content": "Training vs Inference\n Training:\n– Predict next token\n– Compare with ground truth\n– Update weights\n Inference:\n– Predict next token\n– Sample or choose max\n– Feed prediction back in"
+        },
+        {
+            "page_number": 18,
+            "content": "Limitation of the Objective\n Since objective is purely predictive, the model may:\n– Hallucinate plausible but false information\n– Repeat biases in data\n– Generate unsafe content\n Fundamentally, it optimises the likelihood of text, not \ncorrectness or other properties."
+        },
+        {
+            "page_number": 19,
+            "content": "Training Data Scale\n Typical scale:\n– Billions to trillions of tokens\n– Web text, books, code, Wikipedia\n Data preprocessing is important\n– Deduplication\n– Filtering\n– Quality control"
+        },
+        {
+            "page_number": 20,
+            "content": "How large are “large” LMs?\n Today, we mostly talk about two camps of models:\n– Medium-sized models: BERT/RoBERTa models (100M or \n300M), T5 models\n– (220M, 770M, 3B)\n “Very” large LMs: models of 100+ billion \nparameters\n Larger model sizes ⇒ larger compute, more \nexpensive during inference\n Different sizes of LMs have different ways to adapt \nand use them\n– Fine-tuning, zero-shot/few-shot prompting, in-context \nlearning…\n Emergent properties arise from model scale\n Trade-off between model size and corpus size"
+        },
+        {
+            "page_number": 21,
+            "content": "Compute Requirements\n Training can involve:\n– Thousands of GPUs / TPUs\n– Weeks to months of training\n– Distributed training\n Compute becomes the main constraint.\n Training vs inference cost\n– Training: expensive, done a few times (even once)\n– Inference: cheaper, but many times"
+        },
+        {
+            "page_number": 22,
+            "content": "Why LLMs\n The promise: one single model to solve many NLP tasks\n Emergent properties in LLMs"
+        },
+        {
+            "page_number": 23,
+            "content": "Pre-training and adaption\n Pre-training: trained on huge\n– amounts of unlabeled text using “self-\n– supervised” training objectives\n Adaptation: how to use a pre-trained \nmodel for your downstream task?\n– What types of NLP tasks (inputand output \nformats)?\n– How many annotated examples do you \nhave?\n– Approach: Fine-tuning, Prompting, \nInstruction tuning"
+        },
+        {
+            "page_number": 24,
+            "content": "The Dominant Architecture of Transformer-based \nLLMs\n GPT-3:\n– Decoder-only Transformer\n– Causal attention\n– LayerNorm, residual blocks, etc.\n Modern LLMs (LLaMA, Mistral, DeepSeek, etc.):\n– Same core architecture\n– Sometimes improved normalization or efficiency\n– Minor architectural refinements\n– But the core is the same."
+        },
+        {
+            "page_number": 25,
+            "content": "Foundation vs Instruction Tuned Models\nFoundation\n● Coherent, fluent generation\n● Completion and continuation\n● Vast world knowledge\n● Potentially harmful outputs\n● Difficult to control\n● Misaligned with our values\nInstruction Tuned\n● Foundation ability and more\n● Controllable by prompt\n● Less need to fine-tune\n● Follows any command \n● Slight hit to performance\n● Sensitive to prompt template"
+        },
+        {
+            "page_number": 26,
+            "content": "Summary \n Pretraining\n– Large-scale self-supervised learning\n– Autoregressive next-token prediction\n– Trained on massive text corpora\n What It Produces\n– Fluent text\n– World knowledge correlations\n– In-context learning capability\n– Generative foundation model\n What It does NOT Guarantee\n– Instruction following\n– Helpfulness or safety\n– Truthfulness"
+        }
+    ]
+}

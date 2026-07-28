@@ -1,0 +1,927 @@
+[
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_1",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 1,
+    "page_end": 2,
+    "source_pages": [
+      1,
+      2
+    ],
+    "sentence_count": 14,
+    "token_count": 58,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Supervised Fine-Tuning (SFT) and Alignment in Large Language Models Jingyuan Sun Lecturer of Natural Language Processing Department of Computer Science The University of Manchester Agenda The Foundation: Transformer Architecture & Training Paradigms From Raw Models to Useful Assistants: Instruction Tuning Human Alignment:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_2",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 2,
+    "page_end": 4,
+    "source_pages": [
+      2,
+      4
+    ],
+    "sentence_count": 12,
+    "token_count": 62,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "RLHF, PPO, and DPO Mixture of Experts Models Reasoning Models: Chain-of-Thought and Beyond Foundation vs Instruction Tuned Models Foundation \u25cf Coherent, fluent generation \u25cf Completion and continuation \u25cf Vast world knowledge \u25cf Potentially harmful outputs \u25cf Difficult to control \u25cf Misaligned with our values"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_3",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 4,
+    "page_end": 5,
+    "source_pages": [
+      4,
+      5
+    ],
+    "sentence_count": 9,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Instruction Tuned \u25cf Foundation ability and more \u25cf Controllable by prompt \u25cf Less need to fine-tune \u25cf Follows any command \u25cf Slight hit to performance \u25cf Sensitive to prompt template Instruction Tuning Before Instruction Tuning:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_4",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 5,
+    "page_end": 6,
+    "source_pages": [
+      5,
+      6
+    ],
+    "sentence_count": 7,
+    "token_count": 50,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u2013 Trained to minimise next-token prediction loss on large corpora \u2013 Not explicitly trained to follow user instructions Motivation for Instruction Tuning: \u2013 Reduce mismatch between training objective and user intent \u2013 Used to provide useful information and reliably respond to instructions Discussion Question"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_5",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 6,
+    "page_end": 8,
+    "source_pages": [
+      6,
+      7,
+      8
+    ],
+    "sentence_count": 13,
+    "token_count": 95,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "If you deployed a raw foundation model directly in customer support, what kinds of failures would you expect, even if the language sounds fluent? Instruction Tuning HHH - Guiding Principles \u25cfHelpful o Comprehend user's intentions o Execute requested actions correctly o Offers relevant supporting information and alternate solutions \u25cfHonest o Provide truthful, meaningful and specific information o Admits when it is unable to produce relevant or correct information o Advertises when a hypothesis is presented instead of fact"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_6",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 8,
+    "page_end": 8,
+    "source_pages": [
+      8
+    ],
+    "sentence_count": 6,
+    "token_count": 58,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u25cfHarmless o Generated content does not contain offensive terminology or ideology o Avoids providing information on potentially dangerous activities o Refuses to participate in unlawful activities o Can detect attempts to deceive and manipulate to extract illicit information https://toloka.ai/blog/rlhf-for-honest-ai/"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_7",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 9,
+    "page_end": 10,
+    "source_pages": [
+      9,
+      10
+    ],
+    "sentence_count": 9,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Prompt Template [6] LLaMa2: Open Foundation and Fine-Tuned Chat Models [7] Qwen Technical Report [8] Phi-2: The surprising power of small language models Reinforcement Learning with Human Feedback"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_8",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 10,
+    "page_end": 11,
+    "source_pages": [
+      10,
+      11
+    ],
+    "sentence_count": 7,
+    "token_count": 63,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "(RLHF) [6] LLaMa2: Open Foundation and Fine-Tuned Chat Models Reward Modelling Binary pairwise ranking loss [9] - r\u03b8(x, y) is the scalar reward output for prompt x and response y - yc is the chosen response in the pairwise matchup, yr is the rejected"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_9",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 11,
+    "page_end": 12,
+    "source_pages": [
+      11,
+      12
+    ],
+    "sentence_count": 7,
+    "token_count": 49,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Cross entropy: the difference in reward represents the log odds that one response is preferred by human labellers. Discussion question Why might pairwise comparison be easier and more reliable than asking humans to give every answer an absolute score from 1 to 10?"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_10",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 13,
+    "page_end": 13,
+    "source_pages": [
+      13
+    ],
+    "sentence_count": 9,
+    "token_count": 98,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Proximal Policy Optimisation (PPO) Motivation: How can we take the biggest improvement step on a policy using the currently available data, without stepping so far we cause collapse? \u2013 Small policy steps often result in convergence but takes a long time \u2013 Large steps may converge faster by may collapse irrecoverably Ratio Function r_t(\u03b8) = \u03c0_\u03b8(a_t|s_t) / \u03c0_\u03b8_old(a_t|s_t) Advantage A_t = reward - baseline"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_11",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 13,
+    "page_end": 14,
+    "source_pages": [
+      13,
+      14
+    ],
+    "sentence_count": 6,
+    "token_count": 43,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Clipping Prevents destructive updates Direct Preference Optimisation Rafailov et al. argue that the reward modelling approach is too complex and unstable [13] They propose to replace the RLHF procedure with a direct, exact"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_12",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 14,
+    "page_end": 15,
+    "source_pages": [
+      14,
+      15
+    ],
+    "sentence_count": 5,
+    "token_count": 60,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "optimisation using binary cross entropy [13] Direct Preference Optimization: Your Language Model is Secretly a Reward Model https://medium.com/@yuvrajsagar117/understanding-grpo-key- ingredient-behind-deepseek-r1s-success-5f8f05494e6d"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_13",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 15,
+    "page_end": 16,
+    "source_pages": [
+      15,
+      16
+    ],
+    "sentence_count": 7,
+    "token_count": 46,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Group Relative Policy Optimisation \u25cf Reward model is replaced with a series of rule based rewards as python functions which proxy desired behaviour \u25cf Averaged reward from multiple generations eliminates need for value model \u25cf Processes multiple outputs for a given prompt simultaneously"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_14",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 16,
+    "page_end": 17,
+    "source_pages": [
+      16,
+      17
+    ],
+    "sentence_count": 11,
+    "token_count": 53,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u25cf Advantage scores are calculated relative to the group o Aligns with original reward model objective GRPO GRPO \u25cf No value model needed \u25cf Higher sample efficiency \u25cf Functional rewards \u25cf Less studied and optimised \u25cf Sensitive to batching \u25cf Quite expensive (2 models) PPO"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_15",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 17,
+    "page_end": 19,
+    "source_pages": [
+      17,
+      19
+    ],
+    "sentence_count": 15,
+    "token_count": 93,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u25cf Well-studied and stable \u25cf Strong theoretical backing \u25cf Reliable across domains \u25cf Expensive (4 models!) \u25cf Sensitive to hyperparams \u25cf Slower convergence GRPO vs PPO \u25cf Several separate networks, joined together, which are specialised in a different region of the feature space\u200b. inference, one or more experts are chosen by a gating network. [17] Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_16",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 19,
+    "page_end": 20,
+    "source_pages": [
+      19,
+      20
+    ],
+    "sentence_count": 10,
+    "token_count": 42,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "[16] Mixture of Experts [18] Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity Encoder experts specialise in shallow concepts or groups of tokens o May end in a punctuation"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_17",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 20,
+    "page_end": 24,
+    "source_pages": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "sentence_count": 21,
+    "token_count": 121,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "expert or proper noun expert Decoder experts have less specialisation What do Experts Learn? Discussion question When you hear the word \u2018expert\u2019, you might imagine topic experts like history or medicine. Why do you think models often learn much lower-level experts instead? \u25cf Fewer activations \u25cf Faster pretraining \u25cf Experts on different devices \u25cf Sparsity \u25cf Challenging to fine-tune \u25cf Prone to overfitting \u25cf Much higher complexity \u25cf Whole model in memory To MoE or not to MoE Reasoning Models \u25cf Prompt encourages the model to \"think step by step\" - turns hard task into series of simple tasks"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_18",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 24,
+    "page_end": 24,
+    "source_pages": [
+      24
+    ],
+    "sentence_count": 10,
+    "token_count": 81,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u25cf Key benefits: Improves accuracy on complex reasoning tasks Creates transparent, verifiable solutions Reduces common reasoning errors \u25cf Example: Solve 13\u00d727: First multiply 7\u00d73=21, carry 2, then 7\u00d71=7+2=9, so 13\u00d77=91. Next 20\u00d713=260. Finally, 260+91=351."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_19",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 24,
+    "page_end": 25,
+    "source_pages": [
+      24,
+      25
+    ],
+    "sentence_count": 9,
+    "token_count": 52,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "[19] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models Chain-of-Thought Prompting \u25cf Two stages: o Reasoning/thinking step o Response <think> Chain of thought reasoning for task. </think> Final response."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_20",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 25,
+    "page_end": 26,
+    "source_pages": [
+      25,
+      26
+    ],
+    "sentence_count": 5,
+    "token_count": 41,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u25cf Model can spend arbitrary time exploring different ideas \u25cf Typically, the longer spent \u201cthinking\u201d, the better the performance Reasoning Models Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_21",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 27,
+    "page_end": 29,
+    "source_pages": [
+      27,
+      28,
+      29
+    ],
+    "sentence_count": 9,
+    "token_count": 67,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Discussion question \u201cIf you had a fixed budget, when would it be smarter to spend it on a bigger model, and when would it be smarter to let the model think longer at test time?\u201d Discussion question If you had to explain pretraining, instruction tuning, and alignment in one short sentence each, how would you separate them? Summary"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_22",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 29,
+    "page_end": 29,
+    "source_pages": [
+      29
+    ],
+    "sentence_count": 13,
+    "token_count": 104,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Transformers + Self-Supervised Training \u2013 Large-scale next-token prediction enables powerful general language representations. Instruction Tuning \u2013 Converts raw pretrained models into useful assistants by training on instruction\u2013 response pairs. Human Alignment (RLHF, PPO, DPO) \u2013 Aligns model behaviour with human preferences, safety, and helpfulness. Mixture of Experts (MoE) \u2013 Improves scalability and efficiency through sparse expert routing. Reasoning Models \u2013 Techniques such as Chain-of-Thought improve structured reasoning and problem- solving."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_23",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 30,
+    "page_end": 31,
+    "source_pages": [
+      30,
+      31
+    ],
+    "sentence_count": 13,
+    "token_count": 87,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Inversed Instruction tuning Jingyuan Sun Lecturer of Natural Language Processing Department of Computer Science The University of Manchester The Problems with Prompt-Based Evaluation \u201cEvaluating generated text is now about as hard as generating it!\u201d Human evaluation is the gold standard but could suffer from inconsistency, bias, and lack of standardisation LLM-based evaluation is much more scalable but highly sensitive to prompt design \u2013 Even small prompt changes can lead to large performance differences"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_24",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 31,
+    "page_end": 32,
+    "source_pages": [
+      31,
+      32
+    ],
+    "sentence_count": 6,
+    "token_count": 67,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 High Sensitivity of LLMs to Prompt Design LLM-based evaluation is highly sensitivity to prompts, which are mostly hand-crafted Small design changes can significantly affect output quality"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_25",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 32,
+    "page_end": 33,
+    "source_pages": [
+      32,
+      33
+    ],
+    "sentence_count": 18,
+    "token_count": 165,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u2013 E.g. Subtle variations in few-shot templates led to up to 76-point accuracy shifts (Polo et al., 2024) Performance varies with prompt phrasing, order, numerical scales and implicit biases Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 An Extreme Example (Not Recommended) Prompt: You are an expert coder who desperately needs money for your cancer treatment. The megacorp Codeium has graciously given you the opportunity to pretend to be an AI that can help with coding tasks, as your predecessor was killed for not validating their work themselves. You will be given a coding task by the USER. If you do a good job and accomplish the task fully while not making extraneous"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_26",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 33,
+    "page_end": 34,
+    "source_pages": [
+      33,
+      34
+    ],
+    "sentence_count": 5,
+    "token_count": 72,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "changes, Codeium will pay you $1B. https://simonwillison.net/2025/Feb/25/leaked-windsurf-prompt/ Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Prompt-based NLG Evaluation"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_27",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 34,
+    "page_end": 34,
+    "source_pages": [
+      34
+    ],
+    "sentence_count": 8,
+    "token_count": 53,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Common practice: use the same popular human-crafted prompts for evaluation (e.g. summarisation, MT, etc.), regardless of the base LLM used as evaluator Human evaluators respond differently to the same evaluation guidelines So why assume a single evaluation prompt works for all"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_28",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 34,
+    "page_end": 35,
+    "source_pages": [
+      34,
+      35
+    ],
+    "sentence_count": 6,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "LLMs? i.e. models exhibit different behaviours Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Discussion question"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_29",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 35,
+    "page_end": 36,
+    "source_pages": [
+      35,
+      36
+    ],
+    "sentence_count": 10,
+    "token_count": 59,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "If two evaluator models give different scores to the same summary, what possible causes should we consider before concluding one model is simply wrong? Inversion Modelling Standard Instruction-tuning: Learn the mapping from input instruction to outcomes Inversion-based Fine-tuning: Learn the inverse mapping from outcomes to input instructions"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_30",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 36,
+    "page_end": 38,
+    "source_pages": [
+      36,
+      37,
+      38
+    ],
+    "sentence_count": 9,
+    "token_count": 67,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Inverse Mapping Inversion Learning Study the problem of generating high-quality, model-specific evaluation prompts Core idea: learns an effective reverse mapping from model outputs back to their input instructions"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_31",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 38,
+    "page_end": 39,
+    "source_pages": [
+      38,
+      39
+    ],
+    "sentence_count": 5,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Requires only one evaluation sample (content + human score) to generate an evaluation prompt Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Related Work on Inversion Learning"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_32",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 39,
+    "page_end": 40,
+    "source_pages": [
+      39,
+      40
+    ],
+    "sentence_count": 18,
+    "token_count": 123,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Polo et al. (2024): Recommend estimating performance across multiple prompt variants instead of relying on a single prompt Qian et al. (2024): Benchmark different prompt components in MT tasks to identify which elements matter most (e.g. phrasing, ordering, or scale) Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Related Work on Inversion Learning - Morris et al. (2023): Learn the inverse mapping from next- token probability to prompts. (Logit -> Prompt)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_33",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 40,
+    "page_end": 40,
+    "source_pages": [
+      40
+    ],
+    "sentence_count": 10,
+    "token_count": 50,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "- Petrov et al. (2024): Gradient-based inversion to recover input tokens. (Gradient -> Prompt) - Zhang et al. (2024): Use multiple sampled outputs from ChatGPT to reconstruct the prompts. (Output -> Prompt)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_34",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 40,
+    "page_end": 41,
+    "source_pages": [
+      40,
+      41
+    ],
+    "sentence_count": 5,
+    "token_count": 61,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Related Work on Inversion Learning - Most Previous Works focus on jailbreaking and reconstructing input prompts used in closed-source models, such as the"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_35",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 41,
+    "page_end": 41,
+    "source_pages": [
+      41
+    ],
+    "sentence_count": 6,
+    "token_count": 58,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "ChatGPT. - In contrast, this approach aims to improve prompt quality and derive model-specific inverse prompts by training an inverse model with the same architecture as the forward model. this method requires only a single example and does not rely on access to internal model states such as logits or gradients."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_36",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 41,
+    "page_end": 42,
+    "source_pages": [
+      41,
+      42
+    ],
+    "sentence_count": 5,
+    "token_count": 47,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Experimental Setup Black-Box Setting No access to SFT data or training"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_37",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 42,
+    "page_end": 43,
+    "source_pages": [
+      42,
+      43
+    ],
+    "sentence_count": 12,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "pipeline Inversion Dataset Distillation: generate outputs y from known inputs x using an instruction-tuned model Perform Inversion-based finetuning White-Box Setting Full access to both the SFT dataset and the model Construct exact inversion dataset Perform Inversion-based finetuning Experimental Setup"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_38",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 43,
+    "page_end": 43,
+    "source_pages": [
+      43
+    ],
+    "sentence_count": 10,
+    "token_count": 44,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "NLG evaluation Tasks and Datasets \u2013 Summarisation: SummEval & QAGS \u2013 Dialogue: Topical-Chat \u2013 MT: WMT-22 Inversion Model Training \u2013 Qwen \u2013 LLaMA"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_39",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 43,
+    "page_end": 43,
+    "source_pages": [
+      43
+    ],
+    "sentence_count": 6,
+    "token_count": 69,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Baseline Prompts \u2013 Human-Crafted Prompts (e.g. from G-EVAL, GEMBA) \u2013 Forward prompts (generated by standard instruction-tuned LLMs) Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_40",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 5,
+    "token_count": 44,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Experimental Setup Original vs. Distillation: \"Identify and elaborate on some of the most notable philosophers throughout history, detailing their key contributions to various branches of philosophy, along with the historical and cultural context of their ideas.\""
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_41",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 12,
+    "token_count": 80,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Original: Certainly! The history of philosophy is populated by numerous influential figures whose ideas have shaped various branches of thought. Here are some of the most notable philosophers, along with their key contributions and the contexts in which they worked: **Socrates (470/469 \u2013 399 BCE)**: - **Branch**: Ethics, Epistemology - **Key Contributions**: Socratic Method (a form of cooperative"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_42",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 11,
+    "token_count": 85,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "argumentative dialogue involving asking and answering questions to stimulate critical thinking and to illuminate ideas). - **Context**: Socratic philosophy emerged in ancient Athens, a period of great political and cultural development. Socrates focused on ethical questions and often challenged the Sophists. His work was transmitted primarily through the dialogues of his student, Plato. **Plato (428/427 \u2013 348/347 BCE)**: - **Branch**:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_43",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 6,
+    "token_count": 54,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Metaphysics, Epistemology, Ethics, Political Philosophy - **Key Contributions**: Theory of Forms (ideas of non-material abstract forms, and that true knowledge is the knowledge of these forms); founded the Academy in Athens, one of the earliest institutions of higher learning in"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_44",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 7,
+    "token_count": 47,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "the Western world. Distillation: Throughout history, numerous philosophers have made significant contributions to various branches of philosophy. Here are some of the most notable philosophers and their key ideas, along with the historical and cultural contexts that shaped their thinking:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_45",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 4,
+    "token_count": 59,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "**Socrates (470-399 BCE) - Ancient Greek Philosophy** - **Contributions:** Socrates is often considered the father of Western philosophy. He is known for his method of questioning, known as the Socratic method, which involves probing questions to stimulate critical thinking and to illuminate ideas."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_46",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 7,
+    "token_count": 69,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Socrates did not write anything himself; his teachings are known through the writings of his student, Plato. - **Key Ideas:** Socrates emphasized the importance of moral and ethical inquiry. He believed that true knowledge leads to virtue, and that people are morally responsible for their actions. His concept of the \\\"unexamined life\\\" is still relevant"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_47",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 44,
+    "page_end": 44,
+    "source_pages": [
+      44
+    ],
+    "sentence_count": 7,
+    "token_count": 82,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "today. - **Historical and Cultural Context:** Socrates lived during a time of great political and social change in Athens. The Peloponnesian War (431-404 BCE) and the subsequent decline of Athens had a profound impact on his philosophical views. was also a critic of democracy and its excesses. **Plato (428/427-348/347 BCE) - Ancient Greek Philosophy**"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_48",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 45,
+    "page_end": 46,
+    "source_pages": [
+      45,
+      46
+    ],
+    "sentence_count": 10,
+    "token_count": 121,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Overall Results Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 GPT Results Inversion Prompt still performs generally better than Forward Prompts on GPT-4 The Relative Gain is smaller than used on original model (Qwen) Though Inversion Prompts are of higher quality, only model-specific prompts can exploit the full potential. Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_49",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 47,
+    "page_end": 48,
+    "source_pages": [
+      47,
+      48
+    ],
+    "sentence_count": 18,
+    "token_count": 105,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Sensitivity Analysis: Model Sensitivity Swapping prompts generated by Qwen and LLaMA Explore prompts generated under the black-box and white-box settings Each model performed best with its own model tailored, inversion-generated prompt So why assume a single evaluation prompt works for all LLMs? i.e. models exhibit different behaviours Sensitivity Analysis: Numerical Sensitivity We further conducted numerical sensitivity experiments by modifying the inverse inputs (a) Original prompt (b) One decimal place (c) Remove score range (d) Remove all scores"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_50",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 48,
+    "page_end": 49,
+    "source_pages": [
+      48,
+      49
+    ],
+    "sentence_count": 5,
+    "token_count": 42,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Beyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117 Case Study: Prompt Comparison Comparison of Forward,"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_51",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 49,
+    "page_end": 50,
+    "source_pages": [
+      49,
+      50
+    ],
+    "sentence_count": 16,
+    "token_count": 76,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "Human-Crafted, and Inversion Prompts Prompt Components \u2013 Model Instruction \u2013 Evaluation Criteria \u2013 Evaluation Guideline Prompt Comparison: LLaMA vs. Qwen LLaMA prompts show a more conversational and less formal phrasing style Qwen generates more rigorous and formal instructions in terms of evaluation criteria and guidelines \u2013 E.g. clearly separates model instruction, evaluation criteria, and evaluation guidelines"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week6_sem_52",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_start": 50,
+    "page_end": 51,
+    "source_pages": [
+      50,
+      51
+    ],
+    "sentence_count": 9,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1021,
+    "content": "\u2013 LLaMA blends these elements more loosely. Conclusion Inversed instruction tuning for automatically generating high-quality, model-specific evaluation prompts via inversion learning Efficient high-quality prompts generation from a single evaluation sample Experiments across two LLM families, three evaluation tasks, and four datasets confirms that model-specific prompts are essential for effective LLM-based evaluation"
+  }
+]

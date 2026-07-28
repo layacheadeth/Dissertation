@@ -1,0 +1,462 @@
+[
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p1",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 1,
+    "char_count": 181,
+    "word_count": 24,
+    "content": "Supervised Fine-Tuning (SFT) and Alignment in \nLarge Language Models\nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p2",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 2,
+    "char_count": 250,
+    "word_count": 36,
+    "content": "Agenda\n1. The Foundation: Transformer Architecture & Training \nParadigms\n2. From Raw Models to Useful Assistants: Instruction \nTuning\n3. Human Alignment: RLHF, PPO, and DPO\n4. Mixture of Experts Models\n5. Reasoning Models: Chain-of-Thought and Beyond"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p4",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 4,
+    "char_count": 394,
+    "word_count": 61,
+    "content": "Foundation vs Instruction Tuned Models\nFoundation\n\u25cf Coherent, fluent generation\n\u25cf Completion and continuation\n\u25cf Vast world knowledge\n\u25cf Potentially harmful outputs\n\u25cf Difficult to control\n\u25cf Misaligned with our values\nInstruction Tuned\n\u25cf Foundation ability and more\n\u25cf Controllable by prompt\n\u25cf Less need to fine-tune\n\u25cf Follows any command \n\u25cf Slight hit to performance\n\u25cf Sensitive to prompt template"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p5",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 5,
+    "char_count": 337,
+    "word_count": 47,
+    "content": "Instruction Tuning\n Before Instruction Tuning:\n\u2013 Trained to minimise next-token prediction loss on large corpora\n\u2013 Not explicitly trained to follow user instructions\n Motivation for Instruction Tuning:\n\u2013 Reduce mismatch between training objective and user intent\n\u2013 Used to provide useful information and reliably respond to \ninstructions"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p6",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 6,
+    "char_count": 168,
+    "word_count": 26,
+    "content": "Discussion Question\n If you deployed a raw foundation model directly in \ncustomer support, what kinds of failures would you expect, \neven if the language sounds fluent?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p8",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 8,
+    "char_count": 679,
+    "word_count": 91,
+    "content": "HHH - Guiding Principles\n\u25cfHelpful\no Comprehend user's intentions\no Execute requested actions correctly\no Offers relevant supporting information and alternate solutions\n\u25cfHonest\no Provide truthful, meaningful and specific information\no Admits when it is unable to produce relevant or correct information\no Advertises when a hypothesis is presented instead of fact\n\u25cfHarmless\no Generated content does not contain offensive terminology or ideology\no Avoids providing information on potentially dangerous activities\no Refuses to participate in unlawful activities\no Can detect attempts to deceive and manipulate to extract illicit information\nhttps://toloka.ai/blog/rlhf-for-honest-ai/"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p9",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 9,
+    "char_count": 156,
+    "word_count": 23,
+    "content": "Prompt Template\n[6] LLaMa2: Open Foundation and \nFine-Tuned Chat Models\n[7] Qwen Technical Report\n [8] Phi-2: The surprising power of \nsmall language models"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p10",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 10,
+    "char_count": 105,
+    "word_count": 14,
+    "content": "Reinforcement Learning with Human Feedback \n(RLHF)\n[6] LLaMa2: Open Foundation and Fine-Tuned Chat Models"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p11",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 11,
+    "char_count": 306,
+    "word_count": 53,
+    "content": "Reward Modelling\n Binary pairwise ranking loss [9]\n- r\u03b8(x, y) is the scalar reward output for prompt x and response y\n- yc is the chosen response in the pairwise matchup, yr is the rejected\n Cross entropy: the difference in reward represents the log odds \nthat one response is preferred by human labellers."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p12",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 12,
+    "char_count": 152,
+    "word_count": 25,
+    "content": "Discussion question\n Why might pairwise comparison be easier and more \nreliable than asking humans to give every answer an \nabsolute score from 1 to 10?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p13",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 13,
+    "char_count": 448,
+    "word_count": 68,
+    "content": "Proximal Policy Optimisation (PPO)\n Motivation: How can we take the biggest improvement step on a \npolicy using the currently available data, without stepping so far we \ncause collapse?\n\u2013 Small policy steps often result in convergence but takes a long time\n\u2013 Large steps may converge faster by may collapse irrecoverably\nRatio Function r_t(\u03b8) = \u03c0_\u03b8(a_t|s_t) / \u03c0_\u03b8_old(a_t|s_t)\nAdvantage A_t = reward - baseline\nClipping Prevents destructive updates"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p14",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 14,
+    "char_count": 312,
+    "word_count": 46,
+    "content": "Direct Preference Optimisation\n Rafailov et al. argue that the reward modelling approach is too \ncomplex and unstable [13]\n They propose to replace the RLHF procedure with a direct, exact \noptimisation using binary cross entropy\n[13] Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p15",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 15,
+    "char_count": 145,
+    "word_count": 6,
+    "content": "https://medium.com/@yuvrajsagar117/understanding-grpo-key-\ningredient-behind-deepseek-r1s-success-5f8f05494e6d\nGroup Relative Policy Optimisation"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p16",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 16,
+    "char_count": 361,
+    "word_count": 56,
+    "content": "\u25cf Reward model is replaced with a series of rule based \nrewards as python functions which proxy desired behaviour\n\u25cf Averaged reward from multiple generations eliminates need \nfor value model\n\u25cf Processes multiple outputs for a given prompt \nsimultaneously\n\u25cf Advantage scores are calculated relative to the group\no Aligns with original reward model objective\nGRPO"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p17",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 17,
+    "char_count": 327,
+    "word_count": 54,
+    "content": "GRPO\n\u25cf No value model needed\n\u25cf Higher sample efficiency\n\u25cf Functional rewards\n\u25cf Less studied and optimised\n\u25cf Sensitive to batching\n\u25cf Quite expensive (2 models)\nPPO\n\u25cf Well-studied and stable\n\u25cf Strong theoretical backing\n\u25cf Reliable across domains\n\u25cf Expensive (4 models!)\n\u25cf Sensitive to hyperparams\n\u25cf Slower convergence\nGRPO vs PPO"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p19",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 19,
+    "char_count": 292,
+    "word_count": 42,
+    "content": "\u25cf Several separate networks, joined together, which are \nspecialised in a different region of the feature space\u200b. At \ninference, one or more experts are chosen by a gating \nnetwork.\n[17] Outrageously Large Neural \nNetworks: The Sparsely-Gated \nMixture-of-Experts Layer\n[16]\nMixture of Experts"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p20",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 20,
+    "char_count": 292,
+    "word_count": 43,
+    "content": "[18] Switch Transformers: Scaling to \nTrillion Parameter Models with \nSimple and Efficient Sparsity\n Encoder experts specialise \nin shallow concepts or \ngroups of tokens\no May end in a punctuation \nexpert or proper noun expert\n Decoder experts have less \nspecialisation\nWhat do Experts Learn?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p21",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 21,
+    "char_count": 183,
+    "word_count": 28,
+    "content": "Discussion question\n When you hear the word \u2018expert\u2019, you might imagine topic \nexperts like history or medicine. Why do you think models \noften learn much lower-level experts instead?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p22",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 22,
+    "char_count": 202,
+    "word_count": 36,
+    "content": "\u25cf Fewer activations\n\u25cf Faster pretraining\n\u25cf Experts on different devices\n\u25cf Sparsity\n\u25cf Challenging to fine-tune\n\u25cf Prone to overfitting\n\u25cf Much higher complexity\n\u25cf Whole model in memory\nTo MoE or not to MoE"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p24",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 24,
+    "char_count": 464,
+    "word_count": 64,
+    "content": "\u25cf Prompt encourages the model to \"think step by step\" - turns hard \ntask into series of simple tasks\n\u25cf Key benefits: \n Improves accuracy on complex reasoning tasks\n Creates transparent, verifiable solutions\n Reduces common reasoning errors\n\u25cf Example:\nSolve 13\u00d727: First multiply 7\u00d73=21, carry 2, then 7\u00d71=7+2=9, so \n13\u00d77=91. Next 20\u00d713=260. Finally, 260+91=351.\n[19] Chain-of-Thought Prompting Elicits Reasoning \nin Large Language Models\nChain-of-Thought Prompting"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p25",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 25,
+    "char_count": 267,
+    "word_count": 39,
+    "content": "\u25cf Two stages:\no Reasoning/thinking step\no Response\n<think> Chain of thought reasoning for task. </think> Final \nresponse.\n\u25cf Model can spend arbitrary time exploring different ideas\n\u25cf Typically, the longer spent \u201cthinking\u201d, the better the \nperformance\nReasoning Models"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p26",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 26,
+    "char_count": 91,
+    "word_count": 13,
+    "content": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p27",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 27,
+    "char_count": 180,
+    "word_count": 35,
+    "content": "Discussion question\n \u201cIf you had a fixed budget, when would it be smarter to \nspend it on a bigger model, and when would it be smarter \nto let the model think longer at test time?\u201d"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p28",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 28,
+    "char_count": 148,
+    "word_count": 22,
+    "content": "Discussion question\n If you had to explain pretraining, instruction tuning, and \nalignment in one short sentence each, how would you \nseparate them?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p29",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 29,
+    "char_count": 567,
+    "word_count": 71,
+    "content": "Summary\n Transformers + Self-Supervised Training\n\u2013 Large-scale next-token prediction enables powerful general language \nrepresentations.\n Instruction Tuning\n\u2013 Converts raw pretrained models into useful assistants by training on instruction\u2013\nresponse pairs.\n Human Alignment (RLHF, PPO, DPO)\n\u2013 Aligns model behaviour with human preferences, safety, and helpfulness.\n Mixture of Experts (MoE)\n\u2013 Improves scalability and efficiency through sparse expert routing.\n Reasoning Models \n\u2013 Techniques such as Chain-of-Thought improve structured reasoning and problem-\nsolving."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p30",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 30,
+    "char_count": 140,
+    "word_count": 18,
+    "content": "Inversed Instruction tuning\nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p31",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 31,
+    "char_count": 497,
+    "word_count": 67,
+    "content": "The Problems with Prompt-Based Evaluation\n\u201cEvaluating generated text is now about as hard as \ngenerating it!\u201d\n Human evaluation is the gold standard but could suffer from \ninconsistency, bias, and lack of standardisation\n LLM-based evaluation is much more scalable but highly sensitive to \nprompt design\n\u2013 Even small prompt changes can lead to large performance differences\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p32",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 32,
+    "char_count": 507,
+    "word_count": 67,
+    "content": "High Sensitivity of LLMs to Prompt Design\n LLM-based evaluation is highly sensitivity to prompts, which \nare mostly hand-crafted\n Small design changes can significantly affect output quality\n\u2013 E.g. Subtle variations in few-shot templates led to up to 76-point \naccuracy shifts (Polo et al., 2024)\n Performance varies with prompt phrasing, order, numerical \nscales and implicit biases\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p33",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 33,
+    "char_count": 667,
+    "word_count": 95,
+    "content": "An Extreme Example (Not Recommended) \nPrompt: You are an expert coder who desperately needs money for \nyour cancer treatment. The megacorp Codeium has graciously given \nyou the opportunity to pretend to be an AI that can help with coding \ntasks, as your predecessor was killed for not validating their work \nthemselves. You will be given a coding task by the USER. If you do a \ngood job and accomplish the task fully while not making extraneous \nchanges, Codeium will pay you $1B.\nhttps://simonwillison.net/2025/Feb/25/leaked-windsurf-prompt/ \nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p34",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 34,
+    "char_count": 484,
+    "word_count": 62,
+    "content": "Prompt-based NLG Evaluation\n Common practice: use the same popular human-crafted \nprompts for evaluation (e.g. summarisation, MT, etc.), \nregardless of the base LLM used as evaluator \n Human evaluators respond differently to the same evaluation \nguidelines\nSo why assume a single evaluation prompt works for all \nLLMs? i.e. models exhibit different behaviours \nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p35",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 35,
+    "char_count": 174,
+    "word_count": 26,
+    "content": "Discussion question\n If two evaluator models give different scores to the same \nsummary, what possible causes should we consider \nbefore concluding one model is simply wrong?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p36",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 36,
+    "char_count": 321,
+    "word_count": 35,
+    "content": "Inversion Modelling \n Standard Instruction-tuning: Learn the mapping from input instruction to \noutcomes\n Inversion-based Fine-tuning: Learn the inverse mapping from outcomes to \ninput instructions\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p38",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 38,
+    "char_count": 420,
+    "word_count": 52,
+    "content": "Inversion Learning\n Study the problem of generating high-quality, model-specific \nevaluation prompts\n Core idea: learns an effective reverse mapping from model \noutputs back to their input instructions\n Requires only one evaluation sample (content + human score) \nto generate an evaluation prompt\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p39",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 39,
+    "char_count": 432,
+    "word_count": 57,
+    "content": "Related Work on Inversion Learning\n Polo et al. (2024): Recommend estimating performance \nacross multiple prompt variants instead of relying on a single \nprompt\n Qian et al. (2024): Benchmark different prompt components in \nMT tasks to identify which elements matter most (e.g. \nphrasing, ordering, or scale)\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p40",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 40,
+    "char_count": 476,
+    "word_count": 67,
+    "content": "Related Work on Inversion Learning\n- Morris et al. (2023): Learn the inverse mapping from next-\ntoken probability to prompts. (Logit -> Prompt)\n- Petrov et al. (2024): Gradient-based inversion to recover \ninput tokens. (Gradient -> Prompt)\n- Zhang et al. (2024): Use multiple sampled outputs from \nChatGPT to reconstruct the prompts. (Output -> Prompt)\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p41",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 41,
+    "char_count": 598,
+    "word_count": 86,
+    "content": "Related Work on Inversion Learning\n- Most Previous Works focus on jailbreaking and reconstructing \ninput prompts used in closed-source models, such as the \nChatGPT. \n- In contrast, this approach aims to improve prompt quality and \nderive model-specific inverse prompts by training an inverse \nmodel with the same architecture as the forward model. \nthis method requires only a single example and does not rely \non access to internal model states such as logits or gradients.\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p42",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 42,
+    "char_count": 369,
+    "word_count": 48,
+    "content": "Experimental Setup\nBlack-Box Setting \n No access to SFT data or training \npipeline\n Inversion Dataset Distillation: \ngenerate outputs y from known \ninputs x using an instruction-tuned \nmodel\n Perform Inversion-based finetuning \nWhite-Box Setting \n Full access to both the SFT \ndataset and the model\n Construct exact inversion dataset\n Perform Inversion-based finetuning"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p43",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 43,
+    "char_count": 422,
+    "word_count": 54,
+    "content": "Experimental Setup\n NLG evaluation Tasks and Datasets\n\u2013 Summarisation: SummEval & QAGS\n\u2013 Dialogue: Topical-Chat\n\u2013 MT: WMT-22\n Inversion Model Training\n\u2013 Qwen\n\u2013 LLaMA\n Baseline Prompts\n\u2013 Human-Crafted Prompts (e.g. from G-EVAL, GEMBA)\n\u2013 Forward prompts (generated by standard instruction-tuned LLMs)\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p44",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 44,
+    "char_count": 2729,
+    "word_count": 393,
+    "content": "Experimental Setup\n Original vs. Distillation:\n\"Identify and elaborate on some of the most notable philosophers throughout history, detailing their key \ncontributions to various branches of philosophy, along with the historical and cultural context of their ideas.\"\nOriginal:\nCertainly! The history of philosophy is populated by numerous influential \nfigures whose ideas have shaped various branches of thought. Here are \nsome of the most notable philosophers, along with their key contributions \nand the contexts in which they worked:\n1. **Socrates (470/469 \u2013 399 BCE)**:\n- **Branch**: Ethics, Epistemology\n- **Key Contributions**: Socratic Method (a form of cooperative \nargumentative dialogue involving asking and answering questions to \nstimulate critical thinking and to illuminate ideas).\n- **Context**: Socratic philosophy emerged in ancient Athens, a period of \ngreat political and cultural development. Socrates focused on ethical \nquestions and often challenged the Sophists. His work was transmitted \nprimarily through the dialogues of his student, Plato.\n2. **Plato (428/427 \u2013 348/347 BCE)**:\n- **Branch**: Metaphysics, Epistemology, Ethics, Political Philosophy\n- **Key Contributions**: Theory of Forms (ideas of non-material abstract \nforms, and that true knowledge is the knowledge of these forms); founded \nthe Academy in Athens, one of the earliest institutions of higher learning in \nthe Western world.\n\u2026\u2026\nDistillation:\nThroughout history, numerous philosophers have made significant contributions to \nvarious branches of philosophy. Here are some of the most notable philosophers \nand their key ideas, along with the historical and cultural contexts that shaped their \nthinking:\n1. **Socrates (470-399 BCE) - Ancient Greek Philosophy**\n- **Contributions:** Socrates is often considered the father of Western philosophy. \nHe is known for his method of questioning, known as the Socratic method, which \ninvolves probing questions to stimulate critical thinking and to illuminate ideas. \nSocrates did not write anything himself; his teachings are known through the \nwritings of his student, Plato.\n- **Key Ideas:** Socrates emphasized the importance of moral and ethical inquiry. \nHe believed that true knowledge leads to virtue, and that people are morally \nresponsible for their actions. His concept of the \\\"unexamined life\\\" is still relevant \ntoday.\n- **Historical and Cultural Context:** Socrates lived during a time of great political \nand social change in Athens. The Peloponnesian War (431-404 BCE) and the \nsubsequent decline of Athens had a profound impact on his philosophical views. He \nwas also a critic of democracy and its excesses.\n2. **Plato (428/427-348/347 BCE) - Ancient Greek Philosophy**\n\u2026\u2026"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p45",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 45,
+    "char_count": 140,
+    "word_count": 14,
+    "content": "Overall Results \nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p46",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 46,
+    "char_count": 391,
+    "word_count": 51,
+    "content": "GPT Results \n Inversion Prompt still performs generally better than Forward Prompts on GPT-4\n The Relative Gain is smaller than used on original model (Qwen)\n Though Inversion Prompts are of higher quality, only model-specific prompts can \nexploit the full potential.\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p47",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 47,
+    "char_count": 341,
+    "word_count": 47,
+    "content": "Sensitivity Analysis: Model Sensitivity\n Swapping prompts generated by Qwen and LLaMA\n Explore prompts generated under the black-box and white-box settings\n Each model performed best with its own model tailored, inversion-generated prompt\nSo why assume a single evaluation prompt works for all LLMs? i.e. models \nexhibit different behaviours"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p48",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 48,
+    "char_count": 348,
+    "word_count": 42,
+    "content": "Sensitivity Analysis: Numerical Sensitivity \nWe further conducted numerical \nsensitivity experiments by \nmodifying the inverse inputs\n (a) Original prompt\n (b) One decimal place\n (c) Remove score range\n (d) Remove all scores\nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p49",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 49,
+    "char_count": 177,
+    "word_count": 22,
+    "content": "Case Study: Prompt Comparison \n Comparison of Forward, \nHuman-Crafted, and \nInversion Prompts\n Prompt Components\n\u2013 Model Instruction\n\u2013 Evaluation Criteria\n\u2013 Evaluation Guideline"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p50",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 50,
+    "char_count": 345,
+    "word_count": 48,
+    "content": "Prompt Comparison: LLaMA vs. Qwen\n LLaMA prompts show a more conversational and less \nformal phrasing style\n Qwen generates more rigorous and formal instructions in \nterms of evaluation criteria and guidelines\n\u2013 E.g. clearly separates model instruction, evaluation criteria, \nand evaluation guidelines\n\u2013 LLaMA blends these elements more loosely."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week6_p51",
+    "filename": "Week6_TRIM_SFT_alignment.pdf",
+    "week": "Week 6",
+    "page_number": 51,
+    "char_count": 384,
+    "word_count": 44,
+    "content": "Conclusion\n Inversed instruction tuning for automatically generating high-quality, \nmodel-specific evaluation prompts via inversion learning\n Efficient high-quality prompts generation from a single evaluation \nsample\n Experiments across two LLM families, three evaluation tasks, and \nfour datasets confirms that model-specific prompts are essential for \neffective LLM-based evaluation"
+  }
+]

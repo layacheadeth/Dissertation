@@ -1,0 +1,96 @@
+{
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "raw_total_pages": 22,
+    "deduplicated_total_pages": 22,
+    "pages": [
+        {
+            "page_number": 1,
+            "content": "BERT: Bidirectional Encoder Representations from Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester"
+        },
+        {
+            "page_number": 2,
+            "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT, RoBERTa, DeBERTaEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
+        },
+        {
+            "page_number": 3,
+            "content": "Prior BERT: ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)–Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs–Feature-based approach: pre-trained representations used as input to task-specific models–Trained on single sentences from 1B word benchmark (Chelbaet al., 2014)\nTrain separate left-to-right and right-to-left LMs Apply as “Pre-trained Embeddings”"
+        },
+        {
+            "page_number": 4,
+            "content": "BERT: Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks."
+        },
+        {
+            "page_number": 5,
+            "content": "Masked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions\nNetwork weights are updated based on average CE loss over the sampled tokens"
+        },
+        {
+            "page_number": 6,
+            "content": "Masked Language Modelling\nExamplesHe is from Kuala Lumpur, Malaysia.àHe [MASK]from Kuala [MASK], Malaysia.He went to the store. àHe went to the [MASK]."
+        },
+        {
+            "page_number": 7,
+            "content": "MLM: Masking Rate and StrategyQ: What is the value of k?–They always use k = 15%.–Too little masking: computationally expensive–Too much masking: not enough context \nQ: How are masked tokens selected?–15% tokens are uniformly sampled–Is it optimal? See span masking (Joshi et al., 2020) –Example: He [MASK]from Kuala [MASK], Malaysia."
+        },
+        {
+            "page_number": 8,
+            "content": "MLM: 80-10-10 CorruptionFor the 15% of tokens selected for prediction,–80% of the time, they replace it with [MASK] tokenwent to the storeàwent to the [MASK]–10% of the time, they replace it with a random word in the vocabularywent to the storeàwent to the running–10% of the time, they keep it unchangedwent to the storeàwent to the storeWhy? Because [MASK] tokens are never seen during fine-tuning"
+        },
+        {
+            "page_number": 9,
+            "content": "Next Sentence Prediction (NSP)Motivation: many NLP downstream tasks require understanding the relationship between two sentences (e.g. NLI, paraphrase detection, QA)NSPis designed to reduce the gap between pre-training and fine-tuning\nInput = [CLS] the man went to [MASK] store [SEP] he bought a gallon [MASK] milk [SEP]Label = IsNextInput = [CLS] the man [MASK] to the store [SEP]penguin [MASK] are flight ##less birds [SEP]Label = NotNext\n[CLS]: a special token always at the beginning[CLS]: a special token used to separate two segments"
+        },
+        {
+            "page_number": 10,
+            "content": "Next Sentence Prediction (NSP)\nStands for \"class\"\nOutput vector associated with [CLS] represents the prediction, and is multiplied with WNSP, a set of classification weights\n0 or 1 to indicate which segment\nStands for \"separator\""
+        },
+        {
+            "page_number": 11,
+            "content": "BERT pre-training: Putting togetherVocabulary size: 30,000 word pieces (common sub-word units) (Wu et al., 2016)\nFinal input representation = Token + Segment + Position embeddings\nSeparate two segments"
+        },
+        {
+            "page_number": 12,
+            "content": "BERT-base: 12 layers, 768 hidden size, 12 attention heads, 100M parametersBERT-large: 24 layers, 1024 hidden size, 16 attention heads, 340M parameters\nTraining corpus: Wikipedia (2.5B) + BooksCorpus (0.8B)Max sequence size: 512 word piecesTrained for 1M steps, batch size 128k\nSame as OpenAI GPT\nOpenAI GPT was trained on BooksCorpus only!\nBERT pre-training: Putting together"
+        },
+        {
+            "page_number": 13,
+            "content": "BERT pre-training: Putting togetherMLM and NSP are trained togetherThe [CLS] representation is trained for NSPToken-level representations are trained via MLM"
+        },
+        {
+            "page_number": 14,
+            "content": "Sentence pair classification tasks:MNLIPremise: A soccer game with multiple males playing.Hypothesis: Some men are playing a sport.\nQQPQ1: Where can I learn to invest in stocks?Q2: How can I learn more about stocks?Single sentence classification tasks:SST2rich veins of funny stuff in this movie\n(Wang et al., 2018):6 sentence pair and 2 single-sentence tasks\n{entailment,contradiction, neutral}\n{duplicate,not duplicate}\n{positive,negative}\nSentence-level Tasks"
+        },
+        {
+            "page_number": 15,
+            "content": "Fine-tuning BERT: Sentence-level tasks“Pretrain once, finetune many times.”"
+        },
+        {
+            "page_number": 16,
+            "content": "For sentence-pair tasks, use [SEP] and segment embeddings to distinguish inputsAdd a task-specific linear classifier on top of the [CLS] representation.\nFine-tuning BERT"
+        },
+        {
+            "page_number": 17,
+            "content": "SQuAD MetLife Stadium\nExtractive question answering e.g., SQuAD(Rajpurkaret al., 2016)\nName entity recognition (Tjong kimSang and De Meulder, 2003)CoNLL2003 NERJohnSmithlives in New YorkB-PERI-PEROOB-LOCI-LOC\nToken-level Tasks"
+        },
+        {
+            "page_number": 18,
+            "content": "Fine-tuning BERT: Token-level Tasks“Pretrain once, finetune many times.”"
+        },
+        {
+            "page_number": 19,
+            "content": "For token-level prediction tasks, add a task-specific linear classifier on top of each token’s hidden representation.\nFine-tuning BERT"
+        },
+        {
+            "page_number": 20,
+            "content": "The bigger, the better!\nAblation study: Model Sizes"
+        },
+        {
+            "page_number": 21,
+            "content": "How large are Large“ LMs?"
+        },
+        {
+            "page_number": 22,
+            "content": "SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain–then-fine-tune paradigm in NLP.Achieved state-of-the-art performance (2018) across diverse NLU tasks."
+        }
+    ]
+}

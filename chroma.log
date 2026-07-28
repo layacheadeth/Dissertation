@@ -1,0 +1,230 @@
+[33mWARNING[0m:  [25-07-2026 22:17:24] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048576. chroma_server_nofile will not be set.
+[32mINFO[0m:     [25-07-2026 22:17:24] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component System
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:17:24] Starting component SegmentAPI
+[31mERROR[0m:    [25-07-2026 22:17:24] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [25-07-2026 22:17:24] Started server process [[36m1[0m]
+[32mINFO[0m:     [25-07-2026 22:17:24] Waiting for application startup.
+[32mINFO[0m:     [25-07-2026 22:17:24] Application startup complete.
+[32mINFO[0m:     [25-07-2026 22:17:24] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [25-07-2026 22:19:03] Shutting down
+[32mINFO[0m:     [25-07-2026 22:19:03] Waiting for application shutdown.
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component System
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component SegmentAPI
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:19:03] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [25-07-2026 22:19:03] Application shutdown complete.
+[32mINFO[0m:     [25-07-2026 22:19:03] Finished server process [[36m1[0m]
+[33mWARNING[0m:  [25-07-2026 22:19:16] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048576. chroma_server_nofile will not be set.
+[32mINFO[0m:     [25-07-2026 22:19:17] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component System
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:19:17] Starting component SegmentAPI
+[31mERROR[0m:    [25-07-2026 22:19:17] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [25-07-2026 22:19:17] Started server process [[36m1[0m]
+[32mINFO[0m:     [25-07-2026 22:19:17] Waiting for application startup.
+[32mINFO[0m:     [25-07-2026 22:19:17] Application startup complete.
+[32mINFO[0m:     [25-07-2026 22:19:17] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [25-07-2026 22:19:40] Shutting down
+[32mINFO[0m:     [25-07-2026 22:19:40] Waiting for application shutdown.
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component System
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component SegmentAPI
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:19:40] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [25-07-2026 22:19:40] Application shutdown complete.
+[32mINFO[0m:     [25-07-2026 22:19:40] Finished server process [[36m1[0m]
+[33mWARNING[0m:  [25-07-2026 22:22:51] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048576. chroma_server_nofile will not be set.
+[32mINFO[0m:     [25-07-2026 22:22:51] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component System
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:22:51] Starting component SegmentAPI
+[31mERROR[0m:    [25-07-2026 22:22:51] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [25-07-2026 22:22:51] Started server process [[36m1[0m]
+[32mINFO[0m:     [25-07-2026 22:22:51] Waiting for application startup.
+[32mINFO[0m:     [25-07-2026 22:22:51] Application startup complete.
+[32mINFO[0m:     [25-07-2026 22:22:51] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [25-07-2026 22:29:21] Shutting down
+[32mINFO[0m:     [25-07-2026 22:29:21] Waiting for application shutdown.
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component System
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component SegmentAPI
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:29:21] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [25-07-2026 22:29:21] Application shutdown complete.
+[32mINFO[0m:     [25-07-2026 22:29:21] Finished server process [[36m1[0m]
+[33mWARNING[0m:  [25-07-2026 22:29:59] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048576. chroma_server_nofile will not be set.
+[32mINFO[0m:     [25-07-2026 22:29:59] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component System
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:29:59] Starting component SegmentAPI
+[31mERROR[0m:    [25-07-2026 22:29:59] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [25-07-2026 22:29:59] Started server process [[36m1[0m]
+[32mINFO[0m:     [25-07-2026 22:29:59] Waiting for application startup.
+[32mINFO[0m:     [25-07-2026 22:29:59] Application startup complete.
+[32mINFO[0m:     [25-07-2026 22:29:59] Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [25-07-2026 22:35:46] Shutting down
+[32mINFO[0m:     [25-07-2026 22:35:46] Waiting for application shutdown.
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component System
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component SegmentAPI
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:35:46] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [25-07-2026 22:35:46] Application shutdown complete.
+[32mINFO[0m:     [25-07-2026 22:35:46] Finished server process [[36m1[0m]
+[33mWARNING[0m:  [25-07-2026 22:36:45] chroma_server_nofile is set to 65535, but this is less than current soft limit of 1048576. chroma_server_nofile will not be set.
+[32mINFO[0m:     [25-07-2026 22:36:45] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component System
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:36:45] Starting component SegmentAPI
+[31mERROR[0m:    [25-07-2026 22:36:45] Failed to send telemetry event ServerStartEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [25-07-2026 22:36:45] Started server process [[36m1[0m]
+[32mINFO[0m:     [25-07-2026 22:36:45] Waiting for application startup.
+[32mINFO[0m:     [25-07-2026 22:36:45] Application startup complete.
+[32mINFO[0m:     [25-07-2026 22:36:45] Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [25-07-2026 22:37:10] 192.168.65.1:49600 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:10] 192.168.65.1:50115 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:10] 192.168.65.1:41246 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:11] 192.168.65.1:50115 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:11] 192.168.65.1:49600 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:12] 192.168.65.1:50115 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[31mERROR[0m:    [25-07-2026 22:37:13] Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+[36mDEBUG[0m:    [25-07-2026 22:37:13] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [25-07-2026 22:37:13] 192.168.65.1:49600 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:13] 192.168.65.1:50115 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:13] 192.168.65.1:49600 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:13] 192.168.65.1:50115 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:14] 192.168.65.1:49600 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:26] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:26] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:26] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:26] 192.168.65.1:23828 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:26] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:27] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:27] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:27] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:23828 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:29] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:23828 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:58509 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:33] 192.168.65.1:23828 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:23870 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:52258 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:23870 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp2_fixed_overlap HTTP/1.1" 200
+[31mERROR[0m:    [25-07-2026 22:37:39] Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+[36mDEBUG[0m:    [25-07-2026 22:37:39] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:52258 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/822164f2-fa8f-4787-8d4d-010eae2a8175/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:23870 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:52258 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:23870 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp2_fixed_overlap HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:39] 192.168.65.1:52258 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/822164f2-fa8f-4787-8d4d-010eae2a8175/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:51] 192.168.65.1:21115 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:51] 192.168.65.1:63830 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:51] 192.168.65.1:21115 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp3_structure_level HTTP/1.1" 200
+[31mERROR[0m:    [25-07-2026 22:37:51] Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+[36mDEBUG[0m:    [25-07-2026 22:37:51] Starting component PersistentLocalHnswSegment
+[32mINFO[0m:     [25-07-2026 22:37:51] 192.168.65.1:63830 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/a21c2f69-ae28-4c11-a0e3-c3a9e8fa244b/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:52] 192.168.65.1:21115 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:52] 192.168.65.1:63830 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:52] 192.168.65.1:21115 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp3_structure_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:37:52] 192.168.65.1:63830 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/a21c2f69-ae28-4c11-a0e3-c3a9e8fa244b/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:55590 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:41498 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:55590 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:41498 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:55590 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:41498 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:55590 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:00] 192.168.65.1:41498 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:08] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:08] 192.168.65.1:58753 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:08] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[31mERROR[0m:    [25-07-2026 22:38:08] Failed to send telemetry event CollectionGetEvent: capture() takes 1 positional argument but 3 were given
+[32mINFO[0m:     [25-07-2026 22:38:08] 192.168.65.1:58753 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:12] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:12] 192.168.65.1:58753 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:12] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:12] 192.168.65.1:58753 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:58753 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:58753 - "POST /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/get HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:58753 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:30503 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/exp1_page_level HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:38:15] 192.168.65.1:58753 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/79292dcc-844f-4c3d-8667-2330c153779a/count HTTP/1.1" 200
+[32mINFO[0m:     [25-07-2026 22:47:12] Shutting down
+[32mINFO[0m:     [25-07-2026 22:47:12] Waiting for application shutdown.
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component System
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component SegmentAPI
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component LocalExecutor
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component Posthog
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component SqliteDB
+[36mDEBUG[0m:    [25-07-2026 22:47:12] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [25-07-2026 22:47:12] Application shutdown complete.
+[32mINFO[0m:     [25-07-2026 22:47:12] Finished server process [[36m1[0m]

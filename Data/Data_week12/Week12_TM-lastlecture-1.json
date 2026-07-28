@@ -1,0 +1,220 @@
+{
+    "filename": "Week12_TM-lastlecture-1.pdf",
+    "week": "Week 12",
+    "raw_total_pages": 66,
+    "deduplicated_total_pages": 53,
+    "pages": [
+        {
+            "page_number": 1,
+            "content": "Sequence Labeling and Evaluations in \nText Mining \nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester"
+        },
+        {
+            "page_number": 2,
+            "content": "Module 1 POS Tagging\n What parts of speech are and why they matter \n Standard POS tagsets: Penn Treebank and Universal POS\n POS tagging as a token-level classification task\n Why POS tagging is difficult: ambiguity and context\n How context helps us choose the correct tag \n Rule-based vs. data-driven tagging approaches \n How tagged corpora provide supervision for POS models"
+        },
+        {
+            "page_number": 3,
+            "content": "The NLP Pipeline\n Natural language processing often works as a pipeline of \ncomponents. \n Each component adds a layer of structure to raw text. \n Later components depend heavily on the quality of earlier ones."
+        },
+        {
+            "page_number": 4,
+            "content": "What Are Parts of Speech?\n Parts of speech are classes of words defined by their grammatical role. \n POS tags help us describe how words function in sentences."
+        },
+        {
+            "page_number": 5,
+            "content": "Standard POS Tagsets\n POS tags come from \nstandard annotation \nschemes. \n Two common tagsets are: \n Penn Treebank: detailed, \nEnglish-focused \n Universal POS tags: broader, \ncross-linguistic \n Examples: \n Penn Treebank: NNP, VBD, DT\n Universal POS: PROPN, \nVERB, DET\nPenn Treebank \nhttps://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_tree\nbank_pos.html"
+        },
+        {
+            "page_number": 6,
+            "content": "Standard POS Tagsets\n POS tags come from \nstandard annotation \nschemes. \n Two common tagsets are: \n Penn Treebank: detailed, \nEnglish-focused \n Universal POS tags: \nbroader, cross-linguistic \n Examples: \n Penn Treebank: NNP, VBD, \nDT\n Universal POS: PROPN, \nVERB, DET\nUniversal POS tags \nhttps://universaldependencies.org/u/pos/all.html"
+        },
+        {
+            "page_number": 7,
+            "content": "The POS Tagging Task\n The task is to assign one POS tag to each token in a sentence. \n POS tagging usually happens after tokenisation. \n Example: \n The same word can receive different tags in different contexts."
+        },
+        {
+            "page_number": 8,
+            "content": "Why POS Tagging Is Hard\n Many words are ambiguous in isolation. \n In a lot of cases, POS tagging is therefore a disambiguation task."
+        },
+        {
+            "page_number": 11,
+            "content": "Context Resolves Ambiguity\n Local context often makes the correct tag much clearer. \n Examples: \n a walk → walk is likely a noun \n to walk → walk is likely a verb \n the old man → old is an adjective \n POS tagging models learn how neighbouring words influence likely \ntags."
+        },
+        {
+            "page_number": 12,
+            "content": "One Sentence, Two Valid Taggings\nMeaning affects POS tagging. \n Example sentence: I saw her duck.\n Interpretation 1: I saw her pet bird. \n I/PRON saw/VERB her/PRON duck/NOUN ./PUNCT\n Interpretation 2: I saw her lower her head quickly. \n I/PRON saw/VERB her/PRON duck/VERB ./PUNCT\n A tagger must choose the tag that matches the intended meaning."
+        },
+        {
+            "page_number": 14,
+            "content": "Rule-Based and Data-Driven Tagging\n A rule-based approach uses handcrafted grammatical rules. \n A statistical or neural approach learns patterns from annotated \ncorpora. \n POS-tagged corpora provide: \n example sentences \n gold labels \n evidence for disambiguation \n In practice, modern systems are usually data-driven."
+        },
+        {
+            "page_number": 17,
+            "content": "Module 2 Syntactic Parsing\n What syntactic parsing is and why it matters \n How parsing goes beyond POS tags to represent structure\n Dependency parsing: heads, dependents, and grammatical \nrelations \n How to read a dependency analysis \n Why parsing is needed for attachment ambiguity\n Phrase structure parsing: NP , VP , PP , and tree structure \n How dependency structure and phrase structure diffe"
+        },
+        {
+            "page_number": 18,
+            "content": "What Is Syntactic Parsing?\n POS tags tell us the category of each word. \n Parsing tells us how the words are structurally related. \n Parsing helps answer questions such as: \n Which noun is the subject? \n Which phrase is the object? \n What does a prepositional phrase modify? \n Two major views of syntax are: \n dependency structure\n phrase structure"
+        },
+        {
+            "page_number": 19,
+            "content": "Why Parsing Matters\n➢Some sentences remain ambiguous even after POS tagging. \n Example: \no The teacher discussed the essay with the student.\n Does with the student describe: \no who the teacher talked to? \no or which essay was discussed? \n Parsing makes these structural choices explicit.\n➢Some sentences allow more than one syntactic analysis. \n The same sequence of words can produce different structures and \ndifferent meanings. \n To understand a sentence, we cannot treat each word in isolation. \n We need to determine what each word is attached or connected to."
+        },
+        {
+            "page_number": 21,
+            "content": "Dependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens."
+        },
+        {
+            "page_number": 22,
+            "content": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent."
+        },
+        {
+            "page_number": 23,
+            "content": "In a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice"
+        },
+        {
+            "page_number": 24,
+            "content": "Common Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme."
+        },
+        {
+            "page_number": 25,
+            "content": "Common Dependency Relations"
+        },
+        {
+            "page_number": 27,
+            "content": "Reading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence."
+        },
+        {
+            "page_number": 28,
+            "content": "Attachment Ambiguity\n A major challenge in parsing is attachment ambiguity. \n Example: \n The teacher discussed the essay with the student.\n Interpretation A: \n with the student modifies discussed\n meaning: the teacher talked to the student\n Interpretation B: \n with the student modifies essay\n meaning: the essay is about / associated with the student\n Different meanings require different parses."
+        },
+        {
+            "page_number": 29,
+            "content": "How to Decide Where a Phrase Attaches\n Ask: Which word is this phrase modifying?\n If the phrase describes the event or action, it usually attaches to \nthe verb. \n If the phrase describes an entity, it usually attaches to the noun. \n Parsing is therefore closely tied to semantic interpretation."
+        },
+        {
+            "page_number": 30,
+            "content": "Phrase Structure Parsing\n Phrase structure parsing \nrepresents sentences as nested \nconstituents. \n Instead of head-dependent links, \nit groups words into phrases. \n Typical phrase types include: \n NP: noun phrase \n VP: verb phrase \n PP: prepositional phrase \n AdjP: adjectival phrase \n AdvP: adverbial phrase"
+        },
+        {
+            "page_number": 31,
+            "content": "Building a Phrase Structure Tree\n Phrase structure analysis usually proceeds in stages: \n identify POS categories \n locate the major constituents \n project phrase nodes \n connect tokens to phrases \n combine phrases into a full tree \n The result shows both grouping and hierarchy."
+        },
+        {
+            "page_number": 32,
+            "content": "Analysis of Phrase Structure\nStep 1: Label the syntactic category (POS) of each of the tokens\nThe child put the puppy in the garden\nDT NN VBD DT NN IN DT NN"
+        },
+        {
+            "page_number": 33,
+            "content": "Analysis of Phrase Structure\nStep 2: There are two principal constituents--a noun phrase (NP) and a \nverb phrase (VP). Locate the boundary between the two.\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN"
+        },
+        {
+            "page_number": 34,
+            "content": "Analysis of Phrase Structure\nStep 3: For each head noun/pronoun, verb, adjective, adverb and \npreposition, project a phrasal node: NP , VP , AdjP , AdvP , PP .\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN\nNP\nVP\nNP\nPP\nNP"
+        },
+        {
+            "page_number": 35,
+            "content": "Analysis of Phrase Structure\nStep 4: Connect the remaining tokens to the nodes they belong to\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN\nNP\nVP\nNP\nPP\nNP"
+        },
+        {
+            "page_number": 36,
+            "content": "Analysis of Phrase Structure\nFinal tree\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN\nNP\nVP\nNP\nPP\nNP\nS"
+        },
+        {
+            "page_number": 37,
+            "content": "Identifying Noun Phrases\n A noun phrase is centered on a \nnoun or pronoun. \n It may contain: \n determiners \n adjectives \n possessives \n modifiers \n Examples of noun phrases: \n the child\n her old bicycle\n the report on climate change\n Not every long span in a sentence \nis a noun phrase."
+        },
+        {
+            "page_number": 38,
+            "content": "Dependency Structure vs Phrase Structure\n Dependency parsing focuses on relations between words. \n Phrase structure parsing focuses on constituent groupings. \n Dependency parsing is especially useful for: \n predicate-argument structure \n information extraction \n relation analysis \n Phrase structure parsing is especially useful for: \n constituent identification \n NP / VP / PP analysis \n hierarchical sentence structure"
+        },
+        {
+            "page_number": 39,
+            "content": "Comparison: What can be represented?\nDependency structure\n● directed edges: head-dependent \nrelations\n● edge labels: grammatical \nfunctions\n● POS tags: syntactic categories\nPhrase structure\n● non-terminal nodes: phrases (and \ntheir hierarchical structure)\n● POS tags: syntactic categories"
+        },
+        {
+            "page_number": 40,
+            "content": "Dependency structures: \nEndocentric vs Exocentric Constructions\nConstruction Head Dependent Required?\nExocentric\nverb subject (sbj) yes\nverb object(obj) yes\nEndocentric\nverb adverb (vmod) no\nnoun adjective (nmod) no"
+        },
+        {
+            "page_number": 41,
+            "content": "Various notations\nThere are far too many!\n... But don't worry; these are just formalisms. You will \nstill see conceptual similarities."
+        },
+        {
+            "page_number": 42,
+            "content": "Various notations\nNotation 1: Horizontally arranged tokens with directed edges\nTokens + grammatical function"
+        },
+        {
+            "page_number": 43,
+            "content": "Various notations\nNotation 2: Horizontally arranged tokens with directed edges\nTokens + grammatical function\n... but arrows are in the opposite direction!"
+        },
+        {
+            "page_number": 44,
+            "content": "Various notations\nNotation 3: Tree of tokens\nTokens + grammatical function... Direction is naturally encoded by the tree"
+        },
+        {
+            "page_number": 45,
+            "content": "Various notations\nNotation 4: Tree of POS tags mapped to tokens\nTokens + grammatical function + POS tags"
+        },
+        {
+            "page_number": 46,
+            "content": "Module 3 Named Entity Recognition\n● What named entities are and why they are useful \n● How entity types depend on the task and domain\n● Why NER is context-dependent\n● NER as a sequence labelling problem \n● The BIO tagging scheme and entity spans \n● How many output classes BIO requires \n● Local vs. global sequence models \n● CRFs, feature-based methods, and neural approaches \n● Exact-match evaluation at the entity level"
+        },
+        {
+            "page_number": 47,
+            "content": "What Is Named Entity Recognition?\n● Named Entity Recognition (NER) identifies mentions of real-world \nentities in text. \n● It also assigns a label to each mention. \n● Typical entity types include: \n○ Person\n○ Organisation\n○ Location\n○ Date / Time\n○ Money\n● NER helps answer questions such as: \n○ Who is mentioned? \n○ Where did something happen? \n○ Which organisations are involved?"
+        },
+        {
+            "page_number": 49,
+            "content": "Named Entities Are Task-Dependent\n● The useful entity types depend on the application domain. \n● In news text, common types include: \n○ person \n○ organisation \n○ location \n○ date \n● In biomedical text, useful types may include: \n○ drug \n○ disease \n○ protein \n○ virus \n● NER is therefore not one fixed universal label set."
+        },
+        {
+            "page_number": 50,
+            "content": "How about this?"
+        },
+        {
+            "page_number": 51,
+            "content": "Why NER Is Context-Dependent\n● The same string can refer to different entity types in different \ncontexts. \n● Examples: \n○ Washington may refer to a person, a city, or a government \n○ Amazon may refer to a company or a river \n● NER systems must use context, not just surface form."
+        },
+        {
+            "page_number": 52,
+            "content": "NER as Sequence Labelling\n● A common formulation treats NER as a token-level sequence \nlabelling task. \n● Each token receives a tag that tells us: \n○ whether it is inside an entity \n○ and which entity type it belongs to \n● This makes NER similar to POS tagging, but with span boundaries \nadded."
+        },
+        {
+            "page_number": 53,
+            "content": "The BIO Tagging Scheme\n● B-X: beginning of an entity of type X \n● I-X: inside an entity of type X \n● O: outside any entity \n● Example: \n○ Maya Chen works at Northbridge Labs in Leeds.\n○ B-PER I-PER O O B-ORG I-ORG O B-LOC O\n● BIO allows us to recover entity spans from token labels."
+        },
+        {
+            "page_number": 54,
+            "content": "From BIO Tags to Entity Mentions\n● Consecutive BIO tags define complete entity mentions. \n● Example: \n○ B-PER I-PER → one two-token person entity \n● A correct entity prediction requires: \n○ the correct span\n○ and the correct type\n● Token-level similarity is not enough if the entity boundary is wrong."
+        },
+        {
+            "page_number": 55,
+            "content": "How Many Output Classes?\n● If BIO is used for N entity types, the number of classes is: \n○ 2N + 1\n● Why? \n○ one B tag for each type \n○ one I tag for each type \n○ one O tag \n● Example: \n○ PER, ORG, LOC \n○ classes = B-PER, I-PER, B-ORG, I-ORG, B-LOC, I-LOC, O \n○ total = 7"
+        },
+        {
+            "page_number": 57,
+            "content": "Local and Global Sequence Models\n● A local model predicts each tag mainly from token-level context. \n● A global model predicts a label sequence while considering \ndependencies between output tags. \n● Why does this matter? \n○ some tag sequences are much more plausible than others \n○ for example, an I-ORG tag should not normally appear after O without a \npreceding B-ORG"
+        },
+        {
+            "page_number": 58,
+            "content": "Conditional Random Fields\n● A Conditional Random Field (CRF) is a global sequence model. \n● It scores the entire output sequence rather than each token \nindependently. \n● CRFs are useful because they can model dependencies such as: \n○ legal BIO transitions \n○ consistency across neighbouring labels \n● This often improves sequence labelling performance."
+        },
+        {
+            "page_number": 60,
+            "content": "Features Used in Classical NER\n● Classical NER models often use handcrafted features: \n○ current word \n○ surrounding words \n○ orthographic features \n○ prefixes and suffixes \n○ trigger words \n○ gazetteers \n● Examples: \n○ initial capitals \n○ all digits \n○ titles such as Dr or Prof\n○ lists of country names or company names"
+        },
+        {
+            "page_number": 64,
+            "content": "Neural Approaches to NER\n● Neural sequence models reduce the need for manual feature \nengineering. \n● Common models include: \n○ BiLSTM\n○ BiLSTM-CRF \n○ Transformer-based encoders \n● These models learn contextual representations directly from data. \n● They often perform well when training data is available."
+        },
+        {
+            "page_number": 65,
+            "content": "Neural Approaches to NER"
+        },
+        {
+            "page_number": 66,
+            "content": "Exact-Match Evaluation for NER\n● NER is usually evaluated at the entity level, not only at the token \nlevel. \n● A predicted entity counts as a true positive only if: \n○ its span is correct \n○ and its type is correct \n● If the boundary is wrong, it is not a correct entity. \n● If the type is wrong, it is also not a correct entity."
+        }
+    ]
+}

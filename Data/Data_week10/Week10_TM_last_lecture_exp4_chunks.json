@@ -1,0 +1,622 @@
+[
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 1,
+    "page_end": 7,
+    "source_pages": [
+      1,
+      3,
+      4,
+      7
+    ],
+    "sentence_count": 36,
+    "token_count": 254,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Module 4 Evaluation Method o Why evaluation is essential in NLP o Benchmark datasets and gold-standard annotations o Why annotation reliability matters o Inter-annotator agreement o Observed agreement, expected agreement, and Cohen\u2019s Kappa o The confusion matrix: TP , FP, FN, TN o Precision, recall, and F1-score o When accuracy can be misleading o Micro, macro, and weighted averages o Entity-level evaluation for NER Why Do We Evaluate NLP Systems? \u25cf Evaluation tells us how well a system is performing. \u25cf Users care about whether a system is useful for a task. \u25cf Developers care about whether a system is improving over time. \u25cf Evaluation supports: \u25cb comparison \u25cb debugging \u25cb model selection \u25cb scientific reporting Benchmark Data and Gold Standards \u25cf Performance evaluation is often based on benchmark datasets. \u25cf These datasets contain: \u25cb inputs \u25cb gold-standard labels \u25cb a fixed evaluation protocol \u25cf Gold standards are usually created by human annotators following annotation guidelines. \u25cf Reliable evaluation depends on reliable annotation. Inter-Annotator Agreement \u25cf Human annotations are not always identical. \u25cf Different annotators may interpret a guideline differently. \u25cf Inter-annotator agreement measures how consistently humans label the same data. \u25cf High agreement suggests the task and the guidelines are clearer and"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_2",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 7,
+    "page_end": 9,
+    "source_pages": [
+      7,
+      8,
+      9
+    ],
+    "sentence_count": 12,
+    "token_count": 83,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "more reliable. Observed Agreement: \ud835\udc43 \ud835\udc4e \u25cf Observed agreement is the proportion of cases on which annotators agree. \u25cf Example: \u25cb two annotators label 10 items \u25cb they agree on 7 items \u25cf Then: \u25cb \ud835\udc43 \ud835\udc4e = 7/10 = 0.70 \u25cf Observed agreement does not correct for chance agreement. Expected Agreement:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_3",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 9,
+    "page_end": 9,
+    "source_pages": [
+      9
+    ],
+    "sentence_count": 10,
+    "token_count": 111,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\ud835\udc43 \ud835\udc52 \u25cf Expected agreement estimates how much agreement would happen by chance. \u25cf Suppose: \u25cb Annotator A assigns Positive to 6/10 items and Negative to 4/10 \u25cb Annotator B assigns Positive to 5/10 items and Negative to 5/10 \u25cf Then: \u25cb chance agreement on Positive = 0.6 \u00d7 0.5 = 0.30 \u25cb chance agreement on Negative = 0.4 \u00d7 0.5 = 0.20 \u25cf So:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_4",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 9,
+    "page_end": 10,
+    "source_pages": [
+      9,
+      10
+    ],
+    "sentence_count": 11,
+    "token_count": 131,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cb \ud835\udc43 \ud835\udc52 = 0.30 + 0.20 = 0.50 Cohen\u2019s Kappa \u25cf Cohen\u2019s Kappa corrects observed agreement for chance agreement. \u25cf Formula: \u25cb \ud835\udc3e = \ud835\udc43 \ud835\udc4e \u2212\ud835\udc43 \ud835\udc52 1\u2212\ud835\udc43 \ud835\udc52 \u25cf Using the previous example: \u25cb \ud835\udc43 \ud835\udc4e = 0.70 \u25cb \ud835\udc43 \ud835\udc52 = 0.50 \u25cb \ud835\udc3e = 0.70 \u2212 0.50 / 1 \u2212 0.50 = 0.40"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_5",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 10,
+    "page_end": 15,
+    "source_pages": [
+      10,
+      15
+    ],
+    "sentence_count": 12,
+    "token_count": 80,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf Kappa is more informative than raw agreement alone. Scoring Precision: fraction of annotated items that are correct Recall: fraction of correct items that are annotated Confusion matrix: Correct Not correct Annotated True positive (TP) False positive (FP) Not annotated False negative (FN) True negative (TN) Precision = TP / (TP+FP) Recall = TP / (TP + FN)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_6",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 21,
+    "page_end": 22,
+    "source_pages": [
+      21,
+      22
+    ],
+    "sentence_count": 11,
+    "token_count": 100,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Blue stars Not blue stars True Positives: False Positives: False Negatives: True Negatives: Precision = TP / (TP+FP) = 5 / (5 + 2) = 5 / 7 = 0.714 Recall = TP / (TP + FN) = 5 / (5 + 1) = 5 / 6 = 0.833 F-score (a.k.a. F-measure, F1-score) Weighted harmonic mean"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_7",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 22,
+    "page_end": 22,
+    "source_pages": [
+      22
+    ],
+    "sentence_count": 3,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "F\u03b2 = (\u03b22 + 1)PR/\u03b22P+R Usually balanced F1 measure is used, where \u03b2=1 F1 = 2PR/(P+R)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_8",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 22,
+    "page_end": 24,
+    "source_pages": [
+      22,
+      23,
+      24
+    ],
+    "sentence_count": 9,
+    "token_count": 87,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Harmonic mean is a more conservative average (truer picture) F-score vs Arithmetic Mean P = 0.714 R = 0.833 Arithmetic Mean: (0.714 + 0.833) / 2 = 0.774 F-score: 2 * 0.714 * 0.833 / (0.714 + 0.833) = 0.769 F-score vs Arithmetic Mean"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_9",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 24,
+    "page_end": 25,
+    "source_pages": [
+      24,
+      25
+    ],
+    "sentence_count": 8,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "P = 1 R = 0.15 Arithmetic Mean: (1 + 0.15) / 2 = 0.575 F-score: 2 * 1 * 0.15 / (1 + 0.15) = 0.261 What about Accuracy? Measure of all correctly identified cases"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_10",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 25,
+    "page_end": 26,
+    "source_pages": [
+      25,
+      26
+    ],
+    "sentence_count": 7,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Acc = (TP + TN) / (TP + TN + FP + FN)) Suitable if all classes are equally important. What if not? Example: Hate vs Neutral Use F-score Multiple Categories:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_11",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 26,
+    "page_end": 26,
+    "source_pages": [
+      26
+    ],
+    "sentence_count": 8,
+    "token_count": 109,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Micro vs Macro-averaging How do we report combined performance for Person and Location? Option 1: Macro-averaging -- Simply get the average PPerson+Location = (0.94+0.87)/2 = 0.91 RPerson+Location = (0.70+0.91)/2 = 0.81 F1Person+Location = (2*0.91*0.81)/(0.91+0.81) = 0.86 Category TPs FPs FNs Precision Recall"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_12",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 26,
+    "page_end": 27,
+    "source_pages": [
+      26,
+      27
+    ],
+    "sentence_count": 5,
+    "token_count": 50,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Person 78 5 33 0.94 0.70 Location 20 3 2 0.87 0.91 Multiple Categories: Micro vs Macro-averaging How do we report combined performance for Person and Location?"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_13",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 27,
+    "page_end": 27,
+    "source_pages": [
+      27
+    ],
+    "sentence_count": 6,
+    "token_count": 107,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Option 2: Micro-averaging -- Pool together the TPs, FPs and FNs PPerson+Location = (78+20)/((78+20)+(5+3)) = 0.92 RPerson+Location = (78+20)/((78+20)+(33+2)) = 0.74 F1Person+Location = (2*0.92*0.74)/(0.92+0.74) = 0.82 Category TPs FPs FNs Precision Recall"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_14",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 27,
+    "page_end": 28,
+    "source_pages": [
+      27,
+      28
+    ],
+    "sentence_count": 8,
+    "token_count": 68,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Person 78 5 33 0.94 0.70 Location 20 3 2 0.87 0.91 Which is better? Macro-averaging does not consider class imbalance; micro-averaging is less sensitive to imbalance Weighted average: average weighted by the number of true instances for each class"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_15",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 28,
+    "page_end": 29,
+    "source_pages": [
+      28,
+      29
+    ],
+    "sentence_count": 15,
+    "token_count": 101,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Category TPs FPs FNs Precision Recall Person 78 5 33 0.94 0.70 Location 20 3 2 0.87 0.91 Confusion Matrix for evaluating automated predictions \u25cf For automated systems, evaluation often starts with a confusion matrix. \u25cf For a positive class: \u25cb TP: predicted positive, actually positive \u25cb FP: predicted positive, actually negative \u25cb FN: predicted negative, actually positive \u25cb TN: predicted negative, actually negative"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_16",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 29,
+    "page_end": 30,
+    "source_pages": [
+      29,
+      30
+    ],
+    "sentence_count": 15,
+    "token_count": 160,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf Many common metrics are derived from these four counts. Positive class (Response) Negative class (Response) Positive class (Reference) True Positives (TP) False Negatives (FN) Negative class (Reference) False Positives (FP) True Negatives (TN) Worked NER Example: Counting Entities \u25cf Tokens: \u25cb Dr | Maya | Chen | joined | Acme | Labs | in | Bristol | . \u25cf Gold tags: \u25cb B-PER I-PER I-PER O B-ORG I-ORG O B-LOC O \u25cf Predicted tags: \u25cb B-PER I-PER O O B-ORG I-ORG O O O \u25cf Entity counts: \u25cb PER: TP = 0, FP = 1, FN = 1"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_17",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 30,
+    "page_end": 31,
+    "source_pages": [
+      30,
+      31
+    ],
+    "sentence_count": 10,
+    "token_count": 68,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cb ORG: TP = 1, FP = 0, FN = 0 \u25cb LOC: TP = 0, FP = 0, FN = 1 \u25cf The person prediction is wrong because the predicted span is incomplete. Gold entities \u25cf Maya Chen = PER \u25cf Acme Labs = ORG \u25cf Bristol = LOC"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_18",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 31,
+    "page_end": 31,
+    "source_pages": [
+      31
+    ],
+    "sentence_count": 8,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Predicted entities \u25cf Maya Chen = PER \u25cf Acme = ORG \u25cf Bristol = LOC Counts \u25cf PER: TP = 1, FP = 0, FN = 0 \u25cf ORG:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_19",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 31,
+    "page_end": 32,
+    "source_pages": [
+      31,
+      32
+    ],
+    "sentence_count": 9,
+    "token_count": 115,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "TP = 0, FP = 1, FN = 1 \u25cf LOC: TP = 1, FP = 0, FN = 0 Key point: A partially correct span does not count as a true positive. Precision and Recall \u25cf Precision asks: \u25cb Of the items predicted as positive, how many are correct? \u25cb \ud835\udc43\ud835\udc5f\ud835\udc52\ud835\udc50\ud835\udc56\ud835\udc60\ud835\udc56\ud835\udc5c\ud835\udc5b = \ud835\udc47\ud835\udc43/ \ud835\udc47\ud835\udc43 + \ud835\udc39\ud835\udc43"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_20",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 32,
+    "page_end": 32,
+    "source_pages": [
+      32
+    ],
+    "sentence_count": 3,
+    "token_count": 59,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf Recall asks: \u25cb Of the truly positive items, how many did the system find? \u25cb \ud835\udc45\ud835\udc52\ud835\udc50\ud835\udc4e\ud835\udc59\ud835\udc59 = \ud835\udc47\ud835\udc43/ \ud835\udc47\ud835\udc43 + \ud835\udc39\ud835\udc41"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_21",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 32,
+    "page_end": 33,
+    "source_pages": [
+      32,
+      33
+    ],
+    "sentence_count": 7,
+    "token_count": 51,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf Precision and recall capture different aspects of performance. The F1 Score \u25cf F1 combines precision and recall using the harmonic mean. \u25cf Formula: \u25cb \ud835\udc391 = 2\ud835\udc43\ud835\udc45 \ud835\udc43+\ud835\udc45"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_22",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 33,
+    "page_end": 34,
+    "source_pages": [
+      33,
+      34
+    ],
+    "sentence_count": 10,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf F1 is high only when both precision and recall are high. \u25cf It is often preferred when the positive class is important and class balance is uneven. Worked Example: Computing F1 \u25cf Suppose a spam detector produces: \u25cb TP = 18 \u25cb FP = 6 \u25cb FN = 9 \u25cf Then:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_23",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 34,
+    "page_end": 34,
+    "source_pages": [
+      34
+    ],
+    "sentence_count": 4,
+    "token_count": 80,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cb Precision = 18 / (18 + 6) = 0.75 \u25cb Recall = 18 / (18 + 9) = 0.67 \u25cb F1 = 2 \u00d7 0.75 \u00d7 0.67/ 0.75 + 0.67 \u22480.71 \u25cf This shows the full calculation from counts to F1."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_24",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 35,
+    "page_end": 35,
+    "source_pages": [
+      35
+    ],
+    "sentence_count": 4,
+    "token_count": 83,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "When Accuracy Can Mislead \u25cf Accuracy measures the proportion of all correct decisions. \u25cf Formula: \u25cb \ud835\udc34\ud835\udc50\ud835\udc50\ud835\udc62\ud835\udc5f\ud835\udc4e\ud835\udc50\ud835\udc66 = \ud835\udc47\ud835\udc43 + \ud835\udc47\ud835\udc41 / \ud835\udc47\ud835\udc43 + \ud835\udc47\ud835\udc41 + \ud835\udc39\ud835\udc43 + \ud835\udc39\ud835\udc41"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_25",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 35,
+    "page_end": 35,
+    "source_pages": [
+      35
+    ],
+    "sentence_count": 4,
+    "token_count": 43,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf Accuracy can be misleading on imbalanced datasets. \u25cf Example: \u25cb if 95% of items are negative, always predicting negative gives 95% accuracy \u25cb but recall for the positive class is 0"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_26",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 35,
+    "page_end": 36,
+    "source_pages": [
+      35,
+      36
+    ],
+    "sentence_count": 7,
+    "token_count": 56,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf In such cases, F1 is often more informative. Micro, Macro, and Weighted Averages \u25cf For multi-class problems, we often report combined performance. \u25cf Macro average: \u25cb compute the metric for each class \u25cb then average across classes equally \u25cf Micro average:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_27",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 36,
+    "page_end": 36,
+    "source_pages": [
+      36
+    ],
+    "sentence_count": 5,
+    "token_count": 47,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cb pool all TP , FP , and FN first \u25cb then compute the metric once \u25cf Weighted average: \u25cb average class-level metrics using class frequency as weights \u25cf The choice affects how strongly rare classes influence the final score."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_28",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 37,
+    "page_end": 37,
+    "source_pages": [
+      37
+    ],
+    "sentence_count": 6,
+    "token_count": 41,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Worked Example: Micro-Averaged F1 for NER Using the previous example: \u25cb PER: TP = 1, FP = 0, FN = 0 \u25cb ORG:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_29",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 37,
+    "page_end": 37,
+    "source_pages": [
+      37
+    ],
+    "sentence_count": 4,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "TP = 0, FP = 1, FN = 1 \u25cb LOC: TP = 1, FP = 0, FN = 0 Now pool all counts across entity types:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_30",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 37,
+    "page_end": 38,
+    "source_pages": [
+      37,
+      38
+    ],
+    "sentence_count": 14,
+    "token_count": 180,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cb Total TP = 2 \u25cb Total FP = 1 \u25cb Total FN = 1 \u25cb \ud835\udc43\ud835\udc5f\ud835\udc52\ud835\udc50\ud835\udc56\ud835\udc60\ud835\udc56\ud835\udc5c\ud835\udc5b\ud835\udc5a\ud835\udc56\ud835\udc50\ud835\udc5f\ud835\udc5c = 2+1 = 0.667 \u25cb \ud835\udc45\ud835\udc52\ud835\udc50\ud835\udc4e\ud835\udc59\ud835\udc59\ud835\udc5a\ud835\udc56\ud835\udc50\ud835\udc5f\ud835\udc5c = 2+1 = 0.667 \u25cb \ud835\udc391\ud835\udc5a\ud835\udc56\ud835\udc50\ud835\udc5f\ud835\udc5c = 2\u00d70.667\u00d70.667 0.667+0.667 = 0.667 \u25cf Interpretation: Micro-averaging gives one overall score after combining all entity decisions across categories. Module 5."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_31",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 38,
+    "page_end": 39,
+    "source_pages": [
+      38,
+      39
+    ],
+    "sentence_count": 11,
+    "token_count": 81,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "Open Information Extraction oWhat Open Information Extraction is oHow OpenIE differs from predefined relation extraction o A brief view of classical and neural OpenIE approaches What Is Open Information Extraction? \u25cf Open Information Extraction (OpenIE) extracts relational facts from text without relying on a fixed predefined schema. \u25cf Input: \u25cb raw sentences or documents \u25cf Output: \u25cb relation tuples such as (argument, relation, argument)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_32",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 39,
+    "page_end": 40,
+    "source_pages": [
+      39,
+      40
+    ],
+    "sentence_count": 12,
+    "token_count": 70,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf OpenIE aims to turn unstructured text into machine-readable knowledge. What an OpenIE Extraction Looks Like \u25cf Sentence: \u25cb Albert Einstein published the theory of relativity in 1915. \u25cf Example extraction: \u25cb (Albert Einstein; published; the theory of relativity) \u25cb (Albert Einstein; published in; 1915)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_33",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 40,
+    "page_end": 41,
+    "source_pages": [
+      40,
+      41
+    ],
+    "sentence_count": 9,
+    "token_count": 47,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf OpenIE relies heavily on earlier NLP steps: \u25cb POS tagging \u25cb parsing \u25cb entity recognition A Short View of OpenIE Methods and Limits \u25cf Classical methods used: \u25cb patterns \u25cb dependency structure \u25cb clause splitting"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_34",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 41,
+    "page_end": 41,
+    "source_pages": [
+      41
+    ],
+    "sentence_count": 7,
+    "token_count": 48,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "\u25cf Later work introduced supervised and neural approaches. \u25cf Common challenges include: \u25cb ambiguity \u25cb synonymy \u25cb coreference \u25cb trustworthiness of extracted facts \u25cf In this module, OpenIE is a compact application case rather than the"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week10_sem_35",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "page_start": 41,
+    "page_end": 41,
+    "source_pages": [
+      41
+    ],
+    "sentence_count": 1,
+    "token_count": 4,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1198,
+    "content": "main assessment focus."
+  }
+]

@@ -1,0 +1,1078 @@
+[
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_1",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 1,
+    "page_end": 2,
+    "source_pages": [
+      1,
+      2
+    ],
+    "sentence_count": 12,
+    "token_count": 77,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Applications of LLMs Jingyuan Sun Lecturer of Natural Language Processing Department of Computer Science The University of Manchester Agenda Agenda: \u2013 The Transition from Foundation Models to Applications \u2013 Core NLP and Text-Based Applications \u2013 Domain-Specific Transformations (Code, Healthcare, Law) \u2013 LLMs as Autonomous Agents (Tool Use and Reasoning) \u2013 Deployment Challenges and Ethical Considerations"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_2",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 2,
+    "page_end": 3,
+    "source_pages": [
+      2,
+      3
+    ],
+    "sentence_count": 12,
+    "token_count": 95,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Learning Outcomes: \u2013 Map core LLM capabilities to specific real-world industry use cases. \u2013 Evaluate the appropriate adaptation strategy (Prompting vs. RAG vs. Fine- Tuning) for different applications. \u2013 Analyze the architecture of LLM agents and tool-augmented systems. \u2013 Critique current limitations regarding deployment, cost, and safety. Core Application 1: Advanced Text Summarization The Evolution of Summarization: \u2013 Pre-LLM Era:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_3",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 3,
+    "page_end": 3,
+    "source_pages": [
+      3
+    ],
+    "sentence_count": 8,
+    "token_count": 54,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Extractive summarization (copying sentences) via smaller encoder models (like BERT). \u2013 LLM Era: Highly abstractive summarization, capable of synthesizing meaning. Key Application Patterns: \u2013 Meeting Transcripts: Converting raw speech-to-text logs into structured"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_4",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 3,
+    "page_end": 3,
+    "source_pages": [
+      3
+    ],
+    "sentence_count": 9,
+    "token_count": 74,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "action items. \u2013 Document Routing: Summarizing customer support tickets to categorize and route to the correct human agent. Evaluation Connection: \u2013 How do we know the summary is good? As discussed in Week 6, we use metrics like ROUGE, but increasingly rely on LLM-as-a-judge (using strict evaluation prompts) to check for factual consistency and prevent"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_5",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 3,
+    "page_end": 4,
+    "source_pages": [
+      3,
+      4
+    ],
+    "sentence_count": 14,
+    "token_count": 104,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "hallucination. Core Application 2: Structured Data Extraction The Problem: 80% of enterprise data is unstructured (emails, PDFs, reports). The LLM Solution: Using LLMs for Zero-Shot or Few-Shot Information Extraction (IE). \u2013 Named Entity Recognition (NER): Extracting companies, monetary values, and dates without training custom BERT models. \u2013 Relation Extraction: Identifying the relationship between entities (e.g., Company A [ACQUIRED] Company B). Implementation Strategy:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_6",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 4,
+    "page_end": 4,
+    "source_pages": [
+      4
+    ],
+    "sentence_count": 5,
+    "token_count": 41,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Use structural prompting (e.g., instructing the model to output strict JSON). \u2013 Challenge: Output parsing errors. Models may append conversational text (\"Here is your JSON:\") which breaks downstream code."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_7",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 5,
+    "page_end": 5,
+    "source_pages": [
+      5
+    ],
+    "sentence_count": 11,
+    "token_count": 83,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Mini-Quiz 1: Application Architecture Scenario: You are building an internal company tool to help HR instantly answer employee questions about the 200-page company benefits handbook. Which architecture is the most appropriate and cost-effective? \u2013 A) Pretrain a new foundational model from scratch on HR documents. \u2013 B) Use a general Instruction-Tuned LLM and Retrieval-Augmented Generation (RAG) with the handbook."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_8",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 5,
+    "page_end": 6,
+    "source_pages": [
+      5,
+      6
+    ],
+    "sentence_count": 23,
+    "token_count": 176,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 C) Use a standard Zero-Shot Prompt asking the model to guess the company policies. \u2013 D) Supervised Fine-Tune (SFT) an LLM solely on the HR handbook. Domain-Specific Application: Software Engineering Code Generation and Copilots: \u2013 LLMs trained heavily on GitHub/StackOverflow (e.g., GitHub Copilot, CodeLlama). \u2013 Tasks:Autocompletion, writing unit tests, translating code between languages (e.g., Python to Rust). Code Review and Bug Fixing: \u2013 Using LLMs to detect security vulnerabilities or suggest performance optimizations. Why LLMs excel at Code: \u2013 Code has strict syntax and logic, reducing the ambiguity present in natural language. \u2013 Evaluation: Extremely objective. We don't need human graders; we evaluate generated code by simply running it through compiler/unit test suites (Pass@k"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_9",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 6,
+    "page_end": 8,
+    "source_pages": [
+      6,
+      7,
+      8
+    ],
+    "sentence_count": 11,
+    "token_count": 68,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "metric). Domain-Specific Application: Healthcare & Biomedicine Class Discussion (5 Minutes) Topic: The Generalist vs. Specialist Debate Currently, state-of-the-art general models (like GPT-4) often outperform smaller, domain-specific fine-tuned models (like a 7B parameter legal-specific model) even on domain-specific"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_10",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 8,
+    "page_end": 8,
+    "source_pages": [
+      8
+    ],
+    "sentence_count": 7,
+    "token_count": 44,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "tasks. Discussion Question: * Will the future of LLM applications be dominated by a few massive \"God-models\" accessed via API, or by thousands of smaller, locally hosted, highly specialized models? \u2013 Hint:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_11",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 8,
+    "page_end": 9,
+    "source_pages": [
+      8,
+      9
+    ],
+    "sentence_count": 12,
+    "token_count": 74,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Consider data privacy, inference costs, and latency. Domain-Specific Application: Law and Finance Legal Sector: \u2013 E-Discovery: Scanning millions of documents for relevance to a subpoena. \u2013 Contract Analysis: Identifying risky clauses, non-standard terms, or missing indemnifications. \u2013 Risk: The \"hallucinated legal cases\" problem (models inventing fake precedent)."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_12",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 9,
+    "page_end": 9,
+    "source_pages": [
+      9
+    ],
+    "sentence_count": 10,
+    "token_count": 58,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Finance Sector: \u2013 Algorithmic Trading: Real-time sentiment analysis of financial news and SEC filings. \u2013 Automated Reporting: Synthesizing quarterly earnings calls into executive summaries. \u2013 Adaptation technique: Often heavily relies on RAG to ensure real-time data access (stock prices change by the second;"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_13",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 9,
+    "page_end": 10,
+    "source_pages": [
+      9,
+      10
+    ],
+    "sentence_count": 13,
+    "token_count": 68,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "parametric memory is useless here). Application Paradigm Shift: LLMs as Agents From Passive Responders to Active Agents: \u2013 Standard LLM: Takes text, outputs text. \u2013 Agentic LLM: Takes a high-level goal, reasons about steps, interacts with external environments, and executes actions. The Core Components of an LLM"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_14",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 10,
+    "page_end": 11,
+    "source_pages": [
+      10,
+      11
+    ],
+    "sentence_count": 22,
+    "token_count": 104,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Agent: \u2013 1. Brain: The LLM itself (handling reasoning and planning). \u2013 2. Memory: Short-term (context window) and Long-term (vector databases). \u2013 3. Tools: Functions the LLM can call (APIs, calculators, web browsers). How Agents Work: ReAct Prompting ReAct (Reasoning and Acting): \u2013 A specific prompting paradigm that intertwines Chain-of-Thought reasoning with environmental actions. The Loop: \u2013 Thought: Model reasons about what to do"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_15",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 11,
+    "page_end": 12,
+    "source_pages": [
+      11,
+      12
+    ],
+    "sentence_count": 20,
+    "token_count": 153,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "next based on the user prompt. \u2013 Action: Model decides to call an external tool (e.g., SearchWikipedia(\"Eiffel Tower\")). \u2013 Observation: The tool returns data to the model. \u2013 (Loop repeats until the goal is achieved). Why this is powerful: It overcomes the LLM's inability to do math or know current events by allowing it to use a calculator and a search engine. Multi-Agent Systems The Concept: \u2013 Instead of one massive prompt trying to do everything, instantiate multiple LLM agents with distinct personas and tools, and let them communicate. Example System (Software Development): \u2013 Agent 1 (Product Manager): Writes the system requirements. \u2013 Agent 2 (Software Engineer): Writes the Python code based on Agent 1's"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_16",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 12,
+    "page_end": 13,
+    "source_pages": [
+      12,
+      13
+    ],
+    "sentence_count": 7,
+    "token_count": 53,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "requirements. \u2013 Agent 3 (QA Tester):Reviews Agent 2's code, finds bugs, and sends it back for revision. Benefits: \u2013 Separation of concerns. \u2013 Self-reflection and self-correction through simulated debate. Mini-Quiz 2:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_17",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 13,
+    "page_end": 13,
+    "source_pages": [
+      13
+    ],
+    "sentence_count": 10,
+    "token_count": 90,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Agents and Hallucinations Question: You ask an LLM Agent to calculate $345,678 \\times 987,654$. Which of the following describes the safest \"Agentic\" approach? A) Prompt the LLM with \"Let's think step-by-step\" to calculate the math token-by-token. B) Provide the LLM with a Python interpreter tool, instruct it to write a Python script to multiply the numbers, execute it, and"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_18",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 13,
+    "page_end": 14,
+    "source_pages": [
+      13,
+      14
+    ],
+    "sentence_count": 10,
+    "token_count": 76,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "return the printed observation. C) Fine-tune the LLM on thousands of multiplication tables. Deployment Bottlenecks: Why isn't LLM everywhere yet? Despite the amazing capabilities, real-world deployment faces severe engineering hurdles: Inference Cost: \u2013 Running a 70B parameter model costs significant GPU compute per token. Generative AI is structurally more expensive than traditional software."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_19",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 14,
+    "page_end": 15,
+    "source_pages": [
+      14,
+      15
+    ],
+    "sentence_count": 14,
+    "token_count": 116,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Latency: \u2013 Autoregressive generation (token-by-token) is slow. High latency degrades user experience in real-time applications (like voice assistants). Reliability & Evaluation: \u2013 Traditional software is deterministic (Input A always yields Output B). \u2013 LLMs are probabilistic. Continuous monitoring and robust evaluation pipelines (like the Inversion Prompting techniques covered in Week 6) are strictly required. Ethical and Safety Considerations in Applications Bias and Fairness: \u2013 Models amplify biases present in their training data (e.g., screening resumes and unfairly penalizing certain demographics)."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_20",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 15,
+    "page_end": 16,
+    "source_pages": [
+      15,
+      16
+    ],
+    "sentence_count": 17,
+    "token_count": 121,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Security (Prompt Injection): \u2013 User-facing applications (like customer service bots) are highly vulnerable to malicious users altering the system prompt to leak data or output profanity. Copyright and IP: \u2013 Generative applications risk reproducing copyrighted code or text from their pretraining datasets. Discussion: The Future of Applications Topic: Human-in-the-loop vs. Full Autonomy Currently, most successful LLM applications act as \"Copilots\" (augmenting a human worker who reviews the final output). However, the industry is pushing toward \"Agents\" (full autonomy, executing workflows while humans sleep). Discussion Prompt:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_21",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 16,
+    "page_end": 17,
+    "source_pages": [
+      16,
+      17
+    ],
+    "sentence_count": 8,
+    "token_count": 72,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 In which industries is full LLM autonomy acceptable today? \u2013 Where must we permanently maintain a \"human-in-the-loop\" constraint? Summary & Q&A Summary: \u2013 LLM Applications extend base models using Prompting, RAG, and Tool-use to solve real business problems. \u2013 Core NLP tasks (Summarization, Extraction) are now largely solved"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_22",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 17,
+    "page_end": 17,
+    "source_pages": [
+      17
+    ],
+    "sentence_count": 6,
+    "token_count": 46,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "by prompting. \u2013 Domain applications (Code, Medical, Legal) require strict adherence to facts, often leveraging RAG. \u2013 Agents represent the frontier: models that use tools, reason via ReAct, and interact with the environment."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_23",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 17,
+    "page_end": 19,
+    "source_pages": [
+      17,
+      18,
+      19
+    ],
+    "sentence_count": 16,
+    "token_count": 110,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Deployment is currently constrained by compute costs, latency, and safety evaluation. Multimodal LLMs Jingyuan Sun Lecturer of Natural Language Processing Department of Computer Science The University of Manchester Agenda & Learning Outcomes Agenda: \u2013 The Motivation for Multimodality \u2013 Core MLLM Architecture & The \"Modality Gap\" \u2013 Landmark Models (CLIP, Flamingo, BLIP-2, LLaVA) \u2013 Training Pipelines: Visual Instruction Tuning \u2013 Multimodal Prompting & Evaluation Learning Outcomes:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_24",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 19,
+    "page_end": 19,
+    "source_pages": [
+      19
+    ],
+    "sentence_count": 5,
+    "token_count": 60,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Understand the structural components of an MLLM (Encoder, Projector, LLM Backbone). \u2013 Analyze the two-stage training pipeline for modern vision-language models. \u2013 Apply multimodal prompting techniques (interleaved text/image). \u2013 Evaluate MLLMs using modern benchmarks and identify visual hallucination"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_25",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 19,
+    "page_end": 21,
+    "source_pages": [
+      19,
+      20,
+      21
+    ],
+    "sentence_count": 18,
+    "token_count": 161,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "risks. What is a Multimodal LLM (MLLM)? Definition: * An MLLM is a language model capable of receiving, reasoning over, and (sometimes) generating multiple data modalities (text, images, audio, video). The Goal: \u2013 Retain the advanced reasoning and instruction-following capabilities of the LLM. \u2013 Grant the LLM \"eyes\" and \"ears\" to perceive the real world. Focus of this Lecture: \u2013 Vision-Language Models (VLMs), as they are currently the most researched and deployed subclass of MLLMs. Core Architecture of an MLLM Virtually all modern MLLMs share a tripartite (three-part) architecture: The Vision Encoder: \u2013 Extracts high-dimensional feature representations from raw image pixels. \u2013 Example:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_26",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 21,
+    "page_end": 21,
+    "source_pages": [
+      21
+    ],
+    "sentence_count": 6,
+    "token_count": 41,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Vision Transformer (ViT). The Connector (Projection Layer): \u2013 Translates the visual features into the \"language\" (embedding space) of the LLM. The LLM Backbone: \u2013 The brain."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_27",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 21,
+    "page_end": 22,
+    "source_pages": [
+      21,
+      22
+    ],
+    "sentence_count": 8,
+    "token_count": 61,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Processes the translated visual tokens alongside standard text tokens to generate a text response. \u2013 Example: LLaMA, Vicuna. Component 1: The Vision Encoder (CLIP) Contrastive Language-Image Pretraining (CLIP): \u2013 A foundational model by OpenAI that maps images and text into the"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_28",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 22,
+    "page_end": 22,
+    "source_pages": [
+      22
+    ],
+    "sentence_count": 7,
+    "token_count": 60,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "same vector space. How it works: \u2013 Trained on 400 million (Image, Caption) pairs. \u2013 Uses a Contrastive Loss function: maximizes the cosine similarity between the embedding of an image (e.g., a dog) and its correct text description (\"a picture of a dog\")."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_29",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 22,
+    "page_end": 24,
+    "source_pages": [
+      22,
+      23,
+      24
+    ],
+    "sentence_count": 10,
+    "token_count": 86,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Why it matters for MLLMs: \u2013 We freeze the CLIP Vision Encoder and use it as the \"eyes\" for our LLMs, because its visual features are already semantically aligned with human language. Reference: Radford et al., \"Learning Transferable Visual Models From Natural Language Supervision\" (ICML 2021) CLIP Architecture Overview Component 2: The Connector / Modality Gap The Problem:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_30",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 24,
+    "page_end": 24,
+    "source_pages": [
+      24
+    ],
+    "sentence_count": 4,
+    "token_count": 49,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 The CLIP Vision Encoder outputs vectors of size $D_{vision}$. \u2013 The LLM expects word embeddings of size $D_{text}$. \u2013 These two spaces do not naturally communicate (The \"Modality Gap\"). The Solution:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_31",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 24,
+    "page_end": 24,
+    "source_pages": [
+      24
+    ],
+    "sentence_count": 6,
+    "token_count": 51,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 We introduce a lightweight, trainable neural network layer between them. Connector Types: \u2013 Linear Projection: A simple weight matrix (used in early LLaVA). \u2013 MLP (Multi-Layer Perceptron): A 2-layer network for better translation."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_32",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 24,
+    "page_end": 25,
+    "source_pages": [
+      24,
+      25
+    ],
+    "sentence_count": 5,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Q-Former / Perceiver Resampler: Compresses visual tokens to save context window space (used in BLIP-2, Flamingo). Mini-Quiz 1: Architecture Check"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_33",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 25,
+    "page_end": 26,
+    "source_pages": [
+      25,
+      26
+    ],
+    "sentence_count": 10,
+    "token_count": 79,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Question: In a standard vision-language MLLM like LLaVA, which component is primarily responsible for performing complex logic, math, and generating the final conversational response? A) The Vision Transformer (ViT) B) The Contrastive Loss Function C) The LLM Backbone (e.g., Vicuna/LLaMA) D) The Projection Layer Landmark Model 1:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_34",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 26,
+    "page_end": 26,
+    "source_pages": [
+      26
+    ],
+    "sentence_count": 9,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Flamingo The Breakthrough: DeepMind's Flamingo was the first model to demonstrate highly effective interleaved image-text prompting. Architecture Innovation: \u2013 Perceiver Resampler: Compresses thousands of image tokens down to just 64 tokens, saving massive computational cost."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_35",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 26,
+    "page_end": 26,
+    "source_pages": [
+      26
+    ],
+    "sentence_count": 9,
+    "token_count": 78,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Cross-Attention Layers: Instead of feeding the image at the very beginning of the prompt, Flamingo injects visual information directly into the deep layers of the LLM. Impact: Proved that MLLMs could perform Few-Shot In- Context Learning (just like GPT-3), but with images. Reference: Alayrac et al., \"Flamingo:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_36",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 26,
+    "page_end": 29,
+    "source_pages": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "sentence_count": 8,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "a Visual Language Model for Few -Shot Learning\" (NeurIPS 2022) Flamingo Architecture Overview Flamingo Architecture Overview Flamingo Results Overview Landmark Model 2: BLIP-2 Reference: Li et al., \"BLIP-2:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_37",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 29,
+    "page_end": 29,
+    "source_pages": [
+      29
+    ],
+    "sentence_count": 5,
+    "token_count": 48,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Bootstrapping Language-Image Pre- training...\" (ICML 2023) The Efficiency Breakthrough: \u2013 Training massive LLMs from scratch is expensive. \u2013 BLIP-2 completely freezes both the Vision Encoder and the LLM"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_38",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 29,
+    "page_end": 29,
+    "source_pages": [
+      29
+    ],
+    "sentence_count": 6,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Backbone. The Q-Former (Querying Transformer): \u2013 A lightweight, trainable module that learns to extract only the most relevant visual features required by the LLM. Result: Achieved state-of-the-art performance using significantly"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_39",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 29,
+    "page_end": 31,
+    "source_pages": [
+      29,
+      31
+    ],
+    "sentence_count": 10,
+    "token_count": 86,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "fewer trainable parameters, democratizing MLLM research for university labs. Landmark Model 3: LLaVA Large Language-and-Vision Assistant (LLaVA): \u2013 The open-source pioneer of Visual Instruction Tuning. Simplicity is Key: \u2013 Uses a frozen CLIP encoder. \u2013 Uses a simple Linear/MLP projection layer. \u2013 Uses a frozen Vicuna (LLaMA-based) LLM."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_40",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 31,
+    "page_end": 33,
+    "source_pages": [
+      31,
+      32,
+      33
+    ],
+    "sentence_count": 11,
+    "token_count": 93,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Why did it win? The magic wasn't in the architecture; was in the data generation pipeline (using GPT-4 to generate multimodal training data). Reference: Liu et al., \"Visual Instruction Tuning\" (NeurIPS 2023) LLaVAArchitecture Overview The MLLM Training Pipeline (Stage 1) Training an MLLM like LLaVA happens in two distinct stages. Stage 1: Feature Alignment Pretraining"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_41",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 33,
+    "page_end": 33,
+    "source_pages": [
+      33
+    ],
+    "sentence_count": 5,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Goal: Teach the LLM to understand the Vision Encoder's \"language\". \u2013 Data: Millions of simple (Image, Caption) pairs (e.g., CC3M dataset). \u2013 Frozen:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_42",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 33,
+    "page_end": 34,
+    "source_pages": [
+      33,
+      34
+    ],
+    "sentence_count": 9,
+    "token_count": 70,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Vision Encoder and LLM Backbone. \u2013 Trainable: Only the Projection Layer. \u2013 Analogy: Teaching an English speaker (LLM) to read a French dictionary (Vision features) by mapping words one-to-one. The MLLM Training Pipeline (Stage 2) Stage 2: Visual Instruction Tuning (Multimodal SFT)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_43",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 34,
+    "page_end": 34,
+    "source_pages": [
+      34
+    ],
+    "sentence_count": 10,
+    "token_count": 58,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Goal: Teach the model to follow complex human instructions about images (e.g., \"Why is this meme funny?\"). \u2013 Data: ~150k highly detailed, instruction-following multimodal conversations. \u2013 Frozen: Vision Encoder. \u2013 Trainable: Projection Layer and LLM Backbone."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_44",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 34,
+    "page_end": 35,
+    "source_pages": [
+      34,
+      35
+    ],
+    "sentence_count": 6,
+    "token_count": 50,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Connecting to Week 6: Just like standard Supervised Fine- Tuning (SFT) taught text LLMs to be assistants, Visual Instruction Tuning teaches MLLMs to be visual assistants. Class Discussion: Data Generation (5 mins)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_45",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 35,
+    "page_end": 35,
+    "source_pages": [
+      35
+    ],
+    "sentence_count": 5,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Topic: How do we get Visual Instruction Data? In 2023, the LLaVA authors needed 150,000 conversational Q&A pairs about images, but human labeling was too expensive."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_46",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 35,
+    "page_end": 35,
+    "source_pages": [
+      35
+    ],
+    "sentence_count": 6,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "They used a text-only model (GPT-4) to generate data for their multimodal model. Discussion Question: \u2013 If GPT-4 (at the time) was text-only and couldn't see images, how did the authors use it to generate highly accurate, detailed visual Q&A data to train LLaVA?"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_47",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 35,
+    "page_end": 36,
+    "source_pages": [
+      35,
+      36
+    ],
+    "sentence_count": 12,
+    "token_count": 83,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 (Hint: Think about bounding boxes and captions). Beyond Images: Audio and Video Video as a Sequence of Images: \u2013 Video MLLMs (like Video-LLaVA) treat video as a sequence of frames. \u2013 Challenge: Context window exhaustion. 30 frames of video = 30x the visual tokens. Audio Encoders: \u2013 Architectures like Whisper (Audio Transformer) can be projected into the"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_48",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 36,
+    "page_end": 37,
+    "source_pages": [
+      36,
+      37
+    ],
+    "sentence_count": 6,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "LLM just like CLIP. Any-to-Any Models: \u2013 Emerging models (like GPT-4o or Gemini 1.5 Pro) are trained natively on multiple modalities from scratch, bypassing the strict \"Encoder -> Projector\" pipeline for more organic cross-modal understanding. Evaluating MLLMs:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_49",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 37,
+    "page_end": 37,
+    "source_pages": [
+      37
+    ],
+    "sentence_count": 5,
+    "token_count": 42,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Traditional Benchmarks How do we know if an MLLM is good? VQAv2 (Visual Question Answering): \u2013 Short, factual questions (e.g., \"What color is the car?\")."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_50",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 37,
+    "page_end": 37,
+    "source_pages": [
+      37
+    ],
+    "sentence_count": 6,
+    "token_count": 46,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Drawback: Too simple for modern MLLMs. OK-VQA (Outside Knowledge VQA): \u2013 Requires world knowledge not present in the image. \u2013 Example: `` + \"Which political party does this person belong to?\""
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_51",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 37,
+    "page_end": 38,
+    "source_pages": [
+      37,
+      38
+    ],
+    "sentence_count": 8,
+    "token_count": 49,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Image Captioning (COCO): \u2013 Generating descriptive text. Evaluated via n-gram overlap metrics like CIDEr or BLEU. Evaluating MLLMs: Comprehensive Benchmarks Because modern MLLMs are conversational, old benchmarks"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_52",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 38,
+    "page_end": 39,
+    "source_pages": [
+      38,
+      39
+    ],
+    "sentence_count": 12,
+    "token_count": 104,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "fail to capture their abilities. MME (Multimodal Evaluation): \u2013 Tests perception (color, position, count) and cognition (commonsense, math, code). \u2013 Evaluates robustness using Yes/No prompts. MM-Vet: \u2013 Evaluates complex, multi-turn multimodal dialogue. \u2013 Uses LLM-as-a-Judge (usually GPT-4V) to grade the MLLM's responses based on accuracy, helpfulness, and reasoning. Mini-Quiz 2: Evaluation Constraints Scenario:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_53",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 39,
+    "page_end": 39,
+    "source_pages": [
+      39
+    ],
+    "sentence_count": 7,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "You evaluate your new MLLM on VQAv2. Ground Truth Answer: \"Red\" Your Model's Answer: \"The car shown in the image is red.\" Question: What happens to your evaluation score under strict"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_54",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 39,
+    "page_end": 39,
+    "source_pages": [
+      39
+    ],
+    "sentence_count": 8,
+    "token_count": 58,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "traditional string-matching metrics (like Exact Match)? \u2013 A) Score is 100% (Correct). \u2013 B) Score is 0% (Incorrect). Answer: * Insight: Instruction-tuned MLLMs are \"chatty\". Traditional benchmarks penalize them for full sentences. This"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_55",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 39,
+    "page_end": 40,
+    "source_pages": [
+      39,
+      40
+    ],
+    "sentence_count": 8,
+    "token_count": 60,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "is why LLM-as-a-judge is now the standard for MLLM evaluation. The Hallucination Problem in MLLMs Visual Hallucination: * When an MLLM confidently describes objects, attributes, or relationships that do not exist in the provided image. Why does it happen?"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_56",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 40,
+    "page_end": 40,
+    "source_pages": [
+      40
+    ],
+    "sentence_count": 6,
+    "token_count": 44,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Language Prior: The LLM backbone is so powerful that it overrides the visual encoder. (e.g., It sees a dining table and hallucinates \"chairs\" because textually, chairs usually accompany tables)."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_57",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 40,
+    "page_end": 41,
+    "source_pages": [
+      40,
+      41
+    ],
+    "sentence_count": 10,
+    "token_count": 69,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "\u2013 Connector Compression: Small details get lost when reducing megapixel images to a few hundred tokens. Evaluating Hallucinations: POPE Polling-based Object Probing Evaluation (POPE): \u2013 A benchmark specifically designed to expose visual hallucinations. Methodology: \u2013 Frames evaluation as binary Yes/No questions. \u2013 Adversarial Probing:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_58",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 41,
+    "page_end": 42,
+    "source_pages": [
+      41,
+      42
+    ],
+    "sentence_count": 12,
+    "token_count": 99,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Asks about objects that frequently co-occur but are missing from the specific image (e.g., `` -> \"Is there a mouse in the image?\"). Finding: Many early MLLMs failed POPE catastrophically, defaulting to \"Yes\" due to statistical priors. Reference: Li et al., \"Evaluating Object Hallucination in Large Vision-Language Models\" (EMNLP 2023) Class Discussion: The \"Clever Hans\" Effect Context:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_59",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 42,
+    "page_end": 42,
+    "source_pages": [
+      42
+    ],
+    "sentence_count": 5,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Clever Hans was a horse who appeared to do math, but was actually just reading the subtle body language of his trainer. Discussion Question: \u2013 Are MLLMs truly \"seeing\" the image, or are they experiencing a"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_60",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 42,
+    "page_end": 42,
+    "source_pages": [
+      42
+    ],
+    "sentence_count": 6,
+    "token_count": 53,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "Clever Hans effect where the user's prompt gives away the answer? \u2013 Example: If I prompt: \"What is the man holding in his left hand?\", does the model know there is a man, or does it just assume there is based on my question?"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week8_sem_61",
+    "filename": "Week8_TRIM-Application-Multimodal.pdf",
+    "week": "Week 8",
+    "page_start": 42,
+    "page_end": 42,
+    "source_pages": [
+      42
+    ],
+    "sentence_count": 1,
+    "token_count": 9,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1056,
+    "content": "How can we design prompts to prevent this?"
+  }
+]

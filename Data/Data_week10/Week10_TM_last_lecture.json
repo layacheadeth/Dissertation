@@ -1,0 +1,124 @@
+{
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "raw_total_pages": 41,
+    "deduplicated_total_pages": 29,
+    "pages": [
+        {
+            "page_number": 1,
+            "content": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER"
+        },
+        {
+            "page_number": 3,
+            "content": "Why Do We Evaluate NLP Systems?\n● Evaluation tells us how well a system is performing. \n● Users care about whether a system is useful for a task. \n● Developers care about whether a system is improving over time. \n● Evaluation supports: \n○ comparison \n○ debugging \n○ model selection \n○ scientific reporting"
+        },
+        {
+            "page_number": 4,
+            "content": "Benchmark Data and Gold Standards\n● Performance evaluation is often based on benchmark datasets. \n● These datasets contain: \n○ inputs \n○ gold-standard labels \n○ a fixed evaluation protocol \n● Gold standards are usually created by human annotators following \nannotation guidelines. \n● Reliable evaluation depends on reliable annotation."
+        },
+        {
+            "page_number": 7,
+            "content": "Inter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable."
+        },
+        {
+            "page_number": 8,
+            "content": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement."
+        },
+        {
+            "page_number": 9,
+            "content": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50"
+        },
+        {
+            "page_number": 10,
+            "content": "Cohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone."
+        },
+        {
+            "page_number": 15,
+            "content": "Scoring \nPrecision: fraction of annotated items that are correct\nRecall: fraction of correct items that are annotated\nConfusion matrix:\nCorrect Not correct\nAnnotated True positive (TP) False positive (FP)\nNot annotated False negative (FN) True negative (TN)\nPrecision = TP / (TP+FP)\nRecall = TP / (TP + FN)"
+        },
+        {
+            "page_number": 21,
+            "content": "Blue stars\nNot blue stars\nTP\nTP\nTP\nTP\nTP\nFP\nFP\nFN\nTN\nTN\nTN\nTN\nTrue Positives: 5\nFalse Positives: 2\nFalse Negatives: 1\nTrue Negatives: 4\nPrecision = TP / (TP+FP) = 5 / (5 + 2) = 5 / 7 = 0.714\nRecall = TP / (TP + FN) = 5 / (5 + 1) = 5 / 6 = 0.833"
+        },
+        {
+            "page_number": 22,
+            "content": "F-score (a.k.a. F-measure, F1-score)\nWeighted harmonic mean\nFβ = (β2 + 1)PR/β2P+R \nUsually balanced F1 measure is used, where β=1\nF1 = 2PR/(P+R)\nHarmonic mean is a more conservative average (truer picture)"
+        },
+        {
+            "page_number": 23,
+            "content": "F-score vs Arithmetic Mean\nP = 0.714\nR = 0.833\nArithmetic Mean: (0.714 + 0.833) / 2 = 0.774\nF-score: 2 * 0.714 * 0.833 / (0.714 + 0.833) = 0.769"
+        },
+        {
+            "page_number": 24,
+            "content": "F-score vs Arithmetic Mean\nP = 1\nR = 0.15\nArithmetic Mean: (1 + 0.15) / 2 = 0.575\nF-score: 2 * 1 * 0.15 / (1 + 0.15) = 0.261"
+        },
+        {
+            "page_number": 25,
+            "content": "What about Accuracy?\nMeasure of all correctly identified cases \nAcc = (TP + TN) / (TP + TN + FP + FN))\nSuitable if all classes are equally important. What if not? \nExample: Hate vs Neutral\nUse F-score"
+        },
+        {
+            "page_number": 26,
+            "content": "Multiple Categories: Micro vs Macro-averaging\nHow do we report combined performance for Person and Location? \nOption 1: Macro-averaging -- Simply get the average\nPPerson+Location = (0.94+0.87)/2 = 0.91\nRPerson+Location = (0.70+0.91)/2 = 0.81\nF1Person+Location = (2*0.91*0.81)/(0.91+0.81) = 0.86\nCategory TPs FPs FNs Precision Recall\nPerson 78 5 33 0.94 0.70\nLocation 20 3 2 0.87 0.91"
+        },
+        {
+            "page_number": 27,
+            "content": "Multiple Categories: Micro vs Macro-averaging\nHow do we report combined performance for Person and Location? \nOption 2: Micro-averaging -- Pool together the TPs, FPs and FNs\nPPerson+Location = (78+20)/((78+20)+(5+3)) = 0.92\nRPerson+Location = (78+20)/((78+20)+(33+2)) = 0.74\nF1Person+Location = (2*0.92*0.74)/(0.92+0.74) = 0.82\nCategory TPs FPs FNs Precision Recall\nPerson 78 5 33 0.94 0.70\nLocation 20 3 2 0.87 0.91"
+        },
+        {
+            "page_number": 28,
+            "content": "Which is better?\nMacro-averaging does not consider class imbalance; micro-averaging is \nless sensitive to imbalance\nWeighted average: \naverage weighted by the number of true instances for each class\nCategory TPs FPs FNs Precision Recall\nPerson 78 5 33 0.94 0.70\nLocation 20 3 2 0.87 0.91"
+        },
+        {
+            "page_number": 29,
+            "content": "Confusion Matrix for evaluating automated predictions \n● For automated systems, evaluation often starts with a confusion \nmatrix. \n● For a positive class: \n○ TP: predicted positive, actually positive \n○ FP: predicted positive, actually negative \n○ FN: predicted negative, actually positive \n○ TN: predicted negative, actually negative \n● Many common metrics are derived from these four counts.\nPositive class (Response) Negative class (Response)\nPositive class (Reference) True Positives (TP) False Negatives (FN)\nNegative class (Reference) False Positives (FP) True Negatives (TN)"
+        },
+        {
+            "page_number": 30,
+            "content": "Worked NER Example: Counting Entities\n● Tokens: \n○ Dr | Maya | Chen | joined | Acme | Labs | in | Bristol | .\n● Gold tags: \n○ B-PER I-PER I-PER O B-ORG I-ORG O B-LOC O\n● Predicted tags: \n○ B-PER I-PER O O B-ORG I-ORG O O O\n● Entity counts: \n○ PER: TP = 0, FP = 1, FN = 1 \n○ ORG: TP = 1, FP = 0, FN = 0 \n○ LOC: TP = 0, FP = 0, FN = 1 \n● The person prediction is wrong because the predicted span is \nincomplete."
+        },
+        {
+            "page_number": 31,
+            "content": "Gold entities\n● Maya Chen = PER \n● Acme Labs = ORG \n● Bristol = LOC \nPredicted entities\n● Maya Chen = PER \n● Acme = ORG \n● Bristol = LOC \nCounts\n● PER: TP = 1, FP = 0, FN = 0 \n● ORG: TP = 0, FP = 1, FN = 1 \n● LOC: TP = 1, FP = 0, FN = 0 \nKey point:\nA partially correct span does not count as a true positive."
+        },
+        {
+            "page_number": 32,
+            "content": "Precision and Recall\n● Precision asks: \n○ Of the items predicted as positive, how many are correct? \n○ 𝑃𝑟𝑒𝑐𝑖𝑠𝑖𝑜𝑛 = 𝑇𝑃/ 𝑇𝑃 + 𝐹𝑃\n● Recall asks: \n○ Of the truly positive items, how many did the system find? \n○ 𝑅𝑒𝑐𝑎𝑙𝑙 = 𝑇𝑃/ 𝑇𝑃 + 𝐹𝑁\n● Precision and recall capture different aspects of performance."
+        },
+        {
+            "page_number": 33,
+            "content": "The F1 Score\n● F1 combines precision and recall using the harmonic mean. \n● Formula: \n○ 𝐹1 =\n2𝑃𝑅\n𝑃+𝑅\n● F1 is high only when both precision and recall are high. \n● It is often preferred when the positive class is important and class \nbalance is uneven."
+        },
+        {
+            "page_number": 34,
+            "content": "Worked Example: Computing F1\n● Suppose a spam detector produces: \n○ TP = 18 \n○ FP = 6 \n○ FN = 9 \n● Then: \n○ Precision = 18 / (18 + 6) = 0.75 \n○ Recall = 18 / (18 + 9) = 0.67 \n○ F1 = 2 × 0.75 × 0.67/ 0.75 + 0.67 ≈0.71\n● This shows the full calculation from counts to F1."
+        },
+        {
+            "page_number": 35,
+            "content": "When Accuracy Can Mislead\n● Accuracy measures the proportion of all correct decisions. \n● Formula: \n○ 𝐴𝑐𝑐𝑢𝑟𝑎𝑐𝑦 = 𝑇𝑃 + 𝑇𝑁 / 𝑇𝑃 + 𝑇𝑁 + 𝐹𝑃 + 𝐹𝑁\n● Accuracy can be misleading on imbalanced datasets. \n● Example: \n○ if 95% of items are negative, always predicting negative gives 95% accuracy \n○ but recall for the positive class is 0 \n● In such cases, F1 is often more informative."
+        },
+        {
+            "page_number": 36,
+            "content": "Micro, Macro, and Weighted Averages\n● For multi-class problems, we often report combined performance. \n● Macro average: \n○ compute the metric for each class \n○ then average across classes equally \n● Micro average: \n○ pool all TP , FP , and FN first \n○ then compute the metric once \n● Weighted average: \n○ average class-level metrics using class frequency as weights \n● The choice affects how strongly rare classes influence the final score."
+        },
+        {
+            "page_number": 37,
+            "content": "Worked Example: Micro-Averaged F1 for NER\nUsing the previous example:\n○ PER: TP = 1, FP = 0, FN = 0 \n○ ORG: TP = 0, FP = 1, FN = 1 \n○ LOC: TP = 1, FP = 0, FN = 0 \nNow pool all counts across entity types:\n○ Total TP = 2\n○ Total FP = 1\n○ Total FN = 1\n○ 𝑃𝑟𝑒𝑐𝑖𝑠𝑖𝑜𝑛𝑚𝑖𝑐𝑟𝑜 =\n2+1 = 0.667\n○ 𝑅𝑒𝑐𝑎𝑙𝑙𝑚𝑖𝑐𝑟𝑜 =\n2+1 = 0.667\n○ 𝐹1𝑚𝑖𝑐𝑟𝑜 =\n2×0.667×0.667\n0.667+0.667 = 0.667\n● Interpretation:\nMicro-averaging gives one overall score after combining all entity decisions across \ncategories."
+        },
+        {
+            "page_number": 38,
+            "content": "Module 5. Open Information Extraction\noWhat Open Information Extraction is \noHow OpenIE differs from predefined relation extraction\no A brief view of classical and neural OpenIE approaches"
+        },
+        {
+            "page_number": 39,
+            "content": "What Is Open Information Extraction?\n● Open Information Extraction (OpenIE) extracts relational facts from \ntext without relying on a fixed predefined schema. \n● Input: \n○ raw sentences or documents \n● Output: \n○ relation tuples such as (argument, relation, argument)\n● OpenIE aims to turn unstructured text into machine-readable \nknowledge."
+        },
+        {
+            "page_number": 40,
+            "content": "What an OpenIE Extraction Looks Like\n● Sentence: \n○ Albert Einstein published the theory of relativity in 1915.\n● Example extraction: \n○ (Albert Einstein; published; the theory of relativity)\n○ (Albert Einstein; published in; 1915)\n● OpenIE relies heavily on earlier NLP steps: \n○ POS tagging \n○ parsing \n○ entity recognition"
+        },
+        {
+            "page_number": 41,
+            "content": "A Short View of OpenIE Methods and Limits\n● Classical methods used: \n○ patterns \n○ dependency structure \n○ clause splitting \n● Later work introduced supervised and neural approaches. \n● Common challenges include: \n○ ambiguity \n○ synonymy \n○ coreference \n○ trustworthiness of extracted facts \n● In this module, OpenIE is a compact application case rather than the \nmain assessment focus."
+        }
+    ]
+}

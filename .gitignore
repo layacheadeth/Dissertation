@@ -1,0 +1,16 @@
+# Ignore these folder
+__pycache__/
+.idea/
+.DS_Store
+input_payload_sample.json
+output_payload_sample.json
+faiss_docs_minilm_semantic.json
+faiss_docs_qwen_semantic.json
+faiss_index_minilm_semantic.bin
+faiss_index_qwen_semantic.bin
+faiss_docs_minilm_section.json
+faiss_docs_qwen_section.json
+faiss_index_minilm_section.bin
+faiss_index_qwen_section.bin
+chroma_db/
+.env

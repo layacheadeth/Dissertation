@@ -1,0 +1,164 @@
+{
+    "filename": "Week9_RAG_LLM_final.pdf",
+    "week": "Week 9",
+    "raw_total_pages": 39,
+    "deduplicated_total_pages": 39,
+    "pages": [
+        {
+            "page_number": 1,
+            "content": "Retrieval-Augmented Generation(RAG)\nChenghua LinDepartment of Computer ScienceThe University of Manchester"
+        },
+        {
+            "page_number": 2,
+            "content": "Limitations of LLMsLLMs are typically trained with next token prediction–Learn statistical patterns from huge amount of text–Knowledge is stored implicitly in model parameters Limitations –Hallucinations: fluent but unsupported / incorrect outputs–Knowledge cutoff: limited to information seen during training–No access to private or up-to-date corpora"
+        },
+        {
+            "page_number": 3,
+            "content": "What is RAG?Retrieval-Augmented Generation (RAG) is a system architecture that:–Retrievesrelevant passages from a background corpus–Augmentsthe LLM input with retrieved passages as context–Generatesan answer grounded in those retrieved evidencesKey points–RAG does notupdate model weights–It augments the input context, not model parameters–Retrieval and generation are separate components but integrated at inference timeRAG = Information Retrieval + Language Model Generation"
+        },
+        {
+            "page_number": 4,
+            "content": "Why RAG?Explainability–LLM's outputs are conditioned on retrieved evidence rather than relying solely on internal parametric knowledgePrivacy–Use proprietary data as external knowledge instead of incorporating it into training dataDecomposition of Memorisationand Reasoning–The retriever handles knowledge access, allowing the LLM to focus on reasoning and generation–Small LLM + Retriever can outperform a larger standalone LLM in domain-specific settings"
+        },
+        {
+            "page_number": 5,
+            "content": "ArchitectureIngestionCorpus → Chunk → Embed → Store in vector indexInferenceQuery → Embed → Retrieve → Prompting → GenerateEvaluation-Retrieval quality (e.g., Recall@k)-End-to-end answer quality (e.g., BERTScore)"
+        },
+        {
+            "page_number": 6,
+            "content": "Ingestion Pipeline -ChunkingWhy chunking?–LLMs have context length limits–Retrieval performs better when chunks preserve coherent semantic unitsCommon chunking strategies:–Fixed-length token windows (e.g. 200-500 tokens per chunk)–Overlapping windows (e.g. 10-20% overlap)–Sentence-based chunking (split by sentence; merge into size-controlled chunks)–Structure-aware chunking (split by headings or sections)"
+        },
+        {
+            "page_number": 7,
+            "content": "Chunking: Fixed LengthMiso soup is a traditional Japanese soup. It is made from dashi stock and miso paste. Common additions include tofu and wakame. Dashi is typically made from kombu and katsuobushi.Fixed-Length Windows: (i) split by token count; (ii) may ignore sentence boundaries.–Chunk 1: Miso soup is a traditional Japanese soup. It is made from dashi stock–Chunk 2: and miso paste. Common additions include tofu and wakame.May break sentences àfragment meaning"
+        },
+        {
+            "page_number": 8,
+            "content": "Chunking: Overlapping WindowsMiso soup is a traditional Japanese soup. It is made from dashi stock and miso paste. Common additions include tofu and wakame. Dashi is typically made from kombu and katsuobushi.Fixed-size chunks with partial overlap (e.g., 300 tokens with 50-token overlap)–Chunk 1: It is made from dashi stock and miso paste.–Chunk 2: from dashi stock and miso paste. Common additions include tofuReduces boundary loss; important facts near boundaries are less likely to be missed"
+        },
+        {
+            "page_number": 9,
+            "content": "Sentence-Based ChunkingMiso soup is a traditional Japanese soup. It is made from dashi stock and miso paste. Common additions include tofu and wakame. Dashi is typically made from kombu and katsuobushi.Split at sentence boundaries and merge into size-controlled chunks.–Chunk 1: Miso soup is a traditional Japanese soup. –Chunk 2: It is made from dashi stock and miso paste.–Could be multiple sentences in a chunkPreserves semantic unitsImproves readability of retrieved context"
+        },
+        {
+            "page_number": 10,
+            "content": "Chunking Trade-offsLarger chunks–More context per retrieval hit–Lower retrieval precision (more irrelevant text included)–Fewer chunks overall (coarser granularity)Smaller chunks–Higher retrieval precision–Finer granularity for matching–Risk of losing needed context (“semantic fragmentation”)Chunking affects retrieval metrics (Recall@k, MRR) and generated answer quality."
+        },
+        {
+            "page_number": 11,
+            "content": "Embeddings in RAGEmbeddings: dense vectors representing semantic meaningHow embeddings are used in RAG–Offline: embed each chunk in the corpus–Online: embed the user query–Retrieve top-k similar chunks (e.g., cosine similarity)Example embedding models–all-MiniLM-L6-v2, E5-small, BGE-smallEmbedding quality strongly impacts retrieval effectiveness"
+        },
+        {
+            "page_number": 12,
+            "content": "Retrieval in RAG (Bi-Encoder)Dense Retrieval (Bi-Encoder)–Precompute embeddings for all chunks (offline)–Embed user query at inference time (online)–Compute similarity in embedding space (e.g., cosine similarity)–Retrieve top-k most similar chunksPros–Efficient and scalable–Strong recalls Cons–Limited fine-grained query–document interaction–May retrieve semantically similar but irrelevant chunks"
+        },
+        {
+            "page_number": 13,
+            "content": "Re-ranking in RAGStage 1: Bi-Encoder (Dense Retrieval)–Encode query and documents independently–Retrieve top-N candidates using vector similarity–High recall, efficientStage 2: Cross-Encoder (Re-ranker)–Jointly encode (query + document)–Compute a refined relevance score–Re-rank top-N → select final top-kTrade-Off–Re-ranking improves precision and ranking quality–More computationally expensive (applied only to a small candidate set)"
+        },
+        {
+            "page_number": 14,
+            "content": "Vector StoreWhy a vector store?–Efficient nearest-neighboursearch over embedding vectors–Enables scalable retrieval over large embedding collectionsHow it works–Stores chunk embeddings in an index–Uses Approximate Nearest Neighbour(ANN) search–Returns top-k most similar chunksANN trades exact search for significant speed gains–Example systems: FAISS, Chroma, LanceDB"
+        },
+        {
+            "page_number": 15,
+            "content": "Exact Nearest NeighbourExact Nearest Neighbour(NN)Given: Nchunk embeddings; Query embedding qExact search:–Compute similarity between q and every embedding–Return the true top-k most similar vectorsComputational Cost–1,000,000 vectors → 1,000,000 similarity computations per query–Too slow for large-scale RAG systems"
+        },
+        {
+            "page_number": 16,
+            "content": "Approximate Nearest Neighbour(ANN)Do notsearch the entire vector space.Instead:–Use an index structure to narrow the search–Explore only a small, promising region–Return vectors that are very likely nearest neighbours(not guaranteed exact)"
+        },
+        {
+            "page_number": 17,
+            "content": "Approximate Nearest Neighbour(ANN)Partition-Based Methods (e.g., IVF)Step 1 (offline)–Divide the vector space into clusters (e.g., using k-means)–Assign each embedding to a clusterStep 2 (at query time)–Identify the nearest cluster(s) to the query vector–Search only within those clusters –Dramatically reduces the number of similarity comparisons–Typical speed-up: 10x–100x; High recall in practice"
+        },
+        {
+            "page_number": 18,
+            "content": "Prompting in RAGPrompting: the bridge between retrieval and generationThe prompt determines how retrieved evidence influences the model’s output.Standard RAG Prompt Structure–Instruction: define behaviuorand constraints (system role)–Context: retrieved passages (+ metadata, chunk IDs)–Question: user task–Answer: model output"
+        },
+        {
+            "page_number": 19,
+            "content": "Standard RAG Prompt Structure\nInclude chunk IDs / sources to enable attribution"
+        },
+        {
+            "page_number": 20,
+            "content": "Example: Strong Grounding Prompt\nWhy this matters:–Reduces hallucination–Enables explicit attribution (claim àevidence mapping)–Makes it easier to audit and automate faithfulness checks–Encourages evidence-constrained generation"
+        },
+        {
+            "page_number": 21,
+            "content": "Context FormattingContext Formatting Matters –Metadata helps reasoning–Chunk IDs enable citation–Clear structure reduces confusion in long contexts–Order chunks by retrieval score (highest first).Practical formatting patterns–Separate chunks with delimiters (e.g., ---)–Add (Source, ChunkID) headers per chunk"
+        },
+        {
+            "page_number": 22,
+            "content": "Format Examples"
+        },
+        {
+            "page_number": 23,
+            "content": "Generation using LLMsLLMs generate text token-by-token conditioned on the promptIn RAG, retrieved context changes the conditional distribution:\nRAG modifies the input distributionIt does NOT modify model weightsIt shifts probability mass toward grounded tokens"
+        },
+        {
+            "page_number": 24,
+            "content": "Evaluation in RAGWe can evaluate a RAG system at two levels:Retrieval quality: Did the system retrieve the correct supporting evidence?End-to-end QA quality: Is the final generated answer correct compared to the gold answer?If relevant evidence is not retrieved, the generator cannot produce a correct grounded answer."
+        },
+        {
+            "page_number": 25,
+            "content": "Retrieval Evaluation: Recall@kRecall@k: Proportion of queries where at least one relevant chunk appears in the top-k results.–Measures coverageof relevant evidence–Ignores ranking order within top-k\nRecall@k→ Did we retrieve relevant evidence?"
+        },
+        {
+            "page_number": 26,
+            "content": "Retrieval Evaluation: MRRMean Reciprocal Rank (MRR)–measures how early the first relevant chunk appears.\n–Higher when relevant evidence appears earlier–Sensitive to ranking quality"
+        },
+        {
+            "page_number": 27,
+            "content": "Retrieval Evaluation: nDCGNormalized Discounted Cumulative Gain (nDCG)–Used when relevance is graded (not just relevant / not relevant).\n–k: number of retrieved results considered (e.g., top-10)–𝑖: rank position (1 = highest rank)–𝑟𝑒𝑙𝑖: relevance score of the document at rank 𝑖–Ideal DCG = DCG score of the best possible ranking–nDCGnormalizes the score to the range [0, 1]."
+        },
+        {
+            "page_number": 28,
+            "content": "Retrieval Evaluation: nDCGNormalized Discounted Cumulative Gain (nDCG)–Used when relevance is graded (not just relevant / not relevant).\n–Rewards highly relevant documents ranked higher–Penalizes relevant documents ranked lower–Captures overall ranking qualityInterpretation–High nDCG→ relevant documents ranked near the top–Low nDCG→ relevant documents ranked lower or poorly ordered"
+        },
+        {
+            "page_number": 29,
+            "content": "Metric Comparision\nRecall@k→ Did we retrieve relevant evidence?MRR → How early does relevant evidence appear?nDCG→ How well are all relevant results ranked?"
+        },
+        {
+            "page_number": 30,
+            "content": "End to End QA QualityEnd-to-End Answer Quality–Compare generated answer %𝑦vs. gold answer 𝑦Common metrics–Exact Match (EM)–Token-level F1–BERTScore–Whatelse?\nNote: high overlap does not guarantee factual grounding"
+        },
+        {
+            "page_number": 31,
+            "content": "Reference: I am giving a talk at a data science conferenceHyp 1:I am giving a talk at a conference about data sciencelots of overlap → high scoreHyp 2:This talk is about recent advances in medical imaginglittle overlap → low score\nThe Old Reliables: BLEU/ROUGE Score"
+        },
+        {
+            "page_number": 32,
+            "content": "Reference: I am giving a talk at a data science conferenceHyp 1: I am giving a talk at a political science conferencelots of overlap but bad outputHyp 2: My lecture will be given to the meeting on data analyticslittle overlap but good output (particularly difficult for open-ended problems)\nWhyisEvaluationHard?"
+        },
+        {
+            "page_number": 33,
+            "content": "End-to-End Answer QualityExact Match (EM)–Strict string-level equality–Common in extractive QA–Does notallow paraphrasingToken-Level F1–Based on token overlap between generated and gold answers–More forgiving than EM–Ignores word order but sensitive to lexical differences"
+        },
+        {
+            "page_number": 34,
+            "content": "Example: Token-Level F1 Gold Answer: \"Paris is the capital of France\"Generated Answer: \"Paris is capital of France”Common tokens: Paris, is, capital, of, France (5 tokens)Compute Precision & Recall–Precision = 5 / 5 = 1.0–Recall = 5 / 6 ≈ 0.83"
+        },
+        {
+            "page_number": 35,
+            "content": "End-to-End Answer QualityBERTScore–Uses contextual embeddings to measure semantic similarity–Captures meaning beyond exact word overlap"
+        },
+        {
+            "page_number": 36,
+            "content": "Automatic vs Human EvaluationAutomatic metrics are useful but limited:–Token-Level F1: overlap-heavy; weak on factuality–BERTScore: semantic similarity; still imperfectHuman evaluation is often needed for:–Correctness–Faithfulness (supported by evidence)–Completeness–Clarity"
+        },
+        {
+            "page_number": 37,
+            "content": "RAG vs Fine-TuningRAG–Uses external retrieval (knowledge can be updated by updating the corpus/index)–No weight updates–Often higher inference complexity (retrieval + generation)Fine-tuning–Updates model weights (parametric knowledge)–Training can be expensive; updates are less frequent–Good for style, format, and domain adaptation (not just “adding facts”)"
+        },
+        {
+            "page_number": 38,
+            "content": "Building a Good RAG SystemRetrieval Quality–Chunking strategy–Embedding model–Query representationGeneration Quality–Prompt design–Context formattingSystem Evaluation–Retrieval metrics –End-to-end answer quality"
+        },
+        {
+            "page_number": 39,
+            "content": "SummaryRAG augments an LLM with external, non-parametric memory (retrieval)Pipeline: Retrieve relevant chunks → provide as context → generate answerCore components: Retrieval | Embeddings | Prompting | EvaluationRetrieval quality bounds answer qualityAnswer correctness ≠ evidence-grounded faithfulness"
+        }
+    ]
+}

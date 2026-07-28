@@ -1,0 +1,238 @@
+[
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_1",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 1,
+    "page_end": 2,
+    "source_pages": [
+      1,
+      2
+    ],
+    "sentence_count": 9,
+    "token_count": 88,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "BERT: Bidirectional Encoder Representations from Transformers Chenghua LinDepartment of Computer ScienceThe University of Manchester TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT, RoBERTa, DeBERTaEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_2",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 2,
+    "page_end": 3,
+    "source_pages": [
+      2,
+      3
+    ],
+    "sentence_count": 6,
+    "token_count": 119,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "GPT-x, LLaMa, every other new model today Prior BERT: ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)\u2013Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs\u2013Feature-based approach: pre-trained representations used as input to task-specific models\u2013Trained on single sentences from 1B word benchmark (Chelbaet al., 2014) Train separate left-to-right and right-to-left LMs Apply as \u201cPre-trained Embeddings\u201d"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_3",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 4,
+    "page_end": 4,
+    "source_pages": [
+      4
+    ],
+    "sentence_count": 6,
+    "token_count": 71,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "BERT: Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_4",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 4,
+    "page_end": 6,
+    "source_pages": [
+      4,
+      5,
+      6
+    ],
+    "sentence_count": 6,
+    "token_count": 132,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "(1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks. Masked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions Network weights are updated based on average CE loss over the sampled tokens Masked Language Modelling ExamplesHe is from Kuala Lumpur, Malaysia.\u00e0He [MASK]from Kuala [MASK], Malaysia.He went to the store. \u00e0He went to the [MASK]."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_5",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 7,
+    "page_end": 7,
+    "source_pages": [
+      7
+    ],
+    "sentence_count": 5,
+    "token_count": 42,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "MLM: Masking Rate and StrategyQ: What is the value of k?\u2013They always use k = 15%.\u2013Too little masking: computationally expensive\u2013Too much masking: not enough context"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_6",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 7,
+    "page_end": 7,
+    "source_pages": [
+      7
+    ],
+    "sentence_count": 3,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "How are masked tokens selected?\u201315% tokens are uniformly sampled\u2013Is it optimal? See span masking (Joshi et al., 2020) \u2013Example: He [MASK]from Kuala [MASK], Malaysia."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_7",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 8,
+    "page_end": 10,
+    "source_pages": [
+      8,
+      9,
+      10
+    ],
+    "sentence_count": 11,
+    "token_count": 249,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "MLM: 80-10-10 CorruptionFor the 15% of tokens selected for prediction,\u201380% of the time, they replace it with [MASK] tokenwent to the store\u00e0went to the [MASK]\u201310% of the time, they replace it with a random word in the vocabularywent to the store\u00e0went to the running\u201310% of the time, they keep it unchangedwent to the store\u00e0went to the storeWhy? Because [MASK] tokens are never seen during fine-tuning Next Sentence Prediction (NSP)Motivation: many NLP downstream tasks require understanding the relationship between two sentences (e.g. NLI, paraphrase detection, QA)NSPis designed to reduce the gap between pre-training and fine-tuning Input = [CLS] the man went to [MASK] store [SEP] he bought a gallon [MASK] milk [SEP]Label = IsNextInput = [CLS] the man [MASK] to the store [SEP]penguin [MASK] are flight ##less birds [SEP]Label = NotNext [CLS]: a special token always at the beginning[CLS]: a special token used to separate two segments Next Sentence Prediction (NSP)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_8",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 10,
+    "page_end": 10,
+    "source_pages": [
+      10
+    ],
+    "sentence_count": 4,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "Stands for \"class\" Output vector associated with [CLS] represents the prediction, and is multiplied with WNSP, a set of classification weights 0 or 1 to indicate which segment Stands for \"separator\""
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_9",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 11,
+    "page_end": 11,
+    "source_pages": [
+      11
+    ],
+    "sentence_count": 5,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "BERT pre-training: Putting togetherVocabulary size: 30,000 word pieces (common sub-word units) (Wu et al., 2016) Final input representation = Token + Segment + Position embeddings Separate two segments"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_10",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 12,
+    "page_end": 14,
+    "source_pages": [
+      12,
+      13,
+      14
+    ],
+    "sentence_count": 13,
+    "token_count": 151,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "BERT-base: 12 layers, 768 hidden size, 12 attention heads, 100M parametersBERT-large: 24 layers, 1024 hidden size, 16 attention heads, 340M parameters Training corpus: Wikipedia (2.5B) + BooksCorpus (0.8B)Max sequence size: 512 word piecesTrained for 1M steps, batch size 128k Same as OpenAI GPT OpenAI GPT was trained on BooksCorpus only! BERT pre-training: Putting together BERT pre-training: Putting togetherMLM and NSP are trained togetherThe [CLS] representation is trained for NSPToken-level representations are trained via MLM Sentence pair classification tasks:MNLIPremise:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_11",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 14,
+    "page_end": 16,
+    "source_pages": [
+      14,
+      15,
+      16
+    ],
+    "sentence_count": 14,
+    "token_count": 159,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "A soccer game with multiple males playing.Hypothesis: Some men are playing a sport. QQPQ1: Where can I learn to invest in stocks?Q2: How can I learn more about stocks?Single sentence classification tasks:SST2rich veins of funny stuff in this movie (Wang et al., 2018):6 sentence pair and 2 single-sentence tasks {entailment,contradiction, neutral} {duplicate,not duplicate} {positive,negative} Sentence-level Tasks Fine-tuning BERT: Sentence-level tasks\u201cPretrain once, finetune many times.\u201d For sentence-pair tasks, use [SEP] and segment embeddings to distinguish inputsAdd a task-specific linear classifier on top of the [CLS] representation. Fine-tuning BERT"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_12",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 17,
+    "page_end": 20,
+    "source_pages": [
+      17,
+      18,
+      19,
+      20
+    ],
+    "sentence_count": 9,
+    "token_count": 127,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "SQuAD MetLife Stadium Extractive question answering e.g., SQuAD(Rajpurkaret al., 2016) Name entity recognition (Tjong kimSang and De Meulder, 2003)CoNLL2003 NERJohnSmithlives in New YorkB-PERI-PEROOB-LOCI-LOC Token-level Tasks Fine-tuning BERT: Token-level Tasks\u201cPretrain once, finetune many times.\u201d For token-level prediction tasks, add a task-specific linear classifier on top of each token\u2019s hidden representation. Fine-tuning BERT The bigger, the better!"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week11_sem_13",
+    "filename": "Week11_TRIM_BERT.pdf",
+    "week": "Week 11",
+    "page_start": 20,
+    "page_end": 22,
+    "source_pages": [
+      20,
+      21,
+      22
+    ],
+    "sentence_count": 4,
+    "token_count": 85,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1162,
+    "content": "Ablation study: Model Sizes How large are Large\u201c LMs? SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain\u2013then-fine-tune paradigm in NLP.Achieved state-of-the-art performance (2018) across diverse NLU tasks."
+  }
+]

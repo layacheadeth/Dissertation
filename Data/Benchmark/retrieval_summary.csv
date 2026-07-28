@@ -1,0 +1,4 @@
+collection,precision@1,precision@3,precision@5,recall@1,recall@3,recall@5,mrr,hit@1,keyword_recall@5,semantic_sim@5
+exp1_page_level,0.5,0.3636,0.3,0.2311,0.4076,0.4955,0.6023,0.5,0.7448,0.7915
+exp2_fixed_overlap,0.5455,0.4394,0.3364,0.297,0.5523,0.6659,0.6629,0.5455,0.8012,0.6653
+exp3_structure_level,0.5,0.3788,0.3182,0.2538,0.453,0.5409,0.625,0.5,0.7646,0.8091

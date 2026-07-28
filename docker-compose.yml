@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  rag-pipeline:
+    build: .
+    image: manchester-rag:latest
+    container_name: comp64702_rag_container
+    volumes:
+      # Mounts your local folder to ensure inputs/outputs and indices save back to your real disk
+      - .:/workspace
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "7860:7860"  # <-- Add this mapping layer right here

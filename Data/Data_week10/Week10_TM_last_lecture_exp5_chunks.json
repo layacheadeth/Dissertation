@@ -1,0 +1,471 @@
+[
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec1_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 1,
+    "section_title": "Module 4 Evaluation Method",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 1,
+    "page_end": 3,
+    "source_pages": [
+      1,
+      3
+    ],
+    "slide_count": 2,
+    "token_count": 166,
+    "char_count": 731,
+    "content": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen\u2019s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER\n\nWhy Do We Evaluate NLP Systems?\n\u25cf Evaluation tells us how well a system is performing. \n\u25cf Users care about whether a system is useful for a task. \n\u25cf Developers care about whether a system is improving over time. \n\u25cf Evaluation supports: \n\u25cb comparison \n\u25cb debugging \n\u25cb model selection \n\u25cb scientific reporting"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec2_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 2,
+    "section_title": "Benchmark Data and Gold Standards",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 4,
+    "page_end": 4,
+    "source_pages": [
+      4
+    ],
+    "slide_count": 1,
+    "token_count": 64,
+    "char_count": 335,
+    "content": "Benchmark Data and Gold Standards\n\u25cf Performance evaluation is often based on benchmark datasets. \n\u25cf These datasets contain: \n\u25cb inputs \n\u25cb gold-standard labels \n\u25cb a fixed evaluation protocol \n\u25cf Gold standards are usually created by human annotators following \nannotation guidelines. \n\u25cf Reliable evaluation depends on reliable annotation."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec3_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 3,
+    "section_title": "Inter-Annotator Agreement",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 7,
+    "page_end": 7,
+    "source_pages": [
+      7
+    ],
+    "slide_count": 1,
+    "token_count": 59,
+    "char_count": 305,
+    "content": "Inter-Annotator Agreement\n\u25cf Human annotations are not always identical. \n\u25cf Different annotators may interpret a guideline differently. \n\u25cf Inter-annotator agreement measures how consistently humans label \nthe same data. \n\u25cf High agreement suggests the task and the guidelines are clearer and \nmore reliable."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec4_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 4,
+    "section_title": "Observed Agreement: \ud835\udc43 \ud835\udc4e",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 8,
+    "page_end": 8,
+    "source_pages": [
+      8
+    ],
+    "slide_count": 1,
+    "token_count": 85,
+    "char_count": 259,
+    "content": "Observed Agreement: \ud835\udc43 \ud835\udc4e\n\u25cf Observed agreement is the proportion of cases on which annotators \nagree. \n\u25cf Example: \n\u25cb two annotators label 10 items \n\u25cb they agree on 7 items \n\u25cf Then: \n\u25cb \ud835\udc43 \ud835\udc4e = 7/10 = 0.70\n\u25cf Observed agreement does not correct for chance agreement."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec5_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 5,
+    "section_title": "Expected Agreement: \ud835\udc43 \ud835\udc52",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 9,
+    "page_end": 9,
+    "source_pages": [
+      9
+    ],
+    "slide_count": 1,
+    "token_count": 147,
+    "char_count": 388,
+    "content": "Expected Agreement: \ud835\udc43 \ud835\udc52\n\u25cf Expected agreement estimates how much agreement would happen \nby chance. \n\u25cf Suppose: \n\u25cb Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n\u25cb Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n\u25cf Then: \n\u25cb chance agreement on Positive = 0.6 \u00d7 0.5 = 0.30\n\u25cb chance agreement on Negative = 0.4 \u00d7 0.5 = 0.20\n\u25cf So: \n\u25cb \ud835\udc43 \ud835\udc52 = 0.30 + 0.20 = 0.50"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec6_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 6,
+    "section_title": "Cohen\u2019s Kappa",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 10,
+    "page_end": 10,
+    "source_pages": [
+      10
+    ],
+    "slide_count": 1,
+    "token_count": 128,
+    "char_count": 260,
+    "content": "Cohen\u2019s Kappa\n\u25cf Cohen\u2019s Kappa corrects observed agreement for chance agreement. \n\u25cf Formula: \n\u25cb \ud835\udc3e =\n\ud835\udc43 \ud835\udc4e \u2212\ud835\udc43 \ud835\udc52\n1\u2212\ud835\udc43 \ud835\udc52\n\u25cf Using the previous example: \n\u25cb \ud835\udc43 \ud835\udc4e = 0.70\n\u25cb \ud835\udc43 \ud835\udc52 = 0.50\n\u25cb \ud835\udc3e = 0.70 \u2212 0.50 / 1 \u2212 0.50 = 0.40\n\u25cf Kappa is more informative than raw agreement alone."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec7_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 7,
+    "section_title": "Scoring",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 15,
+    "page_end": 15,
+    "source_pages": [
+      15
+    ],
+    "slide_count": 1,
+    "token_count": 75,
+    "char_count": 306,
+    "content": "Scoring \nPrecision: fraction of annotated items that are correct\nRecall: fraction of correct items that are annotated\nConfusion matrix:\nCorrect Not correct\nAnnotated True positive (TP) False positive (FP)\nNot annotated False negative (FN) True negative (TN)\nPrecision = TP / (TP+FP)\nRecall = TP / (TP + FN)"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec8_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 8,
+    "section_title": "Blue stars",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 21,
+    "page_end": 21,
+    "source_pages": [
+      21
+    ],
+    "slide_count": 1,
+    "token_count": 121,
+    "char_count": 244,
+    "content": "Blue stars\nNot blue stars\nTP\nTP\nTP\nTP\nTP\nFP\nFP\nFN\nTN\nTN\nTN\nTN\nTrue Positives: 5\nFalse Positives: 2\nFalse Negatives: 1\nTrue Negatives: 4\nPrecision = TP / (TP+FP) = 5 / (5 + 2) = 5 / 7 = 0.714\nRecall = TP / (TP + FN) = 5 / (5 + 1) = 5 / 6 = 0.833"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec9_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 9,
+    "section_title": "F-score (a.k.a. F-measure, F1-score)",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 22,
+    "page_end": 22,
+    "source_pages": [
+      22
+    ],
+    "slide_count": 1,
+    "token_count": 75,
+    "char_count": 205,
+    "content": "F-score (a.k.a. F-measure, F1-score)\nWeighted harmonic mean\nF\u03b2 = (\u03b22 + 1)PR/\u03b22P+R \nUsually balanced F1 measure is used, where \u03b2=1\nF1 = 2PR/(P+R)\nHarmonic mean is a more conservative average (truer picture)"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec10_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 10,
+    "section_title": "F-score vs Arithmetic Mean",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 23,
+    "page_end": 25,
+    "source_pages": [
+      23,
+      24,
+      25
+    ],
+    "slide_count": 3,
+    "token_count": 193,
+    "char_count": 472,
+    "content": "F-score vs Arithmetic Mean\nP = 0.714\nR = 0.833\nArithmetic Mean: (0.714 + 0.833) / 2 = 0.774\nF-score: 2 * 0.714 * 0.833 / (0.714 + 0.833) = 0.769\n\nF-score vs Arithmetic Mean\nP = 1\nR = 0.15\nArithmetic Mean: (1 + 0.15) / 2 = 0.575\nF-score: 2 * 1 * 0.15 / (1 + 0.15) = 0.261\n\nWhat about Accuracy?\nMeasure of all correctly identified cases \nAcc = (TP + TN) / (TP + TN + FP + FN))\nSuitable if all classes are equally important. What if not? \nExample: Hate vs Neutral\nUse F-score"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec11_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 11,
+    "section_title": "Multiple Categories: Micro vs Macro-averaging",
+    "part_index": 1,
+    "part_count": 3,
+    "page_start": 26,
+    "page_end": 29,
+    "source_pages": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "slide_count": 4,
+    "token_count": 150,
+    "char_count": 383,
+    "content": "Multiple Categories: Micro vs Macro-averaging\nHow do we report combined performance for Person and Location? \nOption 1: Macro-averaging -- Simply get the average\nPPerson+Location = (0.94+0.87)/2 = 0.91\nRPerson+Location = (0.70+0.91)/2 = 0.81\nF1Person+Location = (2*0.91*0.81)/(0.91+0.81) = 0.86\nCategory TPs FPs FNs Precision Recall\nPerson 78 5 33 0.94 0.70\nLocation 20 3 2 0.87 0.91"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec11_part2",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 11,
+    "section_title": "Multiple Categories: Micro vs Macro-averaging",
+    "part_index": 2,
+    "part_count": 3,
+    "page_start": 26,
+    "page_end": 29,
+    "source_pages": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "slide_count": 4,
+    "token_count": 249,
+    "char_count": 705,
+    "content": "Multiple Categories: Micro vs Macro-averaging\nHow do we report combined performance for Person and Location? \nOption 2: Micro-averaging -- Pool together the TPs, FPs and FNs\nPPerson+Location = (78+20)/((78+20)+(5+3)) = 0.92\nRPerson+Location = (78+20)/((78+20)+(33+2)) = 0.74\nF1Person+Location = (2*0.92*0.74)/(0.92+0.74) = 0.82\nCategory TPs FPs FNs Precision Recall\nPerson 78 5 33 0.94 0.70\nLocation 20 3 2 0.87 0.91\n\nWhich is better?\nMacro-averaging does not consider class imbalance; micro-averaging is \nless sensitive to imbalance\nWeighted average: \naverage weighted by the number of true instances for each class\nCategory TPs FPs FNs Precision Recall\nPerson 78 5 33 0.94 0.70\nLocation 20 3 2 0.87 0.91"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec11_part3",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 11,
+    "section_title": "Multiple Categories: Micro vs Macro-averaging",
+    "part_index": 3,
+    "part_count": 3,
+    "page_start": 26,
+    "page_end": 29,
+    "source_pages": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "slide_count": 4,
+    "token_count": 135,
+    "char_count": 628,
+    "content": "Multiple Categories: Micro vs Macro-averaging\n\nConfusion Matrix for evaluating automated predictions \n\u25cf For automated systems, evaluation often starts with a confusion \nmatrix. \n\u25cf For a positive class: \n\u25cb TP: predicted positive, actually positive \n\u25cb FP: predicted positive, actually negative \n\u25cb FN: predicted negative, actually positive \n\u25cb TN: predicted negative, actually negative \n\u25cf Many common metrics are derived from these four counts.\nPositive class (Response) Negative class (Response)\nPositive class (Reference) True Positives (TP) False Negatives (FN)\nNegative class (Reference) False Positives (FP) True Negatives (TN)"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec12_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 12,
+    "section_title": "Worked NER Example: Counting Entities",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 30,
+    "page_end": 30,
+    "source_pages": [
+      30
+    ],
+    "slide_count": 1,
+    "token_count": 167,
+    "char_count": 409,
+    "content": "Worked NER Example: Counting Entities\n\u25cf Tokens: \n\u25cb Dr | Maya | Chen | joined | Acme | Labs | in | Bristol | .\n\u25cf Gold tags: \n\u25cb B-PER I-PER I-PER O B-ORG I-ORG O B-LOC O\n\u25cf Predicted tags: \n\u25cb B-PER I-PER O O B-ORG I-ORG O O O\n\u25cf Entity counts: \n\u25cb PER: TP = 0, FP = 1, FN = 1 \n\u25cb ORG: TP = 1, FP = 0, FN = 0 \n\u25cb LOC: TP = 0, FP = 0, FN = 1 \n\u25cf The person prediction is wrong because the predicted span is \nincomplete."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec13_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 13,
+    "section_title": "Gold entities",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 31,
+    "page_end": 31,
+    "source_pages": [
+      31
+    ],
+    "slide_count": 1,
+    "token_count": 116,
+    "char_count": 308,
+    "content": "Gold entities\n\u25cf Maya Chen = PER \n\u25cf Acme Labs = ORG \n\u25cf Bristol = LOC \nPredicted entities\n\u25cf Maya Chen = PER \n\u25cf Acme = ORG \n\u25cf Bristol = LOC \nCounts\n\u25cf PER: TP = 1, FP = 0, FN = 0 \n\u25cf ORG: TP = 0, FP = 1, FN = 1 \n\u25cf LOC: TP = 1, FP = 0, FN = 0 \nKey point:\nA partially correct span does not count as a true positive."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec14_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 14,
+    "section_title": "Precision and Recall",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 32,
+    "page_end": 32,
+    "source_pages": [
+      32
+    ],
+    "slide_count": 1,
+    "token_count": 145,
+    "char_count": 292,
+    "content": "Precision and Recall\n\u25cf Precision asks: \n\u25cb Of the items predicted as positive, how many are correct? \n\u25cb \ud835\udc43\ud835\udc5f\ud835\udc52\ud835\udc50\ud835\udc56\ud835\udc60\ud835\udc56\ud835\udc5c\ud835\udc5b = \ud835\udc47\ud835\udc43/ \ud835\udc47\ud835\udc43 + \ud835\udc39\ud835\udc43\n\u25cf Recall asks: \n\u25cb Of the truly positive items, how many did the system find? \n\u25cb \ud835\udc45\ud835\udc52\ud835\udc50\ud835\udc4e\ud835\udc59\ud835\udc59 = \ud835\udc47\ud835\udc43/ \ud835\udc47\ud835\udc43 + \ud835\udc39\ud835\udc41\n\u25cf Precision and recall capture different aspects of performance."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec15_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 15,
+    "section_title": "The F1 Score",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 33,
+    "page_end": 33,
+    "source_pages": [
+      33
+    ],
+    "slide_count": 1,
+    "token_count": 78,
+    "char_count": 251,
+    "content": "The F1 Score\n\u25cf F1 combines precision and recall using the harmonic mean. \n\u25cf Formula: \n\u25cb \ud835\udc391 =\n2\ud835\udc43\ud835\udc45\n\ud835\udc43+\ud835\udc45\n\u25cf F1 is high only when both precision and recall are high. \n\u25cf It is often preferred when the positive class is important and class \nbalance is uneven."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec16_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 16,
+    "section_title": "Worked Example: Computing F1",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 34,
+    "page_end": 34,
+    "source_pages": [
+      34
+    ],
+    "slide_count": 1,
+    "token_count": 124,
+    "char_count": 269,
+    "content": "Worked Example: Computing F1\n\u25cf Suppose a spam detector produces: \n\u25cb TP = 18 \n\u25cb FP = 6 \n\u25cb FN = 9 \n\u25cf Then: \n\u25cb Precision = 18 / (18 + 6) = 0.75 \n\u25cb Recall = 18 / (18 + 9) = 0.67 \n\u25cb F1 = 2 \u00d7 0.75 \u00d7 0.67/ 0.75 + 0.67 \u22480.71\n\u25cf This shows the full calculation from counts to F1."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec17_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 17,
+    "section_title": "When Accuracy Can Mislead",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 35,
+    "page_end": 35,
+    "source_pages": [
+      35
+    ],
+    "slide_count": 1,
+    "token_count": 146,
+    "char_count": 374,
+    "content": "When Accuracy Can Mislead\n\u25cf Accuracy measures the proportion of all correct decisions. \n\u25cf Formula: \n\u25cb \ud835\udc34\ud835\udc50\ud835\udc50\ud835\udc62\ud835\udc5f\ud835\udc4e\ud835\udc50\ud835\udc66 = \ud835\udc47\ud835\udc43 + \ud835\udc47\ud835\udc41 / \ud835\udc47\ud835\udc43 + \ud835\udc47\ud835\udc41 + \ud835\udc39\ud835\udc43 + \ud835\udc39\ud835\udc41\n\u25cf Accuracy can be misleading on imbalanced datasets. \n\u25cf Example: \n\u25cb if 95% of items are negative, always predicting negative gives 95% accuracy \n\u25cb but recall for the positive class is 0 \n\u25cf In such cases, F1 is often more informative."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec18_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 18,
+    "section_title": "Micro, Macro, and Weighted Averages",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 36,
+    "page_end": 36,
+    "source_pages": [
+      36
+    ],
+    "slide_count": 1,
+    "token_count": 101,
+    "char_count": 440,
+    "content": "Micro, Macro, and Weighted Averages\n\u25cf For multi-class problems, we often report combined performance. \n\u25cf Macro average: \n\u25cb compute the metric for each class \n\u25cb then average across classes equally \n\u25cf Micro average: \n\u25cb pool all TP , FP , and FN first \n\u25cb then compute the metric once \n\u25cf Weighted average: \n\u25cb average class-level metrics using class frequency as weights \n\u25cf The choice affects how strongly rare classes influence the final score."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec19_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 19,
+    "section_title": "Worked Example: Micro-Averaged F1 for NER",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 37,
+    "page_end": 37,
+    "source_pages": [
+      37
+    ],
+    "slide_count": 1,
+    "token_count": 265,
+    "char_count": 468,
+    "content": "Worked Example: Micro-Averaged F1 for NER\nUsing the previous example:\n\u25cb PER: TP = 1, FP = 0, FN = 0 \n\u25cb ORG: TP = 0, FP = 1, FN = 1 \n\u25cb LOC: TP = 1, FP = 0, FN = 0 \nNow pool all counts across entity types:\n\u25cb Total TP = 2\n\u25cb Total FP = 1\n\u25cb Total FN = 1\n\u25cb \ud835\udc43\ud835\udc5f\ud835\udc52\ud835\udc50\ud835\udc56\ud835\udc60\ud835\udc56\ud835\udc5c\ud835\udc5b\ud835\udc5a\ud835\udc56\ud835\udc50\ud835\udc5f\ud835\udc5c =\n2+1 = 0.667\n\u25cb \ud835\udc45\ud835\udc52\ud835\udc50\ud835\udc4e\ud835\udc59\ud835\udc59\ud835\udc5a\ud835\udc56\ud835\udc50\ud835\udc5f\ud835\udc5c =\n2+1 = 0.667\n\u25cb \ud835\udc391\ud835\udc5a\ud835\udc56\ud835\udc50\ud835\udc5f\ud835\udc5c =\n2\u00d70.667\u00d70.667\n0.667+0.667 = 0.667\n\u25cf Interpretation:\nMicro-averaging gives one overall score after combining all entity decisions across \ncategories."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec20_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 20,
+    "section_title": "Module 5. Open Information Extraction",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 38,
+    "page_end": 39,
+    "source_pages": [
+      38,
+      39
+    ],
+    "slide_count": 2,
+    "token_count": 109,
+    "char_count": 531,
+    "content": "Module 5. Open Information Extraction\noWhat Open Information Extraction is \noHow OpenIE differs from predefined relation extraction\no A brief view of classical and neural OpenIE approaches\n\nWhat Is Open Information Extraction?\n\u25cf Open Information Extraction (OpenIE) extracts relational facts from \ntext without relying on a fixed predefined schema. \n\u25cf Input: \n\u25cb raw sentences or documents \n\u25cf Output: \n\u25cb relation tuples such as (argument, relation, argument)\n\u25cf OpenIE aims to turn unstructured text into machine-readable \nknowledge."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec21_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 21,
+    "section_title": "What an OpenIE Extraction Looks Like",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 40,
+    "page_end": 40,
+    "source_pages": [
+      40
+    ],
+    "slide_count": 1,
+    "token_count": 84,
+    "char_count": 325,
+    "content": "What an OpenIE Extraction Looks Like\n\u25cf Sentence: \n\u25cb Albert Einstein published the theory of relativity in 1915.\n\u25cf Example extraction: \n\u25cb (Albert Einstein; published; the theory of relativity)\n\u25cb (Albert Einstein; published in; 1915)\n\u25cf OpenIE relies heavily on earlier NLP steps: \n\u25cb POS tagging \n\u25cb parsing \n\u25cb entity recognition"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week10_sec22_part1",
+    "filename": "Week10_TM_last_lecture.pdf",
+    "week": "Week 10",
+    "section_index": 22,
+    "section_title": "A Short View of OpenIE Methods and Limits",
+    "part_index": 1,
+    "part_count": 1,
+    "page_start": 41,
+    "page_end": 41,
+    "source_pages": [
+      41
+    ],
+    "slide_count": 1,
+    "token_count": 89,
+    "char_count": 386,
+    "content": "A Short View of OpenIE Methods and Limits\n\u25cf Classical methods used: \n\u25cb patterns \n\u25cb dependency structure \n\u25cb clause splitting \n\u25cf Later work introduced supervised and neural approaches. \n\u25cf Common challenges include: \n\u25cb ambiguity \n\u25cb synonymy \n\u25cb coreference \n\u25cb trustworthiness of extracted facts \n\u25cf In this module, OpenIE is a compact application case rather than the \nmain assessment focus."
+  }
+]

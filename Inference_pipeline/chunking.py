@@ -1,164 +1,197 @@
 """
-Chunking strategies for the COMP64702 slide corpus.
+Chunking adapter for the inference pipeline.
 
-Input corpus shape (per lecture file):
-    {"filename": ..., "week": "Week 1", "pages": [{"page_number": 1, "content": "..."}, ...]}
+This file contains NO chunking logic. The five strategies live in
+Ingestion_pipeline_code/2-*.py and are imported from there, so there is exactly
+one implementation of each and it cannot drift from what built the collections.
 
-Three strategies, matching the ingestion experiments:
-    - PageLevelChunker      (exp1) : one chunk per slide page
-    - SlidingWindowChunker  (exp2) : fixed-token window with overlap, ignores page bounds
-    - StructureChunker      (exp3) : per-page recursive split down to a token limit
+All this module does is:
+  1. load those scripts (their filenames are not valid module names, so plain
+     `import` cannot reach them — see load_ingestion_module below)
+  2. wrap run_experiment_N output in langchain Documents
+  3. normalise metadata so page_number is always a list
 
-Every chunk is returned as a langchain Document carrying at least:
-    chunk_id, week, week_number, page_number, content
-so the retriever (RRF needs chunk_id) and the evaluator (needs week/page) both work.
-Use get_chunker("exp1" | "exp2" | "exp3").
+Point INGESTION_DIR at the ingestion folder, or set the env var:
+    export INGESTION_DIR=/path/to/Ingestion_pipeline_code
+
+Usage
+    from chunking import get_chunker
+    chunker = get_chunker("exp5")
+    docs = chunker.chunk_files(["Data/Data_week1/Week1.json"])   # preferred
+    docs = chunker.chunk(corpus_list_of_dicts)                   # RAGPipeline path
 """
 
+import glob
+import importlib.util
+import json
+import os
 import re
-from typing import List
+import tempfile
+from typing import List, Optional
+
 from langchain_core.documents import Document
 
-# Token helpers — tiktoken if available, else ~4 chars/token fallback.
-try:
-    import tiktoken
-    _ENC = tiktoken.get_encoding("cl100k_base")
-    def _tokenize(t): return _ENC.encode(t)
-    def _decode(t):   return _ENC.decode(t)
-    def _count(t):    return len(_ENC.encode(t))
-except ImportError:
-    def _tokenize(t): return t.split()
-    def _decode(t):   return " ".join(t)
-    def _count(t):    return len(t) // 4
+# Where the ingestion scripts live. Default assumes this layout:
+#     project/Inference_pipeline/chunking.py
+#     project/Ingestion_pipeline_code/2-*.py
+INGESTION_DIR = os.environ.get(
+    "INGESTION_DIR",
+    os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                 "..", "Ingestion_pipeline_code"),
+)
+
+# Collection names are NOT listed here on purpose. They belong to
+# 3-1-Ingest-to-ChromaDB.py's STRATEGIES dict, which is the single source of
+# truth for where chunks are stored. This module only produces chunks.
+SCRIPTS = {
+    "exp1": ("2-1-PageLevel-chunking.py",            "run_experiment_1"),
+    "exp2": ("2-2-FixedSizeOverlapping-chunking.py", "run_experiment_2"),
+    "exp3": ("2-3-StructureLevel-chunking.py",       "run_experiment_3"),
+    "exp4": ("2-4-SemanticAware-chunking.py",        "run_experiment_4"),
+    "exp5": ("2-5-SectionAware-chunking.py",         "run_experiment_5"),
+}
+
+_MODULE_CACHE = {}
 
 
+# ---------------------------------------------------------------------------
+def load_ingestion_module(filename: str, directory: Optional[str] = None):
+    """Load a module from the ingestion folder BY FILE PATH.
+
+    Needed because '2-4-SemanticAware-chunking.py' and '3-1-Ingest-to-ChromaDB.py'
+    start with digits and contain hyphens — neither is a legal Python identifier,
+    so `import` cannot reach them. importlib does not care about the name.
+
+    Cached: exp4 loads a real embedding model at module scope in some versions,
+    and reloading per lecture file would reload the model.
+
+    Shared with ingest_to_chroma.py so the loading trick exists in one place.
+    """
+    directory = directory or INGESTION_DIR
+    path = os.path.abspath(os.path.join(directory, filename))
+
+    if path in _MODULE_CACHE:
+        return _MODULE_CACHE[path]
+
+    if not os.path.exists(path):
+        raise FileNotFoundError(
+            f"Cannot find {filename} in {directory}.\n"
+            f"Set INGESTION_DIR to your Ingestion_pipeline_code folder."
+        )
+
+    spec = importlib.util.spec_from_file_location(
+        "ingestion_" + re.sub(r"\W", "_", filename), path
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    _MODULE_CACHE[path] = module
+    return module
+
+
+# ---------------------------------------------------------------------------
 def _week_num(week):
     m = re.search(r"\d+", str(week))
     return int(m.group()) if m else None
 
 
-def _as_files(corpus):
-    """Normalise input to a list of lecture-file dicts (each with a 'pages' key)."""
-    if isinstance(corpus, dict):
-        return [corpus]
-    return corpus
+def record_to_document(rec: dict, experiment_id: str) -> Optional[Document]:
+    """One run_experiment_N record -> Document.
+
+    Metadata is passed through as-is apart from page_number, which is forced to
+    a list. exp2/exp4/exp5 legitimately span several slides, so a scalar cannot
+    represent them; evaluation therefore tests overlap, not equality:
+        hit = bool(set(doc.metadata["page_number"]) & set(gold_pages))
+    """
+    text = (rec.get("content") or rec.get("text")
+            or rec.get("chunk") or rec.get("page_content") or "")
+    if isinstance(text, dict):
+        text = json.dumps(text)
+    text = (text or "").strip()
+    if not text:
+        return None
+
+    meta = {k: v for k, v in rec.items()
+            if k not in ("content", "text", "chunk", "page_content")}
+
+    pages = meta.get("page_number", [])
+    if not isinstance(pages, list):
+        pages = [pages] if pages is not None else []
+    meta["page_number"] = [p for p in pages if p is not None]
+
+    meta.setdefault("experiment_id", experiment_id)
+    meta.setdefault("chunk_id", "?")
+    meta["week_number"] = _week_num(meta.get("week", ""))
+
+    return Document(page_content=text, metadata=meta)
 
 
-def _doc(content, week, chunk_id, page_number=None):
-    return Document(
-        page_content=content.strip(),
-        metadata={
-            "chunk_id": str(chunk_id),
-            "week": week,
-            "week_number": _week_num(week),
-            "page_number": page_number,
-        },
-    )
+# ---------------------------------------------------------------------------
+class IngestionChunker:
+    """Wraps one run_experiment_N function from the ingestion scripts."""
 
+    def __init__(self, strategy: str, **kwargs):
+        filename, funcname = SCRIPTS[strategy]
+        self.strategy = strategy
+        self.kwargs = kwargs                       # forwarded to run_experiment_N
+        module = load_ingestion_module(filename)
+        self._run = getattr(module, funcname)
+        # experiment_id comes from the records themselves; the scripts already
+        # stamp it (exp1_page_level, exp5_section_aware, ...).
+        self.experiment_id = strategy
 
-class PageLevelChunker:
-    """exp1: keep each slide page as a single chunk."""
-
-    def __init__(self, min_chars: int = 25):
-        self.min_chars = min_chars
-
-    def chunk(self, corpus) -> List[Document]:
+    # -- primary entry point: the scripts are path-based, so give them paths --
+    def chunk_files(self, paths) -> List[Document]:
+        if isinstance(paths, str):
+            paths = [paths]
         out = []
-        for data in _as_files(corpus):
-            week = data.get("week", "")
-            wk = str(week).replace(" ", "")
-            for page in data.get("pages", []):
-                content = (page.get("content") or "").strip()
-                pn = page.get("page_number")
-                if len(content) < self.min_chars:
+        for p in paths:
+            for rec in self._run(p, **self.kwargs):
+                doc = record_to_document(rec, self.experiment_id)
+                if doc is not None:
+                    out.append(doc)
+        return out
+
+    def chunk_dir(self, data_dir: str, pattern: str = "**/*.json") -> List[Document]:
+        paths = sorted(glob.glob(os.path.join(data_dir, pattern), recursive=True))
+        paths = [p for p in paths if "chroma_db" not in p and "_chunks.json" not in p]
+        return self.chunk_files(paths)
+
+    # -- compatibility shim for RAGPipeline.index_data, which passes dicts -----
+    def chunk(self, corpus) -> List[Document]:
+        """Accepts what RAGPipeline hands over: a lecture dict or list of dicts.
+
+        The ingestion scripts read from disk, so in-memory corpora are written
+        to a temp file and handed over. Slightly wasteful, but it keeps ONE
+        implementation of each strategy rather than a second in-memory copy
+        that could silently diverge. Prefer chunk_files() when you have paths.
+        """
+        if isinstance(corpus, dict):
+            corpus = [corpus]
+
+        out = []
+        with tempfile.TemporaryDirectory() as tmp:
+            for i, lecture in enumerate(corpus):
+                if not isinstance(lecture, dict) or "pages" not in lecture:
                     continue
-                out.append(_doc(content, week, f"{wk}_p{pn}", pn))
+                p = os.path.join(tmp, f"lecture_{i}.json")
+                with open(p, "w", encoding="utf-8") as f:
+                    json.dump(lecture, f)
+                out.extend(self.chunk_files(p))
         return out
 
 
-class SlidingWindowChunker:
-    """exp2: flatten all pages (with [Slide N] tags) and window over tokens."""
+# ---------------------------------------------------------------------------
+def get_chunker(strategy: str = "exp5", **kwargs) -> IngestionChunker:
+    """Factory. exp5 (section-aware) is the default — it won on retrieval.
 
-    def __init__(self, chunk_size: int = 300, overlap: int = 50):
-        self.chunk_size = chunk_size
-        self.overlap = overlap
+    kwargs are forwarded to the underlying run_experiment_N, e.g.
+        get_chunker("exp2", chunk_size=512, overlap=64)
+        get_chunker("exp3", max_tokens=150)
 
-    def chunk(self, corpus) -> List[Document]:
-        out = []
-        for data in _as_files(corpus):
-            week = data.get("week", "")
-            wk = str(week).replace(" ", "")
-            flat = ""
-            for page in data.get("pages", []):
-                content = (page.get("content") or "").strip()
-                if content:
-                    flat += f"\n[Slide {page.get('page_number')}]\n" + content
-            tokens = _tokenize(flat)
-            step = self.chunk_size - self.overlap
-            idx = 1
-            for i in range(0, len(tokens), step):
-                text = _decode(tokens[i:i + self.chunk_size]).strip()
-                if not text:
-                    continue
-                # page_number stays None; slides are recoverable from [Slide N] markers.
-                out.append(_doc(text, week, f"{wk}_sw_{idx}", None))
-                idx += 1
-        return out
-
-
-class StructureChunker:
-    """exp3: respect page boundaries, recursively split long pages to a token limit."""
-
-    def __init__(self, max_tokens: int = 150):
-        self.max_tokens = max_tokens
-        self.separators = ["\n\n", "\n", ". ", " ", ""]
-
-    def _recursive_split(self, text, separators):
-        text = text.strip()
-        if not text:
-            return []
-        if _count(text) <= self.max_tokens or not separators:
-            return [text]
-        sep, rest = separators[0], separators[1:]
-        splits = text.split(sep) if sep != "" else list(text)
-        chunks, cur = [], []
-        for s in splits:
-            candidate = sep.join(cur + [s]) if cur else s
-            if _count(candidate) <= self.max_tokens:
-                cur.append(s)
-            else:
-                if cur:
-                    chunks.append(sep.join(cur))
-                cur = [s] if _count(s) <= self.max_tokens else None
-                if cur is None:
-                    chunks.extend(self._recursive_split(s, rest))
-                    cur = []
-        if cur:
-            chunks.append(sep.join(cur))
-        return [c.strip() for c in chunks if c.strip()]
-
-    def chunk(self, corpus) -> List[Document]:
-        out = []
-        for data in _as_files(corpus):
-            week = data.get("week", "")
-            wk = str(week).replace(" ", "")
-            for page in data.get("pages", []):
-                content = (page.get("content") or "").strip()
-                pn = page.get("page_number")
-                if not content:
-                    continue
-                for sub, text in enumerate(self._recursive_split(content, self.separators), start=1):
-                    out.append(_doc(text, week, f"{wk}_p{pn}_sub{sub}", pn))
-        return out
-
-
-def get_chunker(strategy: str = "exp2"):
-    """Factory: 'exp1' page-level, 'exp2' sliding-window (best), 'exp3' structure-level."""
-    s = strategy.lower()
-    if s in ("exp1", "page", "page_level"):
-        return PageLevelChunker()
-    if s in ("exp2", "sliding", "fixed_overlap"):
-        return SlidingWindowChunker()
-    if s in ("exp3", "structure", "structure_level"):
-        return StructureChunker()
-    raise ValueError(f"Unknown strategy: {strategy}. Choose exp1 | exp2 | exp3.")
+    The other four are kept reachable because retrieval accuracy is only half
+    the question: a strategy that retrieves well but hands the 0.5B generator
+    300 tokens of context may still lose end to end.
+    """
+    if strategy.lower() not in SCRIPTS:
+        raise ValueError(f"Unknown strategy: {strategy}. Choose {list(SCRIPTS)}.")
+    return IngestionChunker(strategy.lower(), **kwargs)

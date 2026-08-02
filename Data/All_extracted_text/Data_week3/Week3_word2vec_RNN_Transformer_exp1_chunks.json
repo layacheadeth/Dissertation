@@ -1,0 +1,758 @@
+[
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p1",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      1
+    ],
+    "char_count": 103,
+    "word_count": 12,
+    "content": "word2vec, RNNs, and Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p2",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      2
+    ],
+    "char_count": 66,
+    "word_count": 5,
+    "content": "Evolution of Language Models\nN-GramWord2VecRecurrentTransformer???"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p3",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      3
+    ],
+    "char_count": 253,
+    "word_count": 29,
+    "content": "How can we represent word meaning?\nHypernyms\nSynonymsTraditional approach: symbolic lexical resources (e.g., WordNet)Represent meaning via explicit relations:\u2013synonymy (dog \u2194)\u2013hypernymy (dog \u2192 animal)Meaning is discrete, manually defined, and relational"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p4",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      4
+    ],
+    "char_count": 279,
+    "word_count": 31,
+    "content": "Limitations of Symbolic Lexical ResourcesStatic and incomplete\u2013Cannot keep pace with new words, senses, or usageExpensive to maintain\u2013Requires expert human annotationLimited notion of similarity\u2013No natural notion of gradedsimilarity\u2013Cannot capture usage-based meaning differences"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p5",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      5
+    ],
+    "char_count": 290,
+    "word_count": 50,
+    "content": "Discrete Representation Words treated as atomic symbols (e.g., one-hot encoding).motel [0, 0, 0, 0, 0, 1, 0, 0, 0, \u2026, 0, 0]hotel [0, 0, 1, 0, 0, 0, 0, 0, 0, \u2026, 0, 0]Vocabulary size = dimensionality (can be very large) Key limitation:all words are equally dissimilar\u2013cosine(motel, hotel) = 0"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p6",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      6
+    ],
+    "char_count": 396,
+    "word_count": 50,
+    "content": "Distributional Semantics\u201cYou shall know a word by the company it keeps.\u201d (J. R. Firth 1957) Abankis afinancial institutionthat acceptsdepositsfrom the public and createscreditIngeography, the wordbankgenerally refers to the land alongside a body of water.Word meaning inferred from contextual usageSame word, different contexts \u2192 different meaningsMeaning becomes statistical rather than symbolic"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p7",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      7
+    ],
+    "char_count": 399,
+    "word_count": 97,
+    "content": "Context-based Word RepresentationsBuild a word\u2013context co-occurrence matrixEach word represented by its surrounding wordsRows= target words; Columns= context words; Values= frequency countscounts I like enjoy deep learning NLP flying . I 0 2 1 0 0 0 0 0 like 2 0 0 1 0 1 0 0 enjoy 1 0 0 0 0 0 1 0 deep 0 1 0 0 1 0 0 0 learning 0 0 0 1 0 0 0 1 NLP 0 1 0 0 0 0 0 1 flying 0 0 1 0 0 0 0 1 . 0 0 0011 10"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p8",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      8
+    ],
+    "char_count": 345,
+    "word_count": 91,
+    "content": "Issues with raw co-occurrence count Extremely high-dimensionalSparse and memory-intensiveSensitive to corpus size and frequency effectscounts I like enjoy deep learning NLP flying . I 0 2 1 0 0 0 0 0 like 2 0 0 1 0 1 0 0 enjoy 1 0 0 0 0 0 1 0 deep 0 1 0 0 1 0 0 0 learning 0 0 0 1 0 0 0 1 NLP 0 1 0 0 0 0 0 1 flying 0 0 1 0 0 0 0 1 . 0 0 0011 10"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p9",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      9
+    ],
+    "char_count": 285,
+    "word_count": 37,
+    "content": "Low Dimensional Dense Word Embeddings Represent each word as a dense vectorFixed dimensionality (typically 100\u2013300 for word2vec)Learned automatically from data\nCore Idea of word2vec Learn word embeddings by predicting contextReplace explicit co-occurrence counts with a prediction task"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p10",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      10
+    ],
+    "char_count": 128,
+    "word_count": 14,
+    "content": "Word2vec ArchitecturesTwo training objectives\u2013CBOW: predict target word from context\u2013Skip-gram: predict context from target word"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p11",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      11
+    ],
+    "char_count": 189,
+    "word_count": 23,
+    "content": "Continuous Bag-of-Words (CBOW)Input: surrounding context wordsOutput: target wordContext vectors are summed or averagedEfficient for frequent words\n\u201cGiven the context, what word fits here?\u201d"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p12",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      12
+    ],
+    "char_count": 200,
+    "word_count": 26,
+    "content": "Skip-gramInput: target wordOutput: surrounding context wordsGenerates multiple training pairs per wordOften performs better than CBOW for rare words\u201cGiven this word, what words tend to appear nearby?\u201d"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p13",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      13
+    ],
+    "char_count": 161,
+    "word_count": 27,
+    "content": "CBOW vs. Skip-gram\neat an apple every day\nSkip-gram: predict {eat, an, every, day} from apple\neat anapple every day\nCBOW: predict applefrom {eat, an, every, day}"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p14",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      14
+    ],
+    "char_count": 70,
+    "word_count": 8,
+    "content": "Training objective (CBOW)Objective function \nTaking logarithm, we have"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p15",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      15
+    ],
+    "char_count": 168,
+    "word_count": 12,
+    "content": "Applications of Word EmbeddingsDependency parsingNamed entity recognitionDocument classificationSentiment AnalysisParaphrase DetectionWord ClusteringMachine Translation"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p16",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      16
+    ],
+    "char_count": 148,
+    "word_count": 18,
+    "content": "Word Analogies Test for linear regularitiesin embedding spaceRelations captured as vector offsetsEmpirical property observed by Mikolovet al. (2014)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p17",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      17
+    ],
+    "char_count": 151,
+    "word_count": 15,
+    "content": "Machine Translation\nSimilar concepts align geometrically across languagesEnables bilingual lexicon inductionPrecursor to modern multilingual embeddings"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p18",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      18
+    ],
+    "char_count": 66,
+    "word_count": 5,
+    "content": "Evolution of Language Models\nN-GramWord2VecRecurrentTransformer???"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p19",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      19
+    ],
+    "char_count": 96,
+    "word_count": 5,
+    "content": "Recurrent Neural Networks (RNNs)\nSource:http://clah.github.io/posts/2015-08-Understanding-LSTMs/"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p20",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      20
+    ],
+    "char_count": 349,
+    "word_count": 57,
+    "content": "Recurrent Neural Networks (RNNs) as LMs Recurrent Neural NetworkA network that contains a cycle, i.e., the hidden state is fed back and used at the next time stepThe hidden layer has a recurrent connection: the hidden state at time \ud835\udc61depends on\u2013the current input \ud835\udc65\",and\u2013the hidden state from the previous time step \u210e!\"#\n An Elman network (simple RNN)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p21",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      21
+    ],
+    "char_count": 322,
+    "word_count": 56,
+    "content": "Recurrent Neural Networks (RNNs) as LMs Simple RNNThe sequence is processed one token at a time, from left to rightAt each time step \ud835\udc61, the hidden state is updated using:\u2013the current input \ud835\udc65\ud835\udc61\u2013the previous hidden state \u210e(\ud835\udc61\u22121)The hidden state \u210e\ud835\udc61serves as a summary of past inputs and is used to compute the output at time \ud835\udc61."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p22",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      22
+    ],
+    "char_count": 263,
+    "word_count": 36,
+    "content": "Recurrent Neural Networks (RNNs) as LMsRNN language models\u2013Process an input sequence one word at a time\u2013To predict the next word from the current word and the previous hidden state\u2013Model the next-word probabilityComputation is sequential, limiting parallelization"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p23",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      23
+    ],
+    "char_count": 220,
+    "word_count": 36,
+    "content": "et: embedding for the current word wt\nht: combination of etand ht-1\nVh: scores over the vocabulary\nLet tbe the current time step; wtis the current word\nyt: probability distribution\nRecurrent Neural Networks (RNNs) as LMs"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p24",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      24
+    ],
+    "char_count": 153,
+    "word_count": 27,
+    "content": "yt[i] : probability that a particular word iis the next word\nLet tbe the current time step; wtis the current word\nRecurrent Neural Networks (RNNs) as LMs"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p25",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      25
+    ],
+    "char_count": 448,
+    "word_count": 67,
+    "content": "Recurrent Neural Networks (RNNs) as LMsTraining an RNN as a language model\u2013based on a corpus, model learns to predict the next word at each time step t\u2013model minimisesthe error in predicting the correct next word\u2013error/loss: the difference between a predicted probability distribution and the correct distribution, i.e., cross-entropy, where:correct distribution: one-hot vector for the vocabulary, where the actual next word = 1 and the rest are 0"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p26",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      26
+    ],
+    "char_count": 229,
+    "word_count": 34,
+    "content": "wtwt+1wt+2\nsorryBased on probability assigned to correct next word\nRecurrent Neural Networks (RNNs) as LMsTeacher forcing: the model is given the correct history sequence (rather than what was predicted in the previous time step)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p27",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      27
+    ],
+    "char_count": 178,
+    "word_count": 29,
+    "content": "Gradient descent: used to adjust the weights in the RNN, in order tominimise the CE loss (LCE) averaged over the sequence\nwtwt+1wt+2\nsorry\nRecurrent Neural Networks (RNNs) as LMs"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p28",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      28
+    ],
+    "char_count": 349,
+    "word_count": 59,
+    "content": "Use <s>as the first input\nSample a word based on softmax\nUse sampled word as next input\nContinue until </s> is sampled or limit reached\nAutoregressive generation: the word generated at each time step t is conditioned on the word selected by the RNN from the previous time step t-1Sampling using RNN Language Models\nSampling using RNN Language Models"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p29",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      29
+    ],
+    "char_count": 233,
+    "word_count": 31,
+    "content": "Autoregressive generation: used in many other applications (apart from predicting the next word), e.g., machine translation, summarisation\nInstead of <s>,richer context is used in other applications\nSampling using RNN Language Models"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p30",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      30
+    ],
+    "char_count": 267,
+    "word_count": 34,
+    "content": "Quick ComparisonKey difference between n-gram and RNN language models:\u2013n-gram language models incorporate information from limited context only (i.e., preceding n-1 tokens)\u2013RNN language models: the hidden state can incorporate information from all the preceding words"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p31",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      31
+    ],
+    "char_count": 386,
+    "word_count": 43,
+    "content": "Limitations of RNNsProcess input sequentially, slow training and inferenceStruggle with long-range dependencies despite LSTM/GRU improvements.Limited parallelisationduring training, so hard to scale on large datasets.Gradient vanishing/exploding issues over long sequences.Difficult to capture global context effectivelyThere is another type, i.e., transformer language models, up next!"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p32",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      32
+    ],
+    "char_count": 350,
+    "word_count": 39,
+    "content": "Turning Point \u2013TransformerProposed by Vaswani et al. (2017) in \u201cAttention is All You Need\u201d.Eliminates recurrence, i.e., no step-by-step token processing.Enables parallelization: trains faster by processing entire sequences simultaneously.Leverages self-attentionto model long-range dependencies.Achieves SOTA results in machine translation and beyond"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p33",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      33
+    ],
+    "char_count": 66,
+    "word_count": 5,
+    "content": "Evolution of Language Models\nN-GramWord2VecRecurrentTransformer???"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p34",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      34
+    ],
+    "char_count": 308,
+    "word_count": 29,
+    "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT, RoBERTa, DeBERTaEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p35",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      35
+    ],
+    "char_count": 136,
+    "word_count": 15,
+    "content": "TransformersTransformer: a neural architecture built entirely on attention mechanisms.\nCredits: The Illustrated Transformer \u2013Jay Alammar"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p36",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      36
+    ],
+    "char_count": 450,
+    "word_count": 53,
+    "content": "Transformer ArchitectureCore Components Encoder Stack:produces contextual representations of the input.Decoder Stack: usesthe encoder's output and previous decoder outputs to generate the target sequence.Self-Attention Mechanism: allowsthe model to focus on different parts of the input sequence when processing each token.Feed-Forward Neural Networks: apply nonlinear transformation per token.Key idea: no recurrence, no convolution \u2014only attention."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p37",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      37
+    ],
+    "char_count": 457,
+    "word_count": 54,
+    "content": "Why Self-Attention Replaced RNNsIn RNNs: \u2013Information between distant tokens flows through O(n) steps \u2013Computation is sequential, i.e.hard to parallelizeIn Transformers: \u2013Self-attention allows each token to directly attend to all other tokens in the sequence, producing contextualised representations\u2013Computation within each layer is parallelizable across sequence positionsTrade-off: \u2013Attention time and memory scale quadraticallywith sequence length \ud835\udc42(\ud835\udc5b2)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p38",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      38
+    ],
+    "char_count": 58,
+    "word_count": 7,
+    "content": "Transformer ArchitectureOpening the boxwith more details \u2026"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p39",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      39
+    ],
+    "char_count": 119,
+    "word_count": 17,
+    "content": "Transformer ArchitectureOpening the box with even more details \u2026 \nWord embeddings\noutputs of the previous encoder layer"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p40",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      40
+    ],
+    "char_count": 213,
+    "word_count": 20,
+    "content": "Transformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p41",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      41
+    ],
+    "char_count": 204,
+    "word_count": 17,
+    "content": "Inner workings of the Encoder1.Self-attentionmixes information across positions.2.Residual+ LayerNorm3.FNN(position-wise) applies nonlinear transformation independently to each token.4.Residual+ LayerNorm"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p42",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      42
+    ],
+    "char_count": 239,
+    "word_count": 29,
+    "content": "Inner workings of the EncoderImportant propertiesTokens are processed in parallel within each layer Tokens are coupled via attention Deeper layers refine contextual representationsResidual connections preserve signal and ease optimisation."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p43",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      43
+    ],
+    "char_count": 397,
+    "word_count": 48,
+    "content": "Self-Attention Mechanism Scaled Dot-Product AttentionFor input \nInterpretation:\u2013Q, K, Vare learned linear projections of the input\u2013Attention scores measure similarity in projected space\u2013Scaling prevents dot products from growing large in high dimensions and stabilisesgradients.\u2013softmaxconverts attention scores into a distribution over the input elements\u2013Output is a weighted sum of value vectors"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p44",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      44
+    ],
+    "char_count": 594,
+    "word_count": 92,
+    "content": "Understanding Self-AttentionQuery (Q): The query vector represents the current input or the element for which we are trying to find relevant information. Example: Looking for action movies with strong female leads.Key (K): The key vector represents the criteria or features against which the query is compared. Each element in the input data has an associated key vector. Example: This movie is tagged as action, drama, female lead.Value (V): The value vector holds the actual information or content that might be relevant to the query. Example: The full movie details or recommendation result."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p45",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      45
+    ],
+    "char_count": 225,
+    "word_count": 29,
+    "content": "Self-attention Visualisation\nSelf-attention allows each tokenfocus on relevant token in the sequence.Token \"it\" attends more to related tokens like \u201dThe animal\"This helps the model capture long-range dependencies and context."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p46",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      46
+    ],
+    "char_count": 194,
+    "word_count": 24,
+    "content": "Calculating Self Attention \nStep 1: ComputeQ, K, and VvectorsFor each token, compute\u2013a queryvector\u2013a key vector\u2013a valuevector.Derived by multiplying input embeddings with learned weight matrices"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p47",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      47
+    ],
+    "char_count": 239,
+    "word_count": 31,
+    "content": "Calculating Self Attention \nStep 2: Compute attention scores For each token, compute dot products between \u2013Its queryvector and all key vectors\u2013e.g.q\u2081withk\u2081,k\u2082,k\u2083, \u2026Thisproduces one score per token pairLarger dot product \u00e0stronger alignment"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p48",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      48
+    ],
+    "char_count": 409,
+    "word_count": 56,
+    "content": "Calculating Self Attention \nStep 3: Scale and normalize attention scoresThe dot product scores from Step 2 can become large, especially with high-dimensional vectors.Divide each score by the square root of the key dimension (e.g.\u221a64 = 8) to prevent large magnitudesThis scaling helps stabilize gradients during training.Apply Softmax\u2013All weights are positive\u2013Converts to a probability distribution over tokens"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p49",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      49
+    ],
+    "char_count": 338,
+    "word_count": 44,
+    "content": "Calculating Self Attention \nStep 4: Compute the self-attention outputMultiply each value vector by its attention weight. This emphasizes important words and down-weights irrelevant ones.The result is the updated contextualized representation for the tokenThis representation is then passed to the feed-forward layer for further processing"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p50",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      50
+    ],
+    "char_count": 235,
+    "word_count": 37,
+    "content": "E\ufb03cient computation in matrix termsCalculate the Query, Key, and Valuematrices for the entire context. We do that by packing the embeddings into a matrix X and multiplying it by the weight matrices.\nOutputs of the self-attention layer:"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p51",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      51
+    ],
+    "char_count": 409,
+    "word_count": 56,
+    "content": "A few more ornaments: Multiple heads!\nEach self-attention layer computes multiple attention heads in parallel.Instead of one set of Q/K/V weights, we use multiple sets one per head, i.e.\u201cmulti-head attention\u201dEach head learns to capture different aspects or patterns in the data.Intuition: enables the model to attend to different representation subspaces simultaneously (e.g.river \u2018bank\u2019vs. financial \u2018bank\u2019 )"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p52",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      52
+    ],
+    "char_count": 245,
+    "word_count": 36,
+    "content": "A few caveats: Multiple heads!\nEach attention head produces its own output matrix (Z\u2080, Z\u2081, ..., Z\u2087).These outputs are computed independently in different learned projection subspaces and can model diverse relational patterns from the same input."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p53",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      53
+    ],
+    "char_count": 284,
+    "word_count": 43,
+    "content": "Combining Outputs from Multiple Heads\nConcatenate the outputs (Z\u2080, Z\u2081, ..., Z\u2087) from all attention heads.Multiply the combined matrix by a learnable output projection matrix Wo.This gives the final output Z, which integrates diverse attention patterns and is passed to the next layer."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p56",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      56
+    ],
+    "char_count": 25,
+    "word_count": 6,
+    "content": "What is missing so far \u2026?"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p57",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      57
+    ],
+    "char_count": 300,
+    "word_count": 38,
+    "content": "Another ornament: Positional encodings\nTransformers lack a built-in notion of word order.To encode position information, we add a positional vectorto each input embedding.In the original Transformer, fixed sinusoidal positional encodings were used (i.e. sinusoidal functions of different frequencies)"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p58",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      58
+    ],
+    "char_count": 361,
+    "word_count": 49,
+    "content": "Another ornament: Residuals\nTo stabilize training in deep networks, each sub-layer is wrapped with a residual connection.In each sub-layer (self-attention or FFN), the input is added to the sub-layer output.The output is then passed through a layer normalization step.Residual connections improve gradient flow and facilitate optimization in deep architectures."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p59",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      59
+    ],
+    "char_count": 435,
+    "word_count": 54,
+    "content": "Cross Attention: allows the decoder to attend to encoder outputs when generating each tokenOutput Generation: each decoder layer combines the following to produce representations used to predict the next token\u2013masked self-attention\u2013encoder\u2013decoder (cross) attention\u2013a feed-forward networkMasked Self-Attention: ensures each position can only attend to previously generated tokens (prevents access to future tokens)\nThe Decoding Process"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p60",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      60
+    ],
+    "char_count": 268,
+    "word_count": 34,
+    "content": "Masking in the DecoderThe decoder\u2019s self-attention can only look at earlier tokens (i.e.not future ones).This prevents information leakage from future tokens during training.Implemented by masking future positions, setting their attention scores to -infbefore softmax."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p61",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      61
+    ],
+    "char_count": 332,
+    "word_count": 38,
+    "content": "Cross AttentionThe decoder attends to the encoder\u2019s output representations to generate predictions.The top encoder layer produces contextualized representations (used as keysand valuesin cross-attention).These are fed into the decoder\u2019s cross-attentionlayer.This helps the decoder focus on relevant input positionsduring generation."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p62",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      62
+    ],
+    "char_count": 519,
+    "word_count": 68,
+    "content": "From Decoder to Output TokenTraining time:the full targetsequenceis known. We use teacher forcing, feeding the correct previous tokens, to compute next-token predictions.Inference time: output is generated autoregressively, one token at a time. Each predicted token is fed back into the decoder.Linear Layer: Projects the decoder output to the vocabulary size.SoftmaxFunction: Converts logits into probability distributions over the vocabulary.Token Selection: selects the token (e.g., via greedy decoding or sampling)."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p63",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      63
+    ],
+    "char_count": 430,
+    "word_count": 58,
+    "content": "How Transformers Learn: the Training ProcessLoss Function: cross-entropy loss is used to measure how far the predicted token probabilities are from the true target tokens. Lower loss indicates better predictions.Backpropagation: gradients of the loss are computed and used to update model parameters (e.g., via Adam optimizer).Datasets: trained on paired input\u2013output sequences (e.g., source and target sentences for translation)."
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p64",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      64
+    ],
+    "char_count": 411,
+    "word_count": 44,
+    "content": "SummaryCore Idea: Overcomes limitations of RNNs and LSTMs (e.g., sequential bottlenecks, long-range dependencies) through global self-attention.Key Components: Self-Attention, Multi-Head Attention, Encoder-Decoder Structure, Positional EncodingWhy It Works:\u2013Short path length between tokens (i.e.O(1) per layer)\u2013Fully parallelizable across sequence positions\u2013Scales effectively to very large models and datasets"
+  },
+  {
+    "experiment_id": "exp1_page_level",
+    "chunk_id": "Week3_p65",
+    "filename": "Week3_word2vec_RNN_Transformer.pdf",
+    "week": "Week 3",
+    "page_number": [
+      65
+    ],
+    "char_count": 34,
+    "word_count": 4,
+    "content": "Building Transformers from Scratch"
+  }
+]

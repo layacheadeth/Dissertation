@@ -30,7 +30,7 @@ def run_experiment_1(input_json_path: str, min_char_threshold: int = 25) -> List
             "chunk_id": f"{week.replace(' ', '')}_p{page_num}",
             "filename": filename,
             "week": week,
-            "page_number": page_num,
+            "page_number": [page_num] if page_num is not None else [],  # Wrapped in a list for consistency
             "char_count": len(content),
             "word_count": len(content.split()),
             "content": content

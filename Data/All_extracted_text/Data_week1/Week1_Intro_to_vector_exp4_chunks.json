@@ -1,0 +1,817 @@
+[
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_1",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      1,
+      2,
+      3
+    ],
+    "sentence_count": 15,
+    "token_count": 57,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "COMP64702: Transforming Text Into Meaning Introduction & Vector Representations of Text Chenghua Lin chenghua.lin@manchester.ac.uk @chenghua lin Computer Science Department The University of Manchester Part I: Introduction Course Practicalities Course Lecturers: Prof. Chenghua Lin Dr."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_2",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      3
+    ],
+    "sentence_count": 7,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Jingyuan Sun Lectures and Labs: Lectures: Mondays from 10:00\u201312:00 (weekly) Lecture slides for each week will be released one week in advance Labs:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_3",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      3,
+      4
+    ],
+    "sentence_count": 6,
+    "token_count": 64,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Fridays from 12:00\u201314:00 (Weeks 3, 5, 7, 9) All materials will be made available onCanvas. Course Practicalities (cont.) Assessment: Two components:Team courseworkandfinal exam Each component contributes 50% to the overall module mark."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_4",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      4,
+      5
+    ],
+    "sentence_count": 14,
+    "token_count": 96,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Chenghua will be fully responsible for the coursework and for running the labs. Other Support 9 teaching assistants for the course Discussion forum on Canvas Course goals Develop a solid understanding of text mining and NLP fundamentals (e.g. text preprocessing and representations). Understand the evolution of language models leading to transformers and modern LLM architectures. Understand traditional and state-of-the-art approaches (e.g., transformer-based models) to core NLP tasks. Understand how large language models are trained and"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_5",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      5,
+      6
+    ],
+    "sentence_count": 14,
+    "token_count": 104,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "aligned (e.g. pre-training, instruction tuning). Systematically evaluate and compare the performance of approaches to NLP tasks. Develop and apply, as a team, various NLP methods to extract information and meaning from large-scale textual data Text Mining vs. NLP Different historical emphases Natural Language Processing (NLP):traditionally focuses on modeling linguistic structure and meaning (e.g., syntax, semantics, discourse) Text Mining:traditionally focuses on discovering patterns and useful information from large text collections (e.g., topic"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_6",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      6,
+      8,
+      9,
+      11
+    ],
+    "sentence_count": 13,
+    "token_count": 70,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "modelling) Increasing convergence Extensive sharing of representations, models, and evaluation benchmarks Strong overlap in statistical and neural language processing Modern large language models blur the distinction between NLP and text mining Why Text Mining and NLP? Machine Translation Why Text Mining and NLP? Question Answering Historical Legal Text Analytics Manually transcribed from the original handwritten pages in"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_7",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      11,
+      12,
+      13
+    ],
+    "sentence_count": 8,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Latin and Middle Scots. Annotate and enrich transcribed, machine readable Aberdeen Burgh Records Analyse the evolution of social/legal concepts Why Text Mining and NLP? Fact Checking Why Text Mining and NLP? Automatically generate weather forecast report (i.e., data to text"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_8",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      13,
+      14,
+      15
+    ],
+    "sentence_count": 12,
+    "token_count": 43,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "generation) Why Text Mining and NLP? ChatGPT\u2019s abilities Question answering Perform mathematical tasks Write a song/poem given a topic Write an email for you Dialogue generation Code generation and debugging Text completion ... ..."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_9",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      15,
+      16,
+      20
+    ],
+    "sentence_count": 6,
+    "token_count": 47,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "A significant step towards AGI ChatGPT Why are Text Mining and NLP challenging? Natural languagesevolve! New words appear constantly (e.g.\u201cemoji\u201d,\u201cto DM\u201d) Syntactic rules are flexible (e.g."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_10",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      20,
+      22
+    ],
+    "sentence_count": 9,
+    "token_count": 46,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "\u201cComing?\u201d vs. \u201cAre you coming?\u201d) Ambiguity is inherent World knowledge is necessary for interpretation \u201cThe player took three steps. The whistle blew.\u201d Many languages, dialects, styles, etc. Chinese word segmentation"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_11",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      24,
+      25
+    ],
+    "sentence_count": 17,
+    "token_count": 98,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Traditional vs. simplified Chinese Chinese is an ideographic language (vs. English as an alphabetic one) The traditional Chinese characters provide much richer stroke signals than the simplified counterpart Why Machine Learning for TM/NLP? Traditional rule-based artificial intelligence (symbolic AI): requires expert knowledge to engineer the rules not flexible to adapt in multiple languages, domains, applications Learning from data (machine learning) adapts: to evolution: just learn from new data to different applications: just learn with the appropriate target"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_12",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      25,
+      26,
+      28
+    ],
+    "sentence_count": 16,
+    "token_count": 101,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "representation NLP =? NLP is a confluence of computer science, artificial intelligence (AI) and linguistics ML provides techniques for problem solving by learning from data (current dominant AI paradigm) ML isoftenused in modelling NLP tasks NLP =? Computational Linguistics Both mostly use text as data In Computational Linguistics (CL), computational methods are used to support the study of linguistic phenomena and theories (e.g. formal discourse theories) In NLP, the scope is more general. Computational methods"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_13",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      28,
+      29
+    ],
+    "sentence_count": 13,
+    "token_count": 60,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "are used for translating text, extracting information, answering questions etc. The top NLP scientific conference is called: Annual Meeting of the Association for Computational Linguistics (ACL) Other Related fields Machine Learning Speech Processing Artificial Intelligence Information Retrieval Statistics Any field that involves processing language: literature, history, etc."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_14",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      29,
+      30,
+      31
+    ],
+    "sentence_count": 13,
+    "token_count": 43,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "(i.e. digital humanities) social sciences (sociology, psychology, law) biology Typical NLP Applications Machine translation Sentiment analysis Information extraction Text summarisation Question answering Dialogue systems and many more ... Part II:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_15",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      31,
+      32,
+      34
+    ],
+    "sentence_count": 19,
+    "token_count": 134,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Vector Representations of Text Why do we need vector representations of text? How can we transform a raw text to a vector? Vectors and Vector Spaces A vector (i.e. embedding)xis aone-dimensional arrayofd elements (coordinates), that can be identified by an index i\u2208d. e.g.x 1 = 2 x 2 0 ... index 1 2 ... A collection ofnvectors is amatrixXwith sizen\u00d7d- also called avector space. e.g.X[2,1] =\u22122 ( 2 0 ... -2 9 ... ... 0 2 ... | {z }"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_16",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      34,
+      36,
+      38
+    ],
+    "sentence_count": 6,
+    "token_count": 65,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Note that in Python indices start from 0! Example of a vector space di (i\u22080,1) are the coordinates andx j are vectors How can we measure thatx 1 is closer tox 2 than tox 3? Vector Similarity Dot (inner) product:takes two equal-length sequences of"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_17",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      38
+    ],
+    "sentence_count": 6,
+    "token_count": 69,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "numbers (i.e. vectors) and returns a single number. dot(x1,x 2) =x 1 \u00b7x 2 =x 1x\u22a4 2 = Pd i=1 x1,i x2,i = x1,1x2,1 +...+x 1,d x2,d"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_18",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      38
+    ],
+    "sentence_count": 6,
+    "token_count": 68,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Cosine similarity:normalise dot product ([0,1]) by dividing with vectors\u2019 lengths (or magnitude or norm)|x|. cosine(x1,x 2) = x1\u00b7x2 |x1||x2| = i=1 x1,i x2,iqPd i=1 (x1,d )2"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_19",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      38,
+      40
+    ],
+    "sentence_count": 7,
+    "token_count": 47,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "qPd i=1 (x2,d )2 |x|= \u221ax\u00b7x= x 2 1 +...+x 2 Vector Spaces of Text Any ideas what are rows and columns for text data?"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_20",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      40,
+      43
+    ],
+    "sentence_count": 16,
+    "token_count": 57,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "word-word (term-context) game ingredient basketball football recipe document-word (bag-of-words) good bad doc 1 doc 2 doc 3 Why do we need vector representations of text? Encode the meaning of words so we can computesemantic similaritybetween them. E.g."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_21",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      43
+    ],
+    "sentence_count": 7,
+    "token_count": 44,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "isbasketballmore similar to footballorrecipe? Document retrieval, e.g. retrieve documents relevant to a query (web search) ApplyMachine Learningon textual data, e.g. clustering/classification algorithms operate on vectors."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_22",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      43,
+      47
+    ],
+    "sentence_count": 12,
+    "token_count": 76,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "We are going to see a lot of this during this course! Text units Raw text: As far as I\u2019m concerned, this is Lynch at his best. \u2018Lost Highway\u2019 is a dark, violent, surreal, beautiful, hallucinatory masterpiece. 10 out of 10 stars. word (token/term): a sequence of one or more characters excluding whitespaces."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_23",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      47
+    ],
+    "sentence_count": 5,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Sometimes it consists of n-grams. document (text sequence/snippet): sentence, paragraph, section, chapter, entire document, search query, social media post, transcribed utterance, pseudo-documents (e.g."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_24",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      47,
+      48
+    ],
+    "sentence_count": 10,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "all tweets posted by a user), etc. How can we go fromrawtext to avector? Text Processing: Tokenisation Tokenisationto obtain tokens from raw text. Simplest form:split text on whitespacesor useregular expressions. Raw text: As far as I\u2019m concerned, this is Lynch at his best."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_25",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      48
+    ],
+    "sentence_count": 6,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "\u2018Lost Highway\u2019 is a dark, violent, surreal, beautiful, hallucinatory masterpiece. 10 out of 10 stars. Tokenised text: As far as I\u2019m concerned , this is Lynch at his best ."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_26",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      48,
+      49
+    ],
+    "sentence_count": 8,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "\u2018 Lost Highway \u2019 is a dark , violent , surreal , beautiful , hallucinatory masterpiece . 10 out of 10 stars . Text Processing: Other pre-processing options Other pre-processing steps may follow: lowercasing,"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_27",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      49
+    ],
+    "sentence_count": 6,
+    "token_count": 50,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "punctuation/number/stop/infrequent word removal and stemming Tokenised text: As far as I\u2019m concerned , this is Lynch at his best . \u2018 Lost Highway \u2019 is a dark , violent , surreal , beautiful , hallucinatory masterpiece ."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_28",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      49,
+      50
+    ],
+    "sentence_count": 9,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "10 out of 10 stars . Pre-processed text (lowercase, punctuation/stop word removal): concerned lynch best lost highway dark violent surreal beautiful hallucinatory masterpiece 10 10 stars Decide what/how do you want to represent: Obtain a vocabulary Assume a corpusDofmpre-processed texts (e.g."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_29",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      50
+    ],
+    "sentence_count": 5,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "a set of movie reviews or tweets). The vocabularyVis a set containing all thekunique wordsw i in V={w 1, ...,wk } and often is extended to include n-grams (contiguous sequences of"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_30",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      50,
+      51,
+      54
+    ],
+    "sentence_count": 12,
+    "token_count": 63,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "nwords). Words: Discrete vectors Text: love pineapple apricot apple chocolate apple pie Vocabulary size:|V|=? Words: Discrete vectors Text: love pineapple apricot apple chocolate apple pie V={apple, apricot, chocolate, love, pie, pineapple} Vocabulary size:|V|= 6"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_31",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      54
+    ],
+    "sentence_count": 2,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "apricot =x 2 = [0,1,0,0,0,0] pineapple =x 3 = [0,0,0,0,0,1]"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_32",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      54,
+      55
+    ],
+    "sentence_count": 10,
+    "token_count": 126,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Also known asone-hot encoding. What\u2019s the problem? Problems with discrete vectors apricot =x 2 = [0,1,0,0,0,0] pineapple =x 3 = [0,0,0,0,0,1] dot(x2,x 3) = 0\u00b70 + 1\u00b70 + 0\u00b70 + 0\u00b70 + 0\u00b70 + 0\u00b71 = 0 cosine(x2,x 3) = x2 \u00b7x 3 |x2||x3| = 0 1\u00b71 = 0"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_33",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      55,
+      58
+    ],
+    "sentence_count": 13,
+    "token_count": 87,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Every word is equally different from every other word. But apricotandpineappleare related! Wouldcontextual informationbe useful? A quick test: What istesguino? Some sentences mentioning it: A bottle oftesguinois on the table. Everybody likes an ice coldtesguino. Tesguinomakes you drunk. We maketesguinoout of corn. Tesguino is a beer made from corn."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_34",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      59,
+      64
+    ],
+    "sentence_count": 16,
+    "token_count": 154,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Distributional Hypothesis Firth (1957) 1 You shall know a word by the company it keeps! Words appearing in similar contexts are likely to have similar meanings. 1John R Firth (1957). \u201cA synopsis of linguistic theory, 1930-1955\u201d. In:Studies in linguistic analysis. Words: Word-Word Matrix (term-context) A matrixX,n\u00d7mwheren=|V|(target words) and m=|V c |(context words) For each wordx i inV, count how many times it co-occurs with context wordsx j Use a context window of\u00b1kwords (to the left/right ofx i ) Compute frequencies over a big corpus of documents (e.g."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_35",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      64,
+      66
+    ],
+    "sentence_count": 8,
+    "token_count": 60,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "the entire Wikipedia)! Usually target and context word vocabularies are the same resulting into a square matrix. Word-Word Matrix Nowapricotandpineapplevectors look moresimilar! cosine(apricot,pineapple) = 1 cosine(apricot,digital) = 0"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_36",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      67,
+      69
+    ],
+    "sentence_count": 9,
+    "token_count": 87,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Context types We can refine contexts using linguistic information: their part-of-speech tags (bank Vvs.bank N) syntactic dependencies (eat dobjvs.eat subj) Documents: Document-Word Matrix (Bag-of-Words) A matrixX,|D| \u00d7 |V|where rows are documents in corpusD, and columns are vocabulary words inV. For each document, count how many times wordsw\u2208 V"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_37",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      69
+    ],
+    "sentence_count": 5,
+    "token_count": 41,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "appear in it. bad good great terrible Doc 1 14 1 0 5 Doc 2 2 5 3 0 Doc 3 0 2 5 0"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_38",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      69,
+      72
+    ],
+    "sentence_count": 15,
+    "token_count": 143,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Xcan also be obtained by adding all the one-hot vectors of the words in the documents and then transpose! Problems with counts Frequent words (articles, pronouns, etc.) dominate contexts without being informative. Let\u2019s add the wordtheto the contexts. It often appears with most nouns: vocabulary = [aadvark,computer,data,pinch,result,sugar,the] apricot =x 2 = [0,0,0,1,0,1,30] digital =x 3 = [0,2,1,0,1,0,45] cosine(x2,x 3) = 30\u00b745\u221a 902\u00b7 2031 = 0.997"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_39",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      72,
+      73
+    ],
+    "sentence_count": 8,
+    "token_count": 44,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "This also holds for the document-word matrix! Solution: Weight the vectors! Weighting the Word-Word Matrix: Distance discount Weight contexts according to the distance from the word: the further away, the lower the weight!"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_40",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      73,
+      75
+    ],
+    "sentence_count": 12,
+    "token_count": 69,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "For a window size\u00b1k, multiply the context word at each position as k\u2212distance k , e.g. fork= 3: [ 1 3 , 2 3 , 3 3 ,word, 3 3 , 2 3 , 1 3 ] Weighting the Word-Word Matrix:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_41",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      75
+    ],
+    "sentence_count": 13,
+    "token_count": 125,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Pointwise Mutual Information Pointwise Mutual Information (PMI):how often two wordsw i andw j occur togethter relative to occur independently: PMI(w i ,w j ) = log 2 P(w i ,w j ) P(w i )P(w j ) = #(wi ,w j )|D| #(w1)\u00b7#(w j ) P(w i ,w j ) = #(wi ,w j ) |D| ,P(w i ) = #(wi ) |D| where #(\u00b7) denotes count and|D|number of observed words in the corpus."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_42",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      75,
+      77
+    ],
+    "sentence_count": 21,
+    "token_count": 141,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Positive values quantify relatedness. Use PMI instead of counts. Negative values? Usually ignored (positive PMI): PPMI(w i ,w j ) = max(PMI(w i ,w j ),0) Weighting the Document-Word Matrix: TF.IDF Represent the importance of words in a document relative to a corpus Term Frequency (TF): If a term appears frequently in a document, it is likely important to that document. Inverse Document Frequency (IDF): If a term appears in many documents, it might be less informative as a distinguishing feature idfw =log 10 dfw whereNis the number of documents in the corpus,df w is document frequency of wordw"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_43",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      77,
+      79,
+      81
+    ],
+    "sentence_count": 14,
+    "token_count": 80,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "To obtain: xid =tf id log10 dfid Problems with Dimensionality Count-based matrices (for words and documents) often work well, but: high dimensional: vocabulary size could be millions! very sparse: words co-occur only with a small number of words; documents contain only a very small subset of the vocabulary Solution:Dimensionality Reduction to the rescue! Evaluation: Word Vectors"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_44",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      81
+    ],
+    "sentence_count": 10,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Intrinsic: similarity: order word pairs according to their semantic similarity in-context similarity: substitute a word in a sentence without chagning its meaning. analogy: Beijing is to China what Rome is to ...? Extrinsic:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_45",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      81,
+      82
+    ],
+    "sentence_count": 5,
+    "token_count": 42,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "use them to improve performance in a task, i.e. sentiment classification, NER, etc. Best word vectors? high-dimensional count-based? In one of the lectures, we will see how we can obtain"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_46",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      82
+    ],
+    "sentence_count": 8,
+    "token_count": 54,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "low-dimensional vectors with Neural Networks Levy et al. 2 (2015) showed that choice of context window size, rare word removal, etc. matter more. Choice of texts to obtain the counts matters. More text is better, and low-dimensional methods scale better."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_47",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      82
+    ],
+    "sentence_count": 4,
+    "token_count": 46,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "2Omer Levy, Yoav Goldberg, and Ido Dagan (2015). \u201cImproving Distributional Similarity with Lessons Learned from Word Embeddings\u201d. In:Transactions of the Association for Computational Linguistics, pp."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_48",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      82,
+      83
+    ],
+    "sentence_count": 13,
+    "token_count": 104,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "211\u2013225. Limitations: Word Vectors Polysemy:All occurrences of a word (and all its senses) are represented by one vector. Given a task, it is often useful to adapt the word vectors to represent the appropriate sense, e.g.bank Antonymsappear in similar contexts, hard to distinguish them from synonyms Compositionality:what is the meaning of a sequence of words? while we might be able to obtain context vectors for short phrases, this doesn\u2019t scale to whole sentences, paragraphs, etc."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_49",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      83,
+      85,
+      86,
+      87,
+      88
+    ],
+    "sentence_count": 17,
+    "token_count": 66,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Solution: combine word vectors, i.e. add/multiply; sentenceBERT, etc. Evaluation: Document Vectors Intrinsic: document similarity information retrieval Extrinsic: text classification, plagiarism detection etc. Limitations: Document Vectors Word order is ignored, but language is sequential! Upcoming next... Language modelling! Course Bibliography"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_50",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      88
+    ],
+    "sentence_count": 7,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Jurafsky and Martin. 2026. Speech and Language Processing, Prentice Hall [3rd edition] Christopher D. Manning and Hinrich Sch\u00a8 utze. 1999."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week1_sem_51",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      88
+    ],
+    "sentence_count": 9,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1269,
+    "content": "Foundations of Statistical Natural Language Processing, MIT Press. Jacob Eisenstein. 2019. Introduction to Natural Language Processing. MIT Press. (A draft can be found here) other materials referenced at the end of each lecture"
+  }
+]

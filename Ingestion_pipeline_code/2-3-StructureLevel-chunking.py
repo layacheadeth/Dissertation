@@ -103,7 +103,7 @@ def run_experiment_3(
                 "chunk_id": f"{week.replace(' ', '')}_p{page_num}_sub{sub_idx}",
                 "filename": filename,
                 "week": week,
-                "page_number": page_num,
+                "page_number": [page_num] if page_num is not None else [],  # Wrapped in a list for consistency
                 "sub_chunk_index": sub_idx,
                 "token_count": count_tokens(chunk_text),
                 "content": chunk_text

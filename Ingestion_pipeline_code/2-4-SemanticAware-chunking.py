@@ -173,9 +173,7 @@ def run_experiment_4(
                 "chunk_id": f"{week.replace(' ', '')}_sem_{chunk_idx}",
                 "filename": filename,
                 "week": week,
-                "page_start": seen_pages[0] if seen_pages else None,
-                "page_end": seen_pages[-1] if seen_pages else None,
-                "source_pages": seen_pages,
+                "page_number": seen_pages,  # Standardized to list under page_number
                 "sentence_count": len(current_sents),
                 "token_count": count_tokens(text),
                 "embedding_backend": backend,

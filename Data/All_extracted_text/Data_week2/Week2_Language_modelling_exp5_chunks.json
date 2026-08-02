@@ -1,0 +1,597 @@
+[
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec1_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      1,
+      2,
+      4
+    ],
+    "section_index": 1,
+    "section_title": "COMP64702: Transforming Text Into Meaning",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 3,
+    "token_count": 103,
+    "char_count": 432,
+    "content": "COMP64702: Transforming Text Into Meaning\nLanguage Modelling\nChenghua Lin\nE: chenghua.lin@manchester.ac.uk\nX: @chenghua lin\nDepartment of Computer Science\nThe University of Manchcester\n\nIn previous lecture...\nWe studiedVector Representations of Text\n\nIn this lecture...\nOur first NLP problem: Language Modelling\nWhat is the probability of a given sequence of words in a particular\nlanguage (e.g. English)?\nOdd problem. Applications?"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec2_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      8
+    ],
+    "section_index": 2,
+    "section_title": "Applications of LMs",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 62,
+    "char_count": 270,
+    "content": "Applications of LMs\nWord likelihood for query completion in information retrieval\n(\u201cIs Manchester\u201d\u2192try it on your search engine)\nGrammatical error detection (\u201cYou\u2019re welcome\u201d or \u201cYour\nwelcome\u201d?)\nSpeech recognition (\u201cI scream is delicious.\u201d or \u201cIce cream is\ndelicious.\u201d?)"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec3_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      9
+    ],
+    "section_index": 3,
+    "section_title": "Traditional AI approach",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 56,
+    "char_count": 296,
+    "content": "Traditional AI approach\nLook for interpretation which is\ngrammatical\nsemantically sensible\npragmatically plausible in context\nBuild explicit models of rules describing how language works\nPoor performance in real world\nhard to maintain wide-coverage systems\ntoo much knowledge needed for semantics"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec4_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      10
+    ],
+    "section_index": 4,
+    "section_title": "Statistical Approaches",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 72,
+    "char_count": 341,
+    "content": "Statistical Approaches\nNo explicit models of grammar, meaning, context, etc.\nInstead, collect statistics such as\nhow often different words appear\nhow often pairs (or triples, etc.) of words appear next to each\nother\nOr other more complex statistical patterns\nUse this statistics to perform NLP tasks\nspeech, text prediction, translation, ..."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec5_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      11
+    ],
+    "section_index": 5,
+    "section_title": "N-gram Statistics",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 50,
+    "char_count": 215,
+    "content": "N-gram Statistics\nSee how often word(s) occur\nsingle words (unigram)\nword pairs (bigram)\nword triples (trigram)\nAssign a probability to each sequence interpretation, using the\nstatistics\nPick highest-probability one"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec6_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      12
+    ],
+    "section_index": 6,
+    "section_title": "Language Models",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 40,
+    "char_count": 185,
+    "content": "Language Models\nN-gram models: probabilistic models that predict the next\nword from the previousN\u22121 words\nSuch statistical models of word sequences are also called\nlanguage models(LMs)."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec7_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      13
+    ],
+    "section_index": 7,
+    "section_title": "Problem Setup",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 79,
+    "char_count": 238,
+    "content": "Problem Setup\nTraining data is a (often large) set of sentencesx m with wordsx n:\nDtrain ={x 1, ...,xM }\nx= [x 1, ...xN ]\nfor example:\nx=[<s>,The,water,is,clear,., </s>]\n<s>: denotes start of the sentence\n</s>: denotes end of the sentence"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec8_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      14,
+      16,
+      19,
+      23
+    ],
+    "section_index": 8,
+    "section_title": "Corpus",
+    "part_index": 1,
+    "part_count": 2,
+    "slide_count": 4,
+    "token_count": 255,
+    "char_count": 842,
+    "content": "Corpus\nObtain statistics from acorpus\nrepresentative collection of documents\nBritish National Corpus (BNC)\n100M words in 4K documents\nnewspaper articles, academic papers, school essays, memos,\nradio phone-ins, etc.\nhttp://www.natcorp.ox.ac.uk/\nGoogle n-gram web corpus\n1,024,908,267,229words\n\nCalculate sentence probabilities\nWe want to learn a model that returns theprobability of an\nunseen sentence x:\nP(x) =P(x 1, ...,xn),for\u2200x\u2208V max N\nVis the vocabulary andV max N all possible sentences.\nHow to compute probability?\n\nUnigram language model\nMultiply the probability of each word appearing in the sentencex\ncomputed over the entire corpus:\nP(x) =\nNY\nn=1\nP(x n) =\nNY\nn=1\nc(x n)P\nx\u2208V c(x)\n<s>i love playing basketball</s>\n<s>arctic monkeys are from Manchester</s>\n<s>i study in Manchester uni</s>\nP(i love) =P(i)P(love) = 2\n20 \u00b7 1\n20 = 0.005"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec8_part2",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      14,
+      16,
+      19,
+      23
+    ],
+    "section_index": 8,
+    "section_title": "Corpus",
+    "part_index": 2,
+    "part_count": 2,
+    "slide_count": 4,
+    "token_count": 89,
+    "char_count": 313,
+    "content": "Corpus\n\nWhat could go wrong?\n<s>i love playing basketball</s>\n<s>arctic monkeys are from Manchester</s>\n<s>i study in Manchester uni</s>\nThe most probable word is<s>( 3\n20 )\nThe most probable single-word sentence is \u201c<s>\u201d\nThe most probable two-word sentence is \u201c<s> <s>\u201d\nThe most probableN-word sentence isN\u00d7\u201c<s>\u201d"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec9_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      25
+    ],
+    "section_index": 9,
+    "section_title": "Maximum Likelihood Estimation",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 119,
+    "char_count": 289,
+    "content": "Maximum Likelihood Estimation\nInstead of assumingindependence:\nP(x) =\nNY\nn=1\nP(x n)\nWe assume that each word isdependenton all previous ones:\nP(x) =P(x 1, ...,xN )\n=P(x 1)P(x 2...xN |x1)\n=P(x 1)P(x 2|x1)...P(x N |x1, ...,xN\u22121 )\n=\nNY\nn=1\nP(x n|x1, ...xn\u22121) (chain rule)\nWhat could go wrong?"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec10_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      26
+    ],
+    "section_index": 10,
+    "section_title": "Problems with MLE",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 93,
+    "char_count": 203,
+    "content": "Problems with MLE\nLet\u2019s analyse this:\nP(x) =P(x 1)P(x 2|x1)P(x 3|x2,x 1)...P(x N |x1, ...,xN\u22121 )\nP(x n|xn\u22121...x1) = c(x 1...xn\u22121,x n)\nc(x 1...xn\u22121)\nAs we condition on more words, the counts becomesparser"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec11_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      27,
+      28
+    ],
+    "section_index": 11,
+    "section_title": "Bigram Language Models",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 2,
+    "token_count": 220,
+    "char_count": 487,
+    "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn\u22121) =\nNY\nn=1\nc(x n\u22121,x n)\nc(x n\u22121)\nk-th orderMarkov assumption:\nP(x n|xn\u22121, ...,x1)\u2248P(x n|xn\u22121, ...,xn\u2212k )\nwith k=1\n\nBigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn\u22121) =\nNY\nn=1\nP(x n\u22121,x n)\nP(x n\u22121)\n=\nNY\nn=1\nc(x n\u22121,x n)\nc(x n\u22121)\nk-th orderMarkov assumption:\nP(x n|xn\u22121, ...,x1)\u2248P(x n|xn\u22121, ...,xn\u2212k )\nwith k=1"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec12_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      29,
+      30,
+      31
+    ],
+    "section_index": 12,
+    "section_title": "Bigram LM: From counts to probabilities",
+    "part_index": 1,
+    "part_count": 3,
+    "slide_count": 3,
+    "token_count": 143,
+    "char_count": 315,
+    "content": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i\u22121 , cols:x i ):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec12_part2",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      29,
+      30,
+      31
+    ],
+    "section_index": 12,
+    "section_title": "Bigram LM: From counts to probabilities",
+    "part_index": 2,
+    "part_count": 3,
+    "slide_count": 3,
+    "token_count": 185,
+    "char_count": 424,
+    "content": "Bigram LM: From counts to probabilities\nFrom the bigram count matrix, compute probabilities by dividing\neach cell by the appropriate unigram count for its row.\nBigram probabilities (rows:x i\u22121 , cols:x i ):\narctic monkeys are my favourite band\narctic 0 0.1 0.02 0 0 0\nmonkeys 0 0 0.417 0.0017 0.008 0\nare 0.0008 0.0113 0 0.15 0.0063 0.00003\nmy 0 0.0007 0 0.0003 0.1 0.0017\nfavourite 0 0.002 0 0 0 0.1\nband 0 0 0.015 0.05 0 0"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec12_part3",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      29,
+      30,
+      31
+    ],
+    "section_index": 12,
+    "section_title": "Bigram LM: From counts to probabilities",
+    "part_index": 3,
+    "part_count": 3,
+    "slide_count": 3,
+    "token_count": 166,
+    "char_count": 370,
+    "content": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i\u22121 , cols:x i ):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0\nx= [arctic,monkeys,are,my,favourite,band]\nWhat isP(x)?"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec13_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      32
+    ],
+    "section_index": 13,
+    "section_title": "Example: Bigram language model",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 112,
+    "char_count": 255,
+    "content": "Example: Bigram language model\nx= [arctic,monkeys,are,my,favourite,band]\nP(x) =P(monkeys|arctic)P(are|monkeys)P(my|are)\nP(favourite|my)P(band|favourite)\n= c(arctic,monkeys)\nc(arctic) ... c(favourite,band)\nc(favourite)\n= 0.1\u00b70.417\u00b70.15\u00b70.1\u00b70.1\n= 0.00006255"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec14_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      33
+    ],
+    "section_index": 14,
+    "section_title": "Example: Bigram/Trigram Models",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 126,
+    "char_count": 295,
+    "content": "Example: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec15_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      34
+    ],
+    "section_index": 15,
+    "section_title": "Longer contexts (N-gram LMs)",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 106,
+    "char_count": 389,
+    "content": "Longer contexts (N-gram LMs)\nP(x|context) = P(context,x)\nP(context) = c(context,x)\nc(context)\nIn bigram LMcontextisx n\u22121, trigramx n\u22122,x n\u22121, etc.\nThe longer the context:\nthe more likely to capture long-range dependencies:\n\u201cI saw a tiger that was really very ...\u201d fierceor talkative?\nthe sparser the counts (zero probabilities)\n5-grams and training sets with billions of tokens are common."
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec16_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      35,
+      36
+    ],
+    "section_index": 16,
+    "section_title": "Generating sentences using a Unigram Model",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 2,
+    "token_count": 133,
+    "char_count": 627,
+    "content": "Generating sentences using a Unigram Model\nRandom sentences with words selected according to their\nunigram probabilities (based on a corpus of airline reservation\nqueries):\nOf aircraft fare east\nThe the stopover city the coach the one way frequent in\ntravelling flights\nTwo on flight really Boston me like\nAnd like six would these fifty\n\nGenerating sentences using a bigram Model\nRandom sentences using bigram probabilities:\nI want a first class\nI would like to San Francisco\nAre the next week on AA eleven ten\nIn Denver on October\nWhat is the city of three pm\nTwo on flight really Boston me like\nAnd like six would these fifty"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec17_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      37
+    ],
+    "section_index": 17,
+    "section_title": "Generating sentences using a Trigram Model",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 84,
+    "char_count": 383,
+    "content": "Generating sentences using a Trigram Model\nRandom sentences using trigram probabilities:\nHow much does it cost\nI\u2019d like to depart before five o\u2019clock pm\nHow many stops does Delta flight five eleven o\u2019clock pm that\ngo from what am\nI need to Philadelphia\nWhich flight do these flights leave after four pm and lunch and\nTwo on flight really Boston me like\nAnd like six would these fifty"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec18_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      38
+    ],
+    "section_index": 18,
+    "section_title": "Google Booksn-gram Viewer",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 20,
+    "char_count": 77,
+    "content": "Google Booksn-gram Viewer\nGoogle Booksn-grams\nhttps://books.google.com/ngrams"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec19_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      40
+    ],
+    "section_index": 19,
+    "section_title": "Unknown Words",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 68,
+    "char_count": 303,
+    "content": "Unknown Words\nIf a word was never encountered in training, any sentence\ncontaining it will have probability 0\nIt happens:\nall corpora are finite\nnew words emerging\nCommon solutions:\nuse a specific UNKNOWN to manage all the words not in the\nvocabulary\nUse classes of unknown words, e.g. names and numbers"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec20_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      41
+    ],
+    "section_index": 20,
+    "section_title": "Evaluation",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 21,
+    "char_count": 110,
+    "content": "Evaluation\nHow do we train and evaluate our language models?\nWe need train/dev/test data\nEvaluation approaches"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec21_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      42
+    ],
+    "section_index": 21,
+    "section_title": "Intrinsic Evaluation: Accuracy",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 47,
+    "char_count": 212,
+    "content": "Intrinsic Evaluation: Accuracy\nHow well does our LM predict the next word?\nI always order pizza with cheese and...\nmushrooms?\nbread?\nand?\nAccuracy: how often the LM predicts the correct word\nThe higher the better"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec22_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      43
+    ],
+    "section_index": 22,
+    "section_title": "Intrinsic Evaluation: Perplexity",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 106,
+    "char_count": 338,
+    "content": "Intrinsic Evaluation: Perplexity\nPerplexity: measures the ability of the model to predict word\nof an unseen text\nUnseen = not in training data, e.g., test set\nThe average negative log-likelihood of the test set\nx= [x 1, ...,xN ], normalised by the number of wordsN.\nThelowerthe better.\nPerplexity(w) = exp\n \n\u2212\nPD\nd=1 logP(w d )PD\nd=1 Nd\n!"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec23_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      44
+    ],
+    "section_index": 23,
+    "section_title": "Extrinsic Evaluation",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 40,
+    "char_count": 221,
+    "content": "Extrinsic Evaluation\nSentence completion\nGrammatical error correction: detecting \u201codd\u201d sentences and\npropose alternatives\nNatural language generation: prefer more \u201cnatural\u201d sentences\nSpeech recognition\nMachine translation"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec24_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      47
+    ],
+    "section_index": 24,
+    "section_title": "Smoothing",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 55,
+    "char_count": 231,
+    "content": "Smoothing\nWhat happens when words that are in our vocabulary appear\nwith an unseen context in test data?\nThey will be assigned with zero probability\nSmoothing (or discounting)to the\nrescue: Steal from the rich and give to\nthe poor!"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec25_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      48
+    ],
+    "section_index": 25,
+    "section_title": "Smoothing intuition",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 17,
+    "char_count": 81,
+    "content": "Smoothing intuition\nTaking from the frequent and giving to the rare (discounting)"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec26_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      49
+    ],
+    "section_index": 26,
+    "section_title": "Add-1 Smoothing",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 56,
+    "char_count": 155,
+    "content": "Add-1 Smoothing\nAdd-1 (or Laplace) smoothing adds one to all counts:\nPAdd\u22121 (xn) = c(x n) + 1\nCorpus size+|V|\nPretend we have seen all words at least once!"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec27_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      51
+    ],
+    "section_index": 27,
+    "section_title": "Add-k Smoothing",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 62,
+    "char_count": 195,
+    "content": "Add-k Smoothing\nAdd-1 puts too much probability mass to unseen words, better to\nadd-k,k<1:\nPAdd\u2212k (xn) = counts(x n) +k\ncorpus size+k|V|\nkis a hyperparameter: choose optimal value on the dev set!"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec28_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      53
+    ],
+    "section_index": 28,
+    "section_title": "Interpolation",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 51,
+    "char_count": 235,
+    "content": "Interpolation\nLonger contexts are more informative:\ndog bites ... better than bites ...\nbut only if they are frequent enough:\ncanid bites ...better than bites ...?\nCan we combine evidence from unigram, bigram and trigram\nprobabilities?"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec29_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      57
+    ],
+    "section_index": 29,
+    "section_title": "Simple Linear Interpolation",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 104,
+    "char_count": 256,
+    "content": "Simple Linear Interpolation\nFor a trigram LM:\nPSLI (xn|xn\u22121,x n\u22122) =\u03bb 3P(x n|xn\u22121,x n\u22122)\n+\u03bb 2P(x n|xn\u22121)\n+\u03bb 1P(x n)\u03bb i >0,\nX\n\u03bbi = 1\nWeighted average of unigram, bigram and trigram probabilities\nHow we choose the value of\u03bbs? Parameter tuning on the dev\nset!"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec30_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      59,
+      60
+    ],
+    "section_index": 30,
+    "section_title": "Backoff",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 2,
+    "token_count": 220,
+    "char_count": 511,
+    "content": "Backoff\nStart with n-gram order ofkbut if the counts are 0 usek\u22121:\nBO(x n|xn\u22121 . . .xn\u2212k ) =(\nP(x n|xn\u22121 . . .xn\u2212k ),ifc(x n . . .xn\u2212k )>0\nBO(x n|xn\u22121 . . .xn\u2212k+1 ),otherwise\nIs this a probability distribution?\n\nBackoff\nPBO (xn|xn\u22121 . . .xn\u2212k ) =(\nP \u22c6(xn|xn\u22121 . . .xn\u2212k ),ifc(x n . . .xn\u2212k )>0\n\u03b1xn\u22121...xn\u2212k PBO (xn|xn\u22121 . . .xn\u2212k+1 ),otherwise\nwith\u03b1 xn\u22121...xn\u2212k the backoff weight\ncomputed so that probability distribution is respected (i.e.,\nprobs between 0 and 1 and sums to 1)\nSee [Jurafsky and Martin, 2018]"
+  },
+  {
+    "experiment_id": "exp5_section_aware",
+    "chunk_id": "Week2_sec31_part1",
+    "filename": "Week2_Language_modelling.pdf",
+    "week": "Week 2",
+    "page_number": [
+      61
+    ],
+    "section_index": 31,
+    "section_title": "Bibliography",
+    "part_index": 1,
+    "part_count": 1,
+    "slide_count": 1,
+    "token_count": 29,
+    "char_count": 100,
+    "content": "Bibliography\nChapter 3 from Jurafsky & Martin\nChapter 6 from Eisentein\nMichael Collins\u2019 notes on LMs"
+  }
+]

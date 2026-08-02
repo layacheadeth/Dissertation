@@ -6,16 +6,12 @@ from typing import List, Dict, Any
 try:
     import tiktoken
     tokenizer = tiktoken.get_encoding("cl100k_base")
-    def token_length(text: str) -> int:
-        return len(tokenizer.encode(text))
     def tokenize(text: str) -> List[int]:
         return tokenizer.encode(text)
     def decode(tokens: List[int]) -> str:
         return tokenizer.decode(tokens)
 except ImportError:
-    # Fallback to character approximation (~4 chars/token) if tiktoken not installed
-    def token_length(text: str) -> int:
-        return len(text) // 4
+    # Fallback to word split approximation if tiktoken not installed
     def tokenize(text: str) -> List[str]:
         return text.split()
     def decode(tokens: List[str]) -> str:
@@ -29,7 +25,7 @@ def run_experiment_2(
 ) -> List[Dict[str, Any]]:
     """
     Experiment 2: Fixed-Size Overlapping Sliding Window Chunking
-    Flattens text and applies fixed-token windowing ignoring page boundaries.
+    Flattens text while mapping tokens to all exact source page numbers.
     """
     with open(input_json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -38,30 +34,40 @@ def run_experiment_2(
     week = data.get("week", "")
     pages = data.get("pages", [])
 
-    # Concatenate all page contents with explicit source tracking tags
-    flattened_text = ""
+    # Tokenize each page individually while mapping each token to its source page_number
+    all_tokens = []
+    token_page_map = []  # Maps token index -> page_number
+
     for page in pages:
         content = page.get("content", "").strip()
+        page_num = page.get("page_number")
+        
         if content:
-            flattened_text += f"\n[Slide {page.get('page_number')}]\n" + content
+            page_tokens = tokenize(content)
+            all_tokens.extend(page_tokens)
+            token_page_map.extend([page_num] * len(page_tokens))
 
-    tokens = tokenize(flattened_text)
     chunks = []
     chunk_idx = 1
     step = chunk_size - overlap
 
-    for i in range(0, len(tokens), step):
-        chunk_tokens = tokens[i : i + chunk_size]
+    for i in range(0, len(all_tokens), step):
+        chunk_tokens = all_tokens[i : i + chunk_size]
         chunk_text = decode(chunk_tokens).strip()
 
         if not chunk_text:
             continue
+
+        # Collect ALL unique page numbers present inside this chunk
+        chunk_pages_slice = token_page_map[i : i + len(chunk_tokens)]
+        pages_in_chunk = sorted({p for p in chunk_pages_slice if p is not None})
 
         chunk_record = {
             "experiment_id": "exp2_sliding_window",
             "chunk_id": f"{week.replace(' ', '')}_sw_{chunk_idx}",
             "filename": filename,
             "week": week,
+            "page_number": pages_in_chunk,  # Renamed to match 2_1, holding a list of pages
             "chunk_size_tokens": chunk_size,
             "overlap_tokens": overlap,
             "actual_token_count": len(chunk_tokens),

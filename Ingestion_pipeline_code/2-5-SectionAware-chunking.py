@@ -196,7 +196,7 @@ def run_experiment_5(
             continue
 
         parts = recursive_split_text(body, max_tokens=max_tokens)
-        page_list = [p for p in section["pages"] if p is not None]
+        page_list = sorted({p for p in section["pages"] if p is not None})
 
         for part_idx, part in enumerate(parts, start=1):
             if prepend_title and not part.lstrip().startswith(section["title"]):
@@ -209,13 +209,11 @@ def run_experiment_5(
                 "chunk_id": f"{week.replace(' ', '')}_sec{sec_idx}_part{part_idx}",
                 "filename": filename,
                 "week": week,
+                "page_number": page_list,  # Standardized to list under page_number
                 "section_index": sec_idx,
                 "section_title": section["title"],
                 "part_index": part_idx,
                 "part_count": len(parts),
-                "page_start": page_list[0] if page_list else None,
-                "page_end": page_list[-1] if page_list else None,
-                "source_pages": page_list,
                 "slide_count": len(section["pages"]),
                 "token_count": count_tokens(content),
                 "char_count": len(content),

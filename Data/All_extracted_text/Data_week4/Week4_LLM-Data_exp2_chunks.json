@@ -1,0 +1,197 @@
+[
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_1",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "Training Data for Large Language Models\nChenghua LinDepartment of Computer ScienceThe University of ManchesterWhy Training Data MattersThe fossil fuels for training LLMs \u2013data drives what they learnand how they behave!To develop broad capabilities (e.g., language understanding, reasoning, world knowledge), models must be trained on diverse and extensive text corpora.\u2013e.g., science, fiction, encyclopedias, emails,etc.\u2013Help ensure generalisation and robustnessPoorly curated data can introduce bias, misinformation, or safety risks.Why Training Data Matters\nAs the amount of training data increases, high-quality datasets yield significantly better performance than low-quality ones.Investing effort in building or selecting a higher-quality corpus yields better model performance than simply increasing token count.Key Datasets for Training LLMsCommon Crawl\u2013The raw foundation for many datasets, including C4 and parts of GPT-3.Colossal Clean Crawled Corpus (C4)\u2013A cleaned and filtered version of Common Crawl used by T5 and others.WebText& OpenWebText\u2013Curated web content based on Reddit links; more targeted than Common Crawl.The Pile\u2013A modular, high-quality open-source dataset that aggregates diverse sources including books, GitHub, academic papers, etc.GPT-3 Dataset\u2013A proprietary mix that draws from many of the above (Common Crawl, WebText, books, Wikipedia, code, etc.).Common Crawl \nNonprofit project providing open-access web crawl"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_2",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "GitHub, academic papers, etc.GPT-3 Dataset\u2013A proprietary mix that draws from many of the above (Common Crawl, WebText, books, Wikipedia, code, etc.).Common Crawl \nNonprofit project providing open-access web crawl data (~320TB)Maintains regular snapshots of the internet, freely available to anyoneA standard data source for LLMs (e.g., T5, GPT-3, Gopher)Popular due to scale, openness, and ease of use\nhttps://commoncrawl.org/Common CrawlUsed in major models: GPT-3, T5, Gopher, etc.Contains a wide range of contents: blogs, forums, news, etc. Strengths: massive scale, easily accessibleLimitations: noisy, contains spam, boilerplate, duplicated contentNot curated: Requires significant filtering for quality, ethics, and relevanceWebTextand OpenWebTextBackground\u2013Early LLMs used datasets based on news, Wikipedia, or fiction\u2013Common Crawl was large but noisy (e.g., spam, boilerplate)WebText(OpenAI)\u2013URLs from Reddit posts with \u22653 upvotes\u2013Curated for high-quality, diverse content (excludingWikipedia to allow fair benchmark evaluation)\u2013Used to train GPT-2 (~40GB); OpenWebText(Community):\u2013Community-built replica of WebText(since WebTextwas never released)\u2013URLs from Reddit submissions, filtered with Facebook's fastText(English"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_3",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      7,
+      9,
+      10,
+      11
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "evaluation)\u2013Used to train GPT-2 (~40GB); OpenWebText(Community):\u2013Community-built replica of WebText(since WebTextwas never released)\u2013URLs from Reddit submissions, filtered with Facebook's fastText(English only)\u2013Deduplicated content (~38GB)Insight: Curation improves quality but inherits Reddit user bias (e.g., young, male, Western)Colossal Clean Crawled Corpus (C4)Filteredversion of April 2019 Common Crawl (keeps ~10%)Size: ~156B tokens (~806 GB of English-only text)Used to train models like T5Filtering criteria\u2013Removed: profanity, code, boilerplate, very short documents\u2013Language filtering using langdetectFilter decisions affect which voices and topics remain.C4 Compared to Raw Common Crawl\nC4 is a cleaner, smaller, English-only subset of Common Crawl, designed to improve data quality for model training at the cost of reduced diversity.GPT-3 DatasetSource: Built from 2016\u20132019 Common Crawl snapshotsTrained a binary classifier to distinguish WebText-likevs. Common Crawl content\u2013Helps retain higher-quality, curated web contentContent Selection & Cleanup:\u2013Applied fuzzy matching (13-gram overlap)\u2013Removed content if it appeared in fewer than 10 documents\u2013Excluded test data from common benchmark datasets (to avoid data leakage)Expanded the diversity of thedata sources\u2013Included: Web"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_4",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      11,
+      12,
+      13,
+      14,
+      16
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "Cleanup:\u2013Applied fuzzy matching (13-gram overlap)\u2013Removed content if it appeared in fewer than 10 documents\u2013Excluded test data from common benchmark datasets (to avoid data leakage)Expanded the diversity of thedata sources\u2013Included: WebText2, Books1, Books2, WikipediaGPT-3 DatasetThe PileDeveloped by EleutherAI, an open-source AI research group.Goal: (1) Build a high-quality, diverse dataset for training open LLMs; (2) Improve representation of underrepresented domainsContent: 825 GB of English text from 22 sources including:\u2013Academic papers, GitHub, StackExchange, books, medical/legal corpora.\u2013Balances quality and diversity by combining technical, scientific, and informal sources, e.g. biomedical, programming, law, online forumsUsed in: GPT-Neo, GPT-J, Pythia, and other open models.The Pile 22 component datasets:e.g., ArXiv, GitHub, OpenWebText2Diverse domains: biomedical, programming, law, subtitles, online forumsTop contributors (by size/weight): Pile-CC (18%), PubMed Central, Books3, ArXiv, GitHubKey Takeaways: The Pile paperSmaller, high-quality sources (e.g., academic, professional) outperform large-scale web-crawled data for training LLMs.Bias analysis (pejorative, gender, religion) shows patterns consistent with"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_5",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      16,
+      17,
+      18
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "aways: The Pile paperSmaller, high-quality sources (e.g., academic, professional) outperform large-scale web-crawled data for training LLMs.Bias analysis (pejorative, gender, religion) shows patterns consistent with prior studies, suggesting similar ethical challenges persist.Contains a lot of information that\u2019s not well covered by GPT-3\u2019s dataset.Most effective components:\u2013DM Mathematics, Enron Emails, PubMed Central have the highest positive impact on performance.Less effective or redundant components:\u2013YoutubeSubtitles, Gutenberg (PG-19), and OpenWebText2 contribute the least, with some even showing negative impact.Biases in Data RepresentationTraining data is not demographically neutral\u2014it reflects the biases of those who produce content online.Internet data overrepresents youngusers from developedcountries, e.g. Your grandma isn\u2019t posting on Reddit\u2026 probably : )GPT-2\u2019s data is Reddit-based:\u201367% of U.S. users were men\u201364% were aged 18\u201329 (Pew Research, 2016)Only ~9\u201315% of Wikipediansare female \u2192 strong gender imbalance.What about the elderly?MatrixDeveloped byMAP (Multimodal Art Projection), the open-source AI research group behind MAP-Neo.Goal: (1) Assemble a truly transparent, bilingual (English\u2009+\u2009Chinese) pre-training corpus. (2)Boost coverage of under-represented domains (e"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_6",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      18,
+      19,
+      20,
+      21
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "), the open-source AI research group behind MAP-Neo.Goal: (1) Assemble a truly transparent, bilingual (English\u2009+\u2009Chinese) pre-training corpus. (2)Boost coverage of under-represented domains (e.g. biomedical, legal, programming, online forums).Content: 4.5trillion tokens of cleaned text drawn from 22 heterogeneous sources, including:\u2013Web crawl:Common Crawl (52.6%)\u2013Programming code:GitHub, StackExchange, etc. (22.3%)\u2013Academic & professional:arXiv, PubMed, legal documents, textbooks\u2013Other printed/structured:OCR\u2019dPDFs of books, government reports, examsMatrixFineWeb-Edu Dataset OverviewDeveloped byHuggingFace, an open-source AI research collaboration.Goal: (1)Assemble a high-quality, education-focused corpus for pre-training open LLMs(2) Enhance model performance on reasoning & knowledge tasks with minimal data.Content:1.3trillion tokens of grade-school & middle schoollevel web pages filtered from FineWebheterogeneous sourcesBalances quality & diversity by combining:\u2013Curated educational sites (K-12 lesson plans, school portals)\u2013Textbook excerpts & encyclopedicarticles\u2013Vetted forum Q&A for informal explanationsWhose Voices Are Missing?Online harassment can discourage marginalized groups (e.g., queer, trans people) from contributing.Removes noise, but also meaningful content"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_7",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "book excerpts & encyclopedicarticles\u2013Vetted forum Q&A for informal explanationsWhose Voices Are Missing?Online harassment can discourage marginalized groups (e.g., queer, trans people) from contributing.Removes noise, but also meaningful content:\u201322\u201336% of filtered LGBTQ+ mentions were benignDialects like African-American English filtered 42% of the time vs. 6.2% for Standard English\nCleaning steps can systematically silence marginalized communities.C4 Dataset \u2013Analysis Dodge et al. (2021) conducted an extensive analysis of the C4 dataset (used in T5 pretraining). Evaluated document-level quality and content characteristics\u2013Captured metadata: source domain, document structure, utterance styleAnalysed included content: human vs. machine-authored, presence of social biases, contamination with evaluation dataNoted excluded content: documents with medical/health data, or explicit demographic information, e.g. Personally identifiable information (PII)Note:Raffel et al. 2020only provided scripts to recreate; cost thousands of dollars just to run these scripts.C4 Dataset \u2013Source Distribution & Quality ConcernsA surprising amount of data from patents.google.com65% pages in the Internet Archive; out of those, 92% were written in the past 10 years51.3% pages are hosted in the United States; fewer from India even though lots of English speakers thereSome patents.google.comtexts are auto-generated and contain systematic errors:"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_8",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      23,
+      24,
+      25,
+      26
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "out of those, 92% were written in the past 10 years51.3% pages are hosted in the United States; fewer from India even though lots of English speakers thereSome patents.google.comtexts are auto-generated and contain systematic errors:\u2013Documents originally filed in foreign languages (e.g., Japanese) are machine-translated into English\u2013Extracted via OCR, leading to transcription issuesC4 \u2013Token Distribution by Domain \nTop-level domains Most frequent websites\n(1) Token frequency measured in log-scale; (2) heavy dominance of US-based commercial domains and high-frequency automated sites.What is Data Contamination?Definition:When benchmark test data appears in pretraining corpora, either partially or entirely.Why it matters:Leads to inflated benchmark performance and misleading conclusions about a model\u2019s generalization.Examples\u2013XSUM (summarization): ~15.5% overlap (input + output)\u2013QNLI (Wikipedia-based): up to 53.6% overlap (input only)Types of Data ContaminationInput-and-output contamination\u2013Both the input and expected output appear in the training data.\u2013Ranges from 1.87%\u201324.88% (e.g., XSUM = 15.49%)Input-only contamination\u2013Only the input is present in the training set.\u2013Up to 53.6% (e.g., QNLI, based on Wikipedia)Which type is more harmful?\u2013Input-and-output: the model can memorize the"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_9",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "Input-only contamination\u2013Only the input is present in the training set.\u2013Up to 53.6% (e.g., QNLI, based on Wikipedia)Which type is more harmful?\u2013Input-and-output: the model can memorize the entire input-output pair, severely inflating benchmark scores\u2013Input only: still problematic but generally less severe than full input-output overlapReal Example \u2013XSUM ContaminationExample from theXSumsummarization dataset:Input:The 48-year-old former Arsenal goalkeeper played for the Royals for four years. He was appointed youth academy director in 2000 and has been director of football since 2003. A West Brom statement said: \u201cHe played a key role in the Championship club twice winning promotion to the Premier League in 2006 and 2012.Output:West Brom have appointed Nicky Hammond as technical director, ending his 20-year association with Reading.Representational Harms: Sentiment BiasAnalysis examines co-occurrence of identity terms (e.g., Jewish, Arab) with sentiment-bearing words (e.g., successful, dangerous).Example findings:\u2013Jewish: 73.2% positive sentiment\u2013Arab: 65.7% positive sentiment (7.5% difference)News outlet variation:\u2013New York Times: 4.5% gap\u2013Al Jazeera: no differenceEven subtle sentiment biases can skew the representation of identities in model training data.Representational Harms -Filtering BiasDialect-based bias"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_10",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "difference)News outlet variation:\u2013New York Times: 4.5% gap\u2013Al Jazeera: no differenceEven subtle sentiment biases can skew the representation of identities in model training data.Representational Harms -Filtering BiasDialect-based bias:\u2013African American English (AAE): 42% filtered\u2013Hispanic-aligned English: 32%\u2013White American English: only 6.2%\nFiltering heuristics can reinforce systemic erasure of minority voices, even when content is benign.Bias in Filtering: Which Groups Are Affected Most?Common Data Filtering PipelineBase FilterGoal:Perform initial quality screening on raw web text to remove obviously low-quality content and non-English text, establishing a clean foundation dataset for subsequent processing.Language Identification: Use FastText classifier to filter non-English content, retaining text with English probability \u22650.65URL Blacklist: Remove adult content, spam websites and other inappropriate sourcesQuality Filtering: Apply MassiveText rules to filter overly short text, repetitive content and malformed documentsBasic Cleaning: Remove obvious template text, navigation menus and advertising contentDeduplicationGoal: Eliminateduplicatecontentinthedataset to preventmodelover-memorizationofrepeated textduringtraining,improvingdatadiversityandtrainingefficiency.MinHashAlgorithm: Use 5-gramsand112hashfunctionsforfuzzydeduplicationSimilarityThreshold:Set75%similaritythresholdtoidentifynear-duplicate documentsIndividualSnapshotProcessing: Deduplicateeach"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_11",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      33,
+      34,
+      35,
+      36
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "datadiversityandtrainingefficiency.MinHashAlgorithm: Use 5-gramsand112hashfunctionsforfuzzydeduplicationSimilarityThreshold:Set75%similaritythresholdtoidentifynear-duplicate documentsIndividualSnapshotProcessing: DeduplicateeachCommonCrawlsnapshotindependentlyto avoidover-removalClusteringDeduplication:Usetransitive clusteringtoensureonlyonecopyremainsinsimilar documentgroupsHeuristic RulesGoal:Developprecise heuristic rules based on data analysis to further enhance text quality, filtering documents with formatting anomalies and poor content quality.Punctuation Ratio: Filter documents with <12% lines ending in punctuation to ensure content completenessDuplicate Line Control: Remove documents with >10% duplicate line character ratio to reduce templated contentShort Line Filtering: Filter documents with >67% short lines (<30 characters) to ensure substantial contentData-Driven: Determine threshold parameters through comparative analysis of high vs low quality dataPII AnonymizationGoal:Protect personal privacy by removing or anonymizing personally identifiable information, ensuring the dataset complies with privacy protection requirements and legal regulations.Email Addresses: Use regex patterns to identify and anonymize all email addressesIP Addresses: Detect and mask public IP address informationPattern Matching: Rule-based personal information identification and replacementPrivacy Compliance: Ensure dataset release meets data protection regulatory requirementsNeural Scaling lawBackground & Motivation-Model sizes exploded from millions \u2192 billions of parameters, driving training costs and runtimes through the roof-Lacked quantitative guidance on when to"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week4_sw_12",
+    "filename": "Week4_LLM-Data.pdf",
+    "week": "Week 4",
+    "page_number": [
+      35,
+      36,
+      37,
+      38
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 217,
+    "content": "information identification and replacementPrivacy Compliance: Ensure dataset release meets data protection regulatory requirementsNeural Scaling lawBackground & Motivation-Model sizes exploded from millions \u2192 billions of parameters, driving training costs and runtimes through the roof-Lacked quantitative guidance on when to invest in larger models versus more data or computeKey Finding-Test loss L follows power-law relationships with parameters N, data D, and compute CData Mixing Scaling LawsIntroduces an exponential-form law to predict domain-specific loss L as a function of data proportions tSelect representative data domains and design a set of mixing ratios.Train small proxy models, record performance per domain.SummaryThe total amount of data out there (web, private data) is massive.Training on \u201call of it\u201d (even Common Crawl) doesn\u2019t work well (not effective use of compute).Filtering / curation (OpenWebText, C4, GPT-3 dataset) is needed, butcan result in biases.Curating non-web high-quality datasets is promising (The Pile).Important to carefully document and inspect these datasets."
+  }
+]

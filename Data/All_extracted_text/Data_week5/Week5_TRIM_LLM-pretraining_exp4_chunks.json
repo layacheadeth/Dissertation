@@ -1,0 +1,384 @@
+[
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_1",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      1,
+      2
+    ],
+    "sentence_count": 7,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Pretraining Large Language Models Jingyuan Sun Lecturer of Natural Language Processing Department of Computer Science The University of Manchester Learning Outcomes Define LLM pretraining and explain why it is self-supervised."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_2",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      2
+    ],
+    "sentence_count": 6,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Compare Transformer variants (encoder-only, encoder\u2013decoder, decoder- only) and explain why modern LLMs use decoder-only with causal attention. Formulate the training objective: autoregressive probability factorisation, cross-entropy loss, and the difference between training vs inference."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_3",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      2,
+      3
+    ],
+    "sentence_count": 8,
+    "token_count": 44,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Evaluate implications: limitations (e.g., hallucinations/bias), the impact of scale/compute, and how pretraining connects to adaptation and instruction tuning. Where We Are in the Pipeline Previously: \u2013 Transformers \u2013 BERT"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_4",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      3,
+      4
+    ],
+    "sentence_count": 19,
+    "token_count": 84,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "\u2013 Training data for LLMs Today: \u2013 How large language models are pretrained Transformer Encoder Only Uses: NLU, classification, feature extraction Examples: BERT, RoBERTa, DeBERTa Encoder-Decoder Uses: NLG, translation, summarisation, seq2seq mapping Examples: T5, Flan-T5, BART Decoder Only Uses: NLG, translation, summarisation, completion Examples:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_5",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      4,
+      5,
+      6
+    ],
+    "sentence_count": 12,
+    "token_count": 83,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "GPT-x, LLaMa, every other new model today Decoder-Only Architecture Modern LLMs: \u2013 Transformer decoder blocks \u2013 Causal attention (no access to future tokens) \u2013 Left-to-right generation Contrast with BERT: \u2013 Bidirectional \u2013 Masked LM GPT series Generative Pretrained Transformer series of models from OpenAI These are decoder transfer language models and can be used for generative tasks."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_6",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      6,
+      7,
+      8
+    ],
+    "sentence_count": 7,
+    "token_count": 56,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "GPT (2018) GPT-2 (Radford et al., 2019) \u2013 Decoder-only \u2013 Pretrained on more data: WebText from Reddit (40GB) \u2013 Good at Generation Tasks GPT-3 (Brown et al., 2020)"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_7",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      8,
+      9,
+      10
+    ],
+    "sentence_count": 20,
+    "token_count": 104,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "\u2013 Decoder-only \u2013 Pretrained on even more data (45TB) \u2013 Zero-Shot \u2013 One-Shot \u2013 Few-Shot Traditional Fine-Tuning GPT-3 \u201dIn-Context\u201d Learning Autoregressive Models and Self-supervised Learning Autoregressive Models \u2013 Naturally generative \u2013 Can produce long coherent text \u2013 Supports in-context learning Self-supervised Learning \u2013 No manual labels needed. \u2013 Training signal comes from: (1) text itself; (2) next-token prediction \u2013 This scales easily to massive datasets."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_8",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      11
+    ],
+    "sentence_count": 11,
+    "token_count": 49,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Why Decoder-Only? \u2013 Modern LLMs are predominantly decoder-only: GPT-4o Qwen3 Deepseek-R1 Llama4 \u2013 Efficiency Easier to scale and train \u2013 Strong Pretraining Excel in unsupervised pretraining"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_9",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      11,
+      12
+    ],
+    "sentence_count": 7,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "\u2013 Scalability Handles longer contexts and complex tasks What Is Pretraining? Pretraining: \u2013 Large-scale self-supervised training \u2013 Uses raw text (no human labels) \u2013 Learns general language modelling capability"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_10",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      12,
+      13,
+      14
+    ],
+    "sentence_count": 10,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Goal: Learn to model the probability of text. Language Modelling as Probability Estimation Goal of pretraining: Learn the probability distribution over text. Formally: Key idea: Model learns to predict each token given previous tokens. Autoregressive Objective Autoregressive training objective:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_11",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      14,
+      15
+    ],
+    "sentence_count": 12,
+    "token_count": 64,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "At each step: \u2013 See previous tokens (i.e. generation history) \u2013 Predict next token \u2013 Compute cross-entropy loss \u2013 Backpropagate gradients The model learns by minimising: Cross-entropy between predicted and true tokens. What Does This Mean Practically? Input: \u201cThe capital of France is [ ]\u201d"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_12",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      15,
+      16
+    ],
+    "sentence_count": 9,
+    "token_count": 41,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Target: \u201cParis\u201d The model learns by: \u2013 Predicting next tokens \u2013 Over trillions of examples Cross-Entropy Loss For each token: \u2013 yi= one-hot true token \u2013 pi= predicted probability"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_13",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      16,
+      17
+    ],
+    "sentence_count": 12,
+    "token_count": 50,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "This penalises: Assigning low probability to correct token Intuition: Reward correct next-token predictions. Training vs Inference Training: \u2013 Predict next token \u2013 Compare with ground truth \u2013 Update weights Inference: \u2013 Predict next token \u2013 Sample or choose max"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_14",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      17,
+      18
+    ],
+    "sentence_count": 8,
+    "token_count": 55,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "\u2013 Feed prediction back in Limitation of the Objective Since objective is purely predictive, the model may: \u2013 Hallucinate plausible but false information \u2013 Repeat biases in data \u2013 Generate unsafe content Fundamentally, it optimises the likelihood of text, not correctness or other properties."
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_15",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      19,
+      20
+    ],
+    "sentence_count": 9,
+    "token_count": 45,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Training Data Scale Typical scale: \u2013 Billions to trillions of tokens \u2013 Web text, books, code, Wikipedia Data preprocessing is important \u2013 Deduplication \u2013 Filtering \u2013 Quality control How large are \u201clarge\u201d LMs?"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_16",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      20
+    ],
+    "sentence_count": 7,
+    "token_count": 60,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Today, we mostly talk about two camps of models: \u2013 Medium-sized models: BERT/RoBERTa models (100M or 300M), T5 models \u2013 (220M, 770M, 3B) \u201cVery\u201d large LMs: models of 100+ billion"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_17",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      20,
+      21
+    ],
+    "sentence_count": 11,
+    "token_count": 62,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "parameters Larger model sizes \u21d2 larger compute, more expensive during inference Different sizes of LMs have different ways to adapt and use them \u2013 Fine-tuning, zero-shot/few-shot prompting, in-context learning\u2026 Emergent properties arise from model scale Trade-off between model size and corpus size Compute Requirements Training can involve:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_18",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      21
+    ],
+    "sentence_count": 8,
+    "token_count": 43,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "\u2013 Thousands of GPUs / TPUs \u2013 Weeks to months of training \u2013 Distributed training Compute becomes the main constraint. Training vs inference cost \u2013 Training: expensive, done a few times (even once) \u2013 Inference:"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_19",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      21,
+      22,
+      23
+    ],
+    "sentence_count": 8,
+    "token_count": 40,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "cheaper, but many times Why LLMs The promise: one single model to solve many NLP tasks Emergent properties in LLMs Pre-training and adaption Pre-training: trained on huge"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_20",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      23
+    ],
+    "sentence_count": 12,
+    "token_count": 64,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "\u2013 amounts of unlabeled text using \u201cself- \u2013 supervised\u201d training objectives Adaptation: how to use a pre-trained model for your downstream task? \u2013 What types of NLP tasks (inputand output formats)? \u2013 How many annotated examples do you have? \u2013 Approach: Fine-tuning, Prompting, Instruction tuning"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_21",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      24
+    ],
+    "sentence_count": 7,
+    "token_count": 50,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "The Dominant Architecture of Transformer-based LLMs GPT-3: \u2013 Decoder-only Transformer \u2013 Causal attention \u2013 LayerNorm, residual blocks, etc. Modern LLMs (LLaMA, Mistral, DeepSeek, etc.):"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_22",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      24,
+      25
+    ],
+    "sentence_count": 12,
+    "token_count": 61,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "\u2013 Same core architecture \u2013 Sometimes improved normalization or efficiency \u2013 Minor architectural refinements \u2013 But the core is the same. Foundation vs Instruction Tuned Models Foundation \u25cf Coherent, fluent generation \u25cf Completion and continuation \u25cf Vast world knowledge \u25cf Potentially harmful outputs \u25cf Difficult to control \u25cf Misaligned with our values"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_23",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      25,
+      26
+    ],
+    "sentence_count": 12,
+    "token_count": 62,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "Instruction Tuned \u25cf Foundation ability and more \u25cf Controllable by prompt \u25cf Less need to fine-tune \u25cf Follows any command \u25cf Slight hit to performance \u25cf Sensitive to prompt template Summary Pretraining \u2013 Large-scale self-supervised learning \u2013 Autoregressive next-token prediction \u2013 Trained on massive text corpora"
+  },
+  {
+    "experiment_id": "exp4_semantic_aware",
+    "chunk_id": "Week5_sem_24",
+    "filename": "Week5_TRIM_LLM-pretraining.pdf",
+    "week": "Week 5",
+    "page_number": [
+      26
+    ],
+    "sentence_count": 9,
+    "token_count": 37,
+    "embedding_backend": "sentence-transformers:all-MiniLM-L6-v2",
+    "breakpoint_percentile": 25.0,
+    "similarity_threshold": 0.1125,
+    "content": "What It Produces \u2013 Fluent text \u2013 World knowledge correlations \u2013 In-context learning capability \u2013 Generative foundation model What It does NOT Guarantee \u2013 Instruction following \u2013 Helpfulness or safety \u2013 Truthfulness"
+  }
+]

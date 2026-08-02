@@ -1,0 +1,276 @@
+[
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_1",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "COMP64702: Transforming Text Into Meaning\nIntroduction & Vector Representations of Text\nChenghua Lin\nE: chenghua.lin@manchester.ac.uk\nX: @chenghua lin\nComputer Science Department\nThe University of ManchesterPart I: IntroductionCourse Practicalities\nCourse Lecturers:\nProf. Chenghua Lin\nDr. Jingyuan Sun\nLectures and Labs:\nLectures: Mondays from 10:00\u201312:00 (weekly)\nLecture slides for each week will be released one week in\nadvance\nLabs: Fridays from 12:00\u201314:00 (Weeks 3, 5, 7, 9)\nAll materials will be made available onCanvas.Course Practicalities (cont.)\nAssessment:\nTwo components:Team courseworkandfinal exam\nEach component contributes 50% to the overall module mark.\nChenghua will be fully responsible for the coursework and for\nrunning the labs.\nOther Support\n9 teaching assistants for the course\nDiscussion forum on CanvasCourse goals\nDevelop a solid understanding of text mining and NLP\nfundamentals (e.g. text preprocessing and representations).\nUnderstand the evolution of language models leading to\ntransformers and modern LLM architectures.\nUnderstand traditional and state-of-the-art approaches (e.g.,\ntransformer-based models) to core NLP tasks.\nUnderstand how large language models are trained and\naligned (e.g. pre-training, instruction tuning).\nSystem"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_2",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      5,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "LLM architectures.\nUnderstand traditional and state-of-the-art approaches (e.g.,\ntransformer-based models) to core NLP tasks.\nUnderstand how large language models are trained and\naligned (e.g. pre-training, instruction tuning).\nSystematically evaluate and compare the performance of\napproaches to NLP tasks.\nDevelop and apply, as a team, various NLP methods to\nextract information and meaning from large-scale textual dataText Mining vs. NLP\nDifferent historical emphases\nNatural Language Processing (NLP):traditionally focuses\non modeling linguistic structure and meaning (e.g., syntax,\nsemantics, discourse)\nText Mining:traditionally focuses on discovering patterns\nand useful information from large text collections (e.g., topic\nmodelling)\nIncreasing convergence\nExtensive sharing of representations, models, and evaluation\nbenchmarks\nStrong overlap in statistical and neural language processing\nModern large language models blur the distinction between\nNLP and text miningWhy Text Mining and NLP?\nMachine TranslationWhy Text Mining and NLP?\nQuestion AnsweringHistorical Legal Text Analytics\nManually transcribed from the original handwritten pages in\nLatin and Middle Scots.\nAnnotate and enrich transcribed, machine readable Aberdeen\nBurgh Records\nAnalyse the evolution of social/legal conceptsWhy Text Mining and NLP?\nFact CheckingWhy Text Mining and NLP?\nAutomatically generate weather forecast report (i.e., data to text\ngeneration)Why Text Mining and NLP?ChatG"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_3",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      20,
+      22,
+      24,
+      25,
+      26
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "Analyse the evolution of social/legal conceptsWhy Text Mining and NLP?\nFact CheckingWhy Text Mining and NLP?\nAutomatically generate weather forecast report (i.e., data to text\ngeneration)Why Text Mining and NLP?ChatGPT\u2019s abilities\nQuestion answering\nPerform mathematical tasks\nWrite a song/poem given a topic\nWrite an email for you\nDialogue generation\nCode generation and debugging\nText completion\n... ...\nA significant step towards AGIChatGPTWhy are Text Mining and NLP challenging?\nNatural languagesevolve!\nNew words appear constantly (e.g.\u201cemoji\u201d,\u201cto DM\u201d)\nSyntactic rules are flexible (e.g. \u201cComing?\u201d vs. \u201cAre you\ncoming?\u201d)\nAmbiguity is inherent\nWorld knowledge is necessary for interpretation\n\u201cThe player took three steps. The whistle blew.\u201d\nMany languages, dialects, styles, etc.Chinese word segmentationTraditional vs. simplified Chinese\nChinese is an ideographic language (vs. English as an\nalphabetic one)\nThe traditional Chinese characters provide much richer stroke\nsignals than the simplified counterpartWhy Machine Learning for TM/NLP?\nTraditional rule-based artificial intelligence (symbolic AI):\nrequires expert knowledge to engineer the rules\nnot flexible to adapt in multiple languages, domains,\napplications\nLearning from data (machine learning) adapts:\nto evolution: just learn from new data\nto different applications: just learn with the appropriate target\nrepresentationNLP =? ML\nNLP"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_4",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      25,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "flexible to adapt in multiple languages, domains,\napplications\nLearning from data (machine learning) adapts:\nto evolution: just learn from new data\nto different applications: just learn with the appropriate target\nrepresentationNLP =? ML\nNLP is a confluence of computer science, artificial intelligence\n(AI) and linguistics\nML provides techniques for problem solving by learning from\ndata (current dominant AI paradigm)\nML isoftenused in modelling NLP tasksNLP =? Computational Linguistics\nBoth mostly use text as data\nIn Computational Linguistics (CL), computational methods\nare used to support the study of linguistic phenomena and\ntheories (e.g. formal discourse theories)\nIn NLP, the scope is more general. Computational methods\nare used for translating text, extracting information, answering\nquestions etc.\nThe top NLP scientific conference is called: Annual Meeting of the\nAssociation for Computational Linguistics (ACL)Other Related fields\nMachine Learning\nSpeech Processing\nArtificial Intelligence\nInformation Retrieval\nStatistics\nAny field that involves processing language:\nliterature, history, etc. (i.e. digital humanities)\nsocial sciences (sociology, psychology, law)\nbiologyTypical NLP Applications\nMachine translation\nSentiment analysis\nInformation extraction\nText summarisation\nQuestion answering\nDialogue systems\nand many more ...Part II: Vector Representations of TextWhy do we need vector representations of text?\nHow can we transform a raw text to a vector?"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_5",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      30,
+      31,
+      32,
+      34,
+      36,
+      38
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "Sentiment analysis\nInformation extraction\nText summarisation\nQuestion answering\nDialogue systems\nand many more ...Part II: Vector Representations of TextWhy do we need vector representations of text?\nHow can we transform a raw text to a vector?Vectors and Vector Spaces\nA vector (i.e. embedding)xis aone-dimensional arrayofd\nelements (coordinates), that can be identified by an index\ni\u2208d. e.g.x 1 = 2\nx 2 0 ... 5\nindex 1 2 ... d\nA collection ofnvectors is amatrixXwith sizen\u00d7d- also\ncalled avector space. e.g.X[2,1] =\u22122\nn\n( 2 0 ... 5\n-2 9 ... 0\n...\n0 2 ... 0\n| {z }\nd\nNote that in Python indices start from 0!Example of a vector space\nd0\nd1\nx1\nx2\nx3\ndi (i\u22080,1) are the coordinates andx j are vectors\nHow can we measure thatx 1 is closer tox 2 than tox 3?Vector Similarity\nDot (inner) product:takes two equal-length sequences of\nnumbers (i.e. vectors) and returns a single number.\ndot(x1,x 2) =x 1 \u00b7x 2 =x 1x\ufffd"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_6",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      38,
+      40,
+      43
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "ity\nDot (inner) product:takes two equal-length sequences of\nnumbers (i.e. vectors) and returns a single number.\ndot(x1,x 2) =x 1 \u00b7x 2 =x 1x\u22a4\n2 = Pd\ni=1 x1,i x2,i =\nx1,1x2,1 +...+x 1,d x2,d\nCosine similarity:normalise dot product ([0,1]) by dividing\nwith vectors\u2019 lengths (or magnitude or norm)|x|.\ncosine(x1,x 2) = x1\u00b7x2\n|x1||x2| =\nPd\ni=1 x1,i x2,iqPd\ni=1 (x1,d )2\nqPd\ni=1 (x2,d )2\n|x|= \u221ax\u00b7x=\nq\nx 2\n1 +...+x 2\ndVector Spaces of Text\nAny ideas what are rows and columns for text data?\nword-word (term-context)\ngame\ningredient\nbasketball\nfootball\nrecipe\ndocument-word (bag-of-words)\ngood\nbad\ndoc 1\ndoc 2\ndoc 3Why do we need vector representations of text?\nEncode the meaning of words so we can computesemantic\nsimilaritybetween them. E.g. isbasketballmore similar to\nfootballorrecipe?\nDocument retrieval, e.g."
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_7",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      40,
+      43,
+      47,
+      48
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "doc 3Why do we need vector representations of text?\nEncode the meaning of words so we can computesemantic\nsimilaritybetween them. E.g. isbasketballmore similar to\nfootballorrecipe?\nDocument retrieval, e.g. retrieve documents relevant to a\nquery (web search)\nApplyMachine Learningon textual data, e.g.\nclustering/classification algorithms operate on vectors. We are\ngoing to see a lot of this during this course!Text units\nRaw text:\nAs far as I\u2019m concerned, this is Lynch at his best. \u2018Lost Highway\u2019 is a\ndark, violent, surreal, beautiful, hallucinatory masterpiece. 10 out of 10\nstars.\nword (token/term): a sequence of one or more characters\nexcluding whitespaces. Sometimes it consists of n-grams.\ndocument (text sequence/snippet): sentence, paragraph,\nsection, chapter, entire document, search query, social media\npost, transcribed utterance, pseudo-documents (e.g. all\ntweets posted by a user), etc.\nHow can we go fromrawtext to avector?Text Processing: Tokenisation\nTokenisationto obtain tokens from raw text. Simplest form:split\ntext on whitespacesor useregular expressions.\nRaw text:\nAs far as I\u2019m concerned, this is Lynch at his best. \u2018Lost Highway\u2019 is a\ndark, violent, surreal, beautiful, hallucinatory masterpiece. 10 out of"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_8",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      48,
+      49,
+      50
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "on whitespacesor useregular expressions.\nRaw text:\nAs far as I\u2019m concerned, this is Lynch at his best. \u2018Lost Highway\u2019 is a\ndark, violent, surreal, beautiful, hallucinatory masterpiece. 10 out of 10\nstars.\nTokenised text:\nAs far as I\u2019m concerned , this is Lynch at his best . \u2018 Lost Highway \u2019 is a\ndark , violent , surreal , beautiful , hallucinatory masterpiece . 10 out of\n10 stars .Text Processing: Other pre-processing options\nOther pre-processing steps may follow: lowercasing,\npunctuation/number/stop/infrequent word removal and\nstemming\nTokenised text:\nAs far as I\u2019m concerned , this is Lynch at his best . \u2018 Lost Highway \u2019 is a\ndark , violent , surreal , beautiful , hallucinatory masterpiece . 10 out of\n10 stars .\nPre-processed text (lowercase, punctuation/stop word removal):\nconcerned lynch best lost highway dark violent surreal beautiful\nhallucinatory masterpiece 10 10 starsDecide what/how do you want to represent: Obtain a\nvocabulary\nAssume a corpusDofmpre-processed texts (e.g. a set of movie\nreviews or tweets).\nThe vocabularyVis a set containing all thekunique wordsw i in\nD:\nV={w 1, ...,wk }\nand often is extended to include n-grams (contiguous sequences of"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_9",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      50,
+      51,
+      54,
+      55
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "a set of movie\nreviews or tweets).\nThe vocabularyVis a set containing all thekunique wordsw i in\nD:\nV={w 1, ...,wk }\nand often is extended to include n-grams (contiguous sequences of\nnwords).Words: Discrete vectors\nText:\nlove pineapple apricot apple chocolate apple pie\nVocabulary size:|V|=?Words: Discrete vectors\nText:\nlove pineapple apricot apple chocolate apple pie\nV={apple, apricot, chocolate, love, pie, pineapple}\nVocabulary size:|V|= 6\napricot =x 2 = [0,1,0,0,0,0]\npineapple =x 3 = [0,0,0,0,0,1]\nAlso known asone-hot encoding. What\u2019s the problem?Problems with discrete vectors\napricot =x 2 = [0,1,0,0,0,0]\npineapple =x 3 = [0,0,0,0,0,1]\ndot(x2,x 3) = 0\u00b70 + 1\u00b70 + 0\u00b70 + 0\u00b70 + 0\u00b70 + 0\u00b71\n= 0\ncosine(x2,x 3) = x2 \u00b7x 3\n|x2||x3| = 0\n1\u00b71 = 0\nEvery word is equally different"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_10",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      55,
+      58,
+      59,
+      64
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "\u00b70 + 0\u00b71\n= 0\ncosine(x2,x 3) = x2 \u00b7x 3\n|x2||x3| = 0\n1\u00b71 = 0\nEvery word is equally different from every other word. But\napricotandpineappleare related!\nWouldcontextual informationbe useful?A quick test: What istesguino?\nSome sentences mentioning it:\nA bottle oftesguinois on the table.\nEverybody likes an ice coldtesguino.\nTesguinomakes you drunk.\nWe maketesguinoout of corn.\nTesguino is a beer made\nfrom corn.Distributional Hypothesis\nFirth (1957) 1\nYou shall know a word by the company it keeps!\nWords appearing in similar contexts are likely to have similar\nmeanings.\n1John R Firth (1957). \u201cA synopsis of linguistic theory, 1930-1955\u201d. In:Studies in linguistic analysis.Words: Word-Word Matrix (term-context)\nA matrixX,n\u00d7mwheren=|V|(target words) and\nm=|V c |(context words)\nFor each wordx i inV, count how many times it co-occurs\nwith context wordsx j\nUse a context window of\u00b1kwords (to the left/right ofx i )\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_11",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      64,
+      66,
+      67,
+      69,
+      72
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "count how many times it co-occurs\nwith context wordsx j\nUse a context window of\u00b1kwords (to the left/right ofx i )\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia)!\nUsually target and context word vocabularies are the same\nresulting into a square matrix.Word-Word Matrix\nNowapricotandpineapplevectors look moresimilar!\ncosine(apricot,pineapple) = 1\ncosine(apricot,digital) = 0Context types\nWe can refine contexts using linguistic information:\ntheir part-of-speech tags (bank Vvs.bank N)\nsyntactic dependencies (eat dobjvs.eat subj)Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D| \u00d7 |V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw\u2208 V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!Problems with counts\nFrequent words (articles, pronouns, etc.) dominate contexts\nwithout being informative.\nLet\u2019s add the wordth"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_12",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      69,
+      72,
+      73,
+      75
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!Problems with counts\nFrequent words (articles, pronouns, etc.) dominate contexts\nwithout being informative.\nLet\u2019s add the wordtheto the contexts. It often appears with\nmost nouns:\nvocabulary = [aadvark,computer,data,pinch,result,sugar,the]\napricot =x 2 = [0,0,0,1,0,1,30]\ndigital =x 3 = [0,2,1,0,1,0,45]\ncosine(x2,x 3) = 30\u00b745\u221a\n902\u00b7\n\u221a\n2031\n= 0.997\nThis also holds for the document-word matrix! Solution:\nWeight the vectors!Weighting the Word-Word Matrix: Distance discount\nWeight contexts according to the distance from the word: the\nfurther away, the lower the weight!\nFor a window size\u00b1k, multiply the context word at each\nposition as k\u2212distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3 ]Weighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togetht"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_13",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      73,
+      75,
+      77
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "3\n3 , 2\n3 , 1\n3 ]Weighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently:\nPMI(w i ,w j ) = log 2\nP(w i ,w j )\nP(w i )P(w j ) = #(wi ,w j )|D|\n#(w1)\u00b7#(w j )\nP(w i ,w j ) = #(wi ,w j )\n|D| ,P(w i ) = #(wi )\n|D|\nwhere #(\u00b7) denotes count and|D|number of observed words in\nthe corpus.\nPositive values quantify relatedness. Use PMI instead of\ncounts.\nNegative values? Usually ignored (positive PMI):\nPPMI(w i ,w j ) = max(PMI(w i ,w j ),0)Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_14",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      77,
+      79,
+      81,
+      82
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "(IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfidProblems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!Evaluation: Word Vectors\nIntrinsic:\nsimilarity: order word pairs according to their semantic\nsimilarity\nin-context similarity: substitute a word in a sentence without\nchagning its meaning.\nanalogy: Beijing is to China what Rome is to ...?\nExtrinsic: use them to improve performance in a task, i.e.\nsentiment classification, NER, etc.Best word vectors?\nhigh-dimensional count-based?\nIn one of the lectures, we will see how we can obtain\nlow-dimensional vectors with Neural Networks\nLevy et al. 2 (2015) showed that choice of context window\nsize, rare word removal, etc. matter more.\nChoice of texts to obtain the counts matters. More text is\nbetter, and low-dimensional methods scale better.\n2O"
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_15",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      82,
+      83,
+      85,
+      86,
+      87,
+      88
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 300,
+    "content": "al. 2 (2015) showed that choice of context window\nsize, rare word removal, etc. matter more.\nChoice of texts to obtain the counts matters. More text is\nbetter, and low-dimensional methods scale better.\n2Omer Levy, Yoav Goldberg, and Ido Dagan (2015). \u201cImproving Distributional Similarity with Lessons Learned\nfrom Word Embeddings\u201d. In:Transactions of the Association for Computational Linguistics, pp. 211\u2013225.Limitations: Word Vectors\nPolysemy:All occurrences of a word (and all its senses) are\nrepresented by one vector.\nGiven a task, it is often useful to adapt the word vectors to\nrepresent the appropriate sense, e.g.bank\nAntonymsappear in similar contexts, hard to distinguish\nthem from synonyms\nCompositionality:what is the meaning of a sequence of\nwords?\nwhile we might be able to obtain context vectors for short\nphrases, this doesn\u2019t scale to whole sentences, paragraphs, etc.\nSolution: combine word vectors, i.e. add/multiply;\nsentenceBERT, etc.Evaluation: Document Vectors\nIntrinsic:\ndocument similarity\ninformation retrieval\nExtrinsic:\ntext classification, plagiarism detection etc.Limitations: Document Vectors\nWord order is ignored, but language is sequential!Upcoming next...\nLanguage modelling!Course Bibliography\nJurafsky and Martin. 2026. Speech and Language Processing,\nPrentice Hall ["
+  },
+  {
+    "experiment_id": "exp2_sliding_window",
+    "chunk_id": "Week1_sw_16",
+    "filename": "Week1_Intro_to_vector.pdf",
+    "week": "Week 1",
+    "page_number": [
+      85,
+      86,
+      87,
+      88
+    ],
+    "chunk_size_tokens": 300,
+    "overlap_tokens": 50,
+    "actual_token_count": 117,
+    "content": "etc.Limitations: Document Vectors\nWord order is ignored, but language is sequential!Upcoming next...\nLanguage modelling!Course Bibliography\nJurafsky and Martin. 2026. Speech and Language Processing,\nPrentice Hall [3rd edition]\nChristopher D. Manning and Hinrich Sch\u00a8 utze. 1999.\nFoundations of Statistical Natural Language Processing, MIT\nPress.\nJacob Eisenstein. 2019. Introduction to Natural Language\nProcessing. MIT Press. (A draft can be found here)\nother materials referenced at the end of each lecture"
+  }
+]

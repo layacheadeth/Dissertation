@@ -1,0 +1,25 @@
+{
+  "stage": "1-routing",
+  "settings": {
+    "route_meta": true,
+    "meta_patterns": 8,
+    "relevance_floor": null,
+    "gate_combo": "combo2",
+    "combo": "combo2",
+    "gate_active": false
+  },
+  "settings_hash": "75b47612482e",
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "route": "answer",
+    "is_meta": false,
+    "matched_patterns": [],
+    "answer": null,
+    "searched": true,
+    "decided_by": "passed to retrieval",
+    "gate_can_refuse_later": false
+  },
+  "seconds": 5.1e-05
+}

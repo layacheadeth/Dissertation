@@ -1,0 +1,49 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp2",
+    "embedder": "bge",
+    "collection": "exp2_fixed_overlap_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "meta-llama/Llama-3.2-1B-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "828cf65e1955",
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The provided course material does not cover this.",
+    "is_no_answer": true,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week13_sw_1",
+        "week": "Week 13",
+        "page_number": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "token_count": null,
+        "score": -6.3127
+      }
+    ],
+    "context_tokens": 0
+  },
+  "seconds": {
+    "search": 3.877,
+    "answer": 18.3,
+    "total": 22.18
+  }
+}

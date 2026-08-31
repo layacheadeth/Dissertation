@@ -1,0 +1,76 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp1",
+    "embedder": "bge",
+    "collection": "exp1_page_level_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "2d79e68033be",
+  "self_check": 0.9635,
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.6935,
+        "chunk_id": "Week3_p38",
+        "week": "Week 3",
+        "page_number": [
+          38
+        ],
+        "token_count": 11,
+        "content": "Transformer ArchitectureOpening the boxwith more details …"
+      },
+      {
+        "rank": 2,
+        "score": 0.6894,
+        "chunk_id": "Week3_p35",
+        "week": "Week 3",
+        "page_number": [
+          35
+        ],
+        "token_count": 25,
+        "content": "TransformersTransformer: a neural architecture built entirely on attention mechanisms.\nCredits: The Illustrated Transformer –Jay Alammar"
+      },
+      {
+        "rank": 3,
+        "score": 0.637,
+        "chunk_id": "Week5_p24",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78,
+        "content": "The Dominant Architecture of Transformer-based \nLLMs\n GPT-3:\n– Decoder-only Transformer\n– Causal attention\n– LayerNorm, residual blocks, etc.\n Modern LLMs (LLaMA, Mistral, DeepSeek, etc.):\n– Same core architecture\n– Sometimes improved normalization or efficiency\n– Minor architectural refinements\n– But the core is the same."
+      },
+      {
+        "rank": 4,
+        "score": 0.6349,
+        "chunk_id": "Week3_p65",
+        "week": "Week 3",
+        "page_number": [
+          65
+        ],
+        "token_count": 4,
+        "content": "Building Transformers from Scratch"
+      },
+      {
+        "rank": 5,
+        "score": 0.6248,
+        "chunk_id": "Week3_p40",
+        "week": "Week 3",
+        "page_number": [
+          40
+        ],
+        "token_count": 48,
+        "content": "Transformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time"
+      }
+    ],
+    "context_tokens": 166
+  },
+  "seconds": 0.054
+}

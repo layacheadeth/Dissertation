@@ -1,0 +1,85 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp1",
+    "embedder": "bge",
+    "collection": "exp1_page_level_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "b42879749bf8",
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The exam is scheduled for the final week of the semester, which is Week 13.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week13_p2",
+        "week": "Week 13",
+        "page_number": [
+          2
+        ],
+        "token_count": 139,
+        "score": -6.6837
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week9_p26",
+        "week": "Week 9",
+        "page_number": [
+          26
+        ],
+        "token_count": 34,
+        "score": -8.9468
+      },
+      {
+        "rank": 3,
+        "chunk_id": "Week1_p4",
+        "week": "Week 1",
+        "page_number": [
+          4
+        ],
+        "token_count": 59,
+        "score": -8.9748
+      },
+      {
+        "rank": 4,
+        "chunk_id": "Week13_p25",
+        "week": "Week 13",
+        "page_number": [
+          25
+        ],
+        "token_count": 143,
+        "score": -8.9963
+      },
+      {
+        "rank": 5,
+        "chunk_id": "Week1_p3",
+        "week": "Week 1",
+        "page_number": [
+          3
+        ],
+        "token_count": 78,
+        "score": -9.2537
+      }
+    ],
+    "context_tokens": 453
+  },
+  "seconds": {
+    "search": 0.982,
+    "answer": 9.88,
+    "total": 10.86
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp3",
+    "embedder": "bge",
+    "collection": "exp3_section_aware_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "94da73f47cee",
+  "input": {
+    "question": "What can you do?"
+  },
+  "output": {
+    "route": "meta",
+    "answer": "I answer questions about the COMP64702 lecture material. Ask me about anything covered in the course slides and I will answer from them.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": false,
+    "chunks": [],
+    "context_tokens": 0
+  },
+  "seconds": {
+    "search": 0.0,
+    "answer": 0.0,
+    "total": 0.0
+  }
+}

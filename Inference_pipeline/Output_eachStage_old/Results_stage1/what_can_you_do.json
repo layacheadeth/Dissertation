@@ -1,0 +1,27 @@
+{
+  "stage": "1-routing",
+  "settings": {
+    "route_meta": true,
+    "meta_patterns": 8,
+    "relevance_floor": null,
+    "gate_combo": "combo2",
+    "combo": "combo2",
+    "gate_active": false
+  },
+  "settings_hash": "75b47612482e",
+  "input": {
+    "question": "What can you do?"
+  },
+  "output": {
+    "route": "meta",
+    "is_meta": true,
+    "matched_patterns": [
+      "\\bwhat can you (do|teach|help)\\b"
+    ],
+    "answer": "I answer questions about the COMP64702 lecture material. Ask me about anything covered in the course slides and I will answer from them.",
+    "searched": false,
+    "decided_by": "meta router",
+    "gate_can_refuse_later": false
+  },
+  "seconds": 6.7e-05
+}

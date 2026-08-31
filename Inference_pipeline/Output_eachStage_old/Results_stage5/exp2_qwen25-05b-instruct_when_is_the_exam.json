@@ -1,0 +1,49 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp2",
+    "embedder": "bge",
+    "collection": "exp2_fixed_overlap_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "e2ca16264e86",
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The exam is scheduled for next week.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week13_sw_1",
+        "week": "Week 13",
+        "page_number": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "token_count": null,
+        "score": -6.3127
+      }
+    ],
+    "context_tokens": 0
+  },
+  "seconds": {
+    "search": 3.143,
+    "answer": 8.01,
+    "total": 11.16
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp1",
+    "embedder": "bge",
+    "collection": "exp1_page_level_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "2d79e68033be",
+  "self_check": 0.9635,
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.6219,
+        "chunk_id": "Week13_p2",
+        "week": "Week 13",
+        "page_number": [
+          2
+        ],
+        "token_count": 139,
+        "content": "COMP64702 Revision Lecture\nHow the exam will test this material\nOrientation\nThink in terms of skills: recognising, calculating, interpreting, and applying.\nSelect all that apply\nConcept distinctions, true/false traps, \narchitecture properties\nNumeric calculation\nCosine similarity , TF–IDF , agreement, P /R/F1\nMatching / labelling\nPOS tags, BIO classes, token-level labels\nStructure interpretation\nDependency heads, dependents, phrase \nconstituents\nFill-in counts\nTP / FP / FN for entities and classes\nScenario choice\nRAG vs prompting vs fine-tuning; agents and \nsafety\nReminder: \n Have a detailed go-through of all previous lecture slides\n Do the practice exam."
+      },
+      {
+        "rank": 2,
+        "score": 0.5956,
+        "chunk_id": "Week7_p38",
+        "week": "Week 7",
+        "page_number": [
+          38
+        ],
+        "token_count": 62,
+        "content": "Reference: I am giving a talk at a data science conference\nHyp 1: I am giving a talk at a conference about data science\n lots of overlap → high score\nHyp 2: This talk is about recent advances in medical imaging\n little overlap → low score\nThe Old Reliables: BLEU/ROUGE Score"
+      },
+      {
+        "rank": 3,
+        "score": 0.5853,
+        "chunk_id": "Week1_p3",
+        "week": "Week 1",
+        "page_number": [
+          3
+        ],
+        "token_count": 78,
+        "content": "Course Practicalities\nCourse Lecturers:\nProf. Chenghua Lin\nDr. Jingyuan Sun\nLectures and Labs:\nLectures: Mondays from 10:00–12:00 (weekly)\nLecture slides for each week will be released one week in\nadvance\nLabs: Fridays from 12:00–14:00 (Weeks 3, 5, 7, 9)\nAll materials will be made available onCanvas."
+      },
+      {
+        "rank": 4,
+        "score": 0.5786,
+        "chunk_id": "Week1_p87",
+        "week": "Week 1",
+        "page_number": [
+          87
+        ],
+        "token_count": 8,
+        "content": "Upcoming next...\nLanguage modelling!"
+      },
+      {
+        "rank": 5,
+        "score": 0.5761,
+        "chunk_id": "Week9_p31",
+        "week": "Week 9",
+        "page_number": [
+          31
+        ],
+        "token_count": 64,
+        "content": "Reference: I am giving a talk at a data science conferenceHyp 1:I am giving a talk at a conference about data sciencelots of overlap → high scoreHyp 2:This talk is about recent advances in medical imaginglittle overlap → low score\nThe Old Reliables: BLEU/ROUGE Score"
+      }
+    ],
+    "context_tokens": 351
+  },
+  "seconds": 0.038
+}

@@ -1,0 +1,61 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp3",
+    "embedder": "bge",
+    "collection": "exp3_section_aware_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "6aa041040927",
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The Transformer is a type of neural network architecture that was designed to be a more efficient and effective way of processing text data. It was developed by BERT (Bidirectional Encoder Representations from Transformers) and is widely used in natural language processing applications such as language translation, machine translation, and text summarization.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_sec8_part1",
+        "week": "Week 3",
+        "page_number": [
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "token_count": 366,
+        "score": 0.1895
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week5_sec17_part1",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78,
+        "score": 0.0603
+      }
+    ],
+    "context_tokens": 444
+  },
+  "seconds": {
+    "search": 5.321,
+    "answer": 28.42,
+    "total": 33.74
+  }
+}

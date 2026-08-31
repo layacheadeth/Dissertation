@@ -1,0 +1,61 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp3",
+    "embedder": "bge",
+    "collection": "exp3_section_aware_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "94da73f47cee",
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The provided course material does not cover this.",
+    "is_no_answer": true,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_sec8_part1",
+        "week": "Week 3",
+        "page_number": [
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "token_count": 366,
+        "score": 0.1895
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week5_sec17_part1",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78,
+        "score": 0.0603
+      }
+    ],
+    "context_tokens": 444
+  },
+  "seconds": {
+    "search": 5.331,
+    "answer": 9.93,
+    "total": 15.26
+  }
+}

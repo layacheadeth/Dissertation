@@ -1,0 +1,640 @@
+{
+  "run_at": "2026-08-30T21:27:12+00:00",
+  "stages": {
+    "1": "1-routing",
+    "2": "2-vector-search",
+    "3": "3-ranking-retrieval",
+    "4": "4-llm-prompt",
+    "5": "5-pipeline"
+  },
+  "settings": {
+    "questions": [
+      "What is the Transformer?",
+      "When is the exam?",
+      "What can you do?"
+    ],
+    "strategies": [
+      "exp1",
+      "exp2",
+      "exp3"
+    ],
+    "llms": [
+      "360m",
+      "0.5b",
+      "1b"
+    ],
+    "embedder": "bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "max_new_tokens": 256,
+    "week": null,
+    "route_meta": true,
+    "relevance_floor": null,
+    "prompt_format": "chat-turns-v3-answer-last"
+  },
+  "seconds_total": 1465.7,
+  "records": [
+    {
+      "stage": 1,
+      "label": "What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage1/what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 1,
+      "label": "When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage1/when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 1,
+      "label": "What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage1/what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp1 | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp1_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp1 | When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp1_when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp1 | What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp1_what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp2 | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp2_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp2 | When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp2_when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp2 | What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp2_what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp3 | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp3_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp3 | When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp3_when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 2,
+      "label": "exp3 | What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage2/exp3_what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp1 | combo2 | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp1_combo2_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp1 | combo2 | When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp1_combo2_when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp1 | combo2 | What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp1_combo2_what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp2 | combo2 | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp2_combo2_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp2 | combo2 | When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp2_combo2_when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp2 | combo2 | What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp2_combo2_what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp3 | combo2 | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp3_combo2_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp3 | combo2 | When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp3_combo2_when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 3,
+      "label": "exp3 | combo2 | What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage3/exp3_combo2_what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 360m | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage4/exp1_360m_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 360m | When is the exam?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage4/exp1_360m_when_is_the_exam.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 360m | What can you do?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage4/exp1_360m_what_can_you_do.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 0.5b | What is the Transformer?",
+      "status": "skipped",
+      "path": "/workspace/Data/Results_stage4/exp1_05b_what_is_the_transformer.json",
+      "seconds": null,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 0.5b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp1_05b_when_is_the_exam.json",
+      "seconds": 91.89,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 0.5b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp1_05b_what_can_you_do.json",
+      "seconds": 25.57,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 1b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp1_1b_what_is_the_transformer.json",
+      "seconds": 183.96,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 1b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp1_1b_when_is_the_exam.json",
+      "seconds": 47.9,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp1 | 1b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp1_1b_what_can_you_do.json",
+      "seconds": 39.56,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 360m | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_360m_what_is_the_transformer.json",
+      "seconds": 76.3,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 360m | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_360m_when_is_the_exam.json",
+      "seconds": 11.4,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 360m | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_360m_what_can_you_do.json",
+      "seconds": 12.52,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 0.5b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_05b_what_is_the_transformer.json",
+      "seconds": 15.64,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 0.5b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_05b_when_is_the_exam.json",
+      "seconds": 18.29,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 0.5b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_05b_what_can_you_do.json",
+      "seconds": 20.77,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 1b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_1b_what_is_the_transformer.json",
+      "seconds": 35.8,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 1b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_1b_when_is_the_exam.json",
+      "seconds": 38.71,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp2 | 1b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp2_1b_what_can_you_do.json",
+      "seconds": 39.74,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 360m | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_360m_what_is_the_transformer.json",
+      "seconds": 35.89,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 360m | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_360m_when_is_the_exam.json",
+      "seconds": 10.64,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 360m | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_360m_what_can_you_do.json",
+      "seconds": 14.57,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 0.5b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_05b_what_is_the_transformer.json",
+      "seconds": 38.1,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 0.5b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_05b_when_is_the_exam.json",
+      "seconds": 16.67,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 0.5b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_05b_what_can_you_do.json",
+      "seconds": 9.74,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 1b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_1b_what_is_the_transformer.json",
+      "seconds": 58.7,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 1b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_1b_when_is_the_exam.json",
+      "seconds": 46.33,
+      "note": null
+    },
+    {
+      "stage": 4,
+      "label": "exp3 | 1b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage4/exp3_1b_what_can_you_do.json",
+      "seconds": 34.58,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 360m | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_smollm2-360m-instruct_what_is_the_transformer.json",
+      "seconds": 35.57,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 360m | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_smollm2-360m-instruct_when_is_the_exam.json",
+      "seconds": 10.88,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 360m | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_smollm2-360m-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 0.5b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_qwen25-05b-instruct_what_is_the_transformer.json",
+      "seconds": 20.56,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 0.5b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_qwen25-05b-instruct_when_is_the_exam.json",
+      "seconds": 7.03,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 0.5b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_qwen25-05b-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 1b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_llama-32-1b-instruct_what_is_the_transformer.json",
+      "seconds": 28.51,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 1b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_llama-32-1b-instruct_when_is_the_exam.json",
+      "seconds": 14.24,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp1 | 1b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp1_llama-32-1b-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 360m | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_smollm2-360m-instruct_what_is_the_transformer.json",
+      "seconds": 26.73,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 360m | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_smollm2-360m-instruct_when_is_the_exam.json",
+      "seconds": 16.48,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 360m | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_smollm2-360m-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 0.5b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_qwen25-05b-instruct_what_is_the_transformer.json",
+      "seconds": 18.12,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 0.5b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_qwen25-05b-instruct_when_is_the_exam.json",
+      "seconds": 11.17,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 0.5b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_qwen25-05b-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 1b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_llama-32-1b-instruct_what_is_the_transformer.json",
+      "seconds": 40.34,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 1b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_llama-32-1b-instruct_when_is_the_exam.json",
+      "seconds": 22.2,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp2 | 1b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp2_llama-32-1b-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 360m | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_smollm2-360m-instruct_what_is_the_transformer.json",
+      "seconds": 33.76,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 360m | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_smollm2-360m-instruct_when_is_the_exam.json",
+      "seconds": 10.03,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 360m | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_smollm2-360m-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 0.5b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_qwen25-05b-instruct_what_is_the_transformer.json",
+      "seconds": 15.27,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 0.5b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_qwen25-05b-instruct_when_is_the_exam.json",
+      "seconds": 8.09,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 0.5b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_qwen25-05b-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 1b | What is the Transformer?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_llama-32-1b-instruct_what_is_the_transformer.json",
+      "seconds": 49.27,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 1b | When is the exam?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_llama-32-1b-instruct_when_is_the_exam.json",
+      "seconds": 19.8,
+      "note": null
+    },
+    {
+      "stage": 5,
+      "label": "exp3 | 1b | What can you do?",
+      "status": "written",
+      "path": "/workspace/Data/Results_stage5/exp3_llama-32-1b-instruct_what_can_you_do.json",
+      "seconds": 0.01,
+      "note": null
+    }
+  ]
+}

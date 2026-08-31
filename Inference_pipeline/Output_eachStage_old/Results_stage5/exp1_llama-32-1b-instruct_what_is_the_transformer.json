@@ -1,0 +1,115 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp1",
+    "embedder": "bge",
+    "collection": "exp1_page_level_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "meta-llama/Llama-3.2-1B-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "1dcd4b8e7b20",
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The Transformer is a neural architecture built entirely on attention mechanisms.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_p35",
+        "week": "Week 3",
+        "page_number": [
+          35
+        ],
+        "token_count": 25,
+        "score": 3.9943
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week3_p39",
+        "week": "Week 3",
+        "page_number": [
+          39
+        ],
+        "token_count": 25,
+        "score": 2.6887
+      },
+      {
+        "rank": 3,
+        "chunk_id": "Week3_p40",
+        "week": "Week 3",
+        "page_number": [
+          40
+        ],
+        "token_count": 48,
+        "score": 1.755
+      },
+      {
+        "rank": 4,
+        "chunk_id": "Week3_p38",
+        "week": "Week 3",
+        "page_number": [
+          38
+        ],
+        "token_count": 11,
+        "score": 1.7281
+      },
+      {
+        "rank": 5,
+        "chunk_id": "Week3_p36",
+        "week": "Week 3",
+        "page_number": [
+          36
+        ],
+        "token_count": 92,
+        "score": 1.341
+      },
+      {
+        "rank": 6,
+        "chunk_id": "Week11_p22",
+        "week": "Week 11",
+        "page_number": [
+          22
+        ],
+        "token_count": 80,
+        "score": 0.9272
+      },
+      {
+        "rank": 7,
+        "chunk_id": "Week5_p24",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78,
+        "score": 0.0603
+      },
+      {
+        "rank": 8,
+        "chunk_id": "Week6_p2",
+        "week": "Week 6",
+        "page_number": [
+          2
+        ],
+        "token_count": 58,
+        "score": -0.182
+      }
+    ],
+    "context_tokens": 417
+  },
+  "seconds": {
+    "search": 7.119,
+    "answer": 21.37,
+    "total": 28.49
+  }
+}

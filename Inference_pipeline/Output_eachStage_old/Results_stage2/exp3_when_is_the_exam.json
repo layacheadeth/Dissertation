@@ -1,0 +1,113 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp3",
+    "embedder": "bge",
+    "collection": "exp3_section_aware_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "f1b498e953fd",
+  "self_check": 0.9635,
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.5833,
+        "chunk_id": "Week1_sec2_part1",
+        "week": "Week 1",
+        "page_number": [
+          3,
+          4
+        ],
+        "token_count": 137,
+        "content": "Course Practicalities\nCourse Lecturers:\nProf. Chenghua Lin\nDr. Jingyuan Sun\nLectures and Labs:\nLectures: Mondays from 10:00–12:00 (weekly)\nLecture slides for each week will be released one week in\nadvance\nLabs: Fridays from 12:00–14:00 (Weeks 3, 5, 7, 9)\nAll materials will be made available onCanvas.\n\nCourse Practicalities (cont.)\nAssessment:\nTwo components:Team courseworkandfinal exam\nEach component contributes 50% to the overall module mark.\nChenghua will be fully responsible for the coursework and for\nrunning the labs.\nOther Support\n9 teaching assistants for the course\nDiscussion forum on Canvas"
+      },
+      {
+        "rank": 2,
+        "score": 0.55,
+        "chunk_id": "Week13_sec2_part5",
+        "week": "Week 13",
+        "page_number": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "token_count": 455,
+        "content": "COMP64702 Revision Lecture\nIn-context learning (ICL)\nPrompting\nKnow the difference between examples in the prompt and updating model weights.\nMode What the model receives\nZero-shot Instruction + target input; no examples\nOne/few-shot Instruction + 1–5 demonstrations + target input\nFine-tuning Training data used to update weights\nICL No gradient descent; temporary working memory only\nMemory view\nParametric memory = model weights learned during \ntraining.\nWorking memory = current prompt/context window.\nMini practice\nDoes this use ICL?\nTranslate to Spanish.\nEnglish: good morning → Spanish: buenos días\nEnglish: thank you → Spanish:\nAnswer: Yes — it gives a demonstration in the prompt.\n\nCOMP64702 Revision Lecture\nReasoning prompts and prompt security\nPrompting\nLikely format: choose the safest or most appropriate prompting strategy.\nChain-of-Thought\nEncourages intermediate reasoning before \nthe answer . Useful for multi-step math, \nlogic, and planning. A short trigger can help, \nbut it is not a calculator .\nSelf-consistency / ToT\nSelf-consistency samples multiple \nreasoning paths and majority-votes. Tree of \nThoughts explores branches and \nbacktracks.\nPrompt injection\nBecause instructions and data are both text, \nmalicious user content can try to override \nthe task. Separate instructions from data \nand validate tool use.\nFor exact arithmetic in an agent, what is safer: pure CoT or a calculator/Python tool?\nAnswer: Use the external tool and return the observation.\n\nCOMP64702 Revision Lecture\nLLM applications and agents\nApplications\nLikely format: map an application scenario to the best adaptation strategy.\nCore NLP tasks\nSummarisation\nStructured extraction / NER\nClassification and routing\nQuestion answering\nDomain applications\nCode: unit tests, bug fixing\nLegal/finance: RAG for current facts\nHealthcare: strict human review\nAgents\nBrain: LLM\nMemory: context/vector store\nTools: APIs, calculator , browser\nLoop: plan → act → observe\nDeployment bottlenecks\nInference cost, latency , probabilistic reliability, monitoring, safety , prompt \ninjection, copyright/IP .\nMini practice\nA legal assistant must answer using a changing database of cases. \nPrompting only, RAG, or pretraining from scratch?\nAnswer: RAG, with careful evaluation and human review."
+      },
+      {
+        "rank": 3,
+        "score": 0.5492,
+        "chunk_id": "Week3_sec3_part1",
+        "week": "Week 3",
+        "page_number": [
+          13,
+          14
+        ],
+        "token_count": 79,
+        "content": "CBOW vs. Skip-gram\neat an apple every day\nSkip-gram: predict {eat, an, every, day} from apple\neat anapple every day\nCBOW: predict applefrom {eat, an, every, day}\n\nTraining objective (CBOW)Objective function \nTa k i n g l o g a r i t h m , w e h a v e"
+      },
+      {
+        "rank": 4,
+        "score": 0.5485,
+        "chunk_id": "Week9_sec4_part1",
+        "week": "Week 9",
+        "page_number": [
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "token_count": 460,
+        "content": "Metric Comparision\nRecall@k→ Did we retrieve relevant evidence?MRR → How early does relevant evidence appear?nDCG→ How well are all relevant results ranked?\n\nEnd to End QA QualityEnd-to-End Answer Quality–Compare generated answer %𝑦vs. gold answer 𝑦Common metrics–Exact Match (EM)–To k e n-level F1–BERTScore–Whatelse?\nNote: high overlap does not guarantee factual grounding\n\nReference: I am giving a talk at a data science conferenceHyp 1:I am giving a talk at a conference about data sciencelots of overlap → high scoreHyp 2:This talk is about recent advances in medical imaginglittle overlap → low score\nThe Old Reliables: BLEU/ROUGE Score\n\nReference: I am giving a talk at a data science conferenceHyp 1: I am giving a talk at a political science conferencelots of overlap but bad outputHyp 2: My lecture will be given to the meeting on data analyticslittle overlap but good output (particularly difficult for open-ended problems)\nWhyisEvaluationHard?\n\nEnd-to-End Answer QualityExact Match (EM)–Strict string-level equality–Common in extractive QA–Does notallow paraphrasingTo k e n-Level F1–Based on token overlap between generated and gold answers–More forgiving than EM–Ignores word order but sensitive to lexical differences\n\nExample: T oken-Level F1 Gold Answer: \"Paris is the capital of France\"Generated Answer: \"Paris is capital of France”Common tokens: Paris, is, capital, of, France (5 tokens)Compute Precision & Recall–Precision = 5 / 5 = 1.0–Recall = 5 / 6 ≈ 0.83\n\nEnd-to-End Answer QualityBERTScore–Uses contextual embeddings to measure semantic similarity–Captures meaning beyond exact word overlap\n\nAutomatic vs Human EvaluationAutomatic metrics are useful but limited:–To k e n-Level F1: overlap-heavy; weak on factuality–BERTScore: semantic similarity; still imperfectHuman evaluation is often needed for:–Correctness–Faithfulness (supported by evidence)–Completeness–Clarity"
+      },
+      {
+        "rank": 5,
+        "score": 0.5461,
+        "chunk_id": "Week1_sec5_part1",
+        "week": "Week 1",
+        "page_number": [
+          11,
+          12,
+          13
+        ],
+        "token_count": 74,
+        "content": "Historical Legal Text Analytics\nManually transcribed from the original handwritten pages in\nLatin and Middle Scots.\nAnnotate and enrich transcribed, machine readable Aberdeen\nBurgh Records\nAnalyse the evolution of social/legal concepts\n\nWhy Text Mining and NLP?\nFact Checking\n\nWhy Text Mining and NLP?\nAutomatically generate weather forecast report (i.e., data to text\ngeneration)"
+      }
+    ],
+    "context_tokens": 1205
+  },
+  "seconds": 0.073
+}

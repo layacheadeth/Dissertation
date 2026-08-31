@@ -1,0 +1,76 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp3",
+    "embedder": "bge",
+    "collection": "exp3_section_aware_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "f1b498e953fd",
+  "self_check": 0.9635,
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.637,
+        "chunk_id": "Week5_sec17_part1",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78,
+        "content": "The Dominant Architecture of Transformer-based \nLLMs\n GPT-3:\n– Decoder-only Transformer\n– Causal attention\n– LayerNorm, residual blocks, etc.\n Modern LLMs (LLaMA, Mistral, DeepSeek, etc.):\n– Same core architecture\n– Sometimes improved normalization or efficiency\n– Minor architectural refinements\n– But the core is the same."
+      },
+      {
+        "rank": 2,
+        "score": 0.6349,
+        "chunk_id": "Week3_sec16_part1",
+        "week": "Week 3",
+        "page_number": [
+          65
+        ],
+        "token_count": 4,
+        "content": "Building Transformers from Scratch"
+      },
+      {
+        "rank": 3,
+        "score": 0.6244,
+        "chunk_id": "Week6_sec2_part1",
+        "week": "Week 6",
+        "page_number": [
+          2
+        ],
+        "token_count": 58,
+        "content": "Agenda\n1. The Foundation: Transformer Architecture & Training \nParadigms\n2. From Raw Models to Useful Assistants: Instruction \nTuning\n3. Human Alignment: RLHF, PPO, and DPO\n4. Mixture of Experts Models\n5. Reasoning Models: Chain-of-Thought and Beyond"
+      },
+      {
+        "rank": 4,
+        "score": 0.6112,
+        "chunk_id": "Week5_sec4_part1",
+        "week": "Week 5",
+        "page_number": [
+          4
+        ],
+        "token_count": 89,
+        "content": "Transformer\nEncoder Only\nUses: NLU, classification, feature extraction\nExamples: BERT, RoBERTa, DeBERTa\nEncoder-Decoder\nUses: NLG, translation, summarisation, seq2seq \nmapping\nExamples: T5, Flan-T5, BART\nDecoder Only\nUses: NLG, translation, summarisation, completion\nExamples: GPT-x, LLaMa, every other new model today"
+      },
+      {
+        "rank": 5,
+        "score": 0.6051,
+        "chunk_id": "Week3_sec14_part1",
+        "week": "Week 3",
+        "page_number": [
+          57
+        ],
+        "token_count": 72,
+        "content": "Another ornament: Positional encodings\nTransformers lack a built-in notion of word order.To e n c o d e position information, we add a positional vectorto each input embedding.In the original Transformer, fixed sinusoidal positional encodings were used (i.e. sinusoidal functions of different frequencies)"
+      }
+    ],
+    "context_tokens": 301
+  },
+  "seconds": 0.035
+}

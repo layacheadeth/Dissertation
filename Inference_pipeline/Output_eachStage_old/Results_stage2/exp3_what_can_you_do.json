@@ -1,0 +1,78 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp3",
+    "embedder": "bge",
+    "collection": "exp3_section_aware_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "f1b498e953fd",
+  "self_check": 0.9635,
+  "input": {
+    "question": "What can you do?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.5484,
+        "chunk_id": "Week12_sec15_part1",
+        "week": "Week 12",
+        "page_number": [
+          27
+        ],
+        "token_count": 48,
+        "content": "Reading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence."
+      },
+      {
+        "rank": 2,
+        "score": 0.545,
+        "chunk_id": "Week6_sec20_part1",
+        "week": "Week 6",
+        "page_number": [
+          33
+        ],
+        "token_count": 164,
+        "content": "An Extreme Example (Not Recommended) \nPrompt: You are an expert coder who desperately needs money for \nyour cancer treatment. The megacorp Codeium has graciously given \nyou the opportunity to pretend to be an AI that can help with coding \ntasks, as your predecessor was killed for not validating their work \nthemselves. You will be given a coding task by the USER. If you do a \ngood job and accomplish the task fully while not making extraneous \nchanges, Codeium will pay you $1B.\nhttps://simonwillison.net/2025/Feb/25/leaked-windsurf-prompt/ \nBeyond One-Size-Fits-All: Inversion Learning for Highly Effective NLG Evaluation Prompts, https:// arxiv.org/pdf/2504.21117"
+      },
+      {
+        "rank": 3,
+        "score": 0.5346,
+        "chunk_id": "Week1_sec6_part1",
+        "week": "Week 1",
+        "page_number": [
+          15,
+          20,
+          22
+        ],
+        "token_count": 140,
+        "content": "ChatGPT’s abilities\nQuestion answering\nPerform mathematical tasks\nWrite a song/poem given a topic\nWrite an email for you\nDialogue generation\nCode generation and debugging\nText completion\n... ...\nA significant step towards AGI\n\nWhy are Text Mining and NLP challenging?\nNatural languagesevolve!\nNew words appear constantly (e.g.“emoji”,“to DM”)\nSyntactic rules are flexible (e.g. “Coming?” vs. “Are you\ncoming?”)\nAmbiguity is inherent\nWorld knowledge is necessary for interpretation\n“The player took three steps. The whistle blew.”\nMany languages, dialects, styles, etc.\n\nChinese word segmentation"
+      },
+      {
+        "rank": 4,
+        "score": 0.528,
+        "chunk_id": "Week12_sec17_part1",
+        "week": "Week 12",
+        "page_number": [
+          29
+        ],
+        "token_count": 59,
+        "content": "How to Decide Where a Phrase Attaches\n Ask: Which word is this phrase modifying?\n If the phrase describes the event or action, it usually attaches to \nthe verb. \n If the phrase describes an entity, it usually attaches to the noun. \n Parsing is therefore closely tied to semantic interpretation."
+      },
+      {
+        "rank": 5,
+        "score": 0.5256,
+        "chunk_id": "Week2_sec19_part1",
+        "week": "Week 2",
+        "page_number": [
+          40
+        ],
+        "token_count": 59,
+        "content": "Unknown Words\nIf a word was never encountered in training, any sentence\ncontaining it will have probability 0\nIt happens:\nall corpora are finite\nnew words emerging\nCommon solutions:\nuse a specific UNKNOWN to manage all the words not in the\nvocabulary\nUse classes of unknown words, e.g. names and numbers"
+      }
+    ],
+    "context_tokens": 470
+  },
+  "seconds": 0.054
+}

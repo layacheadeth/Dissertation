@@ -1,0 +1,54 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp2",
+    "embedder": "bge",
+    "collection": "exp2_fixed_overlap_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "meta-llama/Llama-3.2-1B-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "828cf65e1955",
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The Transformer is a neural architecture built entirely on attention mechanisms.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_sw_6",
+        "week": "Week 3",
+        "page_number": [
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "token_count": null,
+        "score": -1.1175
+      }
+    ],
+    "context_tokens": 0
+  },
+  "seconds": {
+    "search": 8.556,
+    "answer": 31.77,
+    "total": 40.32
+  }
+}

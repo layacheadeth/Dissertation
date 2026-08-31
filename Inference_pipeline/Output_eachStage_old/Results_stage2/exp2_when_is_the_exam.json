@@ -1,0 +1,108 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp2",
+    "embedder": "bge",
+    "collection": "exp2_fixed_overlap_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "427700caef70",
+  "self_check": 0.991,
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.5423,
+        "chunk_id": "Week13_sw_1",
+        "week": "Week 13",
+        "page_number": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "token_count": null,
+        "content": "COMP64702\nRevision Lecture\nWeek 5 – Week 8\nDr. Jingyuan Sun\nCOMP64702 Revision Lecture\nHow the exam will test this material\nOrientation\nThink in terms of skills: recognising, calculating, interpreting, and applying.\nSelect all that apply\nConcept distinctions, true/false traps, \narchitecture properties\nNumeric calculation\nCosine similarity , TF–IDF , agreement, P /R/F1\nMatching / labelling\nPOS tags, BIO classes, token-level labels\nStructure interpretation\nDependency heads, dependents, phrase \nconstituents\nFill-in counts\nTP / FP / FN for entities and classes\nScenario choice\nRAG vs prompting vs fine-tuning; agents and \nsafety\nReminder: \n Have a detailed go-through of all previous lecture slides\n Do the practice exam.\nCOMP64702 Revision Lecture\nHigh-yield map\nRoadmap\nThe revision is organised around five examinable clusters.\n1. Transformers & representations\nRNN comparison, positional encoding, attention, embeddings, TF–IDF\n2. LLM training & adaptation\nPretraining, instruction tuning, alignment, MoE, reasoning models\n3. Prompting & applications\nICL, CoT, RAG, agents, multimodal systems, safety\n4. Sequence labelling\nPOS tagging, dependency parsing, phrase structure, NER/BIO\n5. Evaluation\nGold standards, kappa, precision/recall/F1, averaging, entity-level scoring\nCOMP64702 Revision Lecture\nTransformers vs RNN sequence-to-sequence\nTransformers\nLikely format: select the correct conceptual differences.\nAspect RNN seq2seq Transformer\nProcessing Sequential over tokens Parallel over input positions\nContext Often bottlenecked by hidden \nstates; attention can help\nDynamic self-attention over all \npositions\nLong-range links Harder due to recurrence Direct pairwise attention paths\nOrder \ninformation Implicit in recurrence Needs positional information\nWhat to say in an answer\nTransformers do not use recurrence; self-attention lets each \ntoken build context by attending to other tokens, while \npositional encodings supply order .\nMini practice\nWhich property makes Transformer encoders easier to \nparallelise than RNN encoders?\nA. Causal masking\nB. No recurrence over positions\nC. Learned output labels\nAnswer: B\nCommon trap\nDo not claim Transformers have no sequence order; they model order \nafter positional information is added.\nCOMP64702 Revision Lecture\nPositional encoding\nTransformers\nSelf-attention alone treats positions symmetrically; order must be injected"
+      },
+      {
+        "rank": 2,
+        "score": 0.5388,
+        "chunk_id": "Week9_sw_6",
+        "week": "Week 9",
+        "page_number": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36
+        ],
+        "token_count": null,
+        "content": "Retrieval Evaluation: nDCGNormalized Discounted Cumulative Gain (nDCG)–Used when relevance is graded (not just relevant / not relevant).\n–Rewards highly relevant documents ranked higher–Penalizes relevant documents ranked lower–Captures overall ranking qualityInterpretation–High nDCG→ relevant documents ranked near the top–Low nDCG→ relevant documents ranked lower or poorly ordered\nMetric Comparision\nRecall@k→ Did we retrieve relevant evidence?MRR → How early does relevant evidence appear?nDCG→ How well are all relevant results ranked?\nEnd to End QA QualityEnd-to-End Answer Quality–Compare generated answer %𝑦vs. gold answer 𝑦Common metrics–Exact Match (EM)–To k e n-level F1–BERTScore–Whatelse?\nNote: high overlap does not guarantee factual grounding\nReference: I am giving a talk at a data science conferenceHyp 1:I am giving a talk at a conference about data sciencelots of overlap → high scoreHyp 2:This talk is about recent advances in medical imaginglittle overlap → low score\nThe Old Reliables: BLEU/ROUGE Score\nReference: I am giving a talk at a data science conferenceHyp 1: I am giving a talk at a political science conferencelots of overlap but bad outputHyp 2: My lecture will be given to the meeting on data analyticslittle overlap but good output (particularly difficult for open-ended problems)\nWhyisEvaluationHard?\nEnd-to-End Answer QualityExact Match (EM)–Strict string-level equality–Common in extractive QA–Does notallow paraphrasingTo k e n-Level F1–Based on token overlap between generated and gold answers–More forgiving than EM–Ignores word order but sensitive to lexical differences\nExample: T oken-Level F1 Gold Answer: \"Paris is the capital of France\"Generated Answer: \"Paris is capital of France”Common tokens: Paris, is, capital, of, France (5 tokens)Compute Precision & Recall–Precision = 5 / 5 = 1.0–Recall = 5 / 6 ≈ 0.83\nEnd-to-End Answer QualityBERTScore–Uses contextual embeddings to measure semantic similarity–Captures meaning beyond exact word overlap\nAutomatic vs Human EvaluationAutomatic metrics are useful but limited:–To k e n-Level F1: overlap-"
+      },
+      {
+        "rank": 3,
+        "score": 0.5367,
+        "chunk_id": "Week1_sw_1",
+        "week": "Week 1",
+        "page_number": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          11,
+          12,
+          13
+        ],
+        "token_count": null,
+        "content": "COMP64702: Transforming Text Into Meaning\nIntroduction & Vector Representations of Text\nChenghua Lin\nE: chenghua.lin@manchester.ac.uk\nX: @chenghua lin\nComputer Science Department\nThe University of Manchester\nPart I: Introduction\nCourse Practicalities\nCourse Lecturers:\nProf. Chenghua Lin\nDr. Jingyuan Sun\nLectures and Labs:\nLectures: Mondays from 10:00–12:00 (weekly)\nLecture slides for each week will be released one week in\nadvance\nLabs: Fridays from 12:00–14:00 (Weeks 3, 5, 7, 9)\nAll materials will be made available onCanvas.\nCourse Practicalities (cont.)\nAssessment:\nTwo components:Team courseworkandfinal exam\nEach component contributes 50% to the overall module mark.\nChenghua will be fully responsible for the coursework and for\nrunning the labs.\nOther Support\n9 teaching assistants for the course\nDiscussion forum on Canvas\nCourse goals\nDevelop a solid understanding of text mining and NLP\nfundamentals (e.g. text preprocessing and representations).\nUnderstand the evolution of language models leading to\ntransformers and modern LLM architectures.\nUnderstand traditional and state-of-the-art approaches (e.g.,\ntransformer-based models) to core NLP tasks.\nUnderstand how large language models are trained and\naligned (e.g. pre-training, instruction tuning).\nSystematically evaluate and compare the performance of\napproaches to NLP tasks.\nDevelop and apply, as a team, various NLP methods to\nextract information and meaning from large-scale textual data\nText Mining vs. NLP\nDifferent historical emphases\nNatural Language Processing (NLP):traditionally focuses\non modeling linguistic structure and meaning (e.g., syntax,\nsemantics, discourse)\nText Mining:traditionally focuses on discovering patterns\nand useful information from large text collections (e.g., topic\nmodelling)\nIncreasing convergence\nExtensive sharing of representations, models, and evaluation\nbenchmarks\nStrong overlap in statistical and neural language processing\nModern large language models blur the distinction between\nNLP and text mining\nWhy Text Mining and NLP?\nMachine Translation\nWhy Text Mining and NLP?\nQuestion Answering\nHistorical Legal Text Analytics\nManually transcribed from the original handwritten pages in\nLatin and Middle Scots.\nAnnotate and enrich transcribed, machine readable Aberdeen\nBurgh Records\nAnalyse the evolution of social/legal concepts\nWhy Text Mining and NLP?\nFact Checking\nWhy Text Mining and NLP?\nAutomatically generate weather forecast report (i.e.,"
+      },
+      {
+        "rank": 4,
+        "score": 0.5359,
+        "chunk_id": "Week7_sw_10",
+        "week": "Week 7",
+        "page_number": [
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "token_count": null,
+        "content": "GPTScore evaluates the quality of a candidate text (e.g., summary or generation) \nby using a large language model (LLM) to compute the conditional log-probability of the \nreference text given the candidate.\n- Key Formula\nLet C be the candidate text, and R be the reference text. GPTScore is computed as:\n: Probability of the iii-th token in reference R given its previous tokens and candidate C\n: Length of reference in tokens\nLLM as Judge\n- LLM as Judge is an automatic evaluation metric where a large language model (LLM) is \nprompted to assess the quality of a candidate response by comparing it to a reference or \nquestion, acting like a human judge.\n- Key Formula.\nwhere\n𝑄 = question/prompt\n𝐶 = candidate answer\n𝑅 = reference answer (optional)\nLLM as a Jury\n- LLM as a Jury evaluates candidate responses by aggregating the judgments of multiple LLMs \n(or multiple prompts of the same LLM), simulating a voting-based decision process — similar \nto how a jury works.\n- Main Formulas\n- Jury Voting Score (Majority Voting)\nwhere\nN: total number of juror models or prompts\nr_i : the response preferred by the iii-th juror\nr_preferred: the final aggregated preferred response\nI(⋅): indicator function (1 if true, else 0)\nG-Eval\nwhere\n𝑃: Prompt / Instruction\n𝑅: Reference response\n𝐶: Candidate response\n𝑆: Score assigned by LLM\n- G-Eval uses a large language model (LLM) as an evaluator to assess the quality of a \ncandidate output compared to a reference, based on a given instruction or query.\nSelf-bias of LLM as evaluators\n- Acting as evaluation models, LLMs tend to favor outputs from the same or similar generation \nmodels, rather than assessing the intrinsic quality of the content.\n- Different models exhibit varying preferences for interpreting similar semantic content.\nLLMs as Narcissistic Evaluators: When Ego \nInflates Evaluation Scores\nACL Findings 2024\n- Assessing bias in the CNN/DM (left) and XSUM (right) dataset in reference-free setting\nOpen Domain Dialogue Evaluation\nEvaluating Open-Domain Dialogues in Latent Space with \nNext Sentence Prediction and Mutual Information\nACL 2023\nSLIDE: A Framework Integrating Small and Large \nLanguage Models for Open-Domain Dialogues Evaluation\nACL Findings 2024"
+      },
+      {
+        "rank": 5,
+        "score": 0.5242,
+        "chunk_id": "Week13_sw_5",
+        "week": "Week 13",
+        "page_number": [
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "token_count": null,
+        "content": "models\nThey allocate more test -time \ncompute by generating \nintermediate reasoning before the \nfinal response.\nTrade-off\nSometimes a smaller model that \nthinks longer can beat a larger \nmodel that answers immediately, \nbut latency/cost increase.\nWhat does “sparse activation” mean in MoE?\nAnswer: Only a subset of experts runs for each token.\nCOMP64702 Revision Lecture\nPrompt anatomy and robust prompting\nPrompting\nLikely format: identify components of a prompt and best practices.\nInstruction\nWhat task should the model \ndo?\nContext\nRole, constraints, background\nInput data\nThe text, table, image \ndescription, or query\nOutput indicator\nDesired format, labels, JSON \nschema, bullets\nBest practices\nUse clear delimiters around user data\nSpecify exact output format\nPrefer positive instructions\nUse examples for custom formats\nCheck for prompt injection\nMini practice\nImprove this prompt:\n“Analyse this. ”\nMake it exam-ready: add instruction, context, \ninput delimiter, output format.\nAnswer: More specific prompts reduce ambiguity .\nCOMP64702 Revision Lecture\nIn-context learning (ICL)\nPrompting\nKnow the difference between examples in the prompt and updating model weights.\nMode What the model receives\nZero-shot Instruction + target input; no examples\nOne/few-shot Instruction + 1–5 demonstrations + target input\nFine-tuning Training data used to update weights\nICL No gradient descent; temporary working memory only\nMemory view\nParametric memory = model weights learned during \ntraining.\nWorking memory = current prompt/context window.\nMini practice\nDoes this use ICL?\nTranslate to Spanish.\nEnglish: good morning → Spanish: buenos días\nEnglish: thank you → Spanish:\nAnswer: Yes — it gives a demonstration in the prompt.\nCOMP64702 Revision Lecture\nReasoning prompts and prompt security\nPrompting\nLikely format: choose the safest or most appropriate prompting strategy.\nChain-of-Thought\nEncourages intermediate reasoning before \nthe answer . Useful for multi-step math, \nlogic, and planning. A short trigger can help, \nbut it is not a calculator .\nSelf-consistency / ToT\nSelf-consistency samples multiple \nreasoning paths and majority-votes. Tree of \nThoughts explores branches and \nbacktracks.\nPrompt injection\nBecause instructions and data are both text, \nmalicious user content can try to override \nthe task. Separate instructions from data \nand validate tool use.\nFor exact arithmetic in an agent, what is safer: pure CoT or a calculator/Python tool?\nAnswer: Use the external tool and return the observation.\nCOMP64702"
+      }
+    ],
+    "context_tokens": 0
+  },
+  "seconds": 0.088
+}

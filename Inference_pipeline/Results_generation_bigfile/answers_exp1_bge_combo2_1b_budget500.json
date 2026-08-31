@@ -1,0 +1,3687 @@
+{
+  "settings": {
+    "hash": "448ff013237e",
+    "strategy": "exp1",
+    "embedder": "bge",
+    "combo": "combo2",
+    "llm": "meta-llama/Llama-3.2-1B-Instruct",
+    "device": "cpu",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "context_tokens_mean": 446.3,
+    "route_meta": true,
+    "relevance_floor": null,
+    "collection": "exp1_page_level_bge",
+    "routes": {
+      "meta": 0,
+      "refused": 0,
+      "answer": 29
+    },
+    "n_questions": 29,
+    "total_seconds": 1430.5,
+    "seconds_per_question": 49.33
+  },
+  "results": [
+    {
+      "question_id": "EXAM_001",
+      "question": "In a dependency analysis (Universal Dependencies style, where a noun heads its prepositional phrase), if a prepositional phrase modifies a noun rather than the verb, what dependency relation connects that noun to the noun inside the prepositional phrase?",
+      "answer": "The head of the whole sentence is usually the main verb. A dependency parse forms a directed structure over the tokens. In this case, the head of the sentence is the verb, and the prepositional phrase modifies the verb, so the dependency relation is VP head-modifier.",
+      "route": "answer",
+      "top_score": 2.6079,
+      "seconds": 74.171,
+      "context_tokens": 431,
+      "n_chunks": 6,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_p23",
+          "text": "In a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice",
+          "metadata": {
+            "char_count": 372,
+            "chunk_id": "Week12_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 65,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 57
+          },
+          "score": 2.6079
+        },
+        {
+          "chunk_id": "Week12_p21",
+          "text": "Dependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens.",
+          "metadata": {
+            "char_count": 270,
+            "chunk_id": "Week12_p21",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              21
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 50,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 41
+          },
+          "score": 2.468
+        },
+        {
+          "chunk_id": "Week12_p22",
+          "text": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent.",
+          "metadata": {
+            "char_count": 321,
+            "chunk_id": "Week12_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 64,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 52
+          },
+          "score": 2.0739
+        },
+        {
+          "chunk_id": "Week13_p19",
+          "text": "COMP64702 Revision Lecture\nDependency parsing\nSyntax\nLikely format: identify the root, dependents of a head, or the head of a phrase.\nhead dependent label\n(nsubj, obj, mod...)\nReading strategy\n1. Find the main predicate/root.\n2. Identify direct dependents: subject, object, modifiers.\n3. For each modifier, ask which word it describes.\n4. Use semantics to resolve attachment ambiguity .\nPractice sentence\nThe analyst emailed the report to Maria.\nRoot: emailed\nSubject dependent: analyst\nObject dependent: report\nPP target/recipient: Maria\nCommon trap\nDo not confuse the preposition itself with the noun it introduces as the semantic \nhead.",
+          "metadata": {
+            "char_count": 639,
+            "chunk_id": "Week13_p19",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              19
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 143,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 95
+          },
+          "score": 1.5472
+        },
+        {
+          "chunk_id": "Week12_p27",
+          "text": "Reading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence.",
+          "metadata": {
+            "char_count": 255,
+            "chunk_id": "Week12_p27",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              27
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 48,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 40
+          },
+          "score": 1.4758
+        },
+        {
+          "chunk_id": "Week12_p38",
+          "text": "Dependency Structure vs Phrase Structure\n Dependency parsing focuses on relations between words. \n Phrase structure parsing focuses on constituent groupings. \n Dependency parsing is especially useful for: \n predicate-argument structure \n information extraction \n relation analysis \n Phrase structure parsing is especially useful for: \n constituent identification \n NP / VP / PP analysis \n hierarchical sentence structure",
+          "metadata": {
+            "char_count": 420,
+            "chunk_id": "Week12_p38",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              38
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 49
+          },
+          "score": 1.279
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_002",
+      "question": "In a dependency parse, what is the root (head) of a simple declarative sentence, and what relation connects the subject to it?",
+      "answer": "The root of a simple declarative sentence is the main verb, and the relation connecting the subject to it is a subject-verb relation.",
+      "route": "answer",
+      "top_score": 5.7553,
+      "seconds": 30.932,
+      "context_tokens": 431,
+      "n_chunks": 6,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_p21",
+          "text": "Dependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens.",
+          "metadata": {
+            "char_count": 270,
+            "chunk_id": "Week12_p21",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              21
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 50,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 41
+          },
+          "score": 5.7553
+        },
+        {
+          "chunk_id": "Week12_p22",
+          "text": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent.",
+          "metadata": {
+            "char_count": 321,
+            "chunk_id": "Week12_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 64,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 52
+          },
+          "score": 5.571
+        },
+        {
+          "chunk_id": "Week13_p19",
+          "text": "COMP64702 Revision Lecture\nDependency parsing\nSyntax\nLikely format: identify the root, dependents of a head, or the head of a phrase.\nhead dependent label\n(nsubj, obj, mod...)\nReading strategy\n1. Find the main predicate/root.\n2. Identify direct dependents: subject, object, modifiers.\n3. For each modifier, ask which word it describes.\n4. Use semantics to resolve attachment ambiguity .\nPractice sentence\nThe analyst emailed the report to Maria.\nRoot: emailed\nSubject dependent: analyst\nObject dependent: report\nPP target/recipient: Maria\nCommon trap\nDo not confuse the preposition itself with the noun it introduces as the semantic \nhead.",
+          "metadata": {
+            "char_count": 639,
+            "chunk_id": "Week13_p19",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              19
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 143,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 95
+          },
+          "score": 2.884
+        },
+        {
+          "chunk_id": "Week12_p23",
+          "text": "In a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice",
+          "metadata": {
+            "char_count": 372,
+            "chunk_id": "Week12_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 65,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 57
+          },
+          "score": 1.3567
+        },
+        {
+          "chunk_id": "Week12_p27",
+          "text": "Reading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence.",
+          "metadata": {
+            "char_count": 255,
+            "chunk_id": "Week12_p27",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              27
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 48,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 40
+          },
+          "score": -0.1459
+        },
+        {
+          "chunk_id": "Week12_p38",
+          "text": "Dependency Structure vs Phrase Structure\n Dependency parsing focuses on relations between words. \n Phrase structure parsing focuses on constituent groupings. \n Dependency parsing is especially useful for: \n predicate-argument structure \n information extraction \n relation analysis \n Phrase structure parsing is especially useful for: \n constituent identification \n NP / VP / PP analysis \n hierarchical sentence structure",
+          "metadata": {
+            "char_count": 420,
+            "chunk_id": "Week12_p38",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              38
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 49
+          },
+          "score": -0.6561
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_003",
+      "question": "How is the observed agreement between two annotators computed when they each assign a category label to the same set of items?",
+      "answer": "Pₐ = proportion of items on which annotators agree, which is 7/10 = 0.70.",
+      "route": "answer",
+      "top_score": 6.5417,
+      "seconds": 29.904,
+      "context_tokens": 439,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_p8",
+          "text": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.",
+          "metadata": {
+            "char_count": 259,
+            "chunk_id": "Week10_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 48
+          },
+          "score": 6.5417
+        },
+        {
+          "chunk_id": "Week13_p23",
+          "text": "COMP64702 Revision Lecture\nGold standards, agreement, and Cohen’s Kappa\nEvaluation\nLikely format: compute observed agreement, expected agreement, then kappa.\nWhy gold standards?\nBenchmarks compare system response \nagainst reliable reference labels created with \nannotation guidelines.\nObserved agreement\nPₐ = proportion of items on which annotators \nagree.\nIt does not correct for chance agreement.\nExpected agreement\nPₑ = chance agreement estimated from \nannotator label distributions.\nκ = (Pₐ − Pₑ) / (1 − Pₑ)\nIf Pₐ = 0.80 and Pₑ = 0.50, compute κ.\nAnswer: 0.60",
+          "metadata": {
+            "char_count": 563,
+            "chunk_id": "Week13_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 128,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 84
+          },
+          "score": 3.893
+        },
+        {
+          "chunk_id": "Week10_p7",
+          "text": "Inter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable.",
+          "metadata": {
+            "char_count": 305,
+            "chunk_id": "Week10_p7",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              7
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 59,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 42
+          },
+          "score": 1.438
+        },
+        {
+          "chunk_id": "Week10_p9",
+          "text": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50",
+          "metadata": {
+            "char_count": 388,
+            "chunk_id": "Week10_p9",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              9
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 76
+          },
+          "score": 0.8397
+        },
+        {
+          "chunk_id": "Week10_p10",
+          "text": "Cohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone.",
+          "metadata": {
+            "char_count": 260,
+            "chunk_id": "Week10_p10",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              10
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 58
+          },
+          "score": -1.9793
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_004",
+      "question": "In Cohen's Kappa, what is expected (chance) agreement and how is it computed from each annotator's label distribution?",
+      "answer": "Expected agreement (Pₐ) is the chance agreement estimated from annotator label distributions, which is computed as the proportion of items on which annotators agree, i.e. Pₐ = 0.70.",
+      "route": "answer",
+      "top_score": 7.3937,
+      "seconds": 41.474,
+      "context_tokens": 477,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week13_p23",
+          "text": "COMP64702 Revision Lecture\nGold standards, agreement, and Cohen’s Kappa\nEvaluation\nLikely format: compute observed agreement, expected agreement, then kappa.\nWhy gold standards?\nBenchmarks compare system response \nagainst reliable reference labels created with \nannotation guidelines.\nObserved agreement\nPₐ = proportion of items on which annotators \nagree.\nIt does not correct for chance agreement.\nExpected agreement\nPₑ = chance agreement estimated from \nannotator label distributions.\nκ = (Pₐ − Pₑ) / (1 − Pₑ)\nIf Pₐ = 0.80 and Pₑ = 0.50, compute κ.\nAnswer: 0.60",
+          "metadata": {
+            "char_count": 563,
+            "chunk_id": "Week13_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 128,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 84
+          },
+          "score": 7.3937
+        },
+        {
+          "chunk_id": "Week10_p10",
+          "text": "Cohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone.",
+          "metadata": {
+            "char_count": 260,
+            "chunk_id": "Week10_p10",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              10
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 58
+          },
+          "score": 5.2768
+        },
+        {
+          "chunk_id": "Week10_p9",
+          "text": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50",
+          "metadata": {
+            "char_count": 388,
+            "chunk_id": "Week10_p9",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              9
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 76
+          },
+          "score": 2.7846
+        },
+        {
+          "chunk_id": "Week10_p1",
+          "text": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER",
+          "metadata": {
+            "char_count": 424,
+            "chunk_id": "Week10_p1",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              1
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 97,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 64
+          },
+          "score": 1.5095
+        },
+        {
+          "chunk_id": "Week10_p8",
+          "text": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.",
+          "metadata": {
+            "char_count": 259,
+            "chunk_id": "Week10_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 48
+          },
+          "score": -0.8637
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_005",
+      "question": "How is Cohen's Kappa computed from observed agreement and expected agreement?",
+      "answer": "Cohen's Kappa = (Pₐ - Pₑ) / (1 - Pₑ), where Pₐ is observed agreement and Pₑ is expected agreement.",
+      "route": "answer",
+      "top_score": 8.4444,
+      "seconds": 36.359,
+      "context_tokens": 477,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week13_p23",
+          "text": "COMP64702 Revision Lecture\nGold standards, agreement, and Cohen’s Kappa\nEvaluation\nLikely format: compute observed agreement, expected agreement, then kappa.\nWhy gold standards?\nBenchmarks compare system response \nagainst reliable reference labels created with \nannotation guidelines.\nObserved agreement\nPₐ = proportion of items on which annotators \nagree.\nIt does not correct for chance agreement.\nExpected agreement\nPₑ = chance agreement estimated from \nannotator label distributions.\nκ = (Pₐ − Pₑ) / (1 − Pₑ)\nIf Pₐ = 0.80 and Pₑ = 0.50, compute κ.\nAnswer: 0.60",
+          "metadata": {
+            "char_count": 563,
+            "chunk_id": "Week13_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 128,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 84
+          },
+          "score": 8.4444
+        },
+        {
+          "chunk_id": "Week10_p10",
+          "text": "Cohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone.",
+          "metadata": {
+            "char_count": 260,
+            "chunk_id": "Week10_p10",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              10
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 58
+          },
+          "score": 8.0022
+        },
+        {
+          "chunk_id": "Week10_p1",
+          "text": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER",
+          "metadata": {
+            "char_count": 424,
+            "chunk_id": "Week10_p1",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              1
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 97,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 64
+          },
+          "score": 3.9619
+        },
+        {
+          "chunk_id": "Week10_p9",
+          "text": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50",
+          "metadata": {
+            "char_count": 388,
+            "chunk_id": "Week10_p9",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              9
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 76
+          },
+          "score": 1.2546
+        },
+        {
+          "chunk_id": "Week10_p8",
+          "text": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.",
+          "metadata": {
+            "char_count": 259,
+            "chunk_id": "Week10_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 48
+          },
+          "score": 0.3681
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_006",
+      "question": "What problem does inverse document frequency (IDF) solve in document representation, and what kind of term does it favour?",
+      "answer": "IDF down-weights very common terms, so it emphasises informative terms.",
+      "route": "answer",
+      "top_score": 5.1593,
+      "seconds": 21.334,
+      "context_tokens": 480,
+      "n_chunks": 4,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_p77",
+          "text": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid",
+          "metadata": {
+            "char_count": 482,
+            "chunk_id": "Week1_p77",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              77
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": 5.1593
+        },
+        {
+          "chunk_id": "Week13_p8",
+          "text": "COMP64702 Revision Lecture\nWord representations & similarity\nRepresentations\nLikely format: numeric cosine similarity or conceptual statements about vector methods.\ncosine(A, B) = (A · B) / (||A|| ||B||)\nCount-based vectors\nTerm–document or term–term matrices\nHigh-dimensional and sparse\nOne vector per word type\nCan be expensive to store\nTF–IDF weighting\nDown-weights very common terms\nEmphasises informative terms\nDoes not magically remove sparsity\nContextual meaning\nStatic vectors struggle with polysemy\nContextual models can represent a word \ndifferently in different sentences\nA=[1,1,0], B=[1,0,0]. Estimate cosine similarity.\nAnswer: 0.71",
+          "metadata": {
+            "char_count": 645,
+            "chunk_id": "Week13_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 159,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 85
+          },
+          "score": -3.6802
+        },
+        {
+          "chunk_id": "Week1_p79",
+          "text": "Problems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!",
+          "metadata": {
+            "char_count": 323,
+            "chunk_id": "Week1_p79",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              79
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 63,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 46
+          },
+          "score": -4.2008
+        },
+        {
+          "chunk_id": "Week1_p72",
+          "text": "Problems with counts\nFrequent words (articles, pronouns, etc.) dominate contexts\nwithout being informative.\nLet’s add the wordtheto the contexts. It often appears with\nmost nouns:\nvocabulary = [aadvark,computer,data,pinch,result,sugar,the]\napricot =x 2 = [0,0,0,1,0,1,30]\ndigital =x 3 = [0,2,1,0,1,0,45]\ncosine(x2,x 3) = 30·45√\n902·\n√\n2031\n= 0.997\nThis also holds for the document-word matrix! Solution:\nWeight the vectors!",
+          "metadata": {
+            "char_count": 423,
+            "chunk_id": "Week1_p72",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              72
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 142,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 58
+          },
+          "score": -5.3234
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_007",
+      "question": "Using idf(t)=log10(N/df(t)) with raw term frequency tf, how do you compute the tf-idf weight of a term in a document, and what does each part contribute?",
+      "answer": "To compute the tf-idf weight of a term in a document, you need to calculate idf(t) first, then multiply it by tf. The formula is:\n\ntf-idf = idf(t) * tf\n\nwhere idf(t) = log10(N/df(t)) and N is the number of documents in the corpus, and df(t) is the document frequency of the term in the document.",
+      "route": "answer",
+      "top_score": 5.0148,
+      "seconds": 66.309,
+      "context_tokens": 390,
+      "n_chunks": 3,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_p77",
+          "text": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid",
+          "metadata": {
+            "char_count": 482,
+            "chunk_id": "Week1_p77",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              77
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": 5.0148
+        },
+        {
+          "chunk_id": "Week1_p64",
+          "text": "Words: Word-Word Matrix (term-context)\nA matrixX,n×mwheren=|V|(target words) and\nm=|V c|(context words)\nFor each wordx i inV, count how many times it co-occurs\nwith context wordsx j\nUse a context window of±kwords (to the left/right ofx i)\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia)!\nUsually target and context word vocabularies are the same\nresulting into a square matrix.",
+          "metadata": {
+            "char_count": 408,
+            "chunk_id": "Week1_p64",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              64
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 115,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 62
+          },
+          "score": -3.0275
+        },
+        {
+          "chunk_id": "Week13_p8",
+          "text": "COMP64702 Revision Lecture\nWord representations & similarity\nRepresentations\nLikely format: numeric cosine similarity or conceptual statements about vector methods.\ncosine(A, B) = (A · B) / (||A|| ||B||)\nCount-based vectors\nTerm–document or term–term matrices\nHigh-dimensional and sparse\nOne vector per word type\nCan be expensive to store\nTF–IDF weighting\nDown-weights very common terms\nEmphasises informative terms\nDoes not magically remove sparsity\nContextual meaning\nStatic vectors struggle with polysemy\nContextual models can represent a word \ndifferently in different sentences\nA=[1,1,0], B=[1,0,0]. Estimate cosine similarity.\nAnswer: 0.71",
+          "metadata": {
+            "char_count": 645,
+            "chunk_id": "Week13_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 159,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 85
+          },
+          "score": -3.2712
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_008",
+      "question": "When computing tf-idf with idf(t)=log10(N/df(t)), why does a term that appears in more of the documents receive a smaller idf, and therefore a smaller tf-idf weight?",
+      "answer": "Because idf(t) = log10(N/df(t)), where N is the number of documents in the corpus and df(t) is the document frequency of the term, a term that appears in more documents will have a smaller idf, and therefore a smaller tf-idf weight.",
+      "route": "answer",
+      "top_score": 3.6847,
+      "seconds": 45.852,
+      "context_tokens": 369,
+      "n_chunks": 3,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_p77",
+          "text": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid",
+          "metadata": {
+            "char_count": 482,
+            "chunk_id": "Week1_p77",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              77
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": 3.6847
+        },
+        {
+          "chunk_id": "Week13_p8",
+          "text": "COMP64702 Revision Lecture\nWord representations & similarity\nRepresentations\nLikely format: numeric cosine similarity or conceptual statements about vector methods.\ncosine(A, B) = (A · B) / (||A|| ||B||)\nCount-based vectors\nTerm–document or term–term matrices\nHigh-dimensional and sparse\nOne vector per word type\nCan be expensive to store\nTF–IDF weighting\nDown-weights very common terms\nEmphasises informative terms\nDoes not magically remove sparsity\nContextual meaning\nStatic vectors struggle with polysemy\nContextual models can represent a word \ndifferently in different sentences\nA=[1,1,0], B=[1,0,0]. Estimate cosine similarity.\nAnswer: 0.71",
+          "metadata": {
+            "char_count": 645,
+            "chunk_id": "Week13_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 159,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 85
+          },
+          "score": -2.4731
+        },
+        {
+          "chunk_id": "Week10_p34",
+          "text": "Worked Example: Computing F1\n● Suppose a spam detector produces: \n○ TP = 18 \n○ FP = 6 \n○ FN = 9 \n● Then: \n○ Precision = 18 / (18 + 6) = 0.75 \n○ Recall = 18 / (18 + 9) = 0.67 \n○ F1 = 2 × 0.75 × 0.67/ 0.75 + 0.67 ≈0.71\n● This shows the full calculation from counts to F1.",
+          "metadata": {
+            "char_count": 269,
+            "chunk_id": "Week10_p34",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              34
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 94,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 66
+          },
+          "score": -2.7696
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_009",
+      "question": "In the document-word (bag-of-words) matrix used to represent a corpus, what do the rows and columns correspond to, and how is a single document represented as a vector?",
+      "answer": "The rows correspond to the target words in the vocabulary, and the columns correspond to the context words. A single document is represented as a vector by taking the frequency counts of the context words that co-occur with each target word.",
+      "route": "answer",
+      "top_score": 6.0704,
+      "seconds": 42.832,
+      "context_tokens": 500,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_p69",
+          "text": "Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D|×|V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!",
+          "metadata": {
+            "char_count": 374,
+            "chunk_id": "Week1_p69",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              69
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 102,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 69
+          },
+          "score": 6.0704
+        },
+        {
+          "chunk_id": "Week1_p77",
+          "text": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid",
+          "metadata": {
+            "char_count": 482,
+            "chunk_id": "Week1_p77",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              77
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": 2.3551
+        },
+        {
+          "chunk_id": "Week1_p64",
+          "text": "Words: Word-Word Matrix (term-context)\nA matrixX,n×mwheren=|V|(target words) and\nm=|V c|(context words)\nFor each wordx i inV, count how many times it co-occurs\nwith context wordsx j\nUse a context window of±kwords (to the left/right ofx i)\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia)!\nUsually target and context word vocabularies are the same\nresulting into a square matrix.",
+          "metadata": {
+            "char_count": 408,
+            "chunk_id": "Week1_p64",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              64
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 115,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 62
+          },
+          "score": 1.1672
+        },
+        {
+          "chunk_id": "Week1_p40",
+          "text": "Vector Spaces of Text\nAny ideas what are rows and columns for text data?\nword-word (term-context)\ngame\ningredient\nbasketball\nfootball\nrecipe\ndocument-word (bag-of-words)\ngood\nbad\ndoc 1\ndoc 2\ndoc 3",
+          "metadata": {
+            "char_count": 196,
+            "chunk_id": "Week1_p40",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              40
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 46,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 31
+          },
+          "score": -0.0922
+        },
+        {
+          "chunk_id": "Week3_p7",
+          "text": "Context-based Word RepresentationsBuild a word–context co-occurrence matrixEach word represented by its surrounding wordsRows= target words; Columns= context words; Values= frequency countscounts I like enjoy deep learning NLP flying . I 0 2 1 0 0 0 0 0 like 2 0 0 1 0 1 0 0 enjoy 1 0 0 0 0 0 1 0 deep 0 1 0 0 1 0 0 0 learning 0 0 0 1 0 0 0 1 NLP 0 1 0 0 0 0 0 1 flying 0 0 1 0 0 0 0 1 . 0 0 0011 10",
+          "metadata": {
+            "char_count": 399,
+            "chunk_id": "Week3_p7",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              7
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 121,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 97
+          },
+          "score": -1.5477
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_010",
+      "question": "What are the disadvantages of using count-based vectors to represent word meanings?",
+      "answer": "The disadvantages of using count-based vectors to represent word meanings are that they are high-dimensional, meaning they can represent a large number of words, which can lead to a large vocabulary size, and they are very sparse, meaning that words co-occur only with a small number of words, which can make it difficult to capture the nuances of word meanings.",
+      "route": "answer",
+      "top_score": 2.6684,
+      "seconds": 54.765,
+      "context_tokens": 474,
+      "n_chunks": 4,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_p83",
+          "text": "Limitations: Word Vectors\nPolysemy:All occurrences of a word (and all its senses) are\nrepresented by one vector.\nGiven a task, it is often useful to adapt the word vectors to\nrepresent the appropriate sense, e.g.bank\nAntonymsappear in similar contexts, hard to distinguish\nthem from synonyms\nCompositionality:what is the meaning of a sequence of\nwords?\nwhile we might be able to obtain context vectors for short\nphrases, this doesn’t scale to whole sentences, paragraphs, etc.\nSolution: combine word vectors, i.e. add/multiply;\nsentenceBERT, etc.",
+          "metadata": {
+            "char_count": 546,
+            "chunk_id": "Week1_p83",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              83
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 124,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": 2.6684
+        },
+        {
+          "chunk_id": "Week13_p8",
+          "text": "COMP64702 Revision Lecture\nWord representations & similarity\nRepresentations\nLikely format: numeric cosine similarity or conceptual statements about vector methods.\ncosine(A, B) = (A · B) / (||A|| ||B||)\nCount-based vectors\nTerm–document or term–term matrices\nHigh-dimensional and sparse\nOne vector per word type\nCan be expensive to store\nTF–IDF weighting\nDown-weights very common terms\nEmphasises informative terms\nDoes not magically remove sparsity\nContextual meaning\nStatic vectors struggle with polysemy\nContextual models can represent a word \ndifferently in different sentences\nA=[1,1,0], B=[1,0,0]. Estimate cosine similarity.\nAnswer: 0.71",
+          "metadata": {
+            "char_count": 645,
+            "chunk_id": "Week13_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 159,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 85
+          },
+          "score": 2.2402
+        },
+        {
+          "chunk_id": "Week1_p82",
+          "text": "Best word vectors?\nhigh-dimensional count-based?\nIn one of the lectures, we will see how we can obtain\nlow-dimensional vectors with Neural Networks\nLevy et al. 2 (2015) showed that choice of context window\nsize, rare word removal, etc. matter more.\nChoice of texts to obtain the counts matters. More text is\nbetter, and low-dimensional methods scale better.\n2Omer Levy, Yoav Goldberg, and Ido Dagan (2015). “Improving Distributional Similarity with Lessons Learned\nfrom Word Embeddings”. In:Transactions of the Association for Computational Linguistics, pp. 211–225.",
+          "metadata": {
+            "char_count": 566,
+            "chunk_id": "Week1_p82",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              82
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 128,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 83
+          },
+          "score": 1.1708
+        },
+        {
+          "chunk_id": "Week1_p79",
+          "text": "Problems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!",
+          "metadata": {
+            "char_count": 323,
+            "chunk_id": "Week1_p79",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              79
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 63,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 46
+          },
+          "score": 0.404
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_011",
+      "question": "In a named entity recognition task using the BIO tagging scheme to detect a given number of named-entity categories, how many tag classes are there in total?",
+      "answer": "If BIO is used for N entity types, the number of classes is: 2N + 1.",
+      "route": "answer",
+      "top_score": 5.0529,
+      "seconds": 22.752,
+      "context_tokens": 480,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week13_p22",
+          "text": "COMP64702 Revision Lecture\nNamed Entity Recognition (NER) and BIO\nSequence \nlabelling\nLikely format: count BIO classes or evaluate exact entity spans.\nNER task\nIdentify spans that mention real -world \nentities and assign a type: PER, ORG, \nLOC, DATE, MONEY , etc.\nBIO scheme\nB-X begins an entity of type X.\nI-X continues it.\nO means outside any entity.\nClass count\nFor T entity types under BIO:\n2T + 1 classes\n(B and I for each type, plus O).\nIf a BIO NER system recognises PER, ORG, LOC, and DATE, how many output classes are needed?\nAnswer: 2×4 + 1 = 9",
+          "metadata": {
+            "char_count": 554,
+            "chunk_id": "Week13_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 144,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 101
+          },
+          "score": 5.0529
+        },
+        {
+          "chunk_id": "Week12_p46",
+          "text": "Module 3 Named Entity Recognition\n● What named entities are and why they are useful \n● How entity types depend on the task and domain\n● Why NER is context-dependent\n● NER as a sequence labelling problem \n● The BIO tagging scheme and entity spans \n● How many output classes BIO requires \n● Local vs. global sequence models \n● CRFs, feature-based methods, and neural approaches \n● Exact-match evaluation at the entity level",
+          "metadata": {
+            "char_count": 421,
+            "chunk_id": "Week12_p46",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              46
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 86,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 72
+          },
+          "score": 3.6637
+        },
+        {
+          "chunk_id": "Week12_p55",
+          "text": "How Many Output Classes?\n● If BIO is used for N entity types, the number of classes is: \n○ 2N + 1\n● Why? \n○ one B tag for each type \n○ one I tag for each type \n○ one O tag \n● Example: \n○ PER, ORG, LOC \n○ classes = B-PER, I-PER, B-ORG, I-ORG, B-LOC, I-LOC, O \n○ total = 7",
+          "metadata": {
+            "char_count": 270,
+            "chunk_id": "Week12_p55",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              55
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 91,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 62
+          },
+          "score": 2.5227
+        },
+        {
+          "chunk_id": "Week12_p53",
+          "text": "The BIO Tagging Scheme\n● B-X: beginning of an entity of type X \n● I-X: inside an entity of type X \n● O: outside any entity \n● Example: \n○ Maya Chen works at Northbridge Labs in Leeds.\n○ B-PER I-PER O O B-ORG I-ORG O B-LOC O\n● BIO allows us to recover entity spans from token labels.",
+          "metadata": {
+            "char_count": 282,
+            "chunk_id": "Week12_p53",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              53
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 81,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 58
+          },
+          "score": 1.173
+        },
+        {
+          "chunk_id": "Week12_p47",
+          "text": "What Is Named Entity Recognition?\n● Named Entity Recognition (NER) identifies mentions of real-world \nentities in text. \n● It also assigns a label to each mention. \n● Typical entity types include: \n○ Person\n○ Organisation\n○ Location\n○ Date / Time\n○ Money\n● NER helps answer questions such as: \n○ Who is mentioned? \n○ Where did something happen? \n○ Which organisations are involved?",
+          "metadata": {
+            "char_count": 381,
+            "chunk_id": "Week12_p47",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              47
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 78,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 64
+          },
+          "score": 0.6067
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_013",
+      "question": "According to the traditional symbolic approach to representing word meaning (e.g. WordNet), which explicit lexical relations are used, and what are the stated properties of meaning under this approach?",
+      "answer": "The traditional symbolic approach to representing word meaning uses the following explicit lexical relations:\n\n- Synonymy (e.g. dog → animal)\n- Hypernymy (e.g. dog → animal, mammal)\n\nThe stated properties of meaning under this approach are:\n\n- Discrete, manually defined\n- Relational, meaning is represented as a set of explicit relations between words.",
+      "route": "answer",
+      "top_score": 5.9735,
+      "seconds": 52.123,
+      "context_tokens": 470,
+      "n_chunks": 6,
+      "chunks_used": [
+        {
+          "chunk_id": "Week3_p3",
+          "text": "How can we represent word meaning?\nHypernyms\nSynonymsTraditional approach: symbolic lexical resources (e.g., WordNet)Represent meaning via explicit relations:–synonymy (dog ↔)–hypernymy (dog → animal)Meaning is discrete, manually defined, and relational",
+          "metadata": {
+            "char_count": 253,
+            "chunk_id": "Week3_p3",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              3
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 59,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 29
+          },
+          "score": 5.9735
+        },
+        {
+          "chunk_id": "Week2_p9",
+          "text": "Traditional AI approach\nLook for interpretation which is\ngrammatical\nsemantically sensible\npragmatically plausible in context\nBuild explicit models of rules describing how language works\nPoor performance in real world\nhard to maintain wide-coverage systems\ntoo much knowledge needed for semantics",
+          "metadata": {
+            "char_count": 296,
+            "chunk_id": "Week2_p9",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              9
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 46,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 40
+          },
+          "score": 0.7622
+        },
+        {
+          "chunk_id": "Week3_p4",
+          "text": "Limitations of Symbolic Lexical ResourcesStatic and incomplete–Cannot keep pace with new words, senses, or usageExpensive to maintain–Requires expert human annotationLimited notion of similarity–No natural notion of gradedsimilarity–Cannot capture usage-based meaning differences",
+          "metadata": {
+            "char_count": 279,
+            "chunk_id": "Week3_p4",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              4
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 56,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 31
+          },
+          "score": -0.9719
+        },
+        {
+          "chunk_id": "Week1_p83",
+          "text": "Limitations: Word Vectors\nPolysemy:All occurrences of a word (and all its senses) are\nrepresented by one vector.\nGiven a task, it is often useful to adapt the word vectors to\nrepresent the appropriate sense, e.g.bank\nAntonymsappear in similar contexts, hard to distinguish\nthem from synonyms\nCompositionality:what is the meaning of a sequence of\nwords?\nwhile we might be able to obtain context vectors for short\nphrases, this doesn’t scale to whole sentences, paragraphs, etc.\nSolution: combine word vectors, i.e. add/multiply;\nsentenceBERT, etc.",
+          "metadata": {
+            "char_count": 546,
+            "chunk_id": "Week1_p83",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              83
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 124,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": -2.0941
+        },
+        {
+          "chunk_id": "Week3_p6",
+          "text": "Distributional Semantics“You shall know a word by the company it keeps.” (J. R. Firth 1957) Abankis afinancial institutionthat acceptsdepositsfrom the public and createscreditIngeography, the wordbankgenerally refers to the land alongside a body of water.Word meaning inferred from contextual usageSame word, different contexts → different meaningsMeaning becomes statistical rather than symbolic",
+          "metadata": {
+            "char_count": 396,
+            "chunk_id": "Week3_p6",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              6
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 90,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 50
+          },
+          "score": -2.19
+        },
+        {
+          "chunk_id": "Week9_p11",
+          "text": "Embeddings in RAGEmbeddings: dense vectors representing semantic meaningHow embeddings are used in RAG–Offline: embed each chunk in the corpus–Online: embed the user query–Retrieve top-k similar chunks (e.g., cosine similarity)Example embedding models–all-MiniLM-L6-v2, E5-small, BGE-smallEmbedding quality strongly impacts retrieval effectiveness",
+          "metadata": {
+            "char_count": 347,
+            "chunk_id": "Week9_p11",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week9_RAG_LLM_final.pdf",
+            "page_number": [
+              11
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week9_RAG_LLM_final_exp1_chunks.json",
+            "token_count": 95,
+            "was_split": false,
+            "week": "Week 9",
+            "word_count": 38
+          },
+          "score": -3.793
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_014",
+      "question": "What kind of NLP tasks can be addressed with sequence labelling models, and what property do such tasks share?",
+      "answer": "Sequence labelling models can be used for tasks such as named entity recognition (NER), where each token receives a tag that tells us whether it is inside an entity, and which entity type it belongs to. This task shares the property of having span boundaries added, as it requires identifying the boundaries of entities within a document.",
+      "route": "answer",
+      "top_score": 0.1849,
+      "seconds": 51.372,
+      "context_tokens": 472,
+      "n_chunks": 6,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_p52",
+          "text": "NER as Sequence Labelling\n● A common formulation treats NER as a token-level sequence \nlabelling task. \n● Each token receives a tag that tells us: \n○ whether it is inside an entity \n○ and which entity type it belongs to \n● This makes NER similar to POS tagging, but with span boundaries \nadded.",
+          "metadata": {
+            "char_count": 294,
+            "chunk_id": "Week12_p52",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              52
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 66,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 53
+          },
+          "score": 0.1849
+        },
+        {
+          "chunk_id": "Week8_p17",
+          "text": "Summary & Q&A\n Summary:\n– LLM Applications extend base models using Prompting, RAG, and \nTool-use to solve real business problems.\n– Core NLP tasks (Summarization, Extraction) are now largely solved \nby prompting.\n– Domain applications (Code, Medical, Legal) require strict adherence \nto facts, often leveraging RAG.\n– Agents represent the frontier: models that use tools, reason via \nReAct, and interact with the environment.\n– Deployment is currently constrained by compute costs, latency, and \nsafety evaluation.",
+          "metadata": {
+            "char_count": 515,
+            "chunk_id": "Week8_p17",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week8_TRIM-Application-Multimodal.pdf",
+            "page_number": [
+              17
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week8_TRIM-Application-Multimodal_exp1_chunks.json",
+            "token_count": 106,
+            "was_split": false,
+            "week": "Week 8",
+            "word_count": 75
+          },
+          "score": -0.4687
+        },
+        {
+          "chunk_id": "Week5_p22",
+          "text": "Why LLMs\n The promise: one single model to solve many NLP tasks\n Emergent properties in LLMs",
+          "metadata": {
+            "char_count": 92,
+            "chunk_id": "Week5_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week5_TRIM_LLM-pretraining.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week5_TRIM_LLM-pretraining_exp1_chunks.json",
+            "token_count": 21,
+            "was_split": false,
+            "week": "Week 5",
+            "word_count": 16
+          },
+          "score": -1.2646
+        },
+        {
+          "chunk_id": "Week1_p5",
+          "text": "Course goals\nDevelop a solid understanding of text mining and NLP\nfundamentals (e.g. text preprocessing and representations).\nUnderstand the evolution of language models leading to\ntransformers and modern LLM architectures.\nUnderstand traditional and state-of-the-art approaches (e.g.,\ntransformer-based models) to core NLP tasks.\nUnderstand how large language models are trained and\naligned (e.g. pre-training, instruction tuning).\nSystematically evaluate and compare the performance of\napproaches to NLP tasks.\nDevelop and apply, as a team, various NLP methods to\nextract information and meaning from large-scale textual data",
+          "metadata": {
+            "char_count": 627,
+            "chunk_id": "Week1_p5",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              5
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 131,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 84
+          },
+          "score": -1.3265
+        },
+        {
+          "chunk_id": "Week5_p23",
+          "text": "Pre-training and adaption\n Pre-training: trained on huge\n– amounts of unlabeled text using “self-\n– supervised” training objectives\n Adaptation: how to use a pre-trained \nmodel for your downstream task?\n– What types of NLP tasks (inputand output \nformats)?\n– How many annotated examples do you \nhave?\n– Approach: Fine-tuning, Prompting, \nInstruction tuning",
+          "metadata": {
+            "char_count": 356,
+            "chunk_id": "Week5_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week5_TRIM_LLM-pretraining.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week5_TRIM_LLM-pretraining_exp1_chunks.json",
+            "token_count": 81,
+            "was_split": false,
+            "week": "Week 5",
+            "word_count": 52
+          },
+          "score": -1.7613
+        },
+        {
+          "chunk_id": "Week2_p10",
+          "text": "Statistical Approaches\nNo explicit models of grammar, meaning, context, etc.\nInstead, collect statistics such as\nhow often different words appear\nhow often pairs (or triples, etc.) of words appear next to each\nother\nOr other more complex statistical patterns\nUse this statistics to perform NLP tasks\nspeech, text prediction, translation, ...",
+          "metadata": {
+            "char_count": 341,
+            "chunk_id": "Week2_p10",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              10
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 67,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 51
+          },
+          "score": -2.1113
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_015",
+      "question": "In BERT's Masked Language Modelling, of the tokens chosen for masking, how are they split between the [MASK] token, a random token, and being left unchanged?",
+      "answer": "The [MASK] token is sampled uniformly from the 15% of tokens that contribute to the training loss, while the other tokens are left unchanged.",
+      "route": "answer",
+      "top_score": 1.55,
+      "seconds": 31.955,
+      "context_tokens": 499,
+      "n_chunks": 6,
+      "chunks_used": [
+        {
+          "chunk_id": "Week11_p22",
+          "text": "SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain–then-fine-tune paradigm in NLP .Achieved state-of-the-art performance (2018) across diverse NLU tasks.",
+          "metadata": {
+            "char_count": 335,
+            "chunk_id": "Week11_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 39
+          },
+          "score": 1.55
+        },
+        {
+          "chunk_id": "Week11_p5",
+          "text": "Masked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions\nNetwork weights are updated based on average CE loss over the sampled tokens",
+          "metadata": {
+            "char_count": 307,
+            "chunk_id": "Week11_p5",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              5
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 60,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 43
+          },
+          "score": -0.0183
+        },
+        {
+          "chunk_id": "Week11_p6",
+          "text": "Masked Language Modelling\nExamplesHe is from Kuala Lumpur, Malaysia.àHe [MASK]from Kuala [MASK], Malaysia.He went to the store. àHe went to the [MASK].",
+          "metadata": {
+            "char_count": 151,
+            "chunk_id": "Week11_p6",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              6
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 34,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 22
+          },
+          "score": -0.3184
+        },
+        {
+          "chunk_id": "Week11_p4",
+          "text": "BERT : Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks.",
+          "metadata": {
+            "char_count": 504,
+            "chunk_id": "Week11_p4",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              4
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 119,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 71
+          },
+          "score": -0.613
+        },
+        {
+          "chunk_id": "Week11_p7",
+          "text": "MLM: Masking Rate and StrategyQ: What is the value of k?–They always use k = 15%.–To o l i t t l e m a s k i n g : c o m p u t a t i o n a l l y e x p e n s i v e–To o m u c h m a s k i n g : n o t e n o u g h c o n t e x t \nQ: How are masked tokens selected?–15% tokens are uniformly sampled–Is it optimal? See span masking (Joshi et al., 2020) –Example: He [MASK]from Kuala [MASK], Malaysia.",
+          "metadata": {
+            "char_count": 393,
+            "chunk_id": "Week11_p7",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              7
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 143,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 109
+          },
+          "score": -0.7391
+        },
+        {
+          "chunk_id": "Week3_p60",
+          "text": "Masking in the DecoderThe decoder’s self-attention can only look at earlier tokens (i.e.not future ones).This prevents information leakage from future tokens during training.Implemented by masking future positions, setting their attention scores to -infbefore softmax.",
+          "metadata": {
+            "char_count": 268,
+            "chunk_id": "Week3_p60",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              60
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 63,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 34
+          },
+          "score": -1.3149
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_016",
+      "question": "What are the key architectural properties of the Transformer, and how does it handle token order without recurrence?",
+      "answer": "Transformers do not use recurrence; self-attention lets each token build context by attending to other tokens, while positional encodings supply order.",
+      "route": "answer",
+      "top_score": 1.76,
+      "seconds": 28.408,
+      "context_tokens": 457,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week3_p36",
+          "text": "Transformer ArchitectureCore Components Encoder Stack:produces contextual representations of the input.Decoder Stack: usesthe encoder's output and previous decoder outputs to generate the target sequence.Self-Attention Mechanism: allowsthe model to focus on different parts of the input sequence when processing each token.Feed-Forward Neural Networks: apply nonlinear transformation per token.Key idea: no recurrence, no convolution —only attention.",
+          "metadata": {
+            "char_count": 450,
+            "chunk_id": "Week3_p36",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              36
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 92,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 53
+          },
+          "score": 1.76
+        },
+        {
+          "chunk_id": "Week13_p4",
+          "text": "COMP64702 Revision Lecture\nTransformers vs RNN sequence-to-sequence\nTransformers\nLikely format: select the correct conceptual differences.\nAspect RNN seq2seq Transformer\nProcessing Sequential over tokens Parallel over input positions\nContext Often bottlenecked by hidden \nstates; attention can help\nDynamic self-attention over all \npositions\nLong-range links Harder due to recurrence Direct pairwise attention paths\nOrder \ninformation Implicit in recurrence Needs positional information\nWhat to say in an answer\nTransformers do not use recurrence; self-attention lets each \ntoken build context by attending to other tokens, while \npositional encodings supply order .\nMini practice\nWhich property makes Transformer encoders easier to \nparallelise than RNN encoders?\nA. Causal masking\nB. No recurrence over positions\nC. Learned output labels\nAnswer: B\nCommon trap\nDo not claim Transformers have no sequence order; they model order \nafter positional information is added.",
+          "metadata": {
+            "char_count": 968,
+            "chunk_id": "Week13_p4",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              4
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 190,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 132
+          },
+          "score": 0.1954
+        },
+        {
+          "chunk_id": "Week3_p32",
+          "text": "Turning Point –TransformerProposed by Vaswani et al. (2017) in “Attention is All You Need”.Eliminates recurrence, i.e., no step-by-step token processing.Enables parallelization: trains faster by processing entire sequences simultaneously.Leverages self-attentionto model long-range dependencies.Achieves SOTA results in machine translation and beyond",
+          "metadata": {
+            "char_count": 350,
+            "chunk_id": "Week3_p32",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              32
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 81,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 39
+          },
+          "score": -2.2547
+        },
+        {
+          "chunk_id": "Week3_p40",
+          "text": "Transformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time",
+          "metadata": {
+            "char_count": 213,
+            "chunk_id": "Week3_p40",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              40
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 48,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 20
+          },
+          "score": -2.9814
+        },
+        {
+          "chunk_id": "Week5_p5",
+          "text": "Decoder-Only Architecture\n Modern LLMs:\n– Transformer decoder blocks\n– Causal attention (no access to future tokens)\n– Left-to-right generation\n Contrast with BERT:\n– Bidirectional\n– Masked LM",
+          "metadata": {
+            "char_count": 192,
+            "chunk_id": "Week5_p5",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week5_TRIM_LLM-pretraining.pdf",
+            "page_number": [
+              5
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week5_TRIM_LLM-pretraining_exp1_chunks.json",
+            "token_count": 46,
+            "was_split": false,
+            "week": "Week 5",
+            "word_count": 27
+          },
+          "score": -4.1193
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_017",
+      "question": "How does the self-attention mechanism work, and which tokens can each token attend to?",
+      "answer": "To compute self-attention, you need to compute Q, K, and V vectors for each token, where Q is the query vector, K is the key vector, and V is the value vector. The formula is: Q = input embeddings * W_q, K = input embeddings * W_k, V = input embeddings * W_v, where W_q, W_k, and W_v are learned weight matrices. Each token can then attend to all other tokens in the sequence by taking the dot product of Q and K, and selecting the relevant tokens.",
+      "route": "answer",
+      "top_score": 7.076,
+      "seconds": 81.232,
+      "context_tokens": 458,
+      "n_chunks": 6,
+      "chunks_used": [
+        {
+          "chunk_id": "Week3_p45",
+          "text": "Self-attention Visualisation\nSelf-attention allows each tokenfocus on relevant token in the sequence.To k e n \"it\" attends more to related tokens like ”The animal\"This helps the model capture long-range dependencies and context.",
+          "metadata": {
+            "char_count": 228,
+            "chunk_id": "Week3_p45",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              45
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 51,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 32
+          },
+          "score": 7.076
+        },
+        {
+          "chunk_id": "Week3_p37",
+          "text": "Why Self-Attention Replaced RNNsIn RNNs: –Information between distant tokens flows through O(n) steps –Computation is sequential, i.e.hard to parallelizeIn Transformers: –Self-attention allows each token to directly attend to all other tokens in the sequence, producing contextualised representations–Computation within each layer is parallelizable across sequence positionsTrade-off: –Attention time and memory scale quadraticallywith sequence length 𝑂(𝑛2)",
+          "metadata": {
+            "char_count": 457,
+            "chunk_id": "Week3_p37",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              37
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 97,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 54
+          },
+          "score": 5.6399
+        },
+        {
+          "chunk_id": "Week11_p22",
+          "text": "SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain–then-fine-tune paradigm in NLP .Achieved state-of-the-art performance (2018) across diverse NLU tasks.",
+          "metadata": {
+            "char_count": 335,
+            "chunk_id": "Week11_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 39
+          },
+          "score": 4.9598
+        },
+        {
+          "chunk_id": "Week3_p59",
+          "text": "Cross Attention: allows the decoder to attend to encoder outputs when generating each tokenOutput Generation: each decoder layer combines the following to produce representations used to predict the next token–masked self-attention–encoder–decoder (cross) attention–a feed-forward networkMasked Self-Attention: ensures each position can only attend to previously generated tokens (prevents access to future tokens)\nThe Decoding Process",
+          "metadata": {
+            "char_count": 435,
+            "chunk_id": "Week3_p59",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              59
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 89,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 54
+          },
+          "score": 4.8486
+        },
+        {
+          "chunk_id": "Week3_p36",
+          "text": "Transformer ArchitectureCore Components Encoder Stack:produces contextual representations of the input.Decoder Stack: usesthe encoder's output and previous decoder outputs to generate the target sequence.Self-Attention Mechanism: allowsthe model to focus on different parts of the input sequence when processing each token.Feed-Forward Neural Networks: apply nonlinear transformation per token.Key idea: no recurrence, no convolution —only attention.",
+          "metadata": {
+            "char_count": 450,
+            "chunk_id": "Week3_p36",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              36
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 92,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 53
+          },
+          "score": 4.1626
+        },
+        {
+          "chunk_id": "Week3_p46",
+          "text": "Calculating Self Attention \nStep 1: ComputeQ, K, and VvectorsFor each token, compute–a queryvector–a key vector–a valuevector.Derived by multiplying input embeddings with learned weight matrices",
+          "metadata": {
+            "char_count": 194,
+            "chunk_id": "Week3_p46",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              46
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 49,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 24
+          },
+          "score": 3.6144
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_018",
+      "question": "What are the key properties of BERT, including how it is trained and how it uses context?",
+      "answer": "BERT is pre-trained using masked language modeling and next sentence prediction, and it uses bidirectional self-attention to allow each token to attend to both its left and right context.",
+      "route": "answer",
+      "top_score": 3.5539,
+      "seconds": 32.034,
+      "context_tokens": 400,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week11_p4",
+          "text": "BERT : Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks.",
+          "metadata": {
+            "char_count": 504,
+            "chunk_id": "Week11_p4",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              4
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 119,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 71
+          },
+          "score": 3.5539
+        },
+        {
+          "chunk_id": "Week11_p22",
+          "text": "SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain–then-fine-tune paradigm in NLP .Achieved state-of-the-art performance (2018) across diverse NLU tasks.",
+          "metadata": {
+            "char_count": 335,
+            "chunk_id": "Week11_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 39
+          },
+          "score": 0.882
+        },
+        {
+          "chunk_id": "Week11_p3",
+          "text": "Prior BERT : ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)–Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs–Feature-based approach: pre-trained representations used as input to task-specific models–Trained on single sentences from 1B word benchmark (Chelbaet al., 2014)\nTrain separate left-to-right and right-to-left LMs Apply as “Pre-trained Embeddings”",
+          "metadata": {
+            "char_count": 399,
+            "chunk_id": "Week11_p3",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              3
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 115,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 50
+          },
+          "score": -2.2517
+        },
+        {
+          "chunk_id": "Week11_p11",
+          "text": "BERT pre-training: Putting togetherVocabulary size: 30,000 word pieces (common sub-word units) (Wu et al., 2016)\nFinal input representation = T oken + Segment + Position embeddings\nSeparate two segments",
+          "metadata": {
+            "char_count": 202,
+            "chunk_id": "Week11_p11",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              11
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 51,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 29
+          },
+          "score": -2.496
+        },
+        {
+          "chunk_id": "Week11_p13",
+          "text": "BERT pre-training: Putting togetherMLM and NSP are trained togetherThe [CLS] representation is trained for NSPTo k e n-level representations are trained via MLM",
+          "metadata": {
+            "char_count": 160,
+            "chunk_id": "Week11_p13",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "page_number": [
+              13
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week11_TRIM_BERT_exp1_chunks.json",
+            "token_count": 35,
+            "was_split": false,
+            "week": "Week 11",
+            "word_count": 23
+          },
+          "score": -2.7013
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_019",
+      "question": "Given a table of bigram probabilities, how do you compute the probability of a sentence under a bigram model, and what tokens must be included?",
+      "answer": "To compute the probability of a sentence under a bigram model, you need to multiply the probabilities of each word in the sentence by the bigram probabilities. For example, to compute the probability of the sentence \"I want a first class\", you would multiply the probabilities of each word by the bigram probabilities:\n\nP(I want a first class) = P(I) * P(want) * P(a) * P(first) * P(class)\n\nWhere P(I), P(want), P(a), P(first), and P(class) are the probabilities of the individual words in the sentence.\n\nThe tokens that must be included are the individual words in the sentence, which are the tokens themselves.",
+      "route": "answer",
+      "top_score": 4.5876,
+      "seconds": 100.102,
+      "context_tokens": 402,
+      "n_chunks": 4,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_p30",
+          "text": "Bigram LM: From counts to probabilities\nFrom the bigram count matrix, compute probabilities by dividing\neach cell by the appropriate unigram count for its row.\nBigram probabilities (rows:x i−1, cols:x i):\narctic monkeys are my favourite band\narctic 0 0.1 0.02 0 0 0\nmonkeys 0 0 0.417 0.0017 0.008 0\nare 0.0008 0.0113 0 0.15 0.0063 0.00003\nmy 0 0.0007 0 0.0003 0.1 0.0017\nfavourite 0 0.002 0 0 0 0.1\nband 0 0 0.015 0.05 0 0",
+          "metadata": {
+            "char_count": 422,
+            "chunk_id": "Week2_p30",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              30
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 153,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 79
+          },
+          "score": 4.5876
+        },
+        {
+          "chunk_id": "Week2_p33",
+          "text": "Example: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1",
+          "metadata": {
+            "char_count": 295,
+            "chunk_id": "Week2_p33",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              33
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 130,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 51
+          },
+          "score": 3.0762
+        },
+        {
+          "chunk_id": "Week2_p16",
+          "text": "Calculate sentence probabilities\nWe want to learn a model that returns theprobability of an\nunseen sentence x:\nP(x) =P(x 1,...,x n),for∀x∈V max N\nVis the vocabulary andV max N all possible sentences.\nHow to compute probability?",
+          "metadata": {
+            "char_count": 227,
+            "chunk_id": "Week2_p16",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              16
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 60,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 36
+          },
+          "score": 2.9741
+        },
+        {
+          "chunk_id": "Week2_p36",
+          "text": "Generating sentences using a bigram Model\nRandom sentences using bigram probabilities:\nI want a first class\nI would like to San Francisco\nAre the next week on AA eleven ten\nIn Denver on October\nWhat is the city of three pm\nTwo on flight really Boston me like\nAnd like six would these fifty",
+          "metadata": {
+            "char_count": 289,
+            "chunk_id": "Week2_p36",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              36
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 59,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 54
+          },
+          "score": 1.2582
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_020",
+      "question": "Under a bigram model (including <s> and </s>), how do you determine which of several candidate sentences has the highest probability?",
+      "answer": "To determine which of several candidate sentences has the highest probability, you need to calculate the probability of each sentence using the bigram model, and then compare the probabilities.",
+      "route": "answer",
+      "top_score": 2.4674,
+      "seconds": 32.901,
+      "context_tokens": 478,
+      "n_chunks": 4,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_p33",
+          "text": "Example: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1",
+          "metadata": {
+            "char_count": 295,
+            "chunk_id": "Week2_p33",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              33
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 130,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 51
+          },
+          "score": 2.4674
+        },
+        {
+          "chunk_id": "Week2_p19",
+          "text": "Unigram language model\nMultiply the probability of each word appearing in the sentencex\ncomputed over the entire corpus:\nP(x) =\nNY\nn=1\nP(x n) =\nNY\nn=1\nc(x n)P\nx∈V c(x)\n<s>i love playing basketball</s>\n<s>arctic monkeys are from Manchester</s>\n<s>i study in Manchester uni</s>\nP(i love) =P(i)P(love) = 2\n20· 1\n20 = 0.005",
+          "metadata": {
+            "char_count": 319,
+            "chunk_id": "Week2_p19",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              19
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 55
+          },
+          "score": 1.1938
+        },
+        {
+          "chunk_id": "Week2_p28",
+          "text": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nP(x n−1,x n)\nP(x n−1)\n=\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1,...,x 1)≈P(x n|xn−1,...,x n−k )\nwith k=1",
+          "metadata": {
+            "char_count": 258,
+            "chunk_id": "Week2_p28",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              28
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 126,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 49
+          },
+          "score": 0.8532
+        },
+        {
+          "chunk_id": "Week2_p27",
+          "text": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1,...,x 1)≈P(x n|xn−1,...,x n−k )\nwith k=1",
+          "metadata": {
+            "char_count": 227,
+            "chunk_id": "Week2_p27",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              27
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 106,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 41
+          },
+          "score": 0.7788
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_021",
+      "question": "What is perplexity in language modelling, what does it measure, and does a higher or lower value indicate a better model?",
+      "answer": "Perplexity measures the ability of the model to predict word of an unseen text. It is the average negative log-likelihood of the test set, normalised by the number of words. Lower perplexity indicates better predictions.",
+      "route": "answer",
+      "top_score": 3.6236,
+      "seconds": 41.209,
+      "context_tokens": 496,
+      "n_chunks": 8,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_p43",
+          "text": "Intrinsic Evaluation: Perplexity\nPerplexity: measures the ability of the model to predict word\nof an unseen text\nUnseen = not in training data, e.g., test set\nThe average negative log-likelihood of the test set\nx= [x 1,...,x N], normalised by the number of wordsN.\nThelowerthe better.\nPerplexity(w) = exp\n \n−\nPD\nd=1 logP(w d)PD\nd=1 Nd\n!",
+          "metadata": {
+            "char_count": 336,
+            "chunk_id": "Week2_p43",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              43
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 103,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 57
+          },
+          "score": 3.6236
+        },
+        {
+          "chunk_id": "Week3_p63",
+          "text": "How Transformers Learn: the Training ProcessLoss Function: cross-entropy loss is used to measure how far the predicted token probabilities are from the true target tokens. Lower loss indicates better predictions.Backpropagation: gradients of the loss are computed and used to update model parameters (e.g., via Adam optimizer).Datasets: trained on paired input–output sequences (e.g., source and target sentences for translation).",
+          "metadata": {
+            "char_count": 430,
+            "chunk_id": "Week3_p63",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              63
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 97,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 58
+          },
+          "score": -3.5069
+        },
+        {
+          "chunk_id": "Week5_p13",
+          "text": "Language Modelling as Probability Estimation\n Goal of pretraining: Learn the probability distribution over text.\n Formally: \n Key idea: Model learns to predict each token given previous tokens.",
+          "metadata": {
+            "char_count": 193,
+            "chunk_id": "Week5_p13",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week5_TRIM_LLM-pretraining.pdf",
+            "page_number": [
+              13
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week5_TRIM_LLM-pretraining_exp1_chunks.json",
+            "token_count": 34,
+            "was_split": false,
+            "week": "Week 5",
+            "word_count": 26
+          },
+          "score": -4.1751
+        },
+        {
+          "chunk_id": "Week2_p4",
+          "text": "In this lecture...\nOur first NLP problem: Language Modelling\nWhat is the probability of a given sequence of words in a particular\nlanguage (e.g. English)?\nOdd problem. Applications?",
+          "metadata": {
+            "char_count": 181,
+            "chunk_id": "Week2_p4",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              4
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 41,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 28
+          },
+          "score": -4.4828
+        },
+        {
+          "chunk_id": "Week1_p87",
+          "text": "Upcoming next...\nLanguage modelling!",
+          "metadata": {
+            "char_count": 36,
+            "chunk_id": "Week1_p87",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              87
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 8,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 4
+          },
+          "score": -4.7579
+        },
+        {
+          "chunk_id": "Week3_p30",
+          "text": "Quick ComparisonKey difference between n-gram and RNN language models:–n-gram language models incorporate information from limited context only (i.e., preceding n-1 tokens)–RNN language models: the hidden state can incorporate information from all the preceding words",
+          "metadata": {
+            "char_count": 267,
+            "chunk_id": "Week3_p30",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "page_number": [
+              30
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+            "token_count": 56,
+            "was_split": false,
+            "week": "Week 3",
+            "word_count": 34
+          },
+          "score": -5.9813
+        },
+        {
+          "chunk_id": "Week2_p32",
+          "text": "Example: Bigram language model\nx= [arctic,monkeys,are,my,favourite,band]\nP(x) =P(monkeys|arctic)P(are|monkeys)P(my|are)\nP(favourite|my)P(band|favourite)\n= c(arctic,monkeys)\nc(arctic) ... c(favourite,band)\nc(favourite)\n= 0.1·0.417·0.15·0.1·0.1\n= 0.00006255",
+          "metadata": {
+            "char_count": 255,
+            "chunk_id": "Week2_p32",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              32
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 108,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 19
+          },
+          "score": -6.0495
+        },
+        {
+          "chunk_id": "Week4_p3",
+          "text": "Why Training Data Matters\nAs the amount of training data increases, high-quality datasets yield significantly better performance than low-quality ones.Investing effort in building or selecting a higher-quality corpus yields better model performance than simply increasing token count.",
+          "metadata": {
+            "char_count": 284,
+            "chunk_id": "Week4_p3",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week4_LLM-Data.pdf",
+            "page_number": [
+              3
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week4_LLM-Data_exp1_chunks.json",
+            "token_count": 49,
+            "was_split": false,
+            "week": "Week 4",
+            "word_count": 37
+          },
+          "score": -6.1115
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_022",
+      "question": "Consider the sentence 'The boy saw the man with a telescope.' Assume a dependency analysis in which nouns are the heads of prepositional phrases, as in Universal Dependencies. Under the interpretation 'the boy saw the man who had a telescope', which dependency relation holds between the tokens 'man' and 'telescope'?",
+      "answer": "The head of the whole sentence is the main verb, which is'saw'. The dependent tokens are'man' and 'telescope', which are both objects.",
+      "route": "answer",
+      "top_score": -0.1975,
+      "seconds": 39.298,
+      "context_tokens": 364,
+      "n_chunks": 7,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_p27",
+          "text": "Reading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence.",
+          "metadata": {
+            "char_count": 255,
+            "chunk_id": "Week12_p27",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              27
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 48,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 40
+          },
+          "score": -0.1975
+        },
+        {
+          "chunk_id": "Week12_p23",
+          "text": "In a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice",
+          "metadata": {
+            "char_count": 372,
+            "chunk_id": "Week12_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 65,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 57
+          },
+          "score": -0.3603
+        },
+        {
+          "chunk_id": "Week12_p22",
+          "text": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent.",
+          "metadata": {
+            "char_count": 321,
+            "chunk_id": "Week12_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 64,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 52
+          },
+          "score": -0.6129
+        },
+        {
+          "chunk_id": "Week12_p21",
+          "text": "Dependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens.",
+          "metadata": {
+            "char_count": 270,
+            "chunk_id": "Week12_p21",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              21
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 50,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 41
+          },
+          "score": -0.676
+        },
+        {
+          "chunk_id": "Week12_p38",
+          "text": "Dependency Structure vs Phrase Structure\n Dependency parsing focuses on relations between words. \n Phrase structure parsing focuses on constituent groupings. \n Dependency parsing is especially useful for: \n predicate-argument structure \n information extraction \n relation analysis \n Phrase structure parsing is especially useful for: \n constituent identification \n NP / VP / PP analysis \n hierarchical sentence structure",
+          "metadata": {
+            "char_count": 420,
+            "chunk_id": "Week12_p38",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              38
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 49
+          },
+          "score": -1.8768
+        },
+        {
+          "chunk_id": "Week12_p25",
+          "text": "Common Dependency Relations",
+          "metadata": {
+            "char_count": 27,
+            "chunk_id": "Week12_p25",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              25
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 3,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 3
+          },
+          "score": -2.2266
+        },
+        {
+          "chunk_id": "Week12_p24",
+          "text": "Common Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme.",
+          "metadata": {
+            "char_count": 318,
+            "chunk_id": "Week12_p24",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              24
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 73,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 41
+          },
+          "score": -2.8474
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_023",
+      "question": "Consider the sentence 'The boy saw the man with a telescope.' interpreted as meaning that the boy saw the man who had a telescope. In the dependency graph for this interpretation, which tokens are dependents of the head of the sentence?",
+      "answer": "The head of the sentence is 'The boy'. The tokens that are dependents of 'The boy' are'saw','man', and 'with'.",
+      "route": "answer",
+      "top_score": -6.4305,
+      "seconds": 48.163,
+      "context_tokens": 417,
+      "n_chunks": 6,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_p12",
+          "text": "One Sentence, Two Valid Taggings\nMeaning affects POS tagging. \n Example sentence: I saw her duck.\n Interpretation 1: I saw her pet bird. \n I/PRON saw/VERB her/PRON duck/NOUN ./PUNCT\n Interpretation 2: I saw her lower her head quickly. \n I/PRON saw/VERB her/PRON duck/VERB ./PUNCT\n A tagger must choose the tag that matches the intended meaning.",
+          "metadata": {
+            "char_count": 344,
+            "chunk_id": "Week12_p12",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              12
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 92,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 52
+          },
+          "score": -6.4305
+        },
+        {
+          "chunk_id": "Week12_p25",
+          "text": "Common Dependency Relations",
+          "metadata": {
+            "char_count": 27,
+            "chunk_id": "Week12_p25",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              25
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 3,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 3
+          },
+          "score": -6.7579
+        },
+        {
+          "chunk_id": "Week12_p21",
+          "text": "Dependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens.",
+          "metadata": {
+            "char_count": 270,
+            "chunk_id": "Week12_p21",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              21
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 50,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 41
+          },
+          "score": -6.9028
+        },
+        {
+          "chunk_id": "Week12_p22",
+          "text": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent.",
+          "metadata": {
+            "char_count": 321,
+            "chunk_id": "Week12_p22",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              22
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 64,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 52
+          },
+          "score": -7.1035
+        },
+        {
+          "chunk_id": "Week12_p23",
+          "text": "In a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice",
+          "metadata": {
+            "char_count": 372,
+            "chunk_id": "Week12_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week12_TM-lastlecture-1_exp1_chunks.json",
+            "token_count": 65,
+            "was_split": false,
+            "week": "Week 12",
+            "word_count": 57
+          },
+          "score": -8.0879
+        },
+        {
+          "chunk_id": "Week13_p25",
+          "text": "COMP64702 Revision Lecture\nFinal revision checklist\nWrap-up\nUse this as a last-pass plan before the exam.\nMemorise formulas\nCosine similarity\nTF–IDF ingredients\nCohen’s Kappa\nPrecision / Recall / F1\nMicro vs macro averaging\nBIO class count: 2T + 1\nPractise skills\nSelect-all conceptual traps\nPOS tags under a stated meaning\nDependency heads/dependents\nPhrase constituents\nNER exact-match counting\nArchitecture selection scenarios\nAvoid common mistakes\nTreating ICL as weight updates\nCalling instruction tuning “guaranteed \nfactuality”\nConfusing precision and recall\nCounting partial NER spans as correct\nIgnoring the stated sentence interpretation\nWhen unsure: define the task, identify the representation, then compute or reason from \nthe definition.",
+          "metadata": {
+            "char_count": 751,
+            "chunk_id": "Week13_p25",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              25
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 143,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 103
+          },
+          "score": -8.3744
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_024",
+      "question": "Two annotators independently label four social media posts as POSITIVE, NEGATIVE or NEUTRAL. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the observed agreement used in the Kappa coefficient?",
+      "answer": "The observed agreement is the proportion of cases on which annotators agree, which is 0.5.",
+      "route": "answer",
+      "top_score": -1.9732,
+      "seconds": 31.41,
+      "context_tokens": 430,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_p8",
+          "text": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.",
+          "metadata": {
+            "char_count": 259,
+            "chunk_id": "Week10_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 48
+          },
+          "score": -1.9732
+        },
+        {
+          "chunk_id": "Week10_p9",
+          "text": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50",
+          "metadata": {
+            "char_count": 388,
+            "chunk_id": "Week10_p9",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              9
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 76
+          },
+          "score": -2.0178
+        },
+        {
+          "chunk_id": "Week10_p7",
+          "text": "Inter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable.",
+          "metadata": {
+            "char_count": 305,
+            "chunk_id": "Week10_p7",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              7
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 59,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 42
+          },
+          "score": -2.3634
+        },
+        {
+          "chunk_id": "Week7_p13",
+          "text": "Zero-Shot Example\n Prompt:\n– Classify the sentiment of the following movie review as Positive, Negative, \nor Neutral.\n– Review: \"The cinematography was stunning, but the plot dragged on \nforever and I found myself checking my watch.\"\n– Sentiment:\n Model Output:\n– Negative\n Analysis:\n– The model successfully maps the instruction to its parametric knowledge of \nsentiment analysis without needing to see a prior example.",
+          "metadata": {
+            "char_count": 420,
+            "chunk_id": "Week7_p13",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+            "page_number": [
+              13
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week7-TRIM_Incontext-Evaluation_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 7",
+            "word_count": 64
+          },
+          "score": -3.2689
+        },
+        {
+          "chunk_id": "Week10_p29",
+          "text": "Confusion Matrix for evaluating automated predictions \n● For automated systems, evaluation often starts with a confusion \nmatrix. \n● For a positive class: \n○ TP: predicted positive, actually positive \n○ FP: predicted positive, actually negative \n○ FN: predicted negative, actually positive \n○ TN: predicted negative, actually negative \n● Many common metrics are derived from these four counts.\nPositive class (Response) Negative class (Response)\nPositive class (Reference) True Positives (TP) False Negatives (FN)\nNegative class (Reference) False Positives (FP) True Negatives (TN)",
+          "metadata": {
+            "char_count": 581,
+            "chunk_id": "Week10_p29",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              29
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 119,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 80
+          },
+          "score": -4.0102
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_025",
+      "question": "Two annotators label four posts. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the expected (chance) agreement used in the Kappa coefficient?",
+      "answer": "Pₐ = 0.5, because Pₐ = (TP + FN) / (TP + FP + FN + TN).",
+      "route": "answer",
+      "top_score": -0.7425,
+      "seconds": 38.106,
+      "context_tokens": 478,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_p9",
+          "text": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50",
+          "metadata": {
+            "char_count": 388,
+            "chunk_id": "Week10_p9",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              9
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 76
+          },
+          "score": -0.7425
+        },
+        {
+          "chunk_id": "Week10_p8",
+          "text": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.",
+          "metadata": {
+            "char_count": 259,
+            "chunk_id": "Week10_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 48
+          },
+          "score": -1.6351
+        },
+        {
+          "chunk_id": "Week10_p7",
+          "text": "Inter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable.",
+          "metadata": {
+            "char_count": 305,
+            "chunk_id": "Week10_p7",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              7
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 59,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 42
+          },
+          "score": -2.5887
+        },
+        {
+          "chunk_id": "Week13_p23",
+          "text": "COMP64702 Revision Lecture\nGold standards, agreement, and Cohen’s Kappa\nEvaluation\nLikely format: compute observed agreement, expected agreement, then kappa.\nWhy gold standards?\nBenchmarks compare system response \nagainst reliable reference labels created with \nannotation guidelines.\nObserved agreement\nPₐ = proportion of items on which annotators \nagree.\nIt does not correct for chance agreement.\nExpected agreement\nPₑ = chance agreement estimated from \nannotator label distributions.\nκ = (Pₐ − Pₑ) / (1 − Pₑ)\nIf Pₐ = 0.80 and Pₑ = 0.50, compute κ.\nAnswer: 0.60",
+          "metadata": {
+            "char_count": 563,
+            "chunk_id": "Week13_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 128,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 84
+          },
+          "score": -4.1907
+        },
+        {
+          "chunk_id": "Week10_p29",
+          "text": "Confusion Matrix for evaluating automated predictions \n● For automated systems, evaluation often starts with a confusion \nmatrix. \n● For a positive class: \n○ TP: predicted positive, actually positive \n○ FP: predicted positive, actually negative \n○ FN: predicted negative, actually positive \n○ TN: predicted negative, actually negative \n● Many common metrics are derived from these four counts.\nPositive class (Response) Negative class (Response)\nPositive class (Reference) True Positives (TP) False Negatives (FN)\nNegative class (Reference) False Positives (FP) True Negatives (TN)",
+          "metadata": {
+            "char_count": 581,
+            "chunk_id": "Week10_p29",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              29
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 119,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 80
+          },
+          "score": -4.5626
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_026",
+      "question": "For a set of four annotated posts, the observed agreement between two annotators is 0.75 and the expected agreement is 0.438. What is the value of the Kappa coefficient?",
+      "answer": "To compute the Kappa coefficient, we need to calculate the difference between observed agreement (Pₐ) and expected agreement (Pₑ), and then divide by the expected agreement (1 - Pₑ). \n\nPₐ = 0.75\nPₑ = 0.438\nKappa = (Pₐ - Pₑ) / (1 - Pₑ) = (0.75 - 0.438) / (1 - 0.438) = 0.312 / 0.562 = 0.55",
+      "route": "answer",
+      "top_score": 2.7577,
+      "seconds": 81.61,
+      "context_tokens": 477,
+      "n_chunks": 5,
+      "chunks_used": [
+        {
+          "chunk_id": "Week13_p23",
+          "text": "COMP64702 Revision Lecture\nGold standards, agreement, and Cohen’s Kappa\nEvaluation\nLikely format: compute observed agreement, expected agreement, then kappa.\nWhy gold standards?\nBenchmarks compare system response \nagainst reliable reference labels created with \nannotation guidelines.\nObserved agreement\nPₐ = proportion of items on which annotators \nagree.\nIt does not correct for chance agreement.\nExpected agreement\nPₑ = chance agreement estimated from \nannotator label distributions.\nκ = (Pₐ − Pₑ) / (1 − Pₑ)\nIf Pₐ = 0.80 and Pₑ = 0.50, compute κ.\nAnswer: 0.60",
+          "metadata": {
+            "char_count": 563,
+            "chunk_id": "Week13_p23",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "page_number": [
+              23
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week13_revision_lecture_exam_focused_exp1_chunks.json",
+            "token_count": 128,
+            "was_split": false,
+            "week": "Week 13",
+            "word_count": 84
+          },
+          "score": 2.7577
+        },
+        {
+          "chunk_id": "Week10_p8",
+          "text": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.",
+          "metadata": {
+            "char_count": 259,
+            "chunk_id": "Week10_p8",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              8
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 61,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 48
+          },
+          "score": 2.5638
+        },
+        {
+          "chunk_id": "Week10_p9",
+          "text": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50",
+          "metadata": {
+            "char_count": 388,
+            "chunk_id": "Week10_p9",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              9
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 76
+          },
+          "score": 1.4159
+        },
+        {
+          "chunk_id": "Week10_p10",
+          "text": "Cohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone.",
+          "metadata": {
+            "char_count": 260,
+            "chunk_id": "Week10_p10",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              10
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 80,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 58
+          },
+          "score": -0.4237
+        },
+        {
+          "chunk_id": "Week10_p1",
+          "text": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER",
+          "metadata": {
+            "char_count": 424,
+            "chunk_id": "Week10_p1",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "page_number": [
+              1
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week10_TM_last_lecture_exp1_chunks.json",
+            "token_count": 97,
+            "was_split": false,
+            "week": "Week 10",
+            "word_count": 64
+          },
+          "score": -0.8287
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_027",
+      "question": "Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('bark', Doc1) to three decimal places?",
+      "answer": "To calculate tf-idf('bark', Doc1), first find the document frequency df(t) of 'bark' in Doc1, which is 0 since 'bark' is not in Doc1. Then, calculate the term frequency tf of 'bark' in Doc1, which is 0 since 'bark' is not in Doc1. Finally, calculate idf(t) = log10(4/0) = log10(1) = 0.",
+      "route": "answer",
+      "top_score": -4.3518,
+      "seconds": 74.928,
+      "context_tokens": 447,
+      "n_chunks": 4,
+      "chunks_used": [
+        {
+          "chunk_id": "Week7_p37",
+          "text": "ROUGE\n For sumamrisation\n- Rouge-N:\nWhere:\n ​ : an n-gram\n : number of times the n-gram appears in the candidate\n : number of times the n-gram appears in the reference\nWhere:\nLCS presents the longest common subsequence (LCS)\n- Rouge-L:\n- Example:\nReference Summary: the cat is on the mat Candidate Summary: the cat on the mat\nROUGE-2 = 3 / 5 = 0.6 ROUGE-L = 5 / 6 ≈ 0.83\nWhat if Candidate Summary: the cat is not on the mat?",
+          "metadata": {
+            "char_count": 424,
+            "chunk_id": "Week7_p37",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+            "page_number": [
+              37
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week7-TRIM_Incontext-Evaluation_exp1_chunks.json",
+            "token_count": 118,
+            "was_split": false,
+            "week": "Week 7",
+            "word_count": 82
+          },
+          "score": -4.3518
+        },
+        {
+          "chunk_id": "Week1_p77",
+          "text": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid",
+          "metadata": {
+            "char_count": 482,
+            "chunk_id": "Week1_p77",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              77
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": -4.4384
+        },
+        {
+          "chunk_id": "Week7_p36",
+          "text": "BLEU\n For translation \nWhere is the n-gram precision, is the weight of the different precision (generally is 1/4), \nis the length of reference sentence, is the length of the model-generated sentence.\n- Example:\nRef: the cat is on the mat. Candidate: the cat on the mat.\n- n-gram Precision: Compare how many words or phrases (such as 1-gram, 2-gram, 3-gram, etc.) in the \nmodel-generated sentence also appear in the reference sentence.\n- Equation:",
+          "metadata": {
+            "char_count": 446,
+            "chunk_id": "Week7_p36",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+            "page_number": [
+              36
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week7-TRIM_Incontext-Evaluation_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 7",
+            "word_count": 73
+          },
+          "score": -4.8848
+        },
+        {
+          "chunk_id": "Week1_p69",
+          "text": "Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D|×|V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!",
+          "metadata": {
+            "char_count": 374,
+            "chunk_id": "Week1_p69",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              69
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 102,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 69
+          },
+          "score": -5.0013
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_028",
+      "question": "Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('dog', Doc3) to three decimal places?",
+      "answer": "To calculate tf-idf('dog', Doc3), first find the document frequency df(t) of 'dog' in all documents, then calculate idf(t) = log10(N/df(t)), where N is the total number of documents in the corpus.",
+      "route": "answer",
+      "top_score": -4.3477,
+      "seconds": 35.678,
+      "context_tokens": 447,
+      "n_chunks": 4,
+      "chunks_used": [
+        {
+          "chunk_id": "Week7_p37",
+          "text": "ROUGE\n For sumamrisation\n- Rouge-N:\nWhere:\n ​ : an n-gram\n : number of times the n-gram appears in the candidate\n : number of times the n-gram appears in the reference\nWhere:\nLCS presents the longest common subsequence (LCS)\n- Rouge-L:\n- Example:\nReference Summary: the cat is on the mat Candidate Summary: the cat on the mat\nROUGE-2 = 3 / 5 = 0.6 ROUGE-L = 5 / 6 ≈ 0.83\nWhat if Candidate Summary: the cat is not on the mat?",
+          "metadata": {
+            "char_count": 424,
+            "chunk_id": "Week7_p37",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+            "page_number": [
+              37
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week7-TRIM_Incontext-Evaluation_exp1_chunks.json",
+            "token_count": 118,
+            "was_split": false,
+            "week": "Week 7",
+            "word_count": 82
+          },
+          "score": -4.3477
+        },
+        {
+          "chunk_id": "Week1_p77",
+          "text": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid",
+          "metadata": {
+            "char_count": 482,
+            "chunk_id": "Week1_p77",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              77
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": -4.4058
+        },
+        {
+          "chunk_id": "Week7_p36",
+          "text": "BLEU\n For translation \nWhere is the n-gram precision, is the weight of the different precision (generally is 1/4), \nis the length of reference sentence, is the length of the model-generated sentence.\n- Example:\nRef: the cat is on the mat. Candidate: the cat on the mat.\n- n-gram Precision: Compare how many words or phrases (such as 1-gram, 2-gram, 3-gram, etc.) in the \nmodel-generated sentence also appear in the reference sentence.\n- Equation:",
+          "metadata": {
+            "char_count": 446,
+            "chunk_id": "Week7_p36",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+            "page_number": [
+              36
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week7-TRIM_Incontext-Evaluation_exp1_chunks.json",
+            "token_count": 111,
+            "was_split": false,
+            "week": "Week 7",
+            "word_count": 73
+          },
+          "score": -4.9591
+        },
+        {
+          "chunk_id": "Week1_p69",
+          "text": "Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D|×|V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!",
+          "metadata": {
+            "char_count": 374,
+            "chunk_id": "Week1_p69",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              69
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 102,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 69
+          },
+          "score": -5.0293
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_029",
+      "question": "In a document-word matrix built from 4 documents, the term 'battle' occurs 7 times in Document 2 and appears in 3 of the 4 documents. Using idf(t) = log10(N/df(t)) with raw term frequency tf, what is the tf-idf value of 'battle' in Document 2?",
+      "answer": "To compute the tf-idf value of 'battle' in Document 2, first calculate the document frequency of 'battle' in the corpus, which is 3/4 = 0.75. Then, compute the idf value as log10(4/3) = 0.287. Finally, multiply the tf value (7/14 = 0.5) by the idf value (0.287) to get the tf-idf value of 'battle' in Document 2, which is 0.5 * 0.287 = 0.143.",
+      "route": "answer",
+      "top_score": 0.5482,
+      "seconds": 66.677,
+      "context_tokens": 333,
+      "n_chunks": 3,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_p69",
+          "text": "Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D|×|V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!",
+          "metadata": {
+            "char_count": 374,
+            "chunk_id": "Week1_p69",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              69
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 102,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 69
+          },
+          "score": 0.5482
+        },
+        {
+          "chunk_id": "Week1_p77",
+          "text": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid",
+          "metadata": {
+            "char_count": 482,
+            "chunk_id": "Week1_p77",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              77
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 116,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 82
+          },
+          "score": 0.2458
+        },
+        {
+          "chunk_id": "Week1_p64",
+          "text": "Words: Word-Word Matrix (term-context)\nA matrixX,n×mwheren=|V|(target words) and\nm=|V c|(context words)\nFor each wordx i inV, count how many times it co-occurs\nwith context wordsx j\nUse a context window of±kwords (to the left/right ofx i)\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia)!\nUsually target and context word vocabularies are the same\nresulting into a square matrix.",
+          "metadata": {
+            "char_count": 408,
+            "chunk_id": "Week1_p64",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "page_number": [
+              64
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week1_Intro_to_vector_exp1_chunks.json",
+            "token_count": 115,
+            "was_split": false,
+            "week": "Week 1",
+            "word_count": 62
+          },
+          "score": 0.1808
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_030",
+      "question": "A bigram model gives the following probabilities: P(arctic | <s>) = 0.6, P(monkeys | arctic) = 0.1, P(are | monkeys) = 0.417, P(my | are) = 0.15, P(favourite | my) = 0.1, P(band | favourite) = 0.1, P(</s> | band) = 0.9. Using this model, what is the probability of the sentence 'arctic monkeys are my favourite band', including the start token <s> and end token </s>, rounded to 5 decimal places?",
+      "answer": "To find P(x), we need to multiply the probabilities of each bigram in the sentence: P(x) = P(arctic | <s>) * P(monkeys | arctic) * P(are | monkeys) * P(my | are) * P(favourite | my) * P(band | favourite) * P(<s>) * P(</s>). \n\nP(x) = 0.6 * 0.1 * 0.417 * 0.15 * 0.1 * 0.1 * 0.9 * 0.0007 * 0.00003.",
+      "route": "answer",
+      "top_score": 4.369,
+      "seconds": 96.236,
+      "context_tokens": 469,
+      "n_chunks": 4,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_p30",
+          "text": "Bigram LM: From counts to probabilities\nFrom the bigram count matrix, compute probabilities by dividing\neach cell by the appropriate unigram count for its row.\nBigram probabilities (rows:x i−1, cols:x i):\narctic monkeys are my favourite band\narctic 0 0.1 0.02 0 0 0\nmonkeys 0 0 0.417 0.0017 0.008 0\nare 0.0008 0.0113 0 0.15 0.0063 0.00003\nmy 0 0.0007 0 0.0003 0.1 0.0017\nfavourite 0 0.002 0 0 0 0.1\nband 0 0 0.015 0.05 0 0",
+          "metadata": {
+            "char_count": 422,
+            "chunk_id": "Week2_p30",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              30
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 153,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 79
+          },
+          "score": 4.369
+        },
+        {
+          "chunk_id": "Week2_p29",
+          "text": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i−1, cols:x i):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0",
+          "metadata": {
+            "char_count": 313,
+            "chunk_id": "Week2_p29",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              29
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 93,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 74
+          },
+          "score": 3.7515
+        },
+        {
+          "chunk_id": "Week2_p31",
+          "text": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i−1, cols:x i):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0\nx= [arctic,monkeys,are,my,favourite,band]\nWhat isP(x)?",
+          "metadata": {
+            "char_count": 368,
+            "chunk_id": "Week2_p31",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              31
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 115,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 78
+          },
+          "score": 3.6886
+        },
+        {
+          "chunk_id": "Week2_p32",
+          "text": "Example: Bigram language model\nx= [arctic,monkeys,are,my,favourite,band]\nP(x) =P(monkeys|arctic)P(are|monkeys)P(my|are)\nP(favourite|my)P(band|favourite)\n= c(arctic,monkeys)\nc(arctic) ... c(favourite,band)\nc(favourite)\n= 0.1·0.417·0.15·0.1·0.1\n= 0.00006255",
+          "metadata": {
+            "char_count": 255,
+            "chunk_id": "Week2_p32",
+            "chunking_strategy": "exp1",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp1_page_level",
+            "filename": "Week2_Language_modelling.pdf",
+            "page_number": [
+              32
+            ],
+            "part_count": 1,
+            "part_index": 1,
+            "source_file": "Week2_Language_modelling_exp1_chunks.json",
+            "token_count": 108,
+            "was_split": false,
+            "week": "Week 2",
+            "word_count": 19
+          },
+          "score": 3.5378
+        }
+      ]
+    }
+  ]
+}

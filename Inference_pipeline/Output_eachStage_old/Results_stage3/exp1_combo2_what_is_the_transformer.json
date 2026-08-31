@@ -1,0 +1,2370 @@
+{
+  "stage": "3-ranking-retrieval",
+  "settings": {
+    "strategy": "exp1",
+    "embedder": "bge",
+    "collection": "exp1_page_level_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "rank_smoothing": 60,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  },
+  "settings_hash": "61a24d0f4258",
+  "input": {
+    "question": "What is the Transformer?",
+    "from_stage1": "/workspace/Data/Results_stage2/exp1_what_is_the_transformer.json"
+  },
+  "stages": {
+    "dense": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_p38",
+        "week": "Week 3",
+        "page_number": [
+          38
+        ],
+        "token_count": 11
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week3_p35",
+        "week": "Week 3",
+        "page_number": [
+          35
+        ],
+        "token_count": 25
+      },
+      {
+        "rank": 3,
+        "chunk_id": "Week5_p24",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78
+      },
+      {
+        "rank": 4,
+        "chunk_id": "Week3_p65",
+        "week": "Week 3",
+        "page_number": [
+          65
+        ],
+        "token_count": 4
+      },
+      {
+        "rank": 5,
+        "chunk_id": "Week3_p40",
+        "week": "Week 3",
+        "page_number": [
+          40
+        ],
+        "token_count": 48
+      },
+      {
+        "rank": 6,
+        "chunk_id": "Week6_p2",
+        "week": "Week 6",
+        "page_number": [
+          2
+        ],
+        "token_count": 58
+      },
+      {
+        "rank": 7,
+        "chunk_id": "Week3_p39",
+        "week": "Week 3",
+        "page_number": [
+          39
+        ],
+        "token_count": 25
+      },
+      {
+        "rank": 8,
+        "chunk_id": "Week5_p4",
+        "week": "Week 5",
+        "page_number": [
+          4
+        ],
+        "token_count": 89
+      },
+      {
+        "rank": 9,
+        "chunk_id": "Week3_p57",
+        "week": "Week 3",
+        "page_number": [
+          57
+        ],
+        "token_count": 72
+      },
+      {
+        "rank": 10,
+        "chunk_id": "Week3_p36",
+        "week": "Week 3",
+        "page_number": [
+          36
+        ],
+        "token_count": 92
+      },
+      {
+        "rank": 11,
+        "chunk_id": "Week13_p7",
+        "week": "Week 13",
+        "page_number": [
+          7
+        ],
+        "token_count": 146
+      },
+      {
+        "rank": 12,
+        "chunk_id": "Week5_p5",
+        "week": "Week 5",
+        "page_number": [
+          5
+        ],
+        "token_count": 46
+      },
+      {
+        "rank": 13,
+        "chunk_id": "Week3_p32",
+        "week": "Week 3",
+        "page_number": [
+          32
+        ],
+        "token_count": 81
+      },
+      {
+        "rank": 14,
+        "chunk_id": "Week8_p25",
+        "week": "Week 8",
+        "page_number": [
+          25
+        ],
+        "token_count": 81
+      },
+      {
+        "rank": 15,
+        "chunk_id": "Week11_p22",
+        "week": "Week 11",
+        "page_number": [
+          22
+        ],
+        "token_count": 80
+      },
+      {
+        "rank": 16,
+        "chunk_id": "Week11_p1",
+        "week": "Week 11",
+        "page_number": [
+          1
+        ],
+        "token_count": 25
+      },
+      {
+        "rank": 17,
+        "chunk_id": "Week5_p6",
+        "week": "Week 5",
+        "page_number": [
+          6
+        ],
+        "token_count": 37
+      },
+      {
+        "rank": 18,
+        "chunk_id": "Week8_p21",
+        "week": "Week 8",
+        "page_number": [
+          21
+        ],
+        "token_count": 122
+      },
+      {
+        "rank": 19,
+        "chunk_id": "Week13_p4",
+        "week": "Week 13",
+        "page_number": [
+          4
+        ],
+        "token_count": 190
+      },
+      {
+        "rank": 20,
+        "chunk_id": "Week13_p5",
+        "week": "Week 13",
+        "page_number": [
+          5
+        ],
+        "token_count": 135
+      },
+      {
+        "rank": 21,
+        "chunk_id": "Week6_p20",
+        "week": "Week 6",
+        "page_number": [
+          20
+        ],
+        "token_count": 57
+      },
+      {
+        "rank": 22,
+        "chunk_id": "Week11_p2",
+        "week": "Week 11",
+        "page_number": [
+          2
+        ],
+        "token_count": 95
+      },
+      {
+        "rank": 23,
+        "chunk_id": "Week3_p34",
+        "week": "Week 3",
+        "page_number": [
+          34
+        ],
+        "token_count": 95
+      },
+      {
+        "rank": 24,
+        "chunk_id": "Week5_p2",
+        "week": "Week 5",
+        "page_number": [
+          2
+        ],
+        "token_count": 119
+      },
+      {
+        "rank": 25,
+        "chunk_id": "Week3_p1",
+        "week": "Week 3",
+        "page_number": [
+          1
+        ],
+        "token_count": 23
+      },
+      {
+        "rank": 26,
+        "chunk_id": "Week3_p41",
+        "week": "Week 3",
+        "page_number": [
+          41
+        ],
+        "token_count": 49
+      },
+      {
+        "rank": 27,
+        "chunk_id": "Week3_p63",
+        "week": "Week 3",
+        "page_number": [
+          63
+        ],
+        "token_count": 97
+      },
+      {
+        "rank": 28,
+        "chunk_id": "Week5_p3",
+        "week": "Week 5",
+        "page_number": [
+          3
+        ],
+        "token_count": 29
+      },
+      {
+        "rank": 29,
+        "chunk_id": "Week8_p29",
+        "week": "Week 8",
+        "page_number": [
+          29
+        ],
+        "token_count": 135
+      },
+      {
+        "rank": 30,
+        "chunk_id": "Week8_p36",
+        "week": "Week 8",
+        "page_number": [
+          36
+        ],
+        "token_count": 137
+      },
+      {
+        "rank": 31,
+        "chunk_id": "Week8_p10",
+        "week": "Week 8",
+        "page_number": [
+          10
+        ],
+        "token_count": 125
+      },
+      {
+        "rank": 32,
+        "chunk_id": "Week8_p20",
+        "week": "Week 8",
+        "page_number": [
+          20
+        ],
+        "token_count": 118
+      },
+      {
+        "rank": 33,
+        "chunk_id": "Week12_p64",
+        "week": "Week 12",
+        "page_number": [
+          64
+        ],
+        "token_count": 63
+      },
+      {
+        "rank": 34,
+        "chunk_id": "Week8_p11",
+        "week": "Week 8",
+        "page_number": [
+          11
+        ],
+        "token_count": 140
+      },
+      {
+        "rank": 35,
+        "chunk_id": "Week12_p3",
+        "week": "Week 12",
+        "page_number": [
+          3
+        ],
+        "token_count": 37
+      },
+      {
+        "rank": 36,
+        "chunk_id": "Week3_p61",
+        "week": "Week 3",
+        "page_number": [
+          61
+        ],
+        "token_count": 70
+      },
+      {
+        "rank": 37,
+        "chunk_id": "Week3_p59",
+        "week": "Week 3",
+        "page_number": [
+          59
+        ],
+        "token_count": 89
+      },
+      {
+        "rank": 38,
+        "chunk_id": "Week5_p11",
+        "week": "Week 5",
+        "page_number": [
+          11
+        ],
+        "token_count": 66
+      },
+      {
+        "rank": 39,
+        "chunk_id": "Week11_p4",
+        "week": "Week 11",
+        "page_number": [
+          4
+        ],
+        "token_count": 119
+      },
+      {
+        "rank": 40,
+        "chunk_id": "Week2_p2",
+        "week": "Week 2",
+        "page_number": [
+          2
+        ],
+        "token_count": 13
+      },
+      {
+        "rank": 41,
+        "chunk_id": "Week8_p40",
+        "week": "Week 8",
+        "page_number": [
+          40
+        ],
+        "token_count": 113
+      },
+      {
+        "rank": 42,
+        "chunk_id": "Week3_p19",
+        "week": "Week 3",
+        "page_number": [
+          19
+        ],
+        "token_count": 35
+      },
+      {
+        "rank": 43,
+        "chunk_id": "Week12_p22",
+        "week": "Week 12",
+        "page_number": [
+          22
+        ],
+        "token_count": 64
+      },
+      {
+        "rank": 44,
+        "chunk_id": "Week7_p48",
+        "week": "Week 7",
+        "page_number": [
+          48
+        ],
+        "token_count": 65
+      },
+      {
+        "rank": 45,
+        "chunk_id": "Week5_p8",
+        "week": "Week 5",
+        "page_number": [
+          8
+        ],
+        "token_count": 30
+      },
+      {
+        "rank": 46,
+        "chunk_id": "Week13_p17",
+        "week": "Week 13",
+        "page_number": [
+          17
+        ],
+        "token_count": 158
+      },
+      {
+        "rank": 47,
+        "chunk_id": "Week8_p22",
+        "week": "Week 8",
+        "page_number": [
+          22
+        ],
+        "token_count": 174
+      },
+      {
+        "rank": 48,
+        "chunk_id": "Week1_p1",
+        "week": "Week 1",
+        "page_number": [
+          1
+        ],
+        "token_count": 44
+      },
+      {
+        "rank": 49,
+        "chunk_id": "Week2_p1",
+        "week": "Week 2",
+        "page_number": [
+          1
+        ],
+        "token_count": 44
+      },
+      {
+        "rank": 50,
+        "chunk_id": "Week1_p32",
+        "week": "Week 1",
+        "page_number": [
+          32
+        ],
+        "token_count": 20
+      },
+      {
+        "rank": 51,
+        "chunk_id": "Week7_p4",
+        "week": "Week 7",
+        "page_number": [
+          4
+        ],
+        "token_count": 108
+      },
+      {
+        "rank": 52,
+        "chunk_id": "Week8_p2",
+        "week": "Week 8",
+        "page_number": [
+          2
+        ],
+        "token_count": 115
+      },
+      {
+        "rank": 53,
+        "chunk_id": "Week8_p31",
+        "week": "Week 8",
+        "page_number": [
+          31
+        ],
+        "token_count": 123
+      },
+      {
+        "rank": 54,
+        "chunk_id": "Week5_p7",
+        "week": "Week 5",
+        "page_number": [
+          7
+        ],
+        "token_count": 41
+      },
+      {
+        "rank": 55,
+        "chunk_id": "Week1_p5",
+        "week": "Week 1",
+        "page_number": [
+          5
+        ],
+        "token_count": 131
+      },
+      {
+        "rank": 56,
+        "chunk_id": "Week7_p49",
+        "week": "Week 7",
+        "page_number": [
+          49
+        ],
+        "token_count": 75
+      },
+      {
+        "rank": 57,
+        "chunk_id": "Week8_p19",
+        "week": "Week 8",
+        "page_number": [
+          19
+        ],
+        "token_count": 131
+      },
+      {
+        "rank": 58,
+        "chunk_id": "Week6_p11",
+        "week": "Week 6",
+        "page_number": [
+          11
+        ],
+        "token_count": 70
+      },
+      {
+        "rank": 59,
+        "chunk_id": "Week5_p15",
+        "week": "Week 5",
+        "page_number": [
+          15
+        ],
+        "token_count": 38
+      },
+      {
+        "rank": 60,
+        "chunk_id": "Week7_p22",
+        "week": "Week 7",
+        "page_number": [
+          22
+        ],
+        "token_count": 122
+      }
+    ],
+    "sparse": [
+      {
+        "rank": 1,
+        "chunk_id": "Week7_p31",
+        "week": "Week 7",
+        "page_number": [
+          31
+        ],
+        "token_count": 62
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week12_p18",
+        "week": "Week 12",
+        "page_number": [
+          18
+        ],
+        "token_count": 70
+      },
+      {
+        "rank": 3,
+        "chunk_id": "Week12_p27",
+        "week": "Week 12",
+        "page_number": [
+          27
+        ],
+        "token_count": 48
+      },
+      {
+        "rank": 4,
+        "chunk_id": "Week2_p23",
+        "week": "Week 2",
+        "page_number": [
+          23
+        ],
+        "token_count": 96
+      },
+      {
+        "rank": 5,
+        "chunk_id": "Week3_p26",
+        "week": "Week 3",
+        "page_number": [
+          26
+        ],
+        "token_count": 52
+      },
+      {
+        "rank": 6,
+        "chunk_id": "Week7_p37",
+        "week": "Week 7",
+        "page_number": [
+          37
+        ],
+        "token_count": 118
+      },
+      {
+        "rank": 7,
+        "chunk_id": "Week6_p35",
+        "week": "Week 6",
+        "page_number": [
+          35
+        ],
+        "token_count": 30
+      },
+      {
+        "rank": 8,
+        "chunk_id": "Week2_p4",
+        "week": "Week 2",
+        "page_number": [
+          4
+        ],
+        "token_count": 41
+      },
+      {
+        "rank": 9,
+        "chunk_id": "Week5_p15",
+        "week": "Week 5",
+        "page_number": [
+          15
+        ],
+        "token_count": 38
+      },
+      {
+        "rank": 10,
+        "chunk_id": "Week8_p20",
+        "week": "Week 8",
+        "page_number": [
+          20
+        ],
+        "token_count": 118
+      },
+      {
+        "rank": 11,
+        "chunk_id": "Week7_p8",
+        "week": "Week 7",
+        "page_number": [
+          8
+        ],
+        "token_count": 136
+      },
+      {
+        "rank": 12,
+        "chunk_id": "Week5_p12",
+        "week": "Week 5",
+        "page_number": [
+          12
+        ],
+        "token_count": 43
+      },
+      {
+        "rank": 13,
+        "chunk_id": "Week7_p4",
+        "week": "Week 7",
+        "page_number": [
+          4
+        ],
+        "token_count": 108
+      },
+      {
+        "rank": 14,
+        "chunk_id": "Week13_p6",
+        "week": "Week 13",
+        "page_number": [
+          6
+        ],
+        "token_count": 138
+      },
+      {
+        "rank": 15,
+        "chunk_id": "Week7_p28",
+        "week": "Week 7",
+        "page_number": [
+          28
+        ],
+        "token_count": 60
+      },
+      {
+        "rank": 16,
+        "chunk_id": "Week1_p58",
+        "week": "Week 1",
+        "page_number": [
+          58
+        ],
+        "token_count": 63
+      },
+      {
+        "rank": 17,
+        "chunk_id": "Week13_p11",
+        "week": "Week 13",
+        "page_number": [
+          11
+        ],
+        "token_count": 163
+      },
+      {
+        "rank": 18,
+        "chunk_id": "Week8_p11",
+        "week": "Week 8",
+        "page_number": [
+          11
+        ],
+        "token_count": 140
+      },
+      {
+        "rank": 19,
+        "chunk_id": "Week2_p47",
+        "week": "Week 2",
+        "page_number": [
+          47
+        ],
+        "token_count": 46
+      },
+      {
+        "rank": 20,
+        "chunk_id": "Week3_p56",
+        "week": "Week 3",
+        "page_number": [
+          56
+        ],
+        "token_count": 7
+      },
+      {
+        "rank": 21,
+        "chunk_id": "Week2_p36",
+        "week": "Week 2",
+        "page_number": [
+          36
+        ],
+        "token_count": 59
+      },
+      {
+        "rank": 22,
+        "chunk_id": "Week8_p39",
+        "week": "Week 8",
+        "page_number": [
+          39
+        ],
+        "token_count": 138
+      },
+      {
+        "rank": 23,
+        "chunk_id": "Week12_p19",
+        "week": "Week 12",
+        "page_number": [
+          19
+        ],
+        "token_count": 105
+      },
+      {
+        "rank": 24,
+        "chunk_id": "Week3_p11",
+        "week": "Week 3",
+        "page_number": [
+          11
+        ],
+        "token_count": 46
+      },
+      {
+        "rank": 25,
+        "chunk_id": "Week12_p46",
+        "week": "Week 12",
+        "page_number": [
+          46
+        ],
+        "token_count": 86
+      },
+      {
+        "rank": 26,
+        "chunk_id": "Week6_p6",
+        "week": "Week 6",
+        "page_number": [
+          6
+        ],
+        "token_count": 29
+      },
+      {
+        "rank": 27,
+        "chunk_id": "Week7_p36",
+        "week": "Week 7",
+        "page_number": [
+          36
+        ],
+        "token_count": 111
+      },
+      {
+        "rank": 28,
+        "chunk_id": "Week9_p3",
+        "week": "Week 9",
+        "page_number": [
+          3
+        ],
+        "token_count": 90
+      },
+      {
+        "rank": 29,
+        "chunk_id": "Week13_p15",
+        "week": "Week 13",
+        "page_number": [
+          15
+        ],
+        "token_count": 158
+      },
+      {
+        "rank": 30,
+        "chunk_id": "Week7_p21",
+        "week": "Week 7",
+        "page_number": [
+          21
+        ],
+        "token_count": 143
+      },
+      {
+        "rank": 31,
+        "chunk_id": "Week7_p30",
+        "week": "Week 7",
+        "page_number": [
+          30
+        ],
+        "token_count": 126
+      },
+      {
+        "rank": 32,
+        "chunk_id": "Week12_p22",
+        "week": "Week 12",
+        "page_number": [
+          22
+        ],
+        "token_count": 64
+      },
+      {
+        "rank": 33,
+        "chunk_id": "Week6_p11",
+        "week": "Week 6",
+        "page_number": [
+          11
+        ],
+        "token_count": 70
+      },
+      {
+        "rank": 34,
+        "chunk_id": "Week10_p40",
+        "week": "Week 10",
+        "page_number": [
+          40
+        ],
+        "token_count": 69
+      },
+      {
+        "rank": 35,
+        "chunk_id": "Week12_p28",
+        "week": "Week 12",
+        "page_number": [
+          28
+        ],
+        "token_count": 67
+      },
+      {
+        "rank": 36,
+        "chunk_id": "Week12_p2",
+        "week": "Week 12",
+        "page_number": [
+          2
+        ],
+        "token_count": 79
+      },
+      {
+        "rank": 37,
+        "chunk_id": "Week13_p18",
+        "week": "Week 13",
+        "page_number": [
+          18
+        ],
+        "token_count": 161
+      },
+      {
+        "rank": 38,
+        "chunk_id": "Week12_p66",
+        "week": "Week 12",
+        "page_number": [
+          66
+        ],
+        "token_count": 77
+      },
+      {
+        "rank": 39,
+        "chunk_id": "Week9_p24",
+        "week": "Week 9",
+        "page_number": [
+          24
+        ],
+        "token_count": 62
+      },
+      {
+        "rank": 40,
+        "chunk_id": "Week12_p29",
+        "week": "Week 12",
+        "page_number": [
+          29
+        ],
+        "token_count": 59
+      },
+      {
+        "rank": 41,
+        "chunk_id": "Week10_p33",
+        "week": "Week 10",
+        "page_number": [
+          33
+        ],
+        "token_count": 54
+      },
+      {
+        "rank": 42,
+        "chunk_id": "Week3_p49",
+        "week": "Week 3",
+        "page_number": [
+          49
+        ],
+        "token_count": 62
+      },
+      {
+        "rank": 43,
+        "chunk_id": "Week3_p44",
+        "week": "Week 3",
+        "page_number": [
+          44
+        ],
+        "token_count": 119
+      },
+      {
+        "rank": 44,
+        "chunk_id": "Week4_p26",
+        "week": "Week 4",
+        "page_number": [
+          26
+        ],
+        "token_count": 134
+      },
+      {
+        "rank": 45,
+        "chunk_id": "Week3_p28",
+        "week": "Week 3",
+        "page_number": [
+          28
+        ],
+        "token_count": 78
+      },
+      {
+        "rank": 46,
+        "chunk_id": "Week3_p62",
+        "week": "Week 3",
+        "page_number": [
+          62
+        ],
+        "token_count": 118
+      },
+      {
+        "rank": 47,
+        "chunk_id": "Week8_p42",
+        "week": "Week 8",
+        "page_number": [
+          42
+        ],
+        "token_count": 120
+      },
+      {
+        "rank": 48,
+        "chunk_id": "Week7_p12",
+        "week": "Week 7",
+        "page_number": [
+          12
+        ],
+        "token_count": 137
+      },
+      {
+        "rank": 49,
+        "chunk_id": "Week13_p14",
+        "week": "Week 13",
+        "page_number": [
+          14
+        ],
+        "token_count": 140
+      },
+      {
+        "rank": 50,
+        "chunk_id": "Week8_p25",
+        "week": "Week 8",
+        "page_number": [
+          25
+        ],
+        "token_count": 81
+      },
+      {
+        "rank": 51,
+        "chunk_id": "Week12_p21",
+        "week": "Week 12",
+        "page_number": [
+          21
+        ],
+        "token_count": 50
+      },
+      {
+        "rank": 52,
+        "chunk_id": "Week11_p6",
+        "week": "Week 11",
+        "page_number": [
+          6
+        ],
+        "token_count": 34
+      },
+      {
+        "rank": 53,
+        "chunk_id": "Week3_p53",
+        "week": "Week 3",
+        "page_number": [
+          53
+        ],
+        "token_count": 64
+      },
+      {
+        "rank": 54,
+        "chunk_id": "Week12_p54",
+        "week": "Week 12",
+        "page_number": [
+          54
+        ],
+        "token_count": 63
+      },
+      {
+        "rank": 55,
+        "chunk_id": "Week12_p7",
+        "week": "Week 12",
+        "page_number": [
+          7
+        ],
+        "token_count": 45
+      },
+      {
+        "rank": 56,
+        "chunk_id": "Week1_p28",
+        "week": "Week 1",
+        "page_number": [
+          28
+        ],
+        "token_count": 88
+      },
+      {
+        "rank": 57,
+        "chunk_id": "Week7_p10",
+        "week": "Week 7",
+        "page_number": [
+          10
+        ],
+        "token_count": 103
+      },
+      {
+        "rank": 58,
+        "chunk_id": "Week12_p11",
+        "week": "Week 12",
+        "page_number": [
+          11
+        ],
+        "token_count": 53
+      },
+      {
+        "rank": 59,
+        "chunk_id": "Week7_p45",
+        "week": "Week 7",
+        "page_number": [
+          45
+        ],
+        "token_count": 102
+      },
+      {
+        "rank": 60,
+        "chunk_id": "Week5_p18",
+        "week": "Week 5",
+        "page_number": [
+          18
+        ],
+        "token_count": 51
+      }
+    ],
+    "merged": [
+      {
+        "rank": 1,
+        "chunk_id": "Week8_p20",
+        "week": "Week 8",
+        "page_number": [
+          20
+        ],
+        "token_count": 118
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week8_p11",
+        "week": "Week 8",
+        "page_number": [
+          11
+        ],
+        "token_count": 140
+      },
+      {
+        "rank": 3,
+        "chunk_id": "Week5_p15",
+        "week": "Week 5",
+        "page_number": [
+          15
+        ],
+        "token_count": 38
+      },
+      {
+        "rank": 4,
+        "chunk_id": "Week7_p4",
+        "week": "Week 7",
+        "page_number": [
+          4
+        ],
+        "token_count": 108
+      },
+      {
+        "rank": 5,
+        "chunk_id": "Week8_p25",
+        "week": "Week 8",
+        "page_number": [
+          25
+        ],
+        "token_count": 81
+      },
+      {
+        "rank": 6,
+        "chunk_id": "Week12_p22",
+        "week": "Week 12",
+        "page_number": [
+          22
+        ],
+        "token_count": 64
+      },
+      {
+        "rank": 7,
+        "chunk_id": "Week6_p11",
+        "week": "Week 6",
+        "page_number": [
+          11
+        ],
+        "token_count": 70
+      },
+      {
+        "rank": 8,
+        "chunk_id": "Week3_p38",
+        "week": "Week 3",
+        "page_number": [
+          38
+        ],
+        "token_count": 11
+      },
+      {
+        "rank": 9,
+        "chunk_id": "Week7_p31",
+        "week": "Week 7",
+        "page_number": [
+          31
+        ],
+        "token_count": 62
+      },
+      {
+        "rank": 10,
+        "chunk_id": "Week3_p35",
+        "week": "Week 3",
+        "page_number": [
+          35
+        ],
+        "token_count": 25
+      },
+      {
+        "rank": 11,
+        "chunk_id": "Week12_p18",
+        "week": "Week 12",
+        "page_number": [
+          18
+        ],
+        "token_count": 70
+      },
+      {
+        "rank": 12,
+        "chunk_id": "Week5_p24",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78
+      },
+      {
+        "rank": 13,
+        "chunk_id": "Week12_p27",
+        "week": "Week 12",
+        "page_number": [
+          27
+        ],
+        "token_count": 48
+      },
+      {
+        "rank": 14,
+        "chunk_id": "Week3_p65",
+        "week": "Week 3",
+        "page_number": [
+          65
+        ],
+        "token_count": 4
+      },
+      {
+        "rank": 15,
+        "chunk_id": "Week2_p23",
+        "week": "Week 2",
+        "page_number": [
+          23
+        ],
+        "token_count": 96
+      },
+      {
+        "rank": 16,
+        "chunk_id": "Week3_p40",
+        "week": "Week 3",
+        "page_number": [
+          40
+        ],
+        "token_count": 48
+      },
+      {
+        "rank": 17,
+        "chunk_id": "Week3_p26",
+        "week": "Week 3",
+        "page_number": [
+          26
+        ],
+        "token_count": 52
+      },
+      {
+        "rank": 18,
+        "chunk_id": "Week6_p2",
+        "week": "Week 6",
+        "page_number": [
+          2
+        ],
+        "token_count": 58
+      },
+      {
+        "rank": 19,
+        "chunk_id": "Week7_p37",
+        "week": "Week 7",
+        "page_number": [
+          37
+        ],
+        "token_count": 118
+      },
+      {
+        "rank": 20,
+        "chunk_id": "Week3_p39",
+        "week": "Week 3",
+        "page_number": [
+          39
+        ],
+        "token_count": 25
+      },
+      {
+        "rank": 21,
+        "chunk_id": "Week6_p35",
+        "week": "Week 6",
+        "page_number": [
+          35
+        ],
+        "token_count": 30
+      },
+      {
+        "rank": 22,
+        "chunk_id": "Week5_p4",
+        "week": "Week 5",
+        "page_number": [
+          4
+        ],
+        "token_count": 89
+      },
+      {
+        "rank": 23,
+        "chunk_id": "Week2_p4",
+        "week": "Week 2",
+        "page_number": [
+          4
+        ],
+        "token_count": 41
+      },
+      {
+        "rank": 24,
+        "chunk_id": "Week3_p57",
+        "week": "Week 3",
+        "page_number": [
+          57
+        ],
+        "token_count": 72
+      },
+      {
+        "rank": 25,
+        "chunk_id": "Week3_p36",
+        "week": "Week 3",
+        "page_number": [
+          36
+        ],
+        "token_count": 92
+      },
+      {
+        "rank": 26,
+        "chunk_id": "Week13_p7",
+        "week": "Week 13",
+        "page_number": [
+          7
+        ],
+        "token_count": 146
+      },
+      {
+        "rank": 27,
+        "chunk_id": "Week7_p8",
+        "week": "Week 7",
+        "page_number": [
+          8
+        ],
+        "token_count": 136
+      },
+      {
+        "rank": 28,
+        "chunk_id": "Week5_p5",
+        "week": "Week 5",
+        "page_number": [
+          5
+        ],
+        "token_count": 46
+      },
+      {
+        "rank": 29,
+        "chunk_id": "Week5_p12",
+        "week": "Week 5",
+        "page_number": [
+          12
+        ],
+        "token_count": 43
+      },
+      {
+        "rank": 30,
+        "chunk_id": "Week3_p32",
+        "week": "Week 3",
+        "page_number": [
+          32
+        ],
+        "token_count": 81
+      },
+      {
+        "rank": 31,
+        "chunk_id": "Week13_p6",
+        "week": "Week 13",
+        "page_number": [
+          6
+        ],
+        "token_count": 138
+      },
+      {
+        "rank": 32,
+        "chunk_id": "Week11_p22",
+        "week": "Week 11",
+        "page_number": [
+          22
+        ],
+        "token_count": 80
+      },
+      {
+        "rank": 33,
+        "chunk_id": "Week7_p28",
+        "week": "Week 7",
+        "page_number": [
+          28
+        ],
+        "token_count": 60
+      },
+      {
+        "rank": 34,
+        "chunk_id": "Week11_p1",
+        "week": "Week 11",
+        "page_number": [
+          1
+        ],
+        "token_count": 25
+      },
+      {
+        "rank": 35,
+        "chunk_id": "Week1_p58",
+        "week": "Week 1",
+        "page_number": [
+          58
+        ],
+        "token_count": 63
+      },
+      {
+        "rank": 36,
+        "chunk_id": "Week5_p6",
+        "week": "Week 5",
+        "page_number": [
+          6
+        ],
+        "token_count": 37
+      },
+      {
+        "rank": 37,
+        "chunk_id": "Week13_p11",
+        "week": "Week 13",
+        "page_number": [
+          11
+        ],
+        "token_count": 163
+      },
+      {
+        "rank": 38,
+        "chunk_id": "Week8_p21",
+        "week": "Week 8",
+        "page_number": [
+          21
+        ],
+        "token_count": 122
+      },
+      {
+        "rank": 39,
+        "chunk_id": "Week13_p4",
+        "week": "Week 13",
+        "page_number": [
+          4
+        ],
+        "token_count": 190
+      },
+      {
+        "rank": 40,
+        "chunk_id": "Week2_p47",
+        "week": "Week 2",
+        "page_number": [
+          47
+        ],
+        "token_count": 46
+      },
+      {
+        "rank": 41,
+        "chunk_id": "Week13_p5",
+        "week": "Week 13",
+        "page_number": [
+          5
+        ],
+        "token_count": 135
+      },
+      {
+        "rank": 42,
+        "chunk_id": "Week3_p56",
+        "week": "Week 3",
+        "page_number": [
+          56
+        ],
+        "token_count": 7
+      },
+      {
+        "rank": 43,
+        "chunk_id": "Week6_p20",
+        "week": "Week 6",
+        "page_number": [
+          20
+        ],
+        "token_count": 57
+      },
+      {
+        "rank": 44,
+        "chunk_id": "Week2_p36",
+        "week": "Week 2",
+        "page_number": [
+          36
+        ],
+        "token_count": 59
+      },
+      {
+        "rank": 45,
+        "chunk_id": "Week11_p2",
+        "week": "Week 11",
+        "page_number": [
+          2
+        ],
+        "token_count": 95
+      },
+      {
+        "rank": 46,
+        "chunk_id": "Week8_p39",
+        "week": "Week 8",
+        "page_number": [
+          39
+        ],
+        "token_count": 138
+      },
+      {
+        "rank": 47,
+        "chunk_id": "Week3_p34",
+        "week": "Week 3",
+        "page_number": [
+          34
+        ],
+        "token_count": 95
+      },
+      {
+        "rank": 48,
+        "chunk_id": "Week12_p19",
+        "week": "Week 12",
+        "page_number": [
+          19
+        ],
+        "token_count": 105
+      },
+      {
+        "rank": 49,
+        "chunk_id": "Week5_p2",
+        "week": "Week 5",
+        "page_number": [
+          2
+        ],
+        "token_count": 119
+      },
+      {
+        "rank": 50,
+        "chunk_id": "Week3_p11",
+        "week": "Week 3",
+        "page_number": [
+          11
+        ],
+        "token_count": 46
+      },
+      {
+        "rank": 51,
+        "chunk_id": "Week3_p1",
+        "week": "Week 3",
+        "page_number": [
+          1
+        ],
+        "token_count": 23
+      },
+      {
+        "rank": 52,
+        "chunk_id": "Week12_p46",
+        "week": "Week 12",
+        "page_number": [
+          46
+        ],
+        "token_count": 86
+      },
+      {
+        "rank": 53,
+        "chunk_id": "Week3_p41",
+        "week": "Week 3",
+        "page_number": [
+          41
+        ],
+        "token_count": 49
+      },
+      {
+        "rank": 54,
+        "chunk_id": "Week6_p6",
+        "week": "Week 6",
+        "page_number": [
+          6
+        ],
+        "token_count": 29
+      },
+      {
+        "rank": 55,
+        "chunk_id": "Week3_p63",
+        "week": "Week 3",
+        "page_number": [
+          63
+        ],
+        "token_count": 97
+      },
+      {
+        "rank": 56,
+        "chunk_id": "Week7_p36",
+        "week": "Week 7",
+        "page_number": [
+          36
+        ],
+        "token_count": 111
+      },
+      {
+        "rank": 57,
+        "chunk_id": "Week5_p3",
+        "week": "Week 5",
+        "page_number": [
+          3
+        ],
+        "token_count": 29
+      },
+      {
+        "rank": 58,
+        "chunk_id": "Week9_p3",
+        "week": "Week 9",
+        "page_number": [
+          3
+        ],
+        "token_count": 90
+      },
+      {
+        "rank": 59,
+        "chunk_id": "Week8_p29",
+        "week": "Week 8",
+        "page_number": [
+          29
+        ],
+        "token_count": 135
+      },
+      {
+        "rank": 60,
+        "chunk_id": "Week13_p15",
+        "week": "Week 13",
+        "page_number": [
+          15
+        ],
+        "token_count": 158
+      }
+    ],
+    "reranked": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_p35",
+        "week": "Week 3",
+        "page_number": [
+          35
+        ],
+        "token_count": 25,
+        "score": 3.9943
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week3_p39",
+        "week": "Week 3",
+        "page_number": [
+          39
+        ],
+        "token_count": 25,
+        "score": 2.6887
+      },
+      {
+        "rank": 3,
+        "chunk_id": "Week3_p40",
+        "week": "Week 3",
+        "page_number": [
+          40
+        ],
+        "token_count": 48,
+        "score": 1.755
+      },
+      {
+        "rank": 4,
+        "chunk_id": "Week3_p38",
+        "week": "Week 3",
+        "page_number": [
+          38
+        ],
+        "token_count": 11,
+        "score": 1.7281
+      },
+      {
+        "rank": 5,
+        "chunk_id": "Week3_p36",
+        "week": "Week 3",
+        "page_number": [
+          36
+        ],
+        "token_count": 92,
+        "score": 1.341
+      },
+      {
+        "rank": 6,
+        "chunk_id": "Week11_p22",
+        "week": "Week 11",
+        "page_number": [
+          22
+        ],
+        "token_count": 80,
+        "score": 0.9272
+      },
+      {
+        "rank": 7,
+        "chunk_id": "Week5_p24",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78,
+        "score": 0.0603
+      },
+      {
+        "rank": 8,
+        "chunk_id": "Week6_p2",
+        "week": "Week 6",
+        "page_number": [
+          2
+        ],
+        "token_count": 58,
+        "score": -0.182
+      },
+      {
+        "rank": 9,
+        "chunk_id": "Week5_p4",
+        "week": "Week 5",
+        "page_number": [
+          4
+        ],
+        "token_count": 89,
+        "score": -0.4624
+      },
+      {
+        "rank": 10,
+        "chunk_id": "Week5_p5",
+        "week": "Week 5",
+        "page_number": [
+          5
+        ],
+        "token_count": 46,
+        "score": -0.9202
+      },
+      {
+        "rank": 11,
+        "chunk_id": "Week3_p32",
+        "week": "Week 3",
+        "page_number": [
+          32
+        ],
+        "token_count": 81,
+        "score": -1.411
+      },
+      {
+        "rank": 12,
+        "chunk_id": "Week8_p29",
+        "week": "Week 8",
+        "page_number": [
+          29
+        ],
+        "token_count": 135,
+        "score": -1.5464
+      },
+      {
+        "rank": 13,
+        "chunk_id": "Week5_p6",
+        "week": "Week 5",
+        "page_number": [
+          6
+        ],
+        "token_count": 37,
+        "score": -1.5505
+      },
+      {
+        "rank": 14,
+        "chunk_id": "Week8_p25",
+        "week": "Week 8",
+        "page_number": [
+          25
+        ],
+        "token_count": 81,
+        "score": -1.9629
+      },
+      {
+        "rank": 15,
+        "chunk_id": "Week3_p57",
+        "week": "Week 3",
+        "page_number": [
+          57
+        ],
+        "token_count": 72,
+        "score": -2.1387
+      },
+      {
+        "rank": 16,
+        "chunk_id": "Week8_p21",
+        "week": "Week 8",
+        "page_number": [
+          21
+        ],
+        "token_count": 122,
+        "score": -2.6753
+      },
+      {
+        "rank": 17,
+        "chunk_id": "Week6_p20",
+        "week": "Week 6",
+        "page_number": [
+          20
+        ],
+        "token_count": 57,
+        "score": -2.9989
+      },
+      {
+        "rank": 18,
+        "chunk_id": "Week5_p2",
+        "week": "Week 5",
+        "page_number": [
+          2
+        ],
+        "token_count": 119,
+        "score": -3.1234
+      },
+      {
+        "rank": 19,
+        "chunk_id": "Week13_p4",
+        "week": "Week 13",
+        "page_number": [
+          4
+        ],
+        "token_count": 190,
+        "score": -3.3485
+      },
+      {
+        "rank": 20,
+        "chunk_id": "Week11_p2",
+        "week": "Week 11",
+        "page_number": [
+          2
+        ],
+        "token_count": 95,
+        "score": -3.5626
+      },
+      {
+        "rank": 21,
+        "chunk_id": "Week3_p34",
+        "week": "Week 3",
+        "page_number": [
+          34
+        ],
+        "token_count": 95,
+        "score": -3.5626
+      },
+      {
+        "rank": 22,
+        "chunk_id": "Week3_p65",
+        "week": "Week 3",
+        "page_number": [
+          65
+        ],
+        "token_count": 4,
+        "score": -3.7031
+      },
+      {
+        "rank": 23,
+        "chunk_id": "Week13_p7",
+        "week": "Week 13",
+        "page_number": [
+          7
+        ],
+        "token_count": 146,
+        "score": -3.7414
+      },
+      {
+        "rank": 24,
+        "chunk_id": "Week3_p63",
+        "week": "Week 3",
+        "page_number": [
+          63
+        ],
+        "token_count": 97,
+        "score": -5.6782
+      },
+      {
+        "rank": 25,
+        "chunk_id": "Week13_p5",
+        "week": "Week 13",
+        "page_number": [
+          5
+        ],
+        "token_count": 135,
+        "score": -5.7426
+      },
+      {
+        "rank": 26,
+        "chunk_id": "Week3_p41",
+        "week": "Week 3",
+        "page_number": [
+          41
+        ],
+        "token_count": 49,
+        "score": -7.7191
+      },
+      {
+        "rank": 27,
+        "chunk_id": "Week3_p1",
+        "week": "Week 3",
+        "page_number": [
+          1
+        ],
+        "token_count": 23,
+        "score": -7.8474
+      },
+      {
+        "rank": 28,
+        "chunk_id": "Week11_p1",
+        "week": "Week 11",
+        "page_number": [
+          1
+        ],
+        "token_count": 25,
+        "score": -8.0385
+      },
+      {
+        "rank": 29,
+        "chunk_id": "Week9_p3",
+        "week": "Week 9",
+        "page_number": [
+          3
+        ],
+        "token_count": 90,
+        "score": -8.6952
+      },
+      {
+        "rank": 30,
+        "chunk_id": "Week7_p4",
+        "week": "Week 7",
+        "page_number": [
+          4
+        ],
+        "token_count": 108,
+        "score": -8.9125
+      },
+      {
+        "rank": 31,
+        "chunk_id": "Week13_p6",
+        "week": "Week 13",
+        "page_number": [
+          6
+        ],
+        "token_count": 138,
+        "score": -9.1166
+      },
+      {
+        "rank": 32,
+        "chunk_id": "Week8_p20",
+        "week": "Week 8",
+        "page_number": [
+          20
+        ],
+        "token_count": 118,
+        "score": -9.2515
+      },
+      {
+        "rank": 33,
+        "chunk_id": "Week5_p3",
+        "week": "Week 5",
+        "page_number": [
+          3
+        ],
+        "token_count": 29,
+        "score": -9.3936
+      },
+      {
+        "rank": 34,
+        "chunk_id": "Week7_p8",
+        "week": "Week 7",
+        "page_number": [
+          8
+        ],
+        "token_count": 136,
+        "score": -10.2407
+      },
+      {
+        "rank": 35,
+        "chunk_id": "Week8_p11",
+        "week": "Week 8",
+        "page_number": [
+          11
+        ],
+        "token_count": 140,
+        "score": -10.681
+      },
+      {
+        "rank": 36,
+        "chunk_id": "Week6_p11",
+        "week": "Week 6",
+        "page_number": [
+          11
+        ],
+        "token_count": 70,
+        "score": -11.0446
+      },
+      {
+        "rank": 37,
+        "chunk_id": "Week5_p12",
+        "week": "Week 5",
+        "page_number": [
+          12
+        ],
+        "token_count": 43,
+        "score": -11.0773
+      },
+      {
+        "rank": 38,
+        "chunk_id": "Week12_p18",
+        "week": "Week 12",
+        "page_number": [
+          18
+        ],
+        "token_count": 70,
+        "score": -11.1208
+      },
+      {
+        "rank": 39,
+        "chunk_id": "Week13_p11",
+        "week": "Week 13",
+        "page_number": [
+          11
+        ],
+        "token_count": 163,
+        "score": -11.152
+      },
+      {
+        "rank": 40,
+        "chunk_id": "Week13_p15",
+        "week": "Week 13",
+        "page_number": [
+          15
+        ],
+        "token_count": 158,
+        "score": -11.1546
+      },
+      {
+        "rank": 41,
+        "chunk_id": "Week3_p56",
+        "week": "Week 3",
+        "page_number": [
+          56
+        ],
+        "token_count": 7,
+        "score": -11.1793
+      },
+      {
+        "rank": 42,
+        "chunk_id": "Week1_p58",
+        "week": "Week 1",
+        "page_number": [
+          58
+        ],
+        "token_count": 63,
+        "score": -11.2273
+      },
+      {
+        "rank": 43,
+        "chunk_id": "Week12_p22",
+        "week": "Week 12",
+        "page_number": [
+          22
+        ],
+        "token_count": 64,
+        "score": -11.2399
+      },
+      {
+        "rank": 44,
+        "chunk_id": "Week7_p36",
+        "week": "Week 7",
+        "page_number": [
+          36
+        ],
+        "token_count": 111,
+        "score": -11.2647
+      },
+      {
+        "rank": 45,
+        "chunk_id": "Week3_p11",
+        "week": "Week 3",
+        "page_number": [
+          11
+        ],
+        "token_count": 46,
+        "score": -11.2709
+      },
+      {
+        "rank": 46,
+        "chunk_id": "Week2_p47",
+        "week": "Week 2",
+        "page_number": [
+          47
+        ],
+        "token_count": 46,
+        "score": -11.2731
+      },
+      {
+        "rank": 47,
+        "chunk_id": "Week5_p15",
+        "week": "Week 5",
+        "page_number": [
+          15
+        ],
+        "token_count": 38,
+        "score": -11.2773
+      },
+      {
+        "rank": 48,
+        "chunk_id": "Week6_p35",
+        "week": "Week 6",
+        "page_number": [
+          35
+        ],
+        "token_count": 30,
+        "score": -11.3121
+      },
+      {
+        "rank": 49,
+        "chunk_id": "Week8_p39",
+        "week": "Week 8",
+        "page_number": [
+          39
+        ],
+        "token_count": 138,
+        "score": -11.3349
+      },
+      {
+        "rank": 50,
+        "chunk_id": "Week7_p37",
+        "week": "Week 7",
+        "page_number": [
+          37
+        ],
+        "token_count": 118,
+        "score": -11.347
+      },
+      {
+        "rank": 51,
+        "chunk_id": "Week7_p28",
+        "week": "Week 7",
+        "page_number": [
+          28
+        ],
+        "token_count": 60,
+        "score": -11.3474
+      },
+      {
+        "rank": 52,
+        "chunk_id": "Week6_p6",
+        "week": "Week 6",
+        "page_number": [
+          6
+        ],
+        "token_count": 29,
+        "score": -11.3485
+      },
+      {
+        "rank": 53,
+        "chunk_id": "Week12_p27",
+        "week": "Week 12",
+        "page_number": [
+          27
+        ],
+        "token_count": 48,
+        "score": -11.3544
+      },
+      {
+        "rank": 54,
+        "chunk_id": "Week3_p26",
+        "week": "Week 3",
+        "page_number": [
+          26
+        ],
+        "token_count": 52,
+        "score": -11.3571
+      },
+      {
+        "rank": 55,
+        "chunk_id": "Week12_p19",
+        "week": "Week 12",
+        "page_number": [
+          19
+        ],
+        "token_count": 105,
+        "score": -11.3574
+      },
+      {
+        "rank": 56,
+        "chunk_id": "Week12_p46",
+        "week": "Week 12",
+        "page_number": [
+          46
+        ],
+        "token_count": 86,
+        "score": -11.3921
+      },
+      {
+        "rank": 57,
+        "chunk_id": "Week2_p4",
+        "week": "Week 2",
+        "page_number": [
+          4
+        ],
+        "token_count": 41,
+        "score": -11.3978
+      },
+      {
+        "rank": 58,
+        "chunk_id": "Week2_p23",
+        "week": "Week 2",
+        "page_number": [
+          23
+        ],
+        "token_count": 96,
+        "score": -11.4012
+      },
+      {
+        "rank": 59,
+        "chunk_id": "Week7_p31",
+        "week": "Week 7",
+        "page_number": [
+          31
+        ],
+        "token_count": 62,
+        "score": -11.4036
+      },
+      {
+        "rank": 60,
+        "chunk_id": "Week2_p36",
+        "week": "Week 2",
+        "page_number": [
+          36
+        ],
+        "token_count": 59,
+        "score": -11.4754
+      }
+    ]
+  },
+  "output": {
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_p35",
+        "week": "Week 3",
+        "page_number": [
+          35
+        ],
+        "token_count": 25,
+        "content": "TransformersTransformer: a neural architecture built entirely on attention mechanisms.\nCredits: The Illustrated Transformer –Jay Alammar"
+      },
+      {
+        "rank": 2,
+        "chunk_id": "Week3_p39",
+        "week": "Week 3",
+        "page_number": [
+          39
+        ],
+        "token_count": 25,
+        "content": "Transformer ArchitectureOpening the box with even more details … \nWord embeddings\noutputs of the previous encoder layer"
+      },
+      {
+        "rank": 3,
+        "chunk_id": "Week3_p40",
+        "week": "Week 3",
+        "page_number": [
+          40
+        ],
+        "token_count": 48,
+        "content": "Transformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time"
+      },
+      {
+        "rank": 4,
+        "chunk_id": "Week3_p38",
+        "week": "Week 3",
+        "page_number": [
+          38
+        ],
+        "token_count": 11,
+        "content": "Transformer ArchitectureOpening the boxwith more details …"
+      },
+      {
+        "rank": 5,
+        "chunk_id": "Week3_p36",
+        "week": "Week 3",
+        "page_number": [
+          36
+        ],
+        "token_count": 92,
+        "content": "Transformer ArchitectureCore Components Encoder Stack:produces contextual representations of the input.Decoder Stack: usesthe encoder's output and previous decoder outputs to generate the target sequence.Self-Attention Mechanism: allowsthe model to focus on different parts of the input sequence when processing each token.Feed-Forward Neural Networks: apply nonlinear transformation per token.Key idea: no recurrence, no convolution —only attention."
+      },
+      {
+        "rank": 6,
+        "chunk_id": "Week11_p22",
+        "week": "Week 11",
+        "page_number": [
+          22
+        ],
+        "token_count": 80,
+        "content": "SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain–then-fine-tune paradigm in NLP .Achieved state-of-the-art performance (2018) across diverse NLU tasks."
+      },
+      {
+        "rank": 7,
+        "chunk_id": "Week5_p24",
+        "week": "Week 5",
+        "page_number": [
+          24
+        ],
+        "token_count": 78,
+        "content": "The Dominant Architecture of Transformer-based \nLLMs\n GPT-3:\n– Decoder-only Transformer\n– Causal attention\n– LayerNorm, residual blocks, etc.\n Modern LLMs (LLaMA, Mistral, DeepSeek, etc.):\n– Same core architecture\n– Sometimes improved normalization or efficiency\n– Minor architectural refinements\n– But the core is the same."
+      },
+      {
+        "rank": 8,
+        "chunk_id": "Week6_p2",
+        "week": "Week 6",
+        "page_number": [
+          2
+        ],
+        "token_count": 58,
+        "content": "Agenda\n1. The Foundation: Transformer Architecture & Training \nParadigms\n2. From Raw Models to Useful Assistants: Instruction \nTuning\n3. Human Alignment: RLHF, PPO, and DPO\n4. Mixture of Experts Models\n5. Reasoning Models: Chain-of-Thought and Beyond"
+      }
+    ],
+    "context_tokens": 417,
+    "budget_underfilled": false,
+    "modes_top_n": {
+      "dense": [
+        "Week3_p38",
+        "Week3_p35",
+        "Week5_p24",
+        "Week3_p65",
+        "Week3_p40"
+      ],
+      "sparse": [
+        "Week7_p31",
+        "Week12_p18",
+        "Week12_p27",
+        "Week2_p23",
+        "Week3_p26"
+      ],
+      "combo1": [
+        "Week8_p20",
+        "Week8_p11",
+        "Week5_p15",
+        "Week7_p4",
+        "Week8_p25"
+      ],
+      "combo2": [
+        "Week3_p35",
+        "Week3_p39",
+        "Week3_p40",
+        "Week3_p38",
+        "Week3_p36"
+      ]
+    }
+  },
+  "seconds": {
+    "dense": 0.023,
+    "sparse": 0.002,
+    "rerank": 22.056
+  }
+}

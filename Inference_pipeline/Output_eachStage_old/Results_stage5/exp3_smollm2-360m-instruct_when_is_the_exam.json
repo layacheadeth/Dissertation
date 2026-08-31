@@ -1,0 +1,68 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp3",
+    "embedder": "bge",
+    "collection": "exp3_section_aware_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "6aa041040927",
+  "input": {
+    "question": "When is the exam?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The exam is scheduled for the last week of the semester.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week13_sec2_part1",
+        "week": "Week 13",
+        "page_number": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "token_count": 459,
+        "score": -5.8729
+      }
+    ],
+    "context_tokens": 459
+  },
+  "seconds": {
+    "search": 2.305,
+    "answer": 7.72,
+    "total": 10.02
+  }
+}

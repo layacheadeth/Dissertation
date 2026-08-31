@@ -1,0 +1,76 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp1",
+    "embedder": "bge",
+    "collection": "exp1_page_level_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "2d79e68033be",
+  "self_check": 0.9635,
+  "input": {
+    "question": "What can you do?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.5541,
+        "chunk_id": "Week7_p28",
+        "week": "Week 7",
+        "page_number": [
+          28
+        ],
+        "token_count": 60,
+        "content": "Classification → easy, measure exact match\n Translation → more difficult, many different good translations\nwith the same semantics\n Dialogue → even more difficult, many different good responses\nwith different semantics (e.g. the one to many )\n What about summarisation? Question answering?\nHow hard is evaluation (nowadays)?"
+      },
+      {
+        "rank": 2,
+        "score": 0.5484,
+        "chunk_id": "Week12_p27",
+        "week": "Week 12",
+        "page_number": [
+          27
+        ],
+        "token_count": 48,
+        "content": "Reading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence."
+      },
+      {
+        "rank": 3,
+        "score": 0.5427,
+        "chunk_id": "Week6_p8",
+        "week": "Week 6",
+        "page_number": [
+          8
+        ],
+        "token_count": 130,
+        "content": "HHH - Guiding Principles\n●Helpful\no Comprehend user's intentions\no Execute requested actions correctly\no Offers relevant supporting information and alternate solutions\n●Honest\no Provide truthful, meaningful and specific information\no Admits when it is unable to produce relevant or correct information\no Advertises when a hypothesis is presented instead of fact\n●Harmless\no Generated content does not contain offensive terminology or ideology\no Avoids providing information on potentially dangerous activities\no Refuses to participate in unlawful activities\no Can detect attempts to deceive and manipulate to extract illicit information\nhttps://toloka.ai/blog/rlhf-for-honest-ai/"
+      },
+      {
+        "rank": 4,
+        "score": 0.5423,
+        "chunk_id": "Week6_p27",
+        "week": "Week 6",
+        "page_number": [
+          27
+        ],
+        "token_count": 40,
+        "content": "Discussion question\n “If you had a fixed budget, when would it be smarter to \nspend it on a bigger model, and when would it be smarter \nto let the model think longer at test time?”"
+      },
+      {
+        "rank": 5,
+        "score": 0.5414,
+        "chunk_id": "Week1_p49",
+        "week": "Week 1",
+        "page_number": [
+          49
+        ],
+        "token_count": 113,
+        "content": "Text Processing: Other pre-processing options\nOther pre-processing steps may follow: lowercasing,\npunctuation/number/stop/infrequent word removal and\nstemming\nTokenised text:\nAs far as I’m concerned , this is Lynch at his best . ‘ Lost Highway ’ is a\ndark , violent , surreal , beautiful , hallucinatory masterpiece . 10 out of\n10 stars .\nPre-processed text (lowercase, punctuation/stop word removal):\nconcerned lynch best lost highway dark violent surreal beautiful\nhallucinatory masterpiece 10 10 stars"
+      }
+    ],
+    "context_tokens": 391
+  },
+  "seconds": 0.177
+}

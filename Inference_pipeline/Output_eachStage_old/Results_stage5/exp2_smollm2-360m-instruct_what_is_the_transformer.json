@@ -1,0 +1,54 @@
+{
+  "stage": "5-pipeline",
+  "settings": {
+    "strategy": "exp2",
+    "embedder": "bge",
+    "collection": "exp2_fixed_overlap_bge",
+    "combo": "combo2",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "route_meta": true,
+    "relevance_floor": null,
+    "retrieve_only": false
+  },
+  "settings_hash": "959361a1defe",
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "route": "answer",
+    "answer": "The Transformer is a type of neural network architecture that was introduced in 2017 by Vaswani et al. It is a transformer-based model that is designed to learn long-range dependencies between words in a sequence.",
+    "is_no_answer": false,
+    "is_out_of_scope": false,
+    "searched": true,
+    "chunks": [
+      {
+        "rank": 1,
+        "chunk_id": "Week3_sw_6",
+        "week": "Week 3",
+        "page_number": [
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "token_count": null,
+        "score": -1.1175
+      }
+    ],
+    "context_tokens": 0
+  },
+  "seconds": {
+    "search": 5.93,
+    "answer": 20.79,
+    "total": 26.72
+  }
+}

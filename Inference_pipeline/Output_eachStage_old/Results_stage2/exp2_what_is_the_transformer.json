@@ -1,0 +1,107 @@
+{
+  "stage": "2-vector-search",
+  "settings": {
+    "strategy": "exp2",
+    "embedder": "bge",
+    "collection": "exp2_fixed_overlap_bge",
+    "k": 5,
+    "week": null
+  },
+  "settings_hash": "427700caef70",
+  "self_check": 0.991,
+  "input": {
+    "question": "What is the Transformer?"
+  },
+  "output": {
+    "hits": [
+      {
+        "rank": 1,
+        "score": 0.6074,
+        "chunk_id": "Week3_sw_6",
+        "week": "Week 3",
+        "page_number": [
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43
+        ],
+        "token_count": null,
+        "content": "summarisation, completionExamples: GPT-x, LLaMa, every other new model today\nTransformersTransformer: a neural architecture built entirely on attention mechanisms.\nCredits: The Illustrated Transformer –Jay Alammar\nTransformer ArchitectureCore Components Encoder Stack:produces contextual representations of the input.Decoder Stack: usesthe encoder's output and previous decoder outputs to generate the target sequence.Self-Attention Mechanism: allowsthe model to focus on different parts of the input sequence when processing each token.Feed-Forward Neural Networks: apply nonlinear transformation per token.Key idea: no recurrence, no convolution —only attention.\nWhy Self-Attention Replaced RNNsIn RNNs: –Information between distant tokens flows through O(n) steps –Computation is sequential, i.e.hard to parallelizeIn Transformers: –Self-attention allows each token to directly attend to all other tokens in the sequence, producing contextualised representations–Computation within each layer is parallelizable across sequence positionsTrade-off: –Attention time and memory scale quadraticallywith sequence length 𝑂(𝑛2)\nTransformer ArchitectureOpening the boxwith more details …\nTransformer ArchitectureOpening the box with even more details … \nWord embeddings\noutputs of the previous encoder layer\nTransformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time\nInner workings of the Encoder1.Self-attentionmixes information across positions.2.Residual+ LayerNorm3.FNN(position-wise) applies nonlinear transformation independently to each token.4.Residual+ LayerNorm\nInner workings of the EncoderImportant propertiesTo k e n s a r e p r o c e s s e d i n p a r a l l e l within each layer To k e n s a r e c o u p l e d v i a a t t e n t i o n Deeper layers refine contextual representationsResidual connections preserve signal and ease optimisation.\nSelf-Attention Mechanism Scaled Dot-Product AttentionFor input \nInterpretation:–Q, K, Vare learned linear projections of the input–Attention scores measure similarity in projected space–Scaling prevents dot products from growing large in high dimensions"
+      },
+      {
+        "rank": 2,
+        "score": 0.5559,
+        "chunk_id": "Week13_sw_2",
+        "week": "Week 13",
+        "page_number": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "token_count": null,
+        "content": "to other tokens, while \npositional encodings supply order .\nMini practice\nWhich property makes Transformer encoders easier to \nparallelise than RNN encoders?\nA. Causal masking\nB. No recurrence over positions\nC. Learned output labels\nAnswer: B\nCommon trap\nDo not claim Transformers have no sequence order; they model order \nafter positional information is added.\nCOMP64702 Revision Lecture\nPositional encoding\nTransformers\nSelf-attention alone treats positions symmetrically; order must be injected.\ntoken embeddings + position vectors order-aware \nrepresentations\nSinusoidal\nFixed function of position\nNot learned\nCan extrapolate by formula\nClassic Transformer design\nLearned\nTrainable position vectors\nUpdated with model weights\nCommon in modern systems\nLimited by trained context length\nWhat can be asked?\nIdentify correct statements about why positional \nencodings are needed and whether they are learned.\nMini practice\nWithout positional encodings, why are “dogs chase cats” \nand “cats chase dogs” hard for plain self-attention?\nAnswer: It lacks an explicit signal for token order.\nCOMP64702 Revision Lecture\nMulti-head attention\nTransformers\nLikely format: dimensions, projections, and what heads do.\nInput\nrepresentations\nQ/K/V\nprojections\nh attention\nheads Concatenate Output\nprojection\nCore idea\nEach head attends using its own \nlearned projections. Heads can focus \non different representation \nsubspaces or relations.\nDimension rule\nA common setup uses d_head = \nd_model / h. The final concatenated \noutput returns to d_model before the \noutput projection.\nCommon trap\nHeads are not separate slices of the \ninput sequence. They process the \nsame sequence through different \nprojections.\nIf d_model = 768 and h = 12, what is the typical head dimension?\nAnswer: 64\nCOMP64702 Revision Lecture\nTransformer architecture families\nTransformers\nKnow the attention pattern, use case, and examples.\nEncoder-only\nExamples: BERT, RoBERTa\nBidirectional self-attention\nBest for NLU: classification, tagging, \nextraction\nPretraining often uses MLM-style objectives\nEncoder–decoder\nExamples: T5, BART\nEncoder represents input\nDecoder generates output\nDecoder uses self-attention + cross-\nattention to encoder output\nDecoder-only\nExamples: GPT-style LLMs\nCausal masked self-attention\nPrompt understanding and generation occur \nin one left-to-right stream\nBERT ≠ autoregressive T5 uses cross-attention GPT uses causal masking\nCOMP64702"
+      },
+      {
+        "rank": 3,
+        "score": 0.5491,
+        "chunk_id": "Week11_sw_1",
+        "week": "Week 11",
+        "page_number": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "token_count": null,
+        "content": "BERT : Bidirectional Encoder Representations from Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester\nTransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT , RoBERT a, DeBERT aEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today\nPrior BERT : ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)–Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs–Feature-based approach: pre-trained representations used as input to task-specific models–Trained on single sentences from 1B word benchmark (Chelbaet al., 2014)\nTrain separate left-to-right and right-to-left LMs Apply as “Pre-trained Embeddings”\nBERT : Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks.\nMasked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions\nNetwork weights are updated based on average CE loss over the sampled tokens\nMasked Language Modelling\nExamplesHe is from Kuala Lumpur, Malaysia.àHe [MASK]from Kuala [MASK], Malaysia.He went to the store. àHe went to the [MASK].\nMLM: Masking Rate and StrategyQ: What is the value of k?–They always use k = 15%.–To o l i t t l e m a s k i n g : c o m p u t a t i"
+      },
+      {
+        "rank": 4,
+        "score": 0.5414,
+        "chunk_id": "Week5_sw_4",
+        "week": "Week 5",
+        "page_number": [
+          23,
+          24,
+          25,
+          26
+        ],
+        "token_count": null,
+        "content": "Instruction tuning\nThe Dominant Architecture of Transformer-based \nLLMs\n GPT-3:\n– Decoder-only Transformer\n– Causal attention\n– LayerNorm, residual blocks, etc.\n Modern LLMs (LLaMA, Mistral, DeepSeek, etc.):\n– Same core architecture\n– Sometimes improved normalization or efficiency\n– Minor architectural refinements\n– But the core is the same.\nFoundation vs Instruction Tuned Models\nFoundation\n● Coherent, fluent generation\n● Completion and continuation\n● Vast world knowledge\n● Potentially harmful outputs\n● Difficult to control\n● Misaligned with our values\nInstruction Tuned\n● Foundation ability and more\n● Controllable by prompt\n● Less need to fine-tune\n● Follows any command \n● Slight hit to performance\n● Sensitive to prompt template\nSummary \n Pretraining\n– Large-scale self-supervised learning\n– Autoregressive next-token prediction\n– Trained on massive text corpora\n What It Produces\n– Fluent text\n– World knowledge correlations\n– In-context learning capability\n– Generative foundation model\n What It does NOT Guarantee\n– Instruction following\n– Helpfulness or safety\n– Truthfulness"
+      },
+      {
+        "rank": 5,
+        "score": 0.5382,
+        "chunk_id": "Week5_sw_1",
+        "week": "Week 5",
+        "page_number": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "token_count": null,
+        "content": "Pretraining Large Language Models\nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester\nLearning Outcomes\nDefine LLM pretraining and explain why it is self-supervised.\nCompare Transformer variants (encoder-only, encoder–decoder, decoder-\nonly) and explain why modern LLMs use decoder-only with causal \nattention.\nFormulate the training objective: autoregressive probability factorisation, \ncross-entropy loss, and the difference between training vs inference.\nEvaluate implications: limitations (e.g., hallucinations/bias), the impact of \nscale/compute, and how pretraining connects to adaptation and instruction \ntuning.\nWhere We Are in the Pipeline\n Previously:\n– Transformers\n– BERT\n– Training data for LLMs\n Today:\n– How large language models are pretrained\nTransformer\nEncoder Only\nUses: NLU, classification, feature extraction\nExamples: BERT, RoBERTa, DeBERTa\nEncoder-Decoder\nUses: NLG, translation, summarisation, seq2seq \nmapping\nExamples: T5, Flan-T5, BART\nDecoder Only\nUses: NLG, translation, summarisation, completion\nExamples: GPT-x, LLaMa, every other new model today\nDecoder-Only Architecture\n Modern LLMs:\n– Transformer decoder blocks\n– Causal attention (no access to future tokens)\n– Left-to-right generation\n Contrast with BERT:\n– Bidirectional\n– Masked LM\nGPT series\nGenerative Pretrained Transformer series of models from OpenAI\nThese are decoder transfer language models and can be used for generative tasks.\nGPT (2018)\nGPT-2 (Radford et al., 2019)\n– Decoder-only\n– Pretrained on more data:\n WebText from Reddit (40GB)\n– Good at Generation Tasks\nGPT-3 (Brown et al., 2020)\n– Decoder-only\n– Pretrained on even more data (45TB)\n– Zero-Shot\n– One-Shot\n– Few-Shot\nTraditional Fine-Tuning\nGPT-3 ”In-Context” Learning\nAutoregressive Models and Self-supervised \nLearning\n Autoregressive Models\n– Naturally generative\n– Can produce long coherent text\n– Supports in-context learning\n Self-supervised Learning\n– No manual labels needed.\n– Training signal comes from: (1) text itself; (2) next-token"
+      }
+    ],
+    "context_tokens": 0
+  },
+  "seconds": 0.294
+}

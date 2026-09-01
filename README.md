@@ -6,7 +6,6 @@ Run everything from the project root, in this order.
 
 ```
 pip install -r requirements.txt
-pip install bert-score sacrebleu        # optional, for bert_f1 and bleu in step 4
 ```
 
 Python 3.11. A Hugging Face token is needed for the models: `export HF_TOKEN=...`.

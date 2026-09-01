@@ -14,3 +14,6 @@ faiss_index_minilm_section.bin
 faiss_index_qwen_section.bin
 chroma_db/
 .env
+Backup/
+*.zip
+.gradio/

@@ -9,6 +9,10 @@
     ],
     "char_count": 103,
     "word_count": 12,
+    "token_count": 23,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "word2vec, RNNs, and Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester"
   },
   {
@@ -21,6 +25,10 @@
     ],
     "char_count": 66,
     "word_count": 5,
+    "token_count": 21,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Evolution of Language Models\nN-GramWord2VecRecurrentTransformer???"
   },
   {
@@ -33,6 +41,10 @@
     ],
     "char_count": 253,
     "word_count": 29,
+    "token_count": 59,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "How can we represent word meaning?\nHypernyms\nSynonymsTraditional approach: symbolic lexical resources (e.g., WordNet)Represent meaning via explicit relations:\u2013synonymy (dog \u2194)\u2013hypernymy (dog \u2192 animal)Meaning is discrete, manually defined, and relational"
   },
   {
@@ -45,6 +57,10 @@
     ],
     "char_count": 279,
     "word_count": 31,
+    "token_count": 56,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Limitations of Symbolic Lexical ResourcesStatic and incomplete\u2013Cannot keep pace with new words, senses, or usageExpensive to maintain\u2013Requires expert human annotationLimited notion of similarity\u2013No natural notion of gradedsimilarity\u2013Cannot capture usage-based meaning differences"
   },
   {
@@ -57,6 +73,10 @@
     ],
     "char_count": 290,
     "word_count": 50,
+    "token_count": 104,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Discrete Representation Words treated as atomic symbols (e.g., one-hot encoding).motel [0, 0, 0, 0, 0, 1, 0, 0, 0, \u2026, 0, 0]hotel [0, 0, 1, 0, 0, 0, 0, 0, 0, \u2026, 0, 0]Vocabulary size = dimensionality (can be very large) Key limitation:all words are equally dissimilar\u2013cosine(motel, hotel) = 0"
   },
   {
@@ -69,6 +89,10 @@
     ],
     "char_count": 396,
     "word_count": 50,
+    "token_count": 90,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Distributional Semantics\u201cYou shall know a word by the company it keeps.\u201d (J. R. Firth 1957) Abankis afinancial institutionthat acceptsdepositsfrom the public and createscreditIngeography, the wordbankgenerally refers to the land alongside a body of water.Word meaning inferred from contextual usageSame word, different contexts \u2192 different meaningsMeaning becomes statistical rather than symbolic"
   },
   {
@@ -81,6 +105,10 @@
     ],
     "char_count": 399,
     "word_count": 97,
+    "token_count": 121,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Context-based Word RepresentationsBuild a word\u2013context co-occurrence matrixEach word represented by its surrounding wordsRows= target words; Columns= context words; Values= frequency countscounts I like enjoy deep learning NLP flying . I 0 2 1 0 0 0 0 0 like 2 0 0 1 0 1 0 0 enjoy 1 0 0 0 0 0 1 0 deep 0 1 0 0 1 0 0 0 learning 0 0 0 1 0 0 0 1 NLP 0 1 0 0 0 0 0 1 flying 0 0 1 0 0 0 0 1 . 0 0 0011 10"
   },
   {
@@ -93,6 +121,10 @@
     ],
     "char_count": 345,
     "word_count": 91,
+    "token_count": 108,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Issues with raw co-occurrence count Extremely high-dimensionalSparse and memory-intensiveSensitive to corpus size and frequency effectscounts I like enjoy deep learning NLP flying . I 0 2 1 0 0 0 0 0 like 2 0 0 1 0 1 0 0 enjoy 1 0 0 0 0 0 1 0 deep 0 1 0 0 1 0 0 0 learning 0 0 0 1 0 0 0 1 NLP 0 1 0 0 0 0 0 1 flying 0 0 1 0 0 0 0 1 . 0 0 0011 10"
   },
   {
@@ -105,6 +137,10 @@
     ],
     "char_count": 285,
     "word_count": 37,
+    "token_count": 61,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Low Dimensional Dense Word Embeddings Represent each word as a dense vectorFixed dimensionality (typically 100\u2013300 for word2vec)Learned automatically from data\nCore Idea of word2vec Learn word embeddings by predicting contextReplace explicit co-occurrence counts with a prediction task"
   },
   {
@@ -117,6 +153,10 @@
     ],
     "char_count": 128,
     "word_count": 14,
+    "token_count": 28,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Word2vec ArchitecturesTwo training objectives\u2013CBOW: predict target word from context\u2013Skip-gram: predict context from target word"
   },
   {
@@ -129,6 +169,10 @@
     ],
     "char_count": 189,
     "word_count": 23,
+    "token_count": 46,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Continuous Bag-of-Words (CBOW)Input: surrounding context wordsOutput: target wordContext vectors are summed or averagedEfficient for frequent words\n\u201cGiven the context, what word fits here?\u201d"
   },
   {
@@ -141,6 +185,10 @@
     ],
     "char_count": 200,
     "word_count": 26,
+    "token_count": 45,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Skip-gramInput: target wordOutput: surrounding context wordsGenerates multiple training pairs per wordOften performs better than CBOW for rare words\u201cGiven this word, what words tend to appear nearby?\u201d"
   },
   {
@@ -153,6 +201,10 @@
     ],
     "char_count": 161,
     "word_count": 27,
+    "token_count": 50,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "CBOW vs. Skip-gram\neat an apple every day\nSkip-gram: predict {eat, an, every, day} from apple\neat anapple every day\nCBOW: predict applefrom {eat, an, every, day}"
   },
   {
@@ -163,9 +215,13 @@
     "page_number": [
       14
     ],
-    "char_count": 70,
-    "word_count": 8,
-    "content": "Training objective (CBOW)Objective function \nTaking logarithm, we have"
+    "char_count": 87,
+    "word_count": 25,
+    "token_count": 29,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Training objective (CBOW)Objective function \nTa k i n g l o g a r i t h m , w e h a v e"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -177,6 +233,10 @@
     ],
     "char_count": 168,
     "word_count": 12,
+    "token_count": 34,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Applications of Word EmbeddingsDependency parsingNamed entity recognitionDocument classificationSentiment AnalysisParaphrase DetectionWord ClusteringMachine Translation"
   },
   {
@@ -187,9 +247,13 @@
     "page_number": [
       16
     ],
-    "char_count": 148,
-    "word_count": 18,
-    "content": "Word Analogies Test for linear regularitiesin embedding spaceRelations captured as vector offsetsEmpirical property observed by Mikolovet al. (2014)"
+    "char_count": 152,
+    "word_count": 22,
+    "token_count": 39,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Word Analogies Te s t f o r linear regularitiesin embedding spaceRelations captured as vector offsetsEmpirical property observed by Mikolovet al. (2014)"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -201,6 +265,10 @@
     ],
     "char_count": 151,
     "word_count": 15,
+    "token_count": 28,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Machine Translation\nSimilar concepts align geometrically across languagesEnables bilingual lexicon inductionPrecursor to modern multilingual embeddings"
   },
   {
@@ -213,6 +281,10 @@
     ],
     "char_count": 66,
     "word_count": 5,
+    "token_count": 21,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Evolution of Language Models\nN-GramWord2VecRecurrentTransformer???"
   },
   {
@@ -225,6 +297,10 @@
     ],
     "char_count": 96,
     "word_count": 5,
+    "token_count": 35,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Recurrent Neural Networks (RNNs)\nSource:http://clah.github.io/posts/2015-08-Understanding-LSTMs/"
   },
   {
@@ -237,6 +313,10 @@
     ],
     "char_count": 349,
     "word_count": 57,
+    "token_count": 86,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Recurrent Neural Networks (RNNs) as LMs Recurrent Neural NetworkA network that contains a cycle, i.e., the hidden state is fed back and used at the next time stepThe hidden layer has a recurrent connection: the hidden state at time \ud835\udc61depends on\u2013the current input \ud835\udc65\",and\u2013the hidden state from the previous time step \u210e!\"#\n An Elman network (simple RNN)"
   },
   {
@@ -249,6 +329,10 @@
     ],
     "char_count": 322,
     "word_count": 56,
+    "token_count": 76,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Recurrent Neural Networks (RNNs) as LMs Simple RNNThe sequence is processed one token at a time, from left to rightAt each time step \ud835\udc61, the hidden state is updated using:\u2013the current input \ud835\udc65\ud835\udc61\u2013the previous hidden state \u210e(\ud835\udc61\u22121)The hidden state \u210e\ud835\udc61serves as a summary of past inputs and is used to compute the output at time \ud835\udc61."
   },
   {
@@ -259,9 +343,13 @@
     "page_number": [
       22
     ],
-    "char_count": 263,
-    "word_count": 36,
-    "content": "Recurrent Neural Networks (RNNs) as LMsRNN language models\u2013Process an input sequence one word at a time\u2013To predict the next word from the current word and the previous hidden state\u2013Model the next-word probabilityComputation is sequential, limiting parallelization"
+    "char_count": 302,
+    "word_count": 75,
+    "token_count": 95,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Recurrent Neural Networks (RNNs) as LMsRNN language models\u2013Process an input sequence one word at a time\u2013To p r e d i c t t h e n e x t w o r d f r o m t h e c u r r e n t w o r d a n d t h e p r e v i o u s hidden state\u2013Model the next-word probabilityComputation is sequential, limiting parallelization"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -273,6 +361,10 @@
     ],
     "char_count": 220,
     "word_count": 36,
+    "token_count": 58,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "et: embedding for the current word wt\nht: combination of etand ht-1\nVh: scores over the vocabulary\nLet tbe the current time step; wtis the current word\nyt: probability distribution\nRecurrent Neural Networks (RNNs) as LMs"
   },
   {
@@ -285,6 +377,10 @@
     ],
     "char_count": 153,
     "word_count": 27,
+    "token_count": 40,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "yt[i] : probability that a particular word iis the next word\nLet tbe the current time step; wtis the current word\nRecurrent Neural Networks (RNNs) as LMs"
   },
   {
@@ -297,6 +393,10 @@
     ],
     "char_count": 448,
     "word_count": 67,
+    "token_count": 102,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Recurrent Neural Networks (RNNs) as LMsTraining an RNN as a language model\u2013based on a corpus, model learns to predict the next word at each time step t\u2013model minimisesthe error in predicting the correct next word\u2013error/loss: the difference between a predicted probability distribution and the correct distribution, i.e., cross-entropy, where:correct distribution: one-hot vector for the vocabulary, where the actual next word = 1 and the rest are 0"
   },
   {
@@ -309,6 +409,10 @@
     ],
     "char_count": 229,
     "word_count": 34,
+    "token_count": 52,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "wtwt+1wt+2\nsorryBased on probability assigned to correct next word\nRecurrent Neural Networks (RNNs) as LMsTeacher forcing: the model is given the correct history sequence (rather than what was predicted in the previous time step)"
   },
   {
@@ -321,6 +425,10 @@
     ],
     "char_count": 178,
     "word_count": 29,
+    "token_count": 49,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Gradient descent: used to adjust the weights in the RNN, in order tominimise the CE loss (LCE) averaged over the sequence\nwtwt+1wt+2\nsorry\nRecurrent Neural Networks (RNNs) as LMs"
   },
   {
@@ -333,6 +441,10 @@
     ],
     "char_count": 349,
     "word_count": 59,
+    "token_count": 78,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Use <s>as the first input\nSample a word based on softmax\nUse sampled word as next input\nContinue until </s> is sampled or limit reached\nAutoregressive generation: the word generated at each time step t is conditioned on the word selected by the RNN from the previous time step t-1Sampling using RNN Language Models\nSampling using RNN Language Models"
   },
   {
@@ -345,6 +457,10 @@
     ],
     "char_count": 233,
     "word_count": 31,
+    "token_count": 51,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Autoregressive generation: used in many other applications (apart from predicting the next word), e.g., machine translation, summarisation\nInstead of <s>,richer context is used in other applications\nSampling using RNN Language Models"
   },
   {
@@ -357,6 +473,10 @@
     ],
     "char_count": 267,
     "word_count": 34,
+    "token_count": 56,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Quick ComparisonKey difference between n-gram and RNN language models:\u2013n-gram language models incorporate information from limited context only (i.e., preceding n-1 tokens)\u2013RNN language models: the hidden state can incorporate information from all the preceding words"
   },
   {
@@ -369,6 +489,10 @@
     ],
     "char_count": 386,
     "word_count": 43,
+    "token_count": 84,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Limitations of RNNsProcess input sequentially, slow training and inferenceStruggle with long-range dependencies despite LSTM/GRU improvements.Limited parallelisationduring training, so hard to scale on large datasets.Gradient vanishing/exploding issues over long sequences.Difficult to capture global context effectivelyThere is another type, i.e., transformer language models, up next!"
   },
   {
@@ -381,6 +505,10 @@
     ],
     "char_count": 350,
     "word_count": 39,
+    "token_count": 81,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Turning Point \u2013TransformerProposed by Vaswani et al. (2017) in \u201cAttention is All You Need\u201d.Eliminates recurrence, i.e., no step-by-step token processing.Enables parallelization: trains faster by processing entire sequences simultaneously.Leverages self-attentionto model long-range dependencies.Achieves SOTA results in machine translation and beyond"
   },
   {
@@ -393,6 +521,10 @@
     ],
     "char_count": 66,
     "word_count": 5,
+    "token_count": 21,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Evolution of Language Models\nN-GramWord2VecRecurrentTransformer???"
   },
   {
@@ -403,9 +535,13 @@
     "page_number": [
       34
     ],
-    "char_count": 308,
-    "word_count": 29,
-    "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT, RoBERTa, DeBERTaEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
+    "char_count": 311,
+    "word_count": 32,
+    "token_count": 95,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT , RoBERT a, DeBERT aEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -417,6 +553,10 @@
     ],
     "char_count": 136,
     "word_count": 15,
+    "token_count": 25,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "TransformersTransformer: a neural architecture built entirely on attention mechanisms.\nCredits: The Illustrated Transformer \u2013Jay Alammar"
   },
   {
@@ -429,6 +569,10 @@
     ],
     "char_count": 450,
     "word_count": 53,
+    "token_count": 92,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Transformer ArchitectureCore Components Encoder Stack:produces contextual representations of the input.Decoder Stack: usesthe encoder's output and previous decoder outputs to generate the target sequence.Self-Attention Mechanism: allowsthe model to focus on different parts of the input sequence when processing each token.Feed-Forward Neural Networks: apply nonlinear transformation per token.Key idea: no recurrence, no convolution \u2014only attention."
   },
   {
@@ -441,6 +585,10 @@
     ],
     "char_count": 457,
     "word_count": 54,
+    "token_count": 97,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Why Self-Attention Replaced RNNsIn RNNs: \u2013Information between distant tokens flows through O(n) steps \u2013Computation is sequential, i.e.hard to parallelizeIn Transformers: \u2013Self-attention allows each token to directly attend to all other tokens in the sequence, producing contextualised representations\u2013Computation within each layer is parallelizable across sequence positionsTrade-off: \u2013Attention time and memory scale quadraticallywith sequence length \ud835\udc42(\ud835\udc5b2)"
   },
   {
@@ -453,6 +601,10 @@
     ],
     "char_count": 58,
     "word_count": 7,
+    "token_count": 11,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Transformer ArchitectureOpening the boxwith more details \u2026"
   },
   {
@@ -465,6 +617,10 @@
     ],
     "char_count": 119,
     "word_count": 17,
+    "token_count": 25,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Transformer ArchitectureOpening the box with even more details \u2026 \nWord embeddings\noutputs of the previous encoder layer"
   },
   {
@@ -477,6 +633,10 @@
     ],
     "char_count": 213,
     "word_count": 20,
+    "token_count": 48,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Transformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time"
   },
   {
@@ -489,6 +649,10 @@
     ],
     "char_count": 204,
     "word_count": 17,
+    "token_count": 49,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Inner workings of the Encoder1.Self-attentionmixes information across positions.2.Residual+ LayerNorm3.FNN(position-wise) applies nonlinear transformation independently to each token.4.Residual+ LayerNorm"
   },
   {
@@ -499,9 +663,13 @@
     "page_number": [
       42
     ],
-    "char_count": 239,
-    "word_count": 29,
-    "content": "Inner workings of the EncoderImportant propertiesTokens are processed in parallel within each layer Tokens are coupled via attention Deeper layers refine contextual representationsResidual connections preserve signal and ease optimisation."
+    "char_count": 283,
+    "word_count": 73,
+    "token_count": 86,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Inner workings of the EncoderImportant propertiesTo k e n s a r e p r o c e s s e d i n p a r a l l e l within each layer To k e n s a r e c o u p l e d v i a a t t e n t i o n Deeper layers refine contextual representationsResidual connections preserve signal and ease optimisation."
   },
   {
     "experiment_id": "exp1_page_level",
@@ -513,6 +681,10 @@
     ],
     "char_count": 397,
     "word_count": 48,
+    "token_count": 77,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Self-Attention Mechanism Scaled Dot-Product AttentionFor input \nInterpretation:\u2013Q, K, Vare learned linear projections of the input\u2013Attention scores measure similarity in projected space\u2013Scaling prevents dot products from growing large in high dimensions and stabilisesgradients.\u2013softmaxconverts attention scores into a distribution over the input elements\u2013Output is a weighted sum of value vectors"
   },
   {
@@ -525,6 +697,10 @@
     ],
     "char_count": 594,
     "word_count": 92,
+    "token_count": 119,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Understanding Self-AttentionQuery (Q): The query vector represents the current input or the element for which we are trying to find relevant information. Example: Looking for action movies with strong female leads.Key (K): The key vector represents the criteria or features against which the query is compared. Each element in the input data has an associated key vector. Example: This movie is tagged as action, drama, female lead.Value (V): The value vector holds the actual information or content that might be relevant to the query. Example: The full movie details or recommendation result."
   },
   {
@@ -535,9 +711,13 @@
     "page_number": [
       45
     ],
-    "char_count": 225,
-    "word_count": 29,
-    "content": "Self-attention Visualisation\nSelf-attention allows each tokenfocus on relevant token in the sequence.Token \"it\" attends more to related tokens like \u201dThe animal\"This helps the model capture long-range dependencies and context."
+    "char_count": 228,
+    "word_count": 32,
+    "token_count": 51,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Self-attention Visualisation\nSelf-attention allows each tokenfocus on relevant token in the sequence.To k e n \"it\" attends more to related tokens like \u201dThe animal\"This helps the model capture long-range dependencies and context."
   },
   {
     "experiment_id": "exp1_page_level",
@@ -549,6 +729,10 @@
     ],
     "char_count": 194,
     "word_count": 24,
+    "token_count": 49,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Calculating Self Attention \nStep 1: ComputeQ, K, and VvectorsFor each token, compute\u2013a queryvector\u2013a key vector\u2013a valuevector.Derived by multiplying input embeddings with learned weight matrices"
   },
   {
@@ -561,6 +745,10 @@
     ],
     "char_count": 239,
     "word_count": 31,
+    "token_count": 60,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Calculating Self Attention \nStep 2: Compute attention scores For each token, compute dot products between \u2013Its queryvector and all key vectors\u2013e.g.q\u2081withk\u2081,k\u2082,k\u2083, \u2026Thisproduces one score per token pairLarger dot product \u00e0stronger alignment"
   },
   {
@@ -573,6 +761,10 @@
     ],
     "char_count": 409,
     "word_count": 56,
+    "token_count": 82,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Calculating Self Attention \nStep 3: Scale and normalize attention scoresThe dot product scores from Step 2 can become large, especially with high-dimensional vectors.Divide each score by the square root of the key dimension (e.g.\u221a64 = 8) to prevent large magnitudesThis scaling helps stabilize gradients during training.Apply Softmax\u2013All weights are positive\u2013Converts to a probability distribution over tokens"
   },
   {
@@ -585,6 +777,10 @@
     ],
     "char_count": 338,
     "word_count": 44,
+    "token_count": 62,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Calculating Self Attention \nStep 4: Compute the self-attention outputMultiply each value vector by its attention weight. This emphasizes important words and down-weights irrelevant ones.The result is the updated contextualized representation for the tokenThis representation is then passed to the feed-forward layer for further processing"
   },
   {
@@ -597,6 +793,10 @@
     ],
     "char_count": 235,
     "word_count": 37,
+    "token_count": 55,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "E\ufb03cient computation in matrix termsCalculate the Query, Key, and Valuematrices for the entire context. We do that by packing the embeddings into a matrix X and multiplying it by the weight matrices.\nOutputs of the self-attention layer:"
   },
   {
@@ -609,6 +809,10 @@
     ],
     "char_count": 409,
     "word_count": 56,
+    "token_count": 94,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "A few more ornaments: Multiple heads!\nEach self-attention layer computes multiple attention heads in parallel.Instead of one set of Q/K/V weights, we use multiple sets one per head, i.e.\u201cmulti-head attention\u201dEach head learns to capture different aspects or patterns in the data.Intuition: enables the model to attend to different representation subspaces simultaneously (e.g.river \u2018bank\u2019vs. financial \u2018bank\u2019 )"
   },
   {
@@ -621,6 +825,10 @@
     ],
     "char_count": 245,
     "word_count": 36,
+    "token_count": 54,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "A few caveats: Multiple heads!\nEach attention head produces its own output matrix (Z\u2080, Z\u2081, ..., Z\u2087).These outputs are computed independently in different learned projection subspaces and can model diverse relational patterns from the same input."
   },
   {
@@ -633,6 +841,10 @@
     ],
     "char_count": 284,
     "word_count": 43,
+    "token_count": 64,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Combining Outputs from Multiple Heads\nConcatenate the outputs (Z\u2080, Z\u2081, ..., Z\u2087) from all attention heads.Multiply the combined matrix by a learnable output projection matrix Wo.This gives the final output Z, which integrates diverse attention patterns and is passed to the next layer."
   },
   {
@@ -645,6 +857,10 @@
     ],
     "char_count": 25,
     "word_count": 6,
+    "token_count": 7,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "What is missing so far \u2026?"
   },
   {
@@ -655,9 +871,13 @@
     "page_number": [
       57
     ],
-    "char_count": 300,
-    "word_count": 38,
-    "content": "Another ornament: Positional encodings\nTransformers lack a built-in notion of word order.To encode position information, we add a positional vectorto each input embedding.In the original Transformer, fixed sinusoidal positional encodings were used (i.e. sinusoidal functions of different frequencies)"
+    "char_count": 305,
+    "word_count": 43,
+    "token_count": 72,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Another ornament: Positional encodings\nTransformers lack a built-in notion of word order.To e n c o d e position information, we add a positional vectorto each input embedding.In the original Transformer, fixed sinusoidal positional encodings were used (i.e. sinusoidal functions of different frequencies)"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -667,9 +887,13 @@
     "page_number": [
       58
     ],
-    "char_count": 361,
-    "word_count": 49,
-    "content": "Another ornament: Residuals\nTo stabilize training in deep networks, each sub-layer is wrapped with a residual connection.In each sub-layer (self-attention or FFN), the input is added to the sub-layer output.The output is then passed through a layer normalization step.Residual connections improve gradient flow and facilitate optimization in deep architectures."
+    "char_count": 388,
+    "word_count": 76,
+    "token_count": 101,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Another ornament: Residuals\nTo s t a b i l i z e t r a i n i n g i n d e e p n e t w o r k s , each sub-layer is wrapped with a residual connection.In each sub-layer (self-attention or FFN), the input is added to the sub-layer output.The output is then passed through a layer normalization step.Residual connections improve gradient flow and facilitate optimization in deep architectures."
   },
   {
     "experiment_id": "exp1_page_level",
@@ -681,6 +905,10 @@
     ],
     "char_count": 435,
     "word_count": 54,
+    "token_count": 89,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Cross Attention: allows the decoder to attend to encoder outputs when generating each tokenOutput Generation: each decoder layer combines the following to produce representations used to predict the next token\u2013masked self-attention\u2013encoder\u2013decoder (cross) attention\u2013a feed-forward networkMasked Self-Attention: ensures each position can only attend to previously generated tokens (prevents access to future tokens)\nThe Decoding Process"
   },
   {
@@ -693,6 +921,10 @@
     ],
     "char_count": 268,
     "word_count": 34,
+    "token_count": 63,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Masking in the DecoderThe decoder\u2019s self-attention can only look at earlier tokens (i.e.not future ones).This prevents information leakage from future tokens during training.Implemented by masking future positions, setting their attention scores to -infbefore softmax."
   },
   {
@@ -705,6 +937,10 @@
     ],
     "char_count": 332,
     "word_count": 38,
+    "token_count": 70,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Cross AttentionThe decoder attends to the encoder\u2019s output representations to generate predictions.The top encoder layer produces contextualized representations (used as keysand valuesin cross-attention).These are fed into the decoder\u2019s cross-attentionlayer.This helps the decoder focus on relevant input positionsduring generation."
   },
   {
@@ -715,9 +951,13 @@
     "page_number": [
       62
     ],
-    "char_count": 519,
-    "word_count": 68,
-    "content": "From Decoder to Output TokenTraining time:the full targetsequenceis known. We use teacher forcing, feeding the correct previous tokens, to compute next-token predictions.Inference time: output is generated autoregressively, one token at a time. Each predicted token is fed back into the decoder.Linear Layer: Projects the decoder output to the vocabulary size.SoftmaxFunction: Converts logits into probability distributions over the vocabulary.Token Selection: selects the token (e.g., via greedy decoding or sampling)."
+    "char_count": 520,
+    "word_count": 69,
+    "token_count": 118,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "From Decoder to Output T okenTraining time:the full targetsequenceis known. We use teacher forcing, feeding the correct previous tokens, to compute next-token predictions.Inference time: output is generated autoregressively, one token at a time. Each predicted token is fed back into the decoder.Linear Layer: Projects the decoder output to the vocabulary size.SoftmaxFunction: Converts logits into probability distributions over the vocabulary.Token Selection: selects the token (e.g., via greedy decoding or sampling)."
   },
   {
     "experiment_id": "exp1_page_level",
@@ -729,6 +969,10 @@
     ],
     "char_count": 430,
     "word_count": 58,
+    "token_count": 97,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "How Transformers Learn: the Training ProcessLoss Function: cross-entropy loss is used to measure how far the predicted token probabilities are from the true target tokens. Lower loss indicates better predictions.Backpropagation: gradients of the loss are computed and used to update model parameters (e.g., via Adam optimizer).Datasets: trained on paired input\u2013output sequences (e.g., source and target sentences for translation)."
   },
   {
@@ -741,6 +985,10 @@
     ],
     "char_count": 411,
     "word_count": 44,
+    "token_count": 103,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "SummaryCore Idea: Overcomes limitations of RNNs and LSTMs (e.g., sequential bottlenecks, long-range dependencies) through global self-attention.Key Components: Self-Attention, Multi-Head Attention, Encoder-Decoder Structure, Positional EncodingWhy It Works:\u2013Short path length between tokens (i.e.O(1) per layer)\u2013Fully parallelizable across sequence positions\u2013Scales effectively to very large models and datasets"
   },
   {
@@ -753,6 +1001,10 @@
     ],
     "char_count": 34,
     "word_count": 4,
+    "token_count": 4,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Building Transformers from Scratch"
   }
 ]

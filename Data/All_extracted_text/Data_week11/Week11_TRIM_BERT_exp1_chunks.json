@@ -7,9 +7,13 @@
     "page_number": [
       1
     ],
-    "char_count": 132,
-    "word_count": 14,
-    "content": "BERT: Bidirectional Encoder Representations from Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester"
+    "char_count": 133,
+    "word_count": 15,
+    "token_count": 25,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "BERT : Bidirectional Encoder Representations from Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -19,9 +23,13 @@
     "page_number": [
       2
     ],
-    "char_count": 308,
-    "word_count": 29,
-    "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT, RoBERTa, DeBERTaEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
+    "char_count": 311,
+    "word_count": 32,
+    "token_count": 95,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT , RoBERT a, DeBERT aEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -31,9 +39,13 @@
     "page_number": [
       3
     ],
-    "char_count": 398,
-    "word_count": 49,
-    "content": "Prior BERT: ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)\u2013Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs\u2013Feature-based approach: pre-trained representations used as input to task-specific models\u2013Trained on single sentences from 1B word benchmark (Chelbaet al., 2014)\nTrain separate left-to-right and right-to-left LMs Apply as \u201cPre-trained Embeddings\u201d"
+    "char_count": 399,
+    "word_count": 50,
+    "token_count": 115,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Prior BERT : ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)\u2013Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs\u2013Feature-based approach: pre-trained representations used as input to task-specific models\u2013Trained on single sentences from 1B word benchmark (Chelbaet al., 2014)\nTrain separate left-to-right and right-to-left LMs Apply as \u201cPre-trained Embeddings\u201d"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -43,9 +55,13 @@
     "page_number": [
       4
     ],
-    "char_count": 503,
-    "word_count": 70,
-    "content": "BERT: Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks."
+    "char_count": 504,
+    "word_count": 71,
+    "token_count": 119,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "BERT : Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks."
   },
   {
     "experiment_id": "exp1_page_level",
@@ -57,6 +73,10 @@
     ],
     "char_count": 307,
     "word_count": 43,
+    "token_count": 60,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Masked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions\nNetwork weights are updated based on average CE loss over the sampled tokens"
   },
   {
@@ -69,6 +89,10 @@
     ],
     "char_count": 151,
     "word_count": 22,
+    "token_count": 34,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Masked Language Modelling\nExamplesHe is from Kuala Lumpur, Malaysia.\u00e0He [MASK]from Kuala [MASK], Malaysia.He went to the store. \u00e0He went to the [MASK]."
   },
   {
@@ -79,9 +103,13 @@
     "page_number": [
       7
     ],
-    "char_count": 334,
-    "word_count": 50,
-    "content": "MLM: Masking Rate and StrategyQ: What is the value of k?\u2013They always use k = 15%.\u2013Too little masking: computationally expensive\u2013Too much masking: not enough context \nQ: How are masked tokens selected?\u201315% tokens are uniformly sampled\u2013Is it optimal? See span masking (Joshi et al., 2020) \u2013Example: He [MASK]from Kuala [MASK], Malaysia."
+    "char_count": 393,
+    "word_count": 109,
+    "token_count": 143,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "MLM: Masking Rate and StrategyQ: What is the value of k?\u2013They always use k = 15%.\u2013To o l i t t l e m a s k i n g : c o m p u t a t i o n a l l y e x p e n s i v e\u2013To o m u c h m a s k i n g : n o t e n o u g h c o n t e x t \nQ: How are masked tokens selected?\u201315% tokens are uniformly sampled\u2013Is it optimal? See span masking (Joshi et al., 2020) \u2013Example: He [MASK]from Kuala [MASK], Malaysia."
   },
   {
     "experiment_id": "exp1_page_level",
@@ -93,6 +121,10 @@
     ],
     "char_count": 399,
     "word_count": 65,
+    "token_count": 105,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "MLM: 80-10-10 CorruptionFor the 15% of tokens selected for prediction,\u201380% of the time, they replace it with [MASK] tokenwent to the store\u00e0went to the [MASK]\u201310% of the time, they replace it with a random word in the vocabularywent to the store\u00e0went to the running\u201310% of the time, they keep it unchangedwent to the store\u00e0went to the storeWhy? Because [MASK] tokens are never seen during fine-tuning"
   },
   {
@@ -105,6 +137,10 @@
     ],
     "char_count": 539,
     "word_count": 81,
+    "token_count": 117,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Next Sentence Prediction (NSP)Motivation: many NLP downstream tasks require understanding the relationship between two sentences (e.g. NLI, paraphrase detection, QA)NSPis designed to reduce the gap between pre-training and fine-tuning\nInput = [CLS] the man went to [MASK] store [SEP] he bought a gallon [MASK] milk [SEP]Label = IsNextInput = [CLS] the man [MASK] to the store [SEP]penguin [MASK] are flight ##less birds [SEP]Label = NotNext\n[CLS]: a special token always at the beginning[CLS]: a special token used to separate two segments"
   },
   {
@@ -117,6 +153,10 @@
     ],
     "char_count": 229,
     "word_count": 35,
+    "token_count": 48,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Next Sentence Prediction (NSP)\nStands for \"class\"\nOutput vector associated with [CLS] represents the prediction, and is multiplied with WNSP, a set of classification weights\n0 or 1 to indicate which segment\nStands for \"separator\""
   },
   {
@@ -127,9 +167,13 @@
     "page_number": [
       11
     ],
-    "char_count": 201,
-    "word_count": 28,
-    "content": "BERT pre-training: Putting togetherVocabulary size: 30,000 word pieces (common sub-word units) (Wu et al., 2016)\nFinal input representation = Token + Segment + Position embeddings\nSeparate two segments"
+    "char_count": 202,
+    "word_count": 29,
+    "token_count": 51,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "BERT pre-training: Putting togetherVocabulary size: 30,000 word pieces (common sub-word units) (Wu et al., 2016)\nFinal input representation = T oken + Segment + Position embeddings\nSeparate two segments"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -141,6 +185,10 @@
     ],
     "char_count": 375,
     "word_count": 54,
+    "token_count": 101,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "BERT-base: 12 layers, 768 hidden size, 12 attention heads, 100M parametersBERT-large: 24 layers, 1024 hidden size, 16 attention heads, 340M parameters\nTraining corpus: Wikipedia (2.5B) + BooksCorpus (0.8B)Max sequence size: 512 word piecesTrained for 1M steps, batch size 128k\nSame as OpenAI GPT\nOpenAI GPT was trained on BooksCorpus only!\nBERT pre-training: Putting together"
   },
   {
@@ -151,9 +199,13 @@
     "page_number": [
       13
     ],
-    "char_count": 157,
-    "word_count": 20,
-    "content": "BERT pre-training: Putting togetherMLM and NSP are trained togetherThe [CLS] representation is trained for NSPToken-level representations are trained via MLM"
+    "char_count": 160,
+    "word_count": 23,
+    "token_count": 35,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "BERT pre-training: Putting togetherMLM and NSP are trained togetherThe [CLS] representation is trained for NSPTo k e n-level representations are trained via MLM"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -163,9 +215,13 @@
     "page_number": [
       14
     ],
-    "char_count": 462,
-    "word_count": 60,
-    "content": "Sentence pair classification tasks:MNLIPremise: A soccer game with multiple males playing.Hypothesis: Some men are playing a sport.\nQQPQ1: Where can I learn to invest in stocks?Q2: How can I learn more about stocks?Single sentence classification tasks:SST2rich veins of funny stuff in this movie\n(Wang et al., 2018):6 sentence pair and 2 single-sentence tasks\n{entailment,contradiction, neutral}\n{duplicate,not duplicate}\n{positive,negative}\nSentence-level Tasks"
+    "char_count": 463,
+    "word_count": 61,
+    "token_count": 112,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Sentence pair classification tasks:MNLIPremise: A soccer game with multiple males playing.Hypothesis: Some men are playing a sport.\nQQPQ1: Where can I learn to invest in stocks?Q2: How can I learn more about stocks?Single sentence classification tasks:SST2rich veins of funny stuff in this movie\n(Wang et al., 2018):6 sentence pair and 2 single-sentence tasks\n{entailment,contradiction, neutral}\n{duplicate,not duplicate}\n{positive,negative}\nSentence-level T asks"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -175,9 +231,13 @@
     "page_number": [
       15
     ],
-    "char_count": 75,
-    "word_count": 8,
-    "content": "Fine-tuning BERT: Sentence-level tasks\u201cPretrain once, finetune many times.\u201d"
+    "char_count": 76,
+    "word_count": 9,
+    "token_count": 21,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Fine-tuning BERT : Sentence-level tasks\u201cPretrain once, finetune many times.\u201d"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -189,6 +249,10 @@
     ],
     "char_count": 169,
     "word_count": 23,
+    "token_count": 37,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "For sentence-pair tasks, use [SEP] and segment embeddings to distinguish inputsAdd a task-specific linear classifier on top of the [CLS] representation.\nFine-tuning BERT"
   },
   {
@@ -199,9 +263,13 @@
     "page_number": [
       17
     ],
-    "char_count": 226,
-    "word_count": 25,
-    "content": "SQuAD MetLife Stadium\nExtractive question answering e.g., SQuAD(Rajpurkaret al., 2016)\nName entity recognition (Tjong kimSang and De Meulder, 2003)CoNLL2003 NERJohnSmithlives in New YorkB-PERI-PEROOB-LOCI-LOC\nToken-level Tasks"
+    "char_count": 231,
+    "word_count": 30,
+    "token_count": 78,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "SQuAD MetLife Stadium\nExtractive question answering e.g., SQuAD(Rajpurkaret al., 2016)\nName entity recognition (Tjong kimSang and De Meulder, 2003)CoNLL2003 NERJohnSmithlives in New Yor kB-PERI-PEROOB-LOCI-LOC\nTo k e n-level T asks"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -211,9 +279,13 @@
     "page_number": [
       18
     ],
-    "char_count": 72,
-    "word_count": 8,
-    "content": "Fine-tuning BERT: Token-level Tasks\u201cPretrain once, finetune many times.\u201d"
+    "char_count": 75,
+    "word_count": 11,
+    "token_count": 24,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "Fine-tuning BERT : T oken-level T asks\u201cPretrain once, finetune many times.\u201d"
   },
   {
     "experiment_id": "exp1_page_level",
@@ -225,6 +297,10 @@
     ],
     "char_count": 134,
     "word_count": 18,
+    "token_count": 29,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "For token-level prediction tasks, add a task-specific linear classifier on top of each token\u2019s hidden representation.\nFine-tuning BERT"
   },
   {
@@ -237,6 +313,10 @@
     ],
     "char_count": 51,
     "word_count": 8,
+    "token_count": 12,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "The bigger, the better!\nAblation study: Model Sizes"
   },
   {
@@ -249,6 +329,10 @@
     ],
     "char_count": 25,
     "word_count": 5,
+    "token_count": 8,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "How large are Large\u201c LMs?"
   },
   {
@@ -259,8 +343,12 @@
     "page_number": [
       22
     ],
-    "char_count": 334,
-    "word_count": 38,
-    "content": "SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain\u2013then-fine-tune paradigm in NLP.Achieved state-of-the-art performance (2018) across diverse NLU tasks."
+    "char_count": 335,
+    "word_count": 39,
+    "token_count": 80,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
+    "content": "SummaryBERT is a deep bidirectional Transformer encoder pre-trained using masked language modelling.Bidirectional self-attention allows each token to attend to both its left and right context.BERT popularisedthe large-scale pretrain\u2013then-fine-tune paradigm in NLP .Achieved state-of-the-art performance (2018) across diverse NLU tasks."
   }
 ]

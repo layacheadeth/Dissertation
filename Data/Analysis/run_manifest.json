@@ -1,0 +1,187 @@
+{
+  "generated_utc": "2026-08-19T17:41:35+00:00",
+  "code": {
+    "git": {
+      "available": false,
+      "reason": "git not usable: FileNotFoundError",
+      "advice": "commit the pipeline to a git repo so runs are traceable"
+    },
+    "repo_dir": "/workspace/Ingestion_pipeline"
+  },
+  "environment": {
+    "python": "3.11.16",
+    "platform": "Linux-6.12.54-linuxkit-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "processor": "unknown",
+    "packages": {
+      "torch": "2.13.0",
+      "transformers": "4.46.3",
+      "sentence-transformers": "5.7.0",
+      "tokenizers": "0.20.3",
+      "huggingface-hub": "0.36.2",
+      "chromadb": "0.5.23",
+      "langchain-core": "1.5.6",
+      "pypdf": "6.16.1",
+      "numpy": "2.4.6"
+    },
+    "cuda": {
+      "available": false,
+      "torch_cuda_version": "13.0"
+    }
+  },
+  "source_pdfs": {
+    "directory": "/workspace/Data/All_lectures",
+    "count": 13,
+    "files": [
+      {
+        "filename": "Week10_TM_last_lecture.pdf",
+        "bytes": 903976,
+        "sha256": "1a74edd1f0a1ac5644b6e7ed64072406c0d116b9fe41e2602677e163ae9ce364"
+      },
+      {
+        "filename": "Week11_TRIM_BERT.pdf",
+        "bytes": 8439961,
+        "sha256": "ed21e18fcbb36a7008ea8d02820262fc9188d57ba02652ca8f2f6899930b0b97"
+      },
+      {
+        "filename": "Week12_TM-lastlecture-1.pdf",
+        "bytes": 3230462,
+        "sha256": "d2e6c21ade1daf43af7e164f3c99d68f648c032e70f86cb397f6a77040c7a226"
+      },
+      {
+        "filename": "Week13_revision_lecture_exam_focused.pdf",
+        "bytes": 270496,
+        "sha256": "c17d886b1f4b9388362285383911fd99a287aa6d32812c08cd7b33e781425c65"
+      },
+      {
+        "filename": "Week1_Intro_to_vector.pdf",
+        "bytes": 4062606,
+        "sha256": "951ac972e3eb3542a843a7232ab2ca9c51e5c758ec8c2428e48f61a5213d7623"
+      },
+      {
+        "filename": "Week2_Language_modelling.pdf",
+        "bytes": 819176,
+        "sha256": "2f1a485ec179f05841653aa47c394c3d9a2becb0b54f3674758ab1d7f04d2504"
+      },
+      {
+        "filename": "Week3_word2vec_RNN_Transformer.pdf",
+        "bytes": 4871350,
+        "sha256": "3ae842c70e15bbc7a073481f16e5429a205ef26abb3504b67c587753288051a1"
+      },
+      {
+        "filename": "Week4_LLM-Data.pdf",
+        "bytes": 2377274,
+        "sha256": "155d69ce9e3db5824f2a475198332da580b5bde8b158b2fe97b9e2ec17e3e4c3"
+      },
+      {
+        "filename": "Week5_TRIM_LLM-pretraining.pdf",
+        "bytes": 3572056,
+        "sha256": "6e040e42c77f66cb9f5892ced0ceb9cbb5ed8f2b4869aee1cf35b341ce26b9a1"
+      },
+      {
+        "filename": "Week6_TRIM_SFT_alignment.pdf",
+        "bytes": 3394265,
+        "sha256": "31dde8e9e210fce0be44dbe19fb9a94a7acfab9df740b2969e2e3881dca46bf8"
+      },
+      {
+        "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+        "bytes": 3946315,
+        "sha256": "3af6d028369a579859bc28f1f679094050d0a4606cba7230fc7e366911f26193"
+      },
+      {
+        "filename": "Week8_TRIM-Application-Multimodal.pdf",
+        "bytes": 1920148,
+        "sha256": "ca6415cb7ece4d7848601f091d958efc4925eb9d29fd997ee6d5ea0e6016ef01"
+      },
+      {
+        "filename": "Week9_RAG_LLM_final.pdf",
+        "bytes": 722659,
+        "sha256": "38b7d229b92dd4bc455fc3e97d40d314aabbf1776db9b6b66079bca7f454fdf5"
+      }
+    ]
+  },
+  "chunker_parameters": {
+    "configured": {
+      "available": true,
+      "source": "/workspace/Data/Analysis/chunker_params.json",
+      "strategies": {
+        "exp1": {
+          "max_tokens": 500,
+          "min_slide_chars": 25
+        },
+        "exp2": {
+          "max_tokens": 500,
+          "overlap_tokens": 100
+        },
+        "exp3": {
+          "max_tokens": 500,
+          "min_slide_chars": 25
+        }
+      },
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "token_unit": "WordPiece (the embedding model's own tokenizer)",
+      "tokenizer": "BAAI/bge-small-en-v1.5"
+    },
+    "observed": {
+      "exp2": {
+        "chunk_size_tokens": {
+          "500": 104
+        },
+        "overlap_tokens": {
+          "100": 104
+        },
+        "consistent": true
+      },
+      "exp1": {
+        "chunks": 516,
+        "chunks_from_split_pages": 2,
+        "guard_fired": true
+      },
+      "exp3": {
+        "chunks": 296,
+        "sections_detected": 273
+      }
+    },
+    "tokenizer": {
+      "name_or_path": "BAAI/bge-small-en-v1.5",
+      "class": "BertTokenizerFast",
+      "vocab_size": 30522,
+      "model_max_positions": 512,
+      "special_tokens_reserved": 2,
+      "usable_tokens": 510,
+      "counts_exclude_special_tokens": true
+    }
+  },
+  "vector_store": {
+    "available": true,
+    "path": "/workspace/Data/Database/chroma_db",
+    "n_collections": 3,
+    "total_vectors": 916,
+    "collections": [
+      {
+        "name": "exp1_page_level_bge",
+        "count": 516,
+        "metadata": {
+          "hnsw:space": "cosine"
+        },
+        "error": "The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "exp2_fixed_overlap_bge",
+        "count": 104,
+        "metadata": {
+          "hnsw:space": "cosine"
+        },
+        "error": "The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      },
+      {
+        "name": "exp3_section_aware_bge",
+        "count": 296,
+        "metadata": {
+          "hnsw:space": "cosine"
+        },
+        "error": "The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"
+      }
+    ]
+  }
+}

@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 8888
 
 # Set default execution to run your main script array processing
-CMD ["python", "main.py"]
+CMD ["python3", "main.py"]

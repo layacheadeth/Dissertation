@@ -1,0 +1,14 @@
+week,filename,deduplicated_total_pages,exp1_chunks,exp1_mean_tokens,exp2_chunks,exp2_mean_tokens,exp3_chunks,exp3_mean_tokens
+Week 1,Week1_Intro_to_vector.pdf,54,51,72.0,9,498.6,34,108.0
+Week 2,Week2_Language_modelling.pdf,41,41,75.2,8,473,31,99.5
+Week 3,Week3_word2vec_RNN_Transformer.pdf,65,63,62.6,10,485.5,19,208.7
+Week 4,Week4_LLM-Data.pdf,36,34,96.8,8,499.4,10,332.4
+Week 5,Week5_TRIM_LLM-pretraining.pdf,26,26,54.4,4,428.8,19,74.5
+Week 6,Week6_TRIM_SFT_alignment.pdf,49,47,79.2,10,462.7,35,106.4
+Week 7,Week7-TRIM_Incontext-Evaluation.pdf,49,48,85.1,10,499,29,140.8
+Week 8,Week8_TRIM-Application-Multimodal.pdf,41,41,109.7,11,499.6,40,112.4
+Week 9,Week9_RAG_LLM_final.pdf,39,38,71.6,7,474.9,9,305.9
+Week 10,Week10_TM_last_lecture.pdf,29,29,85.5,6,496.7,22,112.7
+Week 11,Week11_TRIM_BERT.pdf,22,22,65.9,4,437.2,4,362.2
+Week 12,Week12_TM-lastlecture-1.pdf,53,51,58.7,8,462.9,35,85.5
+Week 13,Week13_revision_lecture_exam_focused.pdf,25,25,142.4,9,484.7,9,395.7

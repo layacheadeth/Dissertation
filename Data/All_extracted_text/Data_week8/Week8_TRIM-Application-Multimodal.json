@@ -2,7 +2,10 @@
     "filename": "Week8_TRIM-Application-Multimodal.pdf",
     "week": "Week 8",
     "raw_total_pages": 42,
+    "pages_with_text": 41,
+    "empty_pages_removed": 1,
     "deduplicated_total_pages": 41,
+    "pages_removed_by_dedup": 0,
     "pages": [
         {
             "page_number": 1,

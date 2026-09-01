@@ -2,7 +2,10 @@
     "filename": "Week13_revision_lecture_exam_focused.pdf",
     "week": "Week 13",
     "raw_total_pages": 25,
+    "pages_with_text": 25,
+    "empty_pages_removed": 0,
     "deduplicated_total_pages": 25,
+    "pages_removed_by_dedup": 0,
     "pages": [
         {
             "page_number": 1,

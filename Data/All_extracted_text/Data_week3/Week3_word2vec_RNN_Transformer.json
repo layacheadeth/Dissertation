@@ -2,7 +2,10 @@
     "filename": "Week3_word2vec_RNN_Transformer.pdf",
     "week": "Week 3",
     "raw_total_pages": 65,
+    "pages_with_text": 65,
+    "empty_pages_removed": 0,
     "deduplicated_total_pages": 65,
+    "pages_removed_by_dedup": 0,
     "pages": [
         {
             "page_number": 1,
@@ -58,7 +61,7 @@
         },
         {
             "page_number": 14,
-            "content": "Training objective (CBOW)Objective function \nTaking logarithm, we have"
+            "content": "Training objective (CBOW)Objective function \nTa k i n g l o g a r i t h m , w e h a v e"
         },
         {
             "page_number": 15,
@@ -66,7 +69,7 @@
         },
         {
             "page_number": 16,
-            "content": "Word Analogies Test for linear regularitiesin embedding spaceRelations captured as vector offsetsEmpirical property observed by Mikolovet al. (2014)"
+            "content": "Word Analogies Te s t f o r linear regularitiesin embedding spaceRelations captured as vector offsetsEmpirical property observed by Mikolovet al. (2014)"
         },
         {
             "page_number": 17,
@@ -90,7 +93,7 @@
         },
         {
             "page_number": 22,
-            "content": "Recurrent Neural Networks (RNNs) as LMsRNN language models–Process an input sequence one word at a time–To predict the next word from the current word and the previous hidden state–Model the next-word probabilityComputation is sequential, limiting parallelization"
+            "content": "Recurrent Neural Networks (RNNs) as LMsRNN language models–Process an input sequence one word at a time–To p r e d i c t t h e n e x t w o r d f r o m t h e c u r r e n t w o r d a n d t h e p r e v i o u s hidden state–Model the next-word probabilityComputation is sequential, limiting parallelization"
         },
         {
             "page_number": 23,
@@ -138,7 +141,7 @@
         },
         {
             "page_number": 34,
-            "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT, RoBERTa, DeBERTaEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
+            "content": "TransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT , RoBERT a, DeBERT aEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today"
         },
         {
             "page_number": 35,
@@ -170,7 +173,7 @@
         },
         {
             "page_number": 42,
-            "content": "Inner workings of the EncoderImportant propertiesTokens are processed in parallel within each layer Tokens are coupled via attention Deeper layers refine contextual representationsResidual connections preserve signal and ease optimisation."
+            "content": "Inner workings of the EncoderImportant propertiesTo k e n s a r e p r o c e s s e d i n p a r a l l e l within each layer To k e n s a r e c o u p l e d v i a a t t e n t i o n Deeper layers refine contextual representationsResidual connections preserve signal and ease optimisation."
         },
         {
             "page_number": 43,
@@ -182,7 +185,7 @@
         },
         {
             "page_number": 45,
-            "content": "Self-attention Visualisation\nSelf-attention allows each tokenfocus on relevant token in the sequence.Token \"it\" attends more to related tokens like ”The animal\"This helps the model capture long-range dependencies and context."
+            "content": "Self-attention Visualisation\nSelf-attention allows each tokenfocus on relevant token in the sequence.To k e n \"it\" attends more to related tokens like ”The animal\"This helps the model capture long-range dependencies and context."
         },
         {
             "page_number": 46,
@@ -230,11 +233,11 @@
         },
         {
             "page_number": 57,
-            "content": "Another ornament: Positional encodings\nTransformers lack a built-in notion of word order.To encode position information, we add a positional vectorto each input embedding.In the original Transformer, fixed sinusoidal positional encodings were used (i.e. sinusoidal functions of different frequencies)"
+            "content": "Another ornament: Positional encodings\nTransformers lack a built-in notion of word order.To e n c o d e position information, we add a positional vectorto each input embedding.In the original Transformer, fixed sinusoidal positional encodings were used (i.e. sinusoidal functions of different frequencies)"
         },
         {
             "page_number": 58,
-            "content": "Another ornament: Residuals\nTo stabilize training in deep networks, each sub-layer is wrapped with a residual connection.In each sub-layer (self-attention or FFN), the input is added to the sub-layer output.The output is then passed through a layer normalization step.Residual connections improve gradient flow and facilitate optimization in deep architectures."
+            "content": "Another ornament: Residuals\nTo s t a b i l i z e t r a i n i n g i n d e e p n e t w o r k s , each sub-layer is wrapped with a residual connection.In each sub-layer (self-attention or FFN), the input is added to the sub-layer output.The output is then passed through a layer normalization step.Residual connections improve gradient flow and facilitate optimization in deep architectures."
         },
         {
             "page_number": 59,
@@ -250,7 +253,7 @@
         },
         {
             "page_number": 62,
-            "content": "From Decoder to Output TokenTraining time:the full targetsequenceis known. We use teacher forcing, feeding the correct previous tokens, to compute next-token predictions.Inference time: output is generated autoregressively, one token at a time. Each predicted token is fed back into the decoder.Linear Layer: Projects the decoder output to the vocabulary size.SoftmaxFunction: Converts logits into probability distributions over the vocabulary.Token Selection: selects the token (e.g., via greedy decoding or sampling)."
+            "content": "From Decoder to Output T okenTraining time:the full targetsequenceis known. We use teacher forcing, feeding the correct previous tokens, to compute next-token predictions.Inference time: output is generated autoregressively, one token at a time. Each predicted token is fed back into the decoder.Linear Layer: Projects the decoder output to the vocabulary size.SoftmaxFunction: Converts logits into probability distributions over the vocabulary.Token Selection: selects the token (e.g., via greedy decoding or sampling)."
         },
         {
             "page_number": 63,

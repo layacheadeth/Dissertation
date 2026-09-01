@@ -1,0 +1,14 @@
+week,filename,raw_total_pages,pages_with_text,empty_pages_removed,deduplicated_total_pages,pages_removed_by_dedup,total_chars,total_tokens,sha256
+Week 1,Week1_Intro_to_vector.pdf,88,88,0,54,34,14621,3687,2bd5791af600280214049fbc6201599f6f501624ed3ac49292f4fe06b716a043
+Week 2,Week2_Language_modelling.pdf,61,61,0,41,20,10135,3084,5e795cd193f26dd7c9afc6e699d0a2c7fc27af807eb2dd319fcd875d7c2a0257
+Week 3,Week3_word2vec_RNN_Transformer.pdf,65,65,0,65,0,16656,3955,019d0a1ea910dcad78e2d2eedf44dd67b1bc25b69019e793e8e8ea124bd8537e
+Week 4,Week4_LLM-Data.pdf,38,37,1,36,1,13688,3299,11fd80d2417f249ded470ab66d507c9114a5669ac8e43de2f1c59168ff730361
+Week 5,Week5_TRIM_LLM-pretraining.pdf,26,26,0,26,0,6347,1415,061f0f7257ed2e556311ca4217354cfcebeabb3334c27dbb7ed63b50dad6520a
+Week 6,Week6_TRIM_SFT_alignment.pdf,51,50,1,49,1,17418,3727,05448058f2b514fb18ef751bae3e8442948fa658803d492ab1f02af9b3aa8928
+Week 7,Week7-TRIM_Incontext-Evaluation.pdf,51,50,1,49,1,18192,4090,eb8ee623a3a99927e64f806260cd70ea3d3df9d1896a176cb42e0a752ba193c2
+Week 8,Week8_TRIM-Application-Multimodal.pdf,42,41,1,41,0,19479,4496,ac9b3e5197acc8403e48a69a1c71aca8f2993baedf0f0ae1090bb1fc6f5e3a07
+Week 9,Week9_RAG_LLM_final.pdf,39,39,0,39,0,11808,2724,576be36a068f9411b3eb370c76d63c4988afb447be1e2a665bd9f8299cd271ed
+Week 10,Week10_TM_last_lecture.pdf,41,33,8,29,4,9217,2480,0de2cc70e5501a997ec1ccdaed5c56865e58c3cb4992cd821dfd11bb5407d6e7
+Week 11,Week11_TRIM_BERT.pdf,22,22,0,22,0,5661,1449,bb881b8dea1c8b80a90551bd36dcd60fb935ddffa682612a64b66efa888115f8
+Week 12,Week12_TM-lastlecture-1.pdf,66,53,13,53,0,14043,3003,81756c0c8e7f30e6b04566ce3a6a31745592d75254a4820639bdb0fe2f77908c
+Week 13,Week13_revision_lecture_exam_focused.pdf,25,25,0,25,0,16646,3561,c5890267eae62a1ba023323ae9551abd2617a5f14f6805374d024e73cb542a7c

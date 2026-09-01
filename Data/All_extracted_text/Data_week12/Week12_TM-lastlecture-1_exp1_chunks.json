@@ -9,6 +9,10 @@
     ],
     "char_count": 163,
     "word_count": 22,
+    "token_count": 24,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Sequence Labeling and Evaluations in \nText Mining \nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester"
   },
   {
@@ -21,6 +25,10 @@
     ],
     "char_count": 374,
     "word_count": 57,
+    "token_count": 79,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Module 1 POS Tagging\n What parts of speech are and why they matter \n Standard POS tagsets: Penn Treebank and Universal POS\n POS tagging as a token-level classification task\n Why POS tagging is difficult: ambiguity and context\n How context helps us choose the correct tag \n Rule-based vs. data-driven tagging approaches \n How tagged corpora provide supervision for POS models"
   },
   {
@@ -33,6 +41,10 @@
     ],
     "char_count": 209,
     "word_count": 33,
+    "token_count": 37,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "The NLP Pipeline\n Natural language processing often works as a pipeline of \ncomponents. \n Each component adds a layer of structure to raw text. \n Later components depend heavily on the quality of earlier ones."
   },
   {
@@ -45,6 +57,10 @@
     ],
     "char_count": 159,
     "word_count": 27,
+    "token_count": 31,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "What Are Parts of Speech?\n Parts of speech are classes of words defined by their grammatical role. \n POS tags help us describe how words function in sentences."
   },
   {
@@ -57,6 +73,10 @@
     ],
     "char_count": 358,
     "word_count": 38,
+    "token_count": 102,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Standard POS Tagsets\n POS tags come from \nstandard annotation \nschemes. \n Two common tagsets are: \n Penn Treebank: detailed, \nEnglish-focused \n Universal POS tags: broader, \ncross-linguistic \n Examples: \n Penn Treebank: NNP, VBD, DT\n Universal POS: PROPN, \nVERB, DET\nPenn Treebank \nhttps://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_tree\nbank_pos.html"
   },
   {
@@ -69,6 +89,10 @@
     ],
     "char_count": 336,
     "word_count": 38,
+    "token_count": 89,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Standard POS Tagsets\n POS tags come from \nstandard annotation \nschemes. \n Two common tagsets are: \n Penn Treebank: detailed, \nEnglish-focused \n Universal POS tags: \nbroader, cross-linguistic \n Examples: \n Penn Treebank: NNP, VBD, \nDT\n Universal POS: PROPN, \nVERB, DET\nUniversal POS tags \nhttps://universaldependencies.org/u/pos/all.html"
   },
   {
@@ -81,6 +105,10 @@
     ],
     "char_count": 211,
     "word_count": 35,
+    "token_count": 45,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "The POS Tagging Task\n The task is to assign one POS tag to each token in a sentence. \n POS tagging usually happens after tokenisation. \n Example: \n The same word can receive different tags in different contexts."
   },
   {
@@ -93,6 +121,10 @@
     ],
     "char_count": 132,
     "word_count": 23,
+    "token_count": 34,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Why POS Tagging Is Hard\n Many words are ambiguous in isolation. \n In a lot of cases, POS tagging is therefore a disambiguation task."
   },
   {
@@ -105,6 +137,10 @@
     ],
     "char_count": 272,
     "word_count": 47,
+    "token_count": 53,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Context Resolves Ambiguity\n Local context often makes the correct tag much clearer. \n Examples: \n a walk \u2192 walk is likely a noun \n to walk \u2192 walk is likely a verb \n the old man \u2192 old is an adjective \n POS tagging models learn how neighbouring words influence likely \ntags."
   },
   {
@@ -117,6 +153,10 @@
     ],
     "char_count": 344,
     "word_count": 52,
+    "token_count": 92,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "One Sentence, Two Valid Taggings\nMeaning affects POS tagging. \n Example sentence: I saw her duck.\n Interpretation 1: I saw her pet bird. \n I/PRON saw/VERB her/PRON duck/NOUN ./PUNCT\n Interpretation 2: I saw her lower her head quickly. \n I/PRON saw/VERB her/PRON duck/VERB ./PUNCT\n A tagger must choose the tag that matches the intended meaning."
   },
   {
@@ -129,6 +169,10 @@
     ],
     "char_count": 318,
     "word_count": 38,
+    "token_count": 65,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Rule-Based and Data-Driven Tagging\n A rule-based approach uses handcrafted grammatical rules. \n A statistical or neural approach learns patterns from annotated \ncorpora. \n POS-tagged corpora provide: \n example sentences \n gold labels \n evidence for disambiguation \n In practice, modern systems are usually data-driven."
   },
   {
@@ -141,6 +185,10 @@
     ],
     "char_count": 397,
     "word_count": 60,
+    "token_count": 77,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Module 2 Syntactic Parsing\n What syntactic parsing is and why it matters \n How parsing goes beyond POS tags to represent structure\n Dependency parsing: heads, dependents, and grammatical \nrelations \n How to read a dependency analysis \n Why parsing is needed for attachment ambiguity\n Phrase structure parsing: NP , VP , PP , and tree structure \n How dependency structure and phrase structure diffe"
   },
   {
@@ -153,6 +201,10 @@
     ],
     "char_count": 348,
     "word_count": 54,
+    "token_count": 70,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "What Is Syntactic Parsing?\n POS tags tell us the category of each word. \n Parsing tells us how the words are structurally related. \n Parsing helps answer questions such as: \n Which noun is the subject? \n Which phrase is the object? \n What does a prepositional phrase modify? \n Two major views of syntax are: \n dependency structure\n phrase structure"
   },
   {
@@ -165,6 +217,10 @@
     ],
     "char_count": 565,
     "word_count": 87,
+    "token_count": 105,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Why Parsing Matters\n\u27a2Some sentences remain ambiguous even after POS tagging. \n Example: \no The teacher discussed the essay with the student.\n Does with the student describe: \no who the teacher talked to? \no or which essay was discussed? \n Parsing makes these structural choices explicit.\n\u27a2Some sentences allow more than one syntactic analysis. \n The same sequence of words can produce different structures and \ndifferent meanings. \n To understand a sentence, we cannot treat each word in isolation. \n We need to determine what each word is attached or connected to."
   },
   {
@@ -177,6 +233,10 @@
     ],
     "char_count": 270,
     "word_count": 41,
+    "token_count": 50,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Dependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens."
   },
   {
@@ -189,6 +249,10 @@
     ],
     "char_count": 321,
     "word_count": 52,
+    "token_count": 64,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent."
   },
   {
@@ -201,6 +265,10 @@
     ],
     "char_count": 372,
     "word_count": 57,
+    "token_count": 65,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "In a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice"
   },
   {
@@ -213,6 +281,10 @@
     ],
     "char_count": 318,
     "word_count": 41,
+    "token_count": 73,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Common Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme."
   },
   {
@@ -225,6 +297,10 @@
     ],
     "char_count": 27,
     "word_count": 3,
+    "token_count": 3,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Common Dependency Relations"
   },
   {
@@ -237,6 +313,10 @@
     ],
     "char_count": 255,
     "word_count": 40,
+    "token_count": 48,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Reading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence."
   },
   {
@@ -249,6 +329,10 @@
     ],
     "char_count": 397,
     "word_count": 55,
+    "token_count": 67,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Attachment Ambiguity\n A major challenge in parsing is attachment ambiguity. \n Example: \n The teacher discussed the essay with the student.\n Interpretation A: \n with the student modifies discussed\n meaning: the teacher talked to the student\n Interpretation B: \n with the student modifies essay\n meaning: the essay is about / associated with the student\n Different meanings require different parses."
   },
   {
@@ -261,6 +345,10 @@
     ],
     "char_count": 294,
     "word_count": 48,
+    "token_count": 59,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "How to Decide Where a Phrase Attaches\n Ask: Which word is this phrase modifying?\n If the phrase describes the event or action, it usually attaches to \nthe verb. \n If the phrase describes an entity, it usually attaches to the noun. \n Parsing is therefore closely tied to semantic interpretation."
   },
   {
@@ -273,6 +361,10 @@
     ],
     "char_count": 309,
     "word_count": 39,
+    "token_count": 64,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Phrase Structure Parsing\n Phrase structure parsing \nrepresents sentences as nested \nconstituents. \n Instead of head-dependent links, \nit groups words into phrases. \n Typical phrase types include: \n NP: noun phrase \n VP: verb phrase \n PP: prepositional phrase \n AdjP: adjectival phrase \n AdvP: adverbial phrase"
   },
   {
@@ -285,6 +377,10 @@
     ],
     "char_count": 279,
     "word_count": 39,
+    "token_count": 43,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Building a Phrase Structure Tree\n Phrase structure analysis usually proceeds in stages: \n identify POS categories \n locate the major constituents \n project phrase nodes \n connect tokens to phrases \n combine phrases into a full tree \n The result shows both grouping and hierarchy."
   },
   {
@@ -297,6 +393,10 @@
     ],
     "char_count": 156,
     "word_count": 32,
+    "token_count": 44,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Analysis of Phrase Structure\nStep 1: Label the syntactic category (POS) of each of the tokens\nThe child put the puppy in the garden\nDT NN VBD DT NN IN DT NN"
   },
   {
@@ -309,6 +409,10 @@
     ],
     "char_count": 222,
     "word_count": 41,
+    "token_count": 60,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Analysis of Phrase Structure\nStep 2: There are two principal constituents--a noun phrase (NP) and a \nverb phrase (VP). Locate the boundary between the two.\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN"
   },
   {
@@ -321,6 +425,10 @@
     ],
     "char_count": 241,
     "word_count": 50,
+    "token_count": 78,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Analysis of Phrase Structure\nStep 3: For each head noun/pronoun, verb, adjective, adverb and \npreposition, project a phrasal node: NP , VP , AdjP , AdvP , PP .\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN\nNP\nVP\nNP\nPP\nNP"
   },
   {
@@ -333,6 +441,10 @@
     ],
     "char_count": 175,
     "word_count": 37,
+    "token_count": 48,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Analysis of Phrase Structure\nStep 4: Connect the remaining tokens to the nodes they belong to\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN\nNP\nVP\nNP\nPP\nNP"
   },
   {
@@ -345,6 +457,10 @@
     ],
     "char_count": 123,
     "word_count": 28,
+    "token_count": 37,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Analysis of Phrase Structure\nFinal tree\n[The child] [put the puppy in the garden]\nDT NN VBD DT NN IN DT NN\nNP\nVP\nNP\nPP\nNP\nS"
   },
   {
@@ -357,6 +473,10 @@
     ],
     "char_count": 286,
     "word_count": 45,
+    "token_count": 55,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Identifying Noun Phrases\n A noun phrase is centered on a \nnoun or pronoun. \n It may contain: \n determiners \n adjectives \n possessives \n modifiers \n Examples of noun phrases: \n the child\n her old bicycle\n the report on climate change\n Not every long span in a sentence \nis a noun phrase."
   },
   {
@@ -369,6 +489,10 @@
     ],
     "char_count": 420,
     "word_count": 49,
+    "token_count": 61,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Dependency Structure vs Phrase Structure\n Dependency parsing focuses on relations between words. \n Phrase structure parsing focuses on constituent groupings. \n Dependency parsing is especially useful for: \n predicate-argument structure \n information extraction \n relation analysis \n Phrase structure parsing is especially useful for: \n constituent identification \n NP / VP / PP analysis \n hierarchical sentence structure"
   },
   {
@@ -381,6 +505,10 @@
     ],
     "char_count": 288,
     "word_count": 37,
+    "token_count": 56,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Comparison: What can be represented?\nDependency structure\n\u25cf directed edges: head-dependent \nrelations\n\u25cf edge labels: grammatical \nfunctions\n\u25cf POS tags: syntactic categories\nPhrase structure\n\u25cf non-terminal nodes: phrases (and \ntheir hierarchical structure)\n\u25cf POS tags: syntactic categories"
   },
   {
@@ -393,6 +521,10 @@
     ],
     "char_count": 215,
     "word_count": 27,
+    "token_count": 57,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Dependency structures: \nEndocentric vs Exocentric Constructions\nConstruction Head Dependent Required?\nExocentric\nverb subject (sbj) yes\nverb object(obj) yes\nEndocentric\nverb adverb (vmod) no\nnoun adjective (nmod) no"
   },
   {
@@ -405,6 +537,10 @@
     ],
     "char_count": 134,
     "word_count": 21,
+    "token_count": 31,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Various notations\nThere are far too many!\n... But don't worry; these are just formalisms. You will \nstill see conceptual similarities."
   },
   {
@@ -417,6 +553,10 @@
     ],
     "char_count": 108,
     "word_count": 14,
+    "token_count": 18,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Various notations\nNotation 1: Horizontally arranged tokens with directed edges\nTokens + grammatical function"
   },
   {
@@ -429,6 +569,10 @@
     ],
     "char_count": 154,
     "word_count": 22,
+    "token_count": 29,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Various notations\nNotation 2: Horizontally arranged tokens with directed edges\nTokens + grammatical function\n... but arrows are in the opposite direction!"
   },
   {
@@ -441,6 +585,10 @@
     ],
     "char_count": 120,
     "word_count": 18,
+    "token_count": 25,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Various notations\nNotation 3: Tree of tokens\nTokens + grammatical function... Direction is naturally encoded by the tree"
   },
   {
@@ -453,6 +601,10 @@
     ],
     "char_count": 104,
     "word_count": 18,
+    "token_count": 24,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Various notations\nNotation 4: Tree of POS tags mapped to tokens\nTokens + grammatical function + POS tags"
   },
   {
@@ -465,6 +617,10 @@
     ],
     "char_count": 421,
     "word_count": 72,
+    "token_count": 86,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Module 3 Named Entity Recognition\n\u25cf What named entities are and why they are useful \n\u25cf How entity types depend on the task and domain\n\u25cf Why NER is context-dependent\n\u25cf NER as a sequence labelling problem \n\u25cf The BIO tagging scheme and entity spans \n\u25cf How many output classes BIO requires \n\u25cf Local vs. global sequence models \n\u25cf CRFs, feature-based methods, and neural approaches \n\u25cf Exact-match evaluation at the entity level"
   },
   {
@@ -477,6 +633,10 @@
     ],
     "char_count": 381,
     "word_count": 64,
+    "token_count": 78,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "What Is Named Entity Recognition?\n\u25cf Named Entity Recognition (NER) identifies mentions of real-world \nentities in text. \n\u25cf It also assigns a label to each mention. \n\u25cf Typical entity types include: \n\u25cb Person\n\u25cb Organisation\n\u25cb Location\n\u25cb Date / Time\n\u25cb Money\n\u25cf NER helps answer questions such as: \n\u25cb Who is mentioned? \n\u25cb Where did something happen? \n\u25cb Which organisations are involved?"
   },
   {
@@ -489,6 +649,10 @@
     ],
     "char_count": 321,
     "word_count": 55,
+    "token_count": 64,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Named Entities Are Task-Dependent\n\u25cf The useful entity types depend on the application domain. \n\u25cf In news text, common types include: \n\u25cb person \n\u25cb organisation \n\u25cb location \n\u25cb date \n\u25cf In biomedical text, useful types may include: \n\u25cb drug \n\u25cb disease \n\u25cb protein \n\u25cb virus \n\u25cf NER is therefore not one fixed universal label set."
   },
   {
@@ -501,6 +665,10 @@
     ],
     "char_count": 280,
     "word_count": 51,
+    "token_count": 61,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Why NER Is Context-Dependent\n\u25cf The same string can refer to different entity types in different \ncontexts. \n\u25cf Examples: \n\u25cb Washington may refer to a person, a city, or a government \n\u25cb Amazon may refer to a company or a river \n\u25cf NER systems must use context, not just surface form."
   },
   {
@@ -513,6 +681,10 @@
     ],
     "char_count": 294,
     "word_count": 53,
+    "token_count": 66,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "NER as Sequence Labelling\n\u25cf A common formulation treats NER as a token-level sequence \nlabelling task. \n\u25cf Each token receives a tag that tells us: \n\u25cb whether it is inside an entity \n\u25cb and which entity type it belongs to \n\u25cf This makes NER similar to POS tagging, but with span boundaries \nadded."
   },
   {
@@ -525,6 +697,10 @@
     ],
     "char_count": 282,
     "word_count": 58,
+    "token_count": 81,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "The BIO Tagging Scheme\n\u25cf B-X: beginning of an entity of type X \n\u25cf I-X: inside an entity of type X \n\u25cf O: outside any entity \n\u25cf Example: \n\u25cb Maya Chen works at Northbridge Labs in Leeds.\n\u25cb B-PER I-PER O O B-ORG I-ORG O B-LOC O\n\u25cf BIO allows us to recover entity spans from token labels."
   },
   {
@@ -537,6 +713,10 @@
     ],
     "char_count": 301,
     "word_count": 51,
+    "token_count": 63,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "From BIO Tags to Entity Mentions\n\u25cf Consecutive BIO tags define complete entity mentions. \n\u25cf Example: \n\u25cb B-PER I-PER \u2192 one two-token person entity \n\u25cf A correct entity prediction requires: \n\u25cb the correct span\n\u25cb and the correct type\n\u25cf Token-level similarity is not enough if the entity boundary is wrong."
   },
   {
@@ -549,6 +729,10 @@
     ],
     "char_count": 270,
     "word_count": 62,
+    "token_count": 91,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "How Many Output Classes?\n\u25cf If BIO is used for N entity types, the number of classes is: \n\u25cb 2N + 1\n\u25cf Why? \n\u25cb one B tag for each type \n\u25cb one I tag for each type \n\u25cb one O tag \n\u25cf Example: \n\u25cb PER, ORG, LOC \n\u25cb classes = B-PER, I-PER, B-ORG, I-ORG, B-LOC, I-LOC, O \n\u25cb total = 7"
   },
   {
@@ -561,6 +745,10 @@
     ],
     "char_count": 370,
     "word_count": 61,
+    "token_count": 74,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Local and Global Sequence Models\n\u25cf A local model predicts each tag mainly from token-level context. \n\u25cf A global model predicts a label sequence while considering \ndependencies between output tags. \n\u25cf Why does this matter? \n\u25cb some tag sequences are much more plausible than others \n\u25cb for example, an I-ORG tag should not normally appear after O without a \npreceding B-ORG"
   },
   {
@@ -573,6 +761,10 @@
     ],
     "char_count": 353,
     "word_count": 53,
+    "token_count": 63,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Conditional Random Fields\n\u25cf A Conditional Random Field (CRF) is a global sequence model. \n\u25cf It scores the entire output sequence rather than each token \nindependently. \n\u25cf CRFs are useful because they can model dependencies such as: \n\u25cb legal BIO transitions \n\u25cb consistency across neighbouring labels \n\u25cf This often improves sequence labelling performance."
   },
   {
@@ -585,6 +777,10 @@
     ],
     "char_count": 321,
     "word_count": 54,
+    "token_count": 65,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Features Used in Classical NER\n\u25cf Classical NER models often use handcrafted features: \n\u25cb current word \n\u25cb surrounding words \n\u25cb orthographic features \n\u25cb prefixes and suffixes \n\u25cb trigger words \n\u25cb gazetteers \n\u25cf Examples: \n\u25cb initial capitals \n\u25cb all digits \n\u25cb titles such as Dr or Prof\n\u25cb lists of country names or company names"
   },
   {
@@ -597,6 +793,10 @@
     ],
     "char_count": 306,
     "word_count": 45,
+    "token_count": 63,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Neural Approaches to NER\n\u25cf Neural sequence models reduce the need for manual feature \nengineering. \n\u25cf Common models include: \n\u25cb BiLSTM\n\u25cb BiLSTM-CRF \n\u25cb Transformer-based encoders \n\u25cf These models learn contextual representations directly from data. \n\u25cf They often perform well when training data is available."
   },
   {
@@ -609,6 +809,10 @@
     ],
     "char_count": 330,
     "word_count": 66,
+    "token_count": 77,
+    "part_index": 1,
+    "part_count": 1,
+    "was_split": false,
     "content": "Exact-Match Evaluation for NER\n\u25cf NER is usually evaluated at the entity level, not only at the token \nlevel. \n\u25cf A predicted entity counts as a true positive only if: \n\u25cb its span is correct \n\u25cb and its type is correct \n\u25cf If the boundary is wrong, it is not a correct entity. \n\u25cf If the type is wrong, it is also not a correct entity."
   }
 ]

@@ -2,7 +2,10 @@
     "filename": "Week1_Intro_to_vector.pdf",
     "week": "Week 1",
     "raw_total_pages": 88,
+    "pages_with_text": 88,
+    "empty_pages_removed": 0,
     "deduplicated_total_pages": 54,
+    "pages_removed_by_dedup": 34,
     "pages": [
         {
             "page_number": 1,
@@ -110,7 +113,7 @@
         },
         {
             "page_number": 38,
-            "content": "Vector Similarity\nDot (inner) product:takes two equal-length sequences of\nnumbers (i.e. vectors) and returns a single number.\ndot(x1,x 2) =x 1 ·x 2 =x 1x⊤\n2 = Pd\ni=1 x1,i x2,i =\nx1,1x2,1 +...+x 1,d x2,d\nCosine similarity:normalise dot product ([0,1]) by dividing\nwith vectors’ lengths (or magnitude or norm)|x|.\ncosine(x1,x 2) = x1·x2\n|x1||x2| =\nPd\ni=1 x1,i x2,iqPd\ni=1 (x1,d )2\nqPd\ni=1 (x2,d )2\n|x|= √x·x=\nq\nx 2\n1 +...+x 2\nd"
+            "content": "Vector Similarity\nDot (inner) product:takes two equal-length sequences of\nnumbers (i.e. vectors) and returns a single number.\ndot(x1,x 2) =x 1·x 2 =x 1x⊤\n2 = Pd\ni=1 x1,i x2,i =\nx1,1x2,1 +...+x 1,d x2,d\nCosine similarity:normalise dot product ([0,1]) by dividing\nwith vectors’ lengths (or magnitude or norm)|x|.\ncosine(x1,x 2) = x1·x2\n|x1||x2| =\nPd\ni=1 x1,i x2,iqPd\ni=1 (x1,d )2\nqPd\ni=1 (x2,d )2\n|x|= √x·x=\nq\nx 2\n1 +...+x 2\nd"
         },
         {
             "page_number": 40,
@@ -134,7 +137,7 @@
         },
         {
             "page_number": 50,
-            "content": "Decide what/how do you want to represent: Obtain a\nvocabulary\nAssume a corpusDofmpre-processed texts (e.g. a set of movie\nreviews or tweets).\nThe vocabularyVis a set containing all thekunique wordsw i in\nD:\nV={w 1, ...,wk }\nand often is extended to include n-grams (contiguous sequences of\nnwords)."
+            "content": "Decide what/how do you want to represent: Obtain a\nvocabulary\nAssume a corpusDofmpre-processed texts (e.g. a set of movie\nreviews or tweets).\nThe vocabularyVis a set containing all thekunique wordsw i in\nD:\nV={w 1, ...,w k}\nand often is extended to include n-grams (contiguous sequences of\nnwords)."
         },
         {
             "page_number": 51,
@@ -146,7 +149,7 @@
         },
         {
             "page_number": 55,
-            "content": "Problems with discrete vectors\napricot =x 2 = [0,1,0,0,0,0]\npineapple =x 3 = [0,0,0,0,0,1]\ndot(x2,x 3) = 0·0 + 1·0 + 0·0 + 0·0 + 0·0 + 0·1\n= 0\ncosine(x2,x 3) = x2 ·x 3\n|x2||x3| = 0\n1·1 = 0\nEvery word is equally different from every other word. But\napricotandpineappleare related!\nWouldcontextual informationbe useful?"
+            "content": "Problems with discrete vectors\napricot =x 2 = [0,1,0,0,0,0]\npineapple =x 3 = [0,0,0,0,0,1]\ndot(x2,x 3) = 0·0 + 1·0 + 0·0 + 0·0 + 0·0 + 0·1\n= 0\ncosine(x2,x 3) = x2·x 3\n|x2||x3| = 0\n1·1 = 0\nEvery word is equally different from every other word. But\napricotandpineappleare related!\nWouldcontextual informationbe useful?"
         },
         {
             "page_number": 58,
@@ -158,7 +161,7 @@
         },
         {
             "page_number": 64,
-            "content": "Words: Word-Word Matrix (term-context)\nA matrixX,n×mwheren=|V|(target words) and\nm=|V c |(context words)\nFor each wordx i inV, count how many times it co-occurs\nwith context wordsx j\nUse a context window of±kwords (to the left/right ofx i )\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia)!\nUsually target and context word vocabularies are the same\nresulting into a square matrix."
+            "content": "Words: Word-Word Matrix (term-context)\nA matrixX,n×mwheren=|V|(target words) and\nm=|V c|(context words)\nFor each wordx i inV, count how many times it co-occurs\nwith context wordsx j\nUse a context window of±kwords (to the left/right ofx i)\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia)!\nUsually target and context word vocabularies are the same\nresulting into a square matrix."
         },
         {
             "page_number": 66,
@@ -170,7 +173,7 @@
         },
         {
             "page_number": 69,
-            "content": "Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D| × |V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈ V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!"
+            "content": "Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D|×|V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!"
         },
         {
             "page_number": 72,
@@ -178,11 +181,11 @@
         },
         {
             "page_number": 73,
-            "content": "Weighting the Word-Word Matrix: Distance discount\nWeight contexts according to the distance from the word: the\nfurther away, the lower the weight!\nFor a window size±k, multiply the context word at each\nposition as k−distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3 ]"
+            "content": "Weighting the Word-Word Matrix: Distance discount\nWeight contexts according to the distance from the word: the\nfurther away, the lower the weight!\nFor a window size±k, multiply the context word at each\nposition as k−distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3]"
         },
         {
             "page_number": 75,
-            "content": "Weighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently:\nPMI(w i ,w j ) = log 2\nP(w i ,w j )\nP(w i )P(w j ) = #(wi ,w j )|D|\n#(w1)·#(w j )\nP(w i ,w j ) = #(wi ,w j )\n|D| ,P(w i ) = #(wi )\n|D|\nwhere #(·) denotes count and|D|number of observed words in\nthe corpus.\nPositive values quantify relatedness. Use PMI instead of\ncounts.\nNegative values? Usually ignored (positive PMI):\nPPMI(w i ,w j ) = max(PMI(w i ,w j ),0)"
+            "content": "Weighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently:\nPMI(w i ,w j) = log 2\nP(w i ,w j)\nP(w i)P(w j) = #(wi ,w j)|D|\n#(w1)·#(w j)\nP(w i ,w j) = #(wi ,w j)\n|D| ,P(w i) = #(wi)\n|D|\nwhere #(·) denotes count and|D|number of observed words in\nthe corpus.\nPositive values quantify relatedness. Use PMI instead of\ncounts.\nNegative values? Usually ignored (positive PMI):\nPPMI(w i ,w j) = max(PMI(w i ,w j),0)"
         },
         {
             "page_number": 77,

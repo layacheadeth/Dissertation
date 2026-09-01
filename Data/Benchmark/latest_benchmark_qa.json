@@ -1,0 +1,1808 @@
+[
+  {
+    "query_id": "EXAM_001",
+    "student_query": "In a dependency analysis (Universal Dependencies style, where a noun heads its prepositional phrase), if a prepositional phrase modifies a noun rather than the verb, what dependency relation connects that noun to the noun inside the prepositional phrase?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "dependency parsing",
+      "nmod",
+      "nominal modifier",
+      "Universal Dependencies",
+      "prepositional phrase",
+      "head",
+      "attachment"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 12,
+        "page": 24,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "amod / nmod: nominal modifier",
+        "why": "Sole source in the corpus for The relation is nmod, a nominal modifier",
+        "content": "Common Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme."
+      },
+      {
+        "rank": 2,
+        "week": 12,
+        "page": 29,
+        "role": "supporting",
+        "claims_supported": [
+          "C2"
+        ],
+        "marginal_claims": [
+          "C2"
+        ],
+        "necessary": false,
+        "evidence": "If the phrase describes an entity, it usually attaches to the noun",
+        "why": "Supplies A phrase describing the noun attaches to the noun, not to the verb",
+        "content": "How to Decide Where a Phrase Attaches\n Ask: Which word is this phrase modifying?\n If the phrase describes the event or action, it usually attaches to \nthe verb. \n If the phrase describes an entity, it usually attaches to the noun. \n Parsing is therefore closely tied to semantic interpretation."
+      }
+    ],
+    "qa_gold_standard": "It is nmod (nominal modifier): when the phrase describes the noun rather than the action, the inner noun attaches to the modified noun as a nominal modifier, not as a verbal dependent.",
+    "claims": {
+      "C1": "The relation is nmod, a nominal modifier",
+      "C2": "A phrase describing the noun attaches to the noun, not to the verb"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 20,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "Reading B treats the phrase as a noun modifier",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_002",
+    "student_query": "In a dependency parse, what is the root (head) of a simple declarative sentence, and what relation connects the subject to it?",
+    "question_type": "conceptual",
+    "difficulty": "easy",
+    "keywords": [
+      "dependency parse",
+      "root",
+      "head",
+      "nsubj",
+      "nominal subject",
+      "main verb",
+      "syntactic structure"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 12,
+        "page": 22,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C3"
+        ],
+        "necessary": false,
+        "evidence": "the sentence head is often the main predicate; subjects and objects depend on that predicate",
+        "why": "Supplies The root of the sentence is the main verb / predicate; Other arguments and modifiers also depend on the predicate",
+        "content": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent."
+      },
+      {
+        "rank": 2,
+        "week": 12,
+        "page": 24,
+        "role": "supporting",
+        "claims_supported": [
+          "C2"
+        ],
+        "marginal_claims": [
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "nsubj: nominal subject",
+        "why": "Sole source in the corpus for The subject attaches to the root as nsubj",
+        "content": "Common Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme."
+      }
+    ],
+    "qa_gold_standard": "The main verb is the root of the sentence, and the subject attaches to it directly as an nsubj (nominal subject) dependent. Other arguments and modifiers also hang off the verb as its dependents, so the verb is the single node from which the rest of the structure descends.",
+    "claims": {
+      "C1": "The root of the sentence is the main verb / predicate",
+      "C2": "The subject attaches to the root as nsubj",
+      "C3": "Other arguments and modifiers also depend on the predicate"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 12,
+        "page": 21,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "The head of the whole sentence is usually the main verb",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 12,
+        "page": 23,
+        "claims_supported": [
+          "C3"
+        ],
+        "evidence": "Other words connect to it through grammatical relations such as subject, object, and modifier",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 19,
+        "claims_supported": [
+          "C1",
+          "C3"
+        ],
+        "evidence": "Find the main predicate/root; identify direct dependents: subject, object, modifiers",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_003",
+    "student_query": "How is the observed agreement between two annotators computed when they each assign a category label to the same set of items?",
+    "question_type": "conceptual",
+    "difficulty": "easy",
+    "keywords": [
+      "observed agreement",
+      "inter-annotator agreement",
+      "proportion",
+      "category label",
+      "annotation"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 10,
+        "page": 8,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "the proportion of cases on which annotators agree; they agree on 7 items, Pa = 7/10",
+        "why": "Sole source in the corpus for Observed agreement is the proportion of items both annotators label alike; It is computed as items agreed divided by total items",
+        "content": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement."
+      }
+    ],
+    "qa_gold_standard": "Observed agreement is the proportion of items on which the two annotators assign the same label: count the items they agree on and divide by the total number of items.",
+    "claims": {
+      "C1": "Observed agreement is the proportion of items both annotators label alike",
+      "C2": "It is computed as items agreed divided by total items"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 23,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "Pa = proportion of items on which annotators agree",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_004",
+    "student_query": "In Cohen's Kappa, what is expected (chance) agreement and how is it computed from each annotator's label distribution?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "Cohen's Kappa",
+      "expected agreement",
+      "chance agreement",
+      "marginal proportions",
+      "inter-annotator agreement",
+      "contingency table",
+      "annotation reliability"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 10,
+        "page": 9,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "chance agreement on Positive = 0.6 x 0.5 = 0.30; Pe = 0.30 + 0.20 = 0.50",
+        "why": "Sole source in the corpus for Expected agreement is the agreement attributable to chance; It is the sum over categories of the product of the two annotators' marginals",
+        "content": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50"
+      }
+    ],
+    "qa_gold_standard": "Expected agreement is the probability the two annotators would agree purely by chance. It is computed by taking, for each category, the product of the two annotators' marginal proportions for that category, and summing those products across all categories.",
+    "claims": {
+      "C1": "Expected agreement is the agreement attributable to chance",
+      "C2": "It is the sum over categories of the product of the two annotators' marginals"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 23,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "Pe = chance agreement estimated from annotator label distributions",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_005",
+    "student_query": "How is Cohen's Kappa computed from observed agreement and expected agreement?",
+    "question_type": "conceptual",
+    "difficulty": "easy",
+    "keywords": [
+      "Cohen's Kappa",
+      "observed agreement",
+      "expected agreement",
+      "inter-annotator agreement",
+      "chance agreement",
+      "agreement metric"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 10,
+        "page": 10,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": false,
+        "evidence": "K = (Pa - Pe) / (1 - Pe); corrects observed agreement for chance agreement",
+        "why": "Supplies Kappa = (observed - expected) / (1 - expected); Kappa removes chance agreement from the observed figure",
+        "content": "Cohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone."
+      }
+    ],
+    "qa_gold_standard": "Kappa = (observed agreement - expected agreement) / (1 - expected agreement). It rescales the observed agreement by removing the agreement expected by chance, so 1 means perfect agreement and 0 means chance-level agreement.",
+    "claims": {
+      "C1": "Kappa = (observed - expected) / (1 - expected)",
+      "C2": "Kappa removes chance agreement from the observed figure"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 23,
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "evidence": "kappa = (Pa - Pe) / (1 - Pe); observed agreement does not correct for chance",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_006",
+    "student_query": "What problem does inverse document frequency (IDF) solve in document representation, and what kind of term does it favour?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "IDF",
+      "TF-IDF",
+      "document representation",
+      "discriminative terms",
+      "term weighting"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 77,
+        "role": "primary",
+        "claims_supported": [
+          "C2",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C2",
+          "C3"
+        ],
+        "necessary": false,
+        "evidence": "If a term appears in many documents it might be less informative as a distinguishing feature",
+        "why": "Supplies IDF weights a term by how few documents contain it; The result is driven by discriminative rather than common vocabulary",
+        "content": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid"
+      },
+      {
+        "rank": 2,
+        "week": 1,
+        "page": 72,
+        "role": "supporting",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "Frequent words (articles, pronouns, etc.) dominate contexts without being informative",
+        "why": "Sole source in the corpus for Raw counts are dominated by frequent words that are not informative",
+        "content": "Problems with counts\nFrequent words (articles, pronouns, etc.) dominate contexts\nwithout being informative.\nLet’s add the wordtheto the contexts. It often appears with\nmost nouns:\nvocabulary = [aadvark,computer,data,pinch,result,sugar,the]\napricot =x 2 = [0,0,0,1,0,1,30]\ndigital =x 3 = [0,2,1,0,1,0,45]\ncosine(x2,x 3) = 30·45√\n902·\n√\n2031\n= 0.997\nThis also holds for the document-word matrix! Solution:\nWeight the vectors!"
+      }
+    ],
+    "qa_gold_standard": "Raw term frequency alone rewards whatever occurs most often, which is dominated by function words and other terms that appear across the whole collection and therefore say nothing about what distinguishes one document from another. IDF fixes this by weighting each term according to how few documents it appears in, so terms concentrated in a small number of documents carry more weight than terms spread across all of them. The effect is that a document's representation is driven by its discriminative vocabulary rather than by its most common words.",
+    "claims": {
+      "C1": "Raw counts are dominated by frequent words that are not informative",
+      "C2": "IDF weights a term by how few documents contain it",
+      "C3": "The result is driven by discriminative rather than common vocabulary"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 8,
+        "claims_supported": [
+          "C2",
+          "C3"
+        ],
+        "evidence": "TF-IDF weighting down-weights very common terms; emphasises informative terms",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_007",
+    "student_query": "Using idf(t)=log10(N/df(t)) with raw term frequency tf, how do you compute the tf-idf weight of a term in a document, and what does each part contribute?",
+    "question_type": "conceptual",
+    "difficulty": "easy",
+    "keywords": [
+      "tf-idf",
+      "term frequency",
+      "inverse document frequency",
+      "weighting",
+      "document-term matrix",
+      "information retrieval"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 77,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "idf_w = log10(N / df_w); if a term appears frequently in a document it is likely important",
+        "why": "Sole source in the corpus for tf-idf = tf x log10(N / df(t)); TF rewards in-document frequency; IDF discounts corpus-wide frequency",
+        "content": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid"
+      }
+    ],
+    "qa_gold_standard": "tf-idf = tf * idf(t) = tf * log10(N/df(t)), where N is the total number of documents and df(t) is the number of documents containing the term. The tf part rewards terms that occur often in the document; the idf part discounts terms that occur in many documents, so a term that is frequent in this document but rare across the collection gets the highest weight.",
+    "claims": {
+      "C1": "tf-idf = tf x log10(N / df(t))",
+      "C2": "TF rewards in-document frequency; IDF discounts corpus-wide frequency"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 8,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "down-weights very common terms; emphasises informative terms",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_008",
+    "student_query": "When computing tf-idf with idf(t)=log10(N/df(t)), why does a term that appears in more of the documents receive a smaller idf, and therefore a smaller tf-idf weight?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "tf-idf",
+      "idf",
+      "document frequency",
+      "term weighting",
+      "discriminative power",
+      "logarithmic scaling",
+      "N/df(t)"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 77,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "idf_w = log10(N / df_w); appears in many documents, less informative",
+        "why": "Sole source in the corpus for As df grows, N/df approaches 1 and its log approaches 0; A term in many documents is less informative as a distinguisher",
+        "content": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid"
+      }
+    ],
+    "qa_gold_standard": "Because df(t) grows as the term appears in more documents, the ratio N/df(t) shrinks toward 1, and log10 of a value near 1 is near 0. So a term occurring in most documents has a small idf and contributes little discriminative weight, even if its raw frequency is high.",
+    "claims": {
+      "C1": "As df grows, N/df approaches 1 and its log approaches 0",
+      "C2": "A term in many documents is less informative as a distinguisher"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 8,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "down-weights very common terms",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_009",
+    "student_query": "In the document-word (bag-of-words) matrix used to represent a corpus, what do the rows and columns correspond to, and how is a single document represented as a vector?",
+    "question_type": "conceptual",
+    "difficulty": "easy",
+    "keywords": [
+      "document-word matrix",
+      "bag-of-words",
+      "rows and columns",
+      "vocabulary",
+      "document vector",
+      "term counts"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 69,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "necessary": true,
+        "evidence": "a matrix X, |D| x |V| where rows are documents and columns are vocabulary words",
+        "why": "Sole source in the corpus for X is |D| x |V| with rows as documents and columns as vocabulary words; Each cell counts occurrences of that word in that document; A document is its row; a word is its column",
+        "content": "Documents: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D| × |V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈ V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!"
+      }
+    ],
+    "qa_gold_standard": "The matrix X is |D| x |V|: the rows are the documents in the corpus and the columns are the vocabulary words, and each cell counts how many times that word appears in that document. A document is therefore represented by its row, i.e. its counts over the whole vocabulary, and a word by its column, i.e. its counts across all the documents.",
+    "claims": {
+      "C1": "X is |D| x |V| with rows as documents and columns as vocabulary words",
+      "C2": "Each cell counts occurrences of that word in that document",
+      "C3": "A document is its row; a word is its column"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_010",
+    "student_query": "What are the disadvantages of using count-based vectors to represent word meanings?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "count-based vectors",
+      "high-dimensional",
+      "sparse",
+      "context sensitivity",
+      "polysemy",
+      "distributional semantics",
+      "vector sparsity"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 79,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "high dimensional: vocabulary size could be millions; very sparse",
+        "why": "Sole source in the corpus for Count vectors are high-dimensional and sparse; This makes them hard to use effectively",
+        "content": "Problems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!"
+      },
+      {
+        "rank": 2,
+        "week": 13,
+        "page": 8,
+        "role": "supporting",
+        "claims_supported": [
+          "C1",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C3"
+        ],
+        "necessary": false,
+        "evidence": "high-dimensional and sparse; static vectors struggle with polysemy",
+        "why": "Supplies One vector per word cannot capture different senses or contexts",
+        "content": "COMP64702 Revision Lecture\nWord representations & similarity\nRepresentations\nLikely format: numeric cosine similarity or conceptual statements about vector methods.\ncosine(A, B) = (A · B) / (||A|| ||B||)\nCount-based vectors\nTerm–document or term–term matrices\nHigh-dimensional and sparse\nOne vector per word type\nCan be expensive to store\nTF–IDF weighting\nDown-weights very common terms\nEmphasises informative terms\nDoes not magically remove sparsity\nContextual meaning\nStatic vectors struggle with polysemy\nContextual models can represent a word \ndifferently in different sentences\nA=[1,1,0], B=[1,0,0]. Estimate cosine similarity.\nAnswer: 0.71"
+      }
+    ],
+    "qa_gold_standard": "They are high-dimensional and sparse, which makes them hard to use effectively in machine learning, and they do not capture how a word's meaning changes across different contexts (no sense or context sensitivity).",
+    "claims": {
+      "C1": "Count vectors are high-dimensional and sparse",
+      "C2": "This makes them hard to use effectively",
+      "C3": "One vector per word cannot capture different senses or contexts"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 1,
+        "page": 83,
+        "claims_supported": [
+          "C3"
+        ],
+        "evidence": "Polysemy: all occurrences of a word and all its senses are represented by one vector",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 3,
+        "page": 8,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "Extremely high-dimensional, sparse and memory-intensive",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_011",
+    "student_query": "In a named entity recognition task using the BIO tagging scheme to detect a given number of named-entity categories, how many tag classes are there in total?",
+    "question_type": "conceptual",
+    "difficulty": "easy",
+    "keywords": [
+      "BIO tagging",
+      "named entity recognition",
+      "tag classes",
+      "sequence labeling",
+      "NLP"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 12,
+        "page": 55,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": false,
+        "evidence": "2N + 1: one B tag for each type, one I tag for each type, one O tag",
+        "why": "Supplies For k categories there are 2k + 1 tags; One B- and one I- tag per category, plus a single O tag",
+        "content": "How Many Output Classes?\n● If BIO is used for N entity types, the number of classes is: \n○ 2N + 1\n● Why? \n○ one B tag for each type \n○ one I tag for each type \n○ one O tag \n● Example: \n○ PER, ORG, LOC \n○ classes = B-PER, I-PER, B-ORG, I-ORG, B-LOC, I-LOC, O \n○ total = 7"
+      }
+    ],
+    "qa_gold_standard": "For k categories there are 2k + 1 tags: a B- (begin) and an I- (inside) tag for each of the k categories, plus a single O tag for tokens that are not part of any entity. (For example, 10 categories give 21 tags.)",
+    "claims": {
+      "C1": "For k categories there are 2k + 1 tags",
+      "C2": "One B- and one I- tag per category, plus a single O tag"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 12,
+        "page": 53,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "B-X beginning of an entity of type X; I-X inside; O outside any entity",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 22,
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "evidence": "For T entity types under BIO: 2T + 1 classes (B and I for each type, plus O)",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_013",
+    "student_query": "According to the traditional symbolic approach to representing word meaning (e.g. WordNet), which explicit lexical relations are used, and what are the stated properties of meaning under this approach?",
+    "question_type": "conceptual",
+    "difficulty": "easy",
+    "keywords": [
+      "WordNet",
+      "synonymy",
+      "hypernymy",
+      "lexical resource",
+      "symbolic representation",
+      "word meaning"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 3,
+        "page": 3,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "necessary": true,
+        "evidence": "symbolic lexical resources; synonymy; hypernymy (dog to animal); discrete, manually defined, relational",
+        "why": "Sole source in the corpus for WordNet encodes meaning via explicit relations: synonymy and hypernymy; Hypernymy links a word to a more general category (dog to animal); Meaning is discrete, manually defined and relational",
+        "content": "How can we represent word meaning?\nHypernyms\nSynonymsTraditional approach: symbolic lexical resources (e.g., WordNet)Represent meaning via explicit relations:–synonymy (dog ↔)–hypernymy (dog → animal)Meaning is discrete, manually defined, and relational"
+      }
+    ],
+    "qa_gold_standard": "WordNet represents meaning through explicit symbolic relations between words, specifically synonymy (words with the same meaning) and hypernymy, which links a word to a more general category (for example dog to animal). Under this approach meaning is discrete, manually defined, and relational rather than learned from data.",
+    "claims": {
+      "C1": "WordNet encodes meaning via explicit relations: synonymy and hypernymy",
+      "C2": "Hypernymy links a word to a more general category (dog to animal)",
+      "C3": "Meaning is discrete, manually defined and relational"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_014",
+    "student_query": "What kind of NLP tasks can be addressed with sequence labelling models, and what property do such tasks share?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "sequence labelling",
+      "Named Entity Recognition",
+      "Part-of-Speech Tagging",
+      "token-level",
+      "BIO tagging",
+      "semantic role labelling"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 12,
+        "page": 52,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": false,
+        "evidence": "treats NER as a token-level sequence labelling task; each token receives a tag",
+        "why": "Supplies Sequence labelling assigns one label to each token, in order; NER is formulated as token-level sequence labelling",
+        "content": "NER as Sequence Labelling\n● A common formulation treats NER as a token-level sequence \nlabelling task. \n● Each token receives a tag that tells us: \n○ whether it is inside an entity \n○ and which entity type it belongs to \n● This makes NER similar to POS tagging, but with span boundaries \nadded."
+      },
+      {
+        "rank": 2,
+        "week": 13,
+        "page": 18,
+        "role": "supporting",
+        "claims_supported": [
+          "C1",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C3"
+        ],
+        "necessary": false,
+        "evidence": "Assign one POS tag to each token after tokenisation",
+        "why": "Supplies POS tagging assigns one tag per token",
+        "content": "COMP64702 Revision Lecture\nPOS tagging\nSequence \nlabelling\nLikely format: match Universal POS tags to tokens under a stated interpretation.\nWhat it is\nAssign one POS tag to each token after \ntokenisation. The same word can have \ndifferent tags in different contexts.\nTagsets\nPenn Treebank: detailed, English-focused.\nUniversal POS: broader cross-linguistic tags \nsuch as PRON, AUX, VERB, NOUN, DET , \nPUNCT .\nHow to decide\nUse local context and intended \nmeaning. Ask: is the token acting as a \nnoun, verb, auxiliary, determiner, etc.?\nTag the ambiguous word only:\n“We watched her duck.”\nMeaning A: her pet bird. Meaning B: her quickly lower her head.\nAnswer: A: NOUN; B: VERB"
+      }
+    ],
+    "qa_gold_standard": "Sequence labelling suits tasks that assign one label to each token in a sequence, in order. Named Entity Recognition is formulated this way, with each token tagged for whether it is inside an entity and which type, and Part-of-Speech tagging follows the same pattern, assigning one tag per token.",
+    "claims": {
+      "C1": "Sequence labelling assigns one label to each token, in order",
+      "C2": "NER is formulated as token-level sequence labelling",
+      "C3": "POS tagging assigns one tag per token"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 12,
+        "page": 2,
+        "claims_supported": [
+          "C3"
+        ],
+        "evidence": "POS tagging as a token-level classification task",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 12,
+        "page": 7,
+        "claims_supported": [
+          "C3"
+        ],
+        "evidence": "assign one POS tag to each token in a sentence",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 22,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "Identify spans that mention real-world entities and assign a type",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_015",
+    "student_query": "In BERT's Masked Language Modelling, of the tokens chosen for masking, how are they split between the [MASK] token, a random token, and being left unchanged?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "BERT",
+      "Masked Language Modelling",
+      "MLM",
+      "masking strategy",
+      "token replacement"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 11,
+        "page": 8,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "necessary": true,
+        "evidence": "80% replace with [MASK]; 10% random token; 10% unchanged",
+        "why": "Sole source in the corpus for 80% of selected tokens are replaced with [MASK]; 10% are replaced with a random token; 10% are left unchanged",
+        "content": "MLM: 80-10-10 CorruptionFor the 15% of tokens selected for prediction,–80% of the time, they replace it with [MASK] tokenwent to the storeàwent to the [MASK]–10% of the time, they replace it with a random word in the vocabularywent to the storeàwent to the running–10% of the time, they keep it unchangedwent to the storeàwent to the storeWhy? Because [MASK] tokens are never seen during fine-tuning"
+      }
+    ],
+    "qa_gold_standard": "Of the tokens selected for masking, 80% are replaced with the [MASK] token, 10% are replaced with a random token, and 10% are left unchanged.",
+    "claims": {
+      "C1": "80% of selected tokens are replaced with [MASK]",
+      "C2": "10% are replaced with a random token",
+      "C3": "10% are left unchanged"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_016",
+    "student_query": "What are the key architectural properties of the Transformer, and how does it handle token order without recurrence?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "Transformer",
+      "self-attention",
+      "positional encoding",
+      "feed-forward network",
+      "parallel processing",
+      "token order",
+      "recurrence-free"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 3,
+        "page": 64,
+        "role": "primary",
+        "claims_supported": [
+          "C2",
+          "C3",
+          "C4"
+        ],
+        "marginal_claims": [
+          "C2",
+          "C3",
+          "C4"
+        ],
+        "necessary": false,
+        "evidence": "global self-attention; fully parallelizable; key components include positional encoding",
+        "why": "Supplies It has no recurrence and processes tokens in parallel; Positional encodings are added so token order is represented; Self-attention relates every token to every other token",
+        "content": "SummaryCore Idea: Overcomes limitations of RNNs and LSTMs (e.g., sequential bottlenecks, long-range dependencies) through global self-attention.Key Components: Self-Attention, Multi-Head Attention, Encoder-Decoder Structure, Positional EncodingWhy It Works:–Short path length between tokens (i.e.O(1) per layer)–Fully parallelizable across sequence positions–Scales effectively to very large models and datasets"
+      },
+      {
+        "rank": 2,
+        "week": 3,
+        "page": 40,
+        "role": "supporting",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "Encoder: Self-attention + Feedforward",
+        "why": "Sole source in the corpus for The Transformer stacks self-attention and feed-forward layers",
+        "content": "Transformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time"
+      }
+    ],
+    "qa_gold_standard": "A Transformer is built from stacked layers of self-attention and feed-forward networks, and it can process all tokens in a sequence in parallel during training. Because it has no recurrence, it adds positional encodings so the model still knows the order of the tokens; self-attention then models dependencies between all tokens.",
+    "claims": {
+      "C1": "The Transformer stacks self-attention and feed-forward layers",
+      "C2": "It has no recurrence and processes tokens in parallel",
+      "C3": "Positional encodings are added so token order is represented",
+      "C4": "Self-attention relates every token to every other token"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 3,
+        "page": 32,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "Eliminates recurrence, i.e. no step-by-step token processing; enables parallelization",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 3,
+        "page": 37,
+        "claims_supported": [
+          "C2",
+          "C4"
+        ],
+        "evidence": "self-attention allows each token to directly attend to all other tokens; parallelizable",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 3,
+        "page": 57,
+        "claims_supported": [
+          "C3"
+        ],
+        "evidence": "Transformers lack a built-in notion of word order; add a positional vector",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 4,
+        "claims_supported": [
+          "C2",
+          "C3",
+          "C4"
+        ],
+        "evidence": "Transformers do not use recurrence; self-attention over all positions; positional encodings supply order",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 5,
+        "claims_supported": [
+          "C3"
+        ],
+        "evidence": "order must be injected; token embeddings + position vectors",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_017",
+    "student_query": "How does the self-attention mechanism work, and which tokens can each token attend to?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "self-attention",
+      "queries",
+      "keys",
+      "values",
+      "attention scores",
+      "weighted combination",
+      "sequence length"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 3,
+        "page": 43,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2",
+          "C3",
+          "C4"
+        ],
+        "necessary": false,
+        "evidence": "Q, K, V are learned linear projections; scaling prevents dot products growing large; softmax converts scores into a distribution; output is a weighted sum of value vectors",
+        "why": "Supplies Q, K and V are learned linear projections of the input embeddings; Attention scores are dot products between queries and keys; Scores are scaled and softmaxed into a distribution; The output is a weighted sum of value vectors",
+        "content": "Self-Attention Mechanism Scaled Dot-Product AttentionFor input \nInterpretation:–Q, K, Vare learned linear projections of the input–Attention scores measure similarity in projected space–Scaling prevents dot products from growing large in high dimensions and stabilisesgradients.–softmaxconverts attention scores into a distribution over the input elements–Output is a weighted sum of value vectors"
+      },
+      {
+        "rank": 2,
+        "week": 3,
+        "page": 45,
+        "role": "supporting",
+        "claims_supported": [
+          "C5"
+        ],
+        "marginal_claims": [
+          "C5"
+        ],
+        "necessary": true,
+        "evidence": "allows each token focus on relevant token in the sequence; captures long-range dependencies",
+        "why": "Sole source in the corpus for Each token can attend to every other token, not only its neighbours",
+        "content": "Self-attention Visualisation\nSelf-attention allows each tokenfocus on relevant token in the sequence.Token \"it\" attends more to related tokens like ”The animal\"This helps the model capture long-range dependencies and context."
+      }
+    ],
+    "qa_gold_standard": "Self-attention derives a query, key and value vector for each token by multiplying the input embeddings with learned weight matrices. Attention scores are the scaled dot products between queries and keys, passed through a softmax to give a distribution, which is then used to take a weighted sum of the value vectors. Each token can attend to every other token in the sequence, not just its neighbours, producing an updated contextualised representation.",
+    "claims": {
+      "C1": "Q, K and V are learned linear projections of the input embeddings",
+      "C2": "Attention scores are dot products between queries and keys",
+      "C3": "Scores are scaled and softmaxed into a distribution",
+      "C4": "The output is a weighted sum of value vectors",
+      "C5": "Each token can attend to every other token, not only its neighbours"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 3,
+        "page": 46,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "Derived by multiplying input embeddings with learned weight matrices",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 3,
+        "page": 47,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "compute dot products between its query vector and all key vectors",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 3,
+        "page": 48,
+        "claims_supported": [
+          "C3"
+        ],
+        "evidence": "Divide each score by the square root of the key dimension",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 3,
+        "page": 49,
+        "claims_supported": [
+          "C4"
+        ],
+        "evidence": "Multiply each value vector by its attention weight",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 3,
+        "page": 50,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "packing the embeddings into a matrix X and multiplying it by the weight matrices",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 6,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "Q/K/V projections; h attention heads",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_018",
+    "student_query": "What are the key properties of BERT, including how it is trained and how it uses context?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "BERT",
+      "Masked Language Modelling",
+      "bidirectional context",
+      "Transformer encoder",
+      "[CLS] token",
+      "contextual embeddings",
+      "pretraining"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 11,
+        "page": 5,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2"
+        ],
+        "necessary": false,
+        "evidence": "All input tokens participate in bidirectional self-attention; 15% sampled for prediction contribute to the loss",
+        "why": "Supplies BERT is pre-trained with masked language modelling; It encodes each token with bidirectional (left and right) context",
+        "content": "Masked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions\nNetwork weights are updated based on average CE loss over the sampled tokens"
+      },
+      {
+        "rank": 2,
+        "week": 11,
+        "page": 16,
+        "role": "supporting",
+        "claims_supported": [
+          "C3"
+        ],
+        "marginal_claims": [
+          "C3"
+        ],
+        "necessary": true,
+        "evidence": "add a task-specific linear classifier on top of the [CLS] representation",
+        "why": "Sole source in the corpus for The [CLS] representation is used for classification",
+        "content": "For sentence-pair tasks, use [SEP] and segment embeddings to distinguish inputsAdd a task-specific linear classifier on top of the [CLS] representation.\nFine-tuning BERT"
+      }
+    ],
+    "qa_gold_standard": "BERT is trained with Masked Language Modelling and encodes each token using bidirectional context (both left and right), rather than predicting tokens strictly left to right. It uses token embeddings, and its special [CLS] token gives a summary representation that can be used for classification tasks.",
+    "claims": {
+      "C1": "BERT is pre-trained with masked language modelling",
+      "C2": "It encodes each token with bidirectional (left and right) context",
+      "C3": "The [CLS] representation is used for classification"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 11,
+        "page": 4,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "learning representations based on bidirectional context",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 11,
+        "page": 22,
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "evidence": "deep bidirectional Transformer encoder pre-trained using masked language modelling",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 7,
+        "claims_supported": [
+          "C1",
+          "C2"
+        ],
+        "evidence": "Encoder-only: BERT; bidirectional self-attention; pretraining often uses MLM-style objectives",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_019",
+    "student_query": "Given a table of bigram probabilities, how do you compute the probability of a sentence under a bigram model, and what tokens must be included?",
+    "question_type": "procedural",
+    "difficulty": "medium",
+    "keywords": [
+      "bigram model",
+      "sentence probability",
+      "start token",
+      "end token",
+      "chain rule",
+      "n-gram",
+      "transition probability"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 2,
+        "page": 27,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": false,
+        "evidence": "P(x) = product over n of P(x_n | x_{n-1})",
+        "why": "Supplies Multiply the bigram probabilities of consecutive word pairs",
+        "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1, ...,x1)≈P(x n|xn−1, ...,xn−k )\nwith k=1"
+      },
+      {
+        "rank": 2,
+        "week": 2,
+        "page": 33,
+        "role": "supporting",
+        "claims_supported": [
+          "C2"
+        ],
+        "marginal_claims": [
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "P(a|<s>) = 2/3; sentences delimited by <s> and </s>",
+        "why": "Sole source in the corpus for Include the <s> and </s> boundary transitions",
+        "content": "Example: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1"
+      }
+    ],
+    "qa_gold_standard": "You multiply together the bigram probabilities of each consecutive word pair in the sentence, including the transition from the start token <s> to the first word and from the last word to the end token </s>.",
+    "claims": {
+      "C1": "Multiply the bigram probabilities of consecutive word pairs",
+      "C2": "Include the <s> and </s> boundary transitions"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 2,
+        "page": 32,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "P(x) = P(monkeys|arctic) P(are|monkeys) ... written out as a product",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_020",
+    "student_query": "Under a bigram model (including <s> and </s>), how do you determine which of several candidate sentences has the highest probability?",
+    "question_type": "procedural",
+    "difficulty": "medium",
+    "keywords": [
+      "bigram model",
+      "sentence probability",
+      "n-gram",
+      "conditional probability",
+      "language model",
+      "chain rule",
+      "smoothing"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 2,
+        "page": 27,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": false,
+        "evidence": "P(x) = product over n of P(x_n | x_{n-1})",
+        "why": "Supplies Compute each candidate's probability as a product of bigram probabilities",
+        "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1, ...,x1)≈P(x n|xn−1, ...,xn−k )\nwith k=1"
+      },
+      {
+        "rank": 2,
+        "week": 2,
+        "page": 33,
+        "role": "supporting",
+        "claims_supported": [
+          "C2"
+        ],
+        "marginal_claims": [
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "P(a|<s>) = 2/3; sentences delimited by <s> and </s>",
+        "why": "Sole source in the corpus for Include the <s> and </s> boundary transitions",
+        "content": "Example: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1"
+      }
+    ],
+    "qa_gold_standard": "For each candidate sentence, compute its probability as the product of its consecutive bigram probabilities (including the <s> and </s> transitions), then pick the sentence with the largest resulting product.",
+    "claims": {
+      "C1": "Compute each candidate's probability as a product of bigram probabilities",
+      "C2": "Include the <s> and </s> boundary transitions",
+      "C3": "Select the candidate with the largest product"
+    },
+    "unsupported_claims": {
+      "C3": "No slide states that the highest-probability candidate is chosen. An inferential step, not retrievable content."
+    },
+    "alternate_pages": [
+      {
+        "week": 2,
+        "page": 32,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "written out as a product of consecutive bigram probabilities",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_021",
+    "student_query": "What is perplexity in language modelling, what does it measure, and does a higher or lower value indicate a better model?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "perplexity",
+      "language modelling",
+      "log-likelihood",
+      "probability",
+      "evaluation metric"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 2,
+        "page": 43,
+        "role": "primary",
+        "claims_supported": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "marginal_claims": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "necessary": true,
+        "evidence": "measures the ability of the model to predict word of an unseen text; average negative log-likelihood normalised by N; the lower the better",
+        "why": "Sole source in the corpus for Perplexity measures how well the model predicts unseen text; It is the exponentiated average negative log-likelihood per token; Lower perplexity is better",
+        "content": "Intrinsic Evaluation: Perplexity\nPerplexity: measures the ability of the model to predict word\nof an unseen text\nUnseen = not in training data, e.g., test set\nThe average negative log-likelihood of the test set\nx= [x 1, ...,xN ], normalised by the number of wordsN.\nThelowerthe better.\nPerplexity(w) = exp\n \n−\nPD\nd=1 logP(w d )PD\nd=1 Nd\n!"
+      }
+    ],
+    "qa_gold_standard": "Perplexity measures how 'surprised' a language model is by a sequence; it is computed from the probabilities the model assigns to the tokens, and equals the exponentiated average negative log-likelihood per token. Lower perplexity means the model assigns higher probability to the data, so lower is better.",
+    "claims": {
+      "C1": "Perplexity measures how well the model predicts unseen text",
+      "C2": "It is the exponentiated average negative log-likelihood per token",
+      "C3": "Lower perplexity is better"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_022",
+    "student_query": "Consider the sentence 'The boy saw the man with a telescope.' Assume a dependency analysis in which nouns are the heads of prepositional phrases, as in Universal Dependencies. Under the interpretation 'the boy saw the man who had a telescope', which dependency relation holds between the tokens 'man' and 'telescope'?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "dependency parsing",
+      "nmod",
+      "attachment ambiguity",
+      "prepositional phrase",
+      "Universal Dependencies",
+      "head",
+      "modifier"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 12,
+        "page": 19,
+        "role": "primary",
+        "claims_supported": [
+          "C2"
+        ],
+        "marginal_claims": [
+          "C2"
+        ],
+        "necessary": false,
+        "evidence": "Does with the student describe who the teacher talked to, or which essay was discussed?",
+        "why": "Supplies The prepositional phrase attaches to the noun, not the verb",
+        "content": "Why Parsing Matters\n➢Some sentences remain ambiguous even after POS tagging. \n Example: \no The teacher discussed the essay with the student.\n Does with the student describe: \no who the teacher talked to? \no or which essay was discussed? \n Parsing makes these structural choices explicit.\n➢Some sentences allow more than one syntactic analysis. \n The same sequence of words can produce different structures and \ndifferent meanings. \n To understand a sentence, we cannot treat each word in isolation. \n We need to determine what each word is attached or connected to."
+      },
+      {
+        "rank": 2,
+        "week": 12,
+        "page": 24,
+        "role": "supporting",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "amod / nmod: nominal modifier",
+        "why": "Sole source in the corpus for The relation is nmod",
+        "content": "Common Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme."
+      }
+    ],
+    "qa_gold_standard": "The relation is nmod: 'telescope' is a nominal modifier of 'man', because in this reading the prepositional phrase 'with a telescope' attaches to the noun 'man' rather than to the verb.",
+    "claims": {
+      "C1": "The relation is nmod",
+      "C2": "The prepositional phrase attaches to the noun, not the verb"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 12,
+        "page": 28,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "Interpretation B: with the student modifies essay",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 20,
+        "claims_supported": [
+          "C2"
+        ],
+        "evidence": "Reading B treats the phrase as a noun modifier",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_023",
+    "student_query": "Consider the sentence 'The boy saw the man with a telescope.' interpreted as meaning that the boy saw the man who had a telescope. In the dependency graph for this interpretation, which tokens are dependents of the head of the sentence?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "keywords": [
+      "dependency parsing",
+      "head",
+      "dependent",
+      "nsubj",
+      "dobj",
+      "attachment ambiguity",
+      "syntactic relations"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 12,
+        "page": 22,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": false,
+        "evidence": "subjects and objects depend on that predicate",
+        "why": "Supplies The verb is the head; subject and object are its direct dependents",
+        "content": "Heads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent."
+      },
+      {
+        "rank": 2,
+        "week": 12,
+        "page": 28,
+        "role": "supporting",
+        "claims_supported": [
+          "C2"
+        ],
+        "marginal_claims": [
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "Interpretation B: with the student modifies essay",
+        "why": "Sole source in the corpus for 'telescope' is not a dependent of the verb because the PP attaches to the noun",
+        "content": "Attachment Ambiguity\n A major challenge in parsing is attachment ambiguity. \n Example: \n The teacher discussed the essay with the student.\n Interpretation A: \n with the student modifies discussed\n meaning: the teacher talked to the student\n Interpretation B: \n with the student modifies essay\n meaning: the essay is about / associated with the student\n Different meanings require different parses."
+      }
+    ],
+    "qa_gold_standard": "The head of the sentence is the verb 'saw', and its direct dependents are 'boy' as the subject and 'man' as the object. 'telescope' is not a dependent of 'saw', because under this reading the prepositional phrase attaches to the noun 'man' instead.",
+    "claims": {
+      "C1": "The verb is the head; subject and object are its direct dependents",
+      "C2": "'telescope' is not a dependent of the verb because the PP attaches to the noun"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 12,
+        "page": 23,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "one token acts as the structural centre; others connect through subject, object, modifier",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 12,
+        "page": 27,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "What is the root? Which words depend directly on the root?",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      },
+      {
+        "week": 13,
+        "page": 19,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "Root: emailed; Subject dependent: analyst; Object dependent: report",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_024",
+    "student_query": "Two annotators independently label four social media posts as POSITIVE, NEGATIVE or NEUTRAL. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the observed agreement used in the Kappa coefficient?",
+    "question_type": "calculation",
+    "difficulty": "easy",
+    "keywords": [
+      "observed agreement",
+      "inter-annotator agreement",
+      "Kappa coefficient",
+      "annotation",
+      "agreement"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 10,
+        "page": 8,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": false,
+        "evidence": "the proportion of cases on which annotators agree",
+        "why": "Supplies Observed agreement is items agreed divided by total items",
+        "content": "Observed Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement."
+      }
+    ],
+    "qa_gold_standard": "The observed agreement is 0.75, because the two annotators assign the same label on 3 of the 4 posts (they differ only on the third post, NEUTRAL vs POSITIVE), and 3/4 = 0.75.",
+    "claims": {
+      "C1": "Observed agreement is items agreed divided by total items"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 23,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "Pa = proportion of items on which annotators agree",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_025",
+    "student_query": "Two annotators label four posts. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the expected (chance) agreement used in the Kappa coefficient?",
+    "question_type": "calculation",
+    "difficulty": "medium",
+    "keywords": [
+      "Cohen's Kappa",
+      "expected agreement",
+      "inter-annotator agreement",
+      "chance agreement",
+      "confusion matrix",
+      "annotation"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 10,
+        "page": 9,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "chance agreement on Positive = 0.6 x 0.5 = 0.30; Pe = 0.50",
+        "why": "Sole source in the corpus for Expected agreement sums, over categories, the product of the annotators' marginals",
+        "content": "Expected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50"
+      }
+    ],
+    "qa_gold_standard": "The expected agreement is 0.438. Annotator 1 uses POSITIVE 2/4, NEGATIVE 1/4, NEUTRAL 1/4; Annotator 2 uses POSITIVE 3/4, NEGATIVE 1/4, NEUTRAL 0. Summing the products per category gives (0.5 x 0.75) + (0.25 x 0.25) + (0.25 x 0) = 0.4375, which rounds to 0.438.",
+    "claims": {
+      "C1": "Expected agreement sums, over categories, the product of the annotators' marginals"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_026",
+    "student_query": "For a set of four annotated posts, the observed agreement between two annotators is 0.75 and the expected agreement is 0.438. What is the value of the Kappa coefficient?",
+    "question_type": "calculation",
+    "difficulty": "easy",
+    "keywords": [
+      "Cohen's Kappa",
+      "inter-annotator agreement",
+      "observed agreement",
+      "expected agreement",
+      "chance correction",
+      "annotation reliability"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 10,
+        "page": 10,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": false,
+        "evidence": "K = (Pa - Pe) / (1 - Pe)",
+        "why": "Supplies Kappa = (observed - expected) / (1 - expected)",
+        "content": "Cohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone."
+      }
+    ],
+    "qa_gold_standard": "Kappa is about 0.556. Using Kappa = (observed - expected) / (1 - expected), this is (0.75 - 0.4375) / (1 - 0.4375) = 0.3125 / 0.5625 = 0.5556, which rounds to 0.556.",
+    "claims": {
+      "C1": "Kappa = (observed - expected) / (1 - expected)"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 13,
+        "page": 23,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "kappa = (Pa - Pe) / (1 - Pe)",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  },
+  {
+    "query_id": "EXAM_027",
+    "student_query": "Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('bark', Doc1) to three decimal places?",
+    "question_type": "calculation",
+    "difficulty": "medium",
+    "keywords": [
+      "tf-idf",
+      "term frequency",
+      "inverse document frequency",
+      "raw tf",
+      "document-term matrix",
+      "idf",
+      "preprocessing"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 77,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "idf_w = log10(N / df_w)",
+        "why": "Sole source in the corpus for tf-idf = tf x log10(N / df(t))",
+        "content": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid"
+      }
+    ],
+    "qa_gold_standard": "tf-idf('bark', Doc1) = 0.301. The term 'bark' occurs once in Doc1 (tf = 1) and appears in 2 of the 4 documents (Doc1 and Doc3), so idf = log10(4/2) = 0.301, and 1 x 0.301 = 0.301.",
+    "claims": {
+      "C1": "tf-idf = tf x log10(N / df(t))"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_028",
+    "student_query": "Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('dog', Doc3) to three decimal places?",
+    "question_type": "calculation",
+    "difficulty": "medium",
+    "keywords": [
+      "tf-idf",
+      "term frequency",
+      "inverse document frequency",
+      "raw tf",
+      "idf",
+      "document frequency",
+      "vector representation"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 77,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "idf_w = log10(N / df_w)",
+        "why": "Sole source in the corpus for tf-idf = tf x log10(N / df(t))",
+        "content": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid"
+      }
+    ],
+    "qa_gold_standard": "tf-idf('dog', Doc3) = 0.125. The term 'dog' occurs once in Doc3 (tf = 1) and appears in 3 of the 4 documents (Doc1, Doc3, Doc4), so idf = log10(4/3) = 0.125, and 1 x 0.125 = 0.125.",
+    "claims": {
+      "C1": "tf-idf = tf x log10(N / df(t))"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_029",
+    "student_query": "In a document-word matrix built from 4 documents, the term 'battle' occurs 7 times in Document 2 and appears in 3 of the 4 documents. Using idf(t) = log10(N/df(t)) with raw term frequency tf, what is the tf-idf value of 'battle' in Document 2?",
+    "question_type": "calculation",
+    "difficulty": "medium",
+    "keywords": [
+      "tf-idf",
+      "idf",
+      "document frequency",
+      "term frequency",
+      "document-word matrix",
+      "log10"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 1,
+        "page": 77,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": true,
+        "evidence": "idf_w = log10(N / df_w)",
+        "why": "Sole source in the corpus for tf-idf = tf x log10(N / df(t))",
+        "content": "Weighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid"
+      }
+    ],
+    "qa_gold_standard": "tf-idf('battle', Document 2) = 0.875. With tf = 7 and df = 3 out of N = 4 documents, idf = log10(4/3) = 0.125, so 7 x 0.125 = 0.875.",
+    "claims": {
+      "C1": "tf-idf = tf x log10(N / df(t))"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": []
+  },
+  {
+    "query_id": "EXAM_030",
+    "student_query": "A bigram model gives the following probabilities: P(arctic | <s>) = 0.6, P(monkeys | arctic) = 0.1, P(are | monkeys) = 0.417, P(my | are) = 0.15, P(favourite | my) = 0.1, P(band | favourite) = 0.1, P(</s> | band) = 0.9. Using this model, what is the probability of the sentence 'arctic monkeys are my favourite band', including the start token <s> and end token </s>, rounded to 5 decimal places?",
+    "question_type": "calculation",
+    "difficulty": "easy",
+    "keywords": [
+      "bigram",
+      "language model",
+      "probability",
+      "chain rule",
+      "n-gram"
+    ],
+    "gold_pages": [
+      {
+        "rank": 1,
+        "week": 2,
+        "page": 27,
+        "role": "primary",
+        "claims_supported": [
+          "C1"
+        ],
+        "marginal_claims": [
+          "C1"
+        ],
+        "necessary": false,
+        "evidence": "P(x) = product over n of P(x_n | x_{n-1})",
+        "why": "Supplies Multiply the bigram probabilities along the sentence",
+        "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1, ...,x1)≈P(x n|xn−1, ...,xn−k )\nwith k=1"
+      },
+      {
+        "rank": 2,
+        "week": 2,
+        "page": 33,
+        "role": "supporting",
+        "claims_supported": [
+          "C2"
+        ],
+        "marginal_claims": [
+          "C2"
+        ],
+        "necessary": true,
+        "evidence": "P(a|<s>) = 2/3; sentences delimited by <s> and </s>",
+        "why": "Sole source in the corpus for Include the <s> and </s> boundary transitions",
+        "content": "Example: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1"
+      }
+    ],
+    "qa_gold_standard": "The probability is 0.00003. It is computed as the product of the seven bigram probabilities along the sentence: 0.6 * 0.1 * 0.417 * 0.15 * 0.1 * 0.1 * 0.9 = 0.000033777, which rounds to 0.00003 to 5 decimal places.",
+    "claims": {
+      "C1": "Multiply the bigram probabilities along the sentence",
+      "C2": "Include the <s> and </s> boundary transitions"
+    },
+    "unsupported_claims": {},
+    "alternate_pages": [
+      {
+        "week": 2,
+        "page": 32,
+        "claims_supported": [
+          "C1"
+        ],
+        "evidence": "written out as a product of consecutive bigram probabilities",
+        "note": "Entails claims already covered by a gold page. Not required; should not be scored as an error if retrieved."
+      }
+    ]
+  }
+]

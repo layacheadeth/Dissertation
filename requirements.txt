@@ -2,7 +2,6 @@ torch
 transformers
 sentence-transformers
 faiss-cpu
-chromadb
 numpy
 langchain-core
 langchain-text-splitters
@@ -19,3 +18,4 @@ chromadb==0.5.23
 streamlit
 openai
 python-dotenv
+pytest

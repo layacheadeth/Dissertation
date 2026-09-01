@@ -2,7 +2,10 @@
     "filename": "Week9_RAG_LLM_final.pdf",
     "week": "Week 9",
     "raw_total_pages": 39,
+    "pages_with_text": 39,
+    "empty_pages_removed": 0,
     "deduplicated_total_pages": 39,
+    "pages_removed_by_dedup": 0,
     "pages": [
         {
             "page_number": 1,
@@ -62,7 +65,7 @@
         },
         {
             "page_number": 15,
-            "content": "Exact Nearest NeighbourExact Nearest Neighbour(NN)Given: Nchunk embeddings; Query embedding qExact search:–Compute similarity between q and every embedding–Return the true top-k most similar vectorsComputational Cost–1,000,000 vectors → 1,000,000 similarity computations per query–Too slow for large-scale RAG systems"
+            "content": "Exact Nearest NeighbourExact Nearest Neighbour(NN)Given: Nchunk embeddings; Query embedding qExact search:–Compute similarity between q and every embedding–Return the true top-k most similar vectorsComputational Cost–1,000,000 vectors → 1,000,000 similarity computations per query–To o s l o w f o r l a r g e-scale RAG systems"
         },
         {
             "page_number": 16,
@@ -122,7 +125,7 @@
         },
         {
             "page_number": 30,
-            "content": "End to End QA QualityEnd-to-End Answer Quality–Compare generated answer %𝑦vs. gold answer 𝑦Common metrics–Exact Match (EM)–Token-level F1–BERTScore–Whatelse?\nNote: high overlap does not guarantee factual grounding"
+            "content": "End to End QA QualityEnd-to-End Answer Quality–Compare generated answer %𝑦vs. gold answer 𝑦Common metrics–Exact Match (EM)–To k e n-level F1–BERTScore–Whatelse?\nNote: high overlap does not guarantee factual grounding"
         },
         {
             "page_number": 31,
@@ -134,11 +137,11 @@
         },
         {
             "page_number": 33,
-            "content": "End-to-End Answer QualityExact Match (EM)–Strict string-level equality–Common in extractive QA–Does notallow paraphrasingToken-Level F1–Based on token overlap between generated and gold answers–More forgiving than EM–Ignores word order but sensitive to lexical differences"
+            "content": "End-to-End Answer QualityExact Match (EM)–Strict string-level equality–Common in extractive QA–Does notallow paraphrasingTo k e n-Level F1–Based on token overlap between generated and gold answers–More forgiving than EM–Ignores word order but sensitive to lexical differences"
         },
         {
             "page_number": 34,
-            "content": "Example: Token-Level F1 Gold Answer: \"Paris is the capital of France\"Generated Answer: \"Paris is capital of France”Common tokens: Paris, is, capital, of, France (5 tokens)Compute Precision & Recall–Precision = 5 / 5 = 1.0–Recall = 5 / 6 ≈ 0.83"
+            "content": "Example: T oken-Level F1 Gold Answer: \"Paris is the capital of France\"Generated Answer: \"Paris is capital of France”Common tokens: Paris, is, capital, of, France (5 tokens)Compute Precision & Recall–Precision = 5 / 5 = 1.0–Recall = 5 / 6 ≈ 0.83"
         },
         {
             "page_number": 35,
@@ -146,7 +149,7 @@
         },
         {
             "page_number": 36,
-            "content": "Automatic vs Human EvaluationAutomatic metrics are useful but limited:–Token-Level F1: overlap-heavy; weak on factuality–BERTScore: semantic similarity; still imperfectHuman evaluation is often needed for:–Correctness–Faithfulness (supported by evidence)–Completeness–Clarity"
+            "content": "Automatic vs Human EvaluationAutomatic metrics are useful but limited:–To k e n-Level F1: overlap-heavy; weak on factuality–BERTScore: semantic similarity; still imperfectHuman evaluation is often needed for:–Correctness–Faithfulness (supported by evidence)–Completeness–Clarity"
         },
         {
             "page_number": 37,

@@ -10,5 +10,7 @@ services:
       - .:/workspace
     environment:
       - PYTHONUNBUFFERED=1
+      - HF_TOKEN=${HF_TOKEN}
+
     ports:
       - "7860:7860"  # <-- Add this mapping layer right here

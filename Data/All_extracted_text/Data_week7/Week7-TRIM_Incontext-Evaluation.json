@@ -2,7 +2,10 @@
     "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
     "week": "Week 7",
     "raw_total_pages": 51,
+    "pages_with_text": 50,
+    "empty_pages_removed": 1,
     "deduplicated_total_pages": 49,
+    "pages_removed_by_dedup": 1,
     "pages": [
         {
             "page_number": 1,

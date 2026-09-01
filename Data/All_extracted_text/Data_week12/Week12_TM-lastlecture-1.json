@@ -2,7 +2,10 @@
     "filename": "Week12_TM-lastlecture-1.pdf",
     "week": "Week 12",
     "raw_total_pages": 66,
+    "pages_with_text": 53,
+    "empty_pages_removed": 13,
     "deduplicated_total_pages": 53,
+    "pages_removed_by_dedup": 0,
     "pages": [
         {
             "page_number": 1,

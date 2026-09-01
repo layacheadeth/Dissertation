@@ -1,0 +1,4 @@
+strategy,label,n_chunks,chunks_per_page,mean_chars,max_chars,mean_tokens,max_tokens,over_510_bge
+exp1,Page-level,516,0.98,336.6,2370,79.3,484,0
+exp2,Fixed-size overlap,104,0.2,2044.5,2655,481.4,501,0
+exp3,Section-aware,296,0.56,589.8,2370,138.5,492,0

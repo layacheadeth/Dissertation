@@ -2,7 +2,10 @@
     "filename": "Week2_Language_modelling.pdf",
     "week": "Week 2",
     "raw_total_pages": 61,
+    "pages_with_text": 61,
+    "empty_pages_removed": 0,
     "deduplicated_total_pages": 41,
+    "pages_removed_by_dedup": 20,
     "pages": [
         {
             "page_number": 1,
@@ -38,7 +41,7 @@
         },
         {
             "page_number": 13,
-            "content": "Problem Setup\nTraining data is a (often large) set of sentencesx m with wordsx n:\nDtrain ={x 1, ...,xM }\nx= [x 1, ...xN ]\nfor example:\nx=[<s>,The,water,is,clear,., </s>]\n<s>: denotes start of the sentence\n</s>: denotes end of the sentence"
+            "content": "Problem Setup\nTraining data is a (often large) set of sentencesx m with wordsx n:\nDtrain ={x 1,...,x M}\nx= [x 1,...x N]\nfor example:\nx=[<s>,The,water,is,clear,.,</s>]\n<s>: denotes start of the sentence\n</s>: denotes end of the sentence"
         },
         {
             "page_number": 14,
@@ -46,43 +49,43 @@
         },
         {
             "page_number": 16,
-            "content": "Calculate sentence probabilities\nWe want to learn a model that returns theprobability of an\nunseen sentence x:\nP(x) =P(x 1, ...,xn),for∀x∈V max N\nVis the vocabulary andV max N all possible sentences.\nHow to compute probability?"
+            "content": "Calculate sentence probabilities\nWe want to learn a model that returns theprobability of an\nunseen sentence x:\nP(x) =P(x 1,...,x n),for∀x∈V max N\nVis the vocabulary andV max N all possible sentences.\nHow to compute probability?"
         },
         {
             "page_number": 19,
-            "content": "Unigram language model\nMultiply the probability of each word appearing in the sentencex\ncomputed over the entire corpus:\nP(x) =\nNY\nn=1\nP(x n) =\nNY\nn=1\nc(x n)P\nx∈V c(x)\n<s>i love playing basketball</s>\n<s>arctic monkeys are from Manchester</s>\n<s>i study in Manchester uni</s>\nP(i love) =P(i)P(love) = 2\n20 · 1\n20 = 0.005"
+            "content": "Unigram language model\nMultiply the probability of each word appearing in the sentencex\ncomputed over the entire corpus:\nP(x) =\nNY\nn=1\nP(x n) =\nNY\nn=1\nc(x n)P\nx∈V c(x)\n<s>i love playing basketball</s>\n<s>arctic monkeys are from Manchester</s>\n<s>i study in Manchester uni</s>\nP(i love) =P(i)P(love) = 2\n20· 1\n20 = 0.005"
         },
         {
             "page_number": 23,
-            "content": "What could go wrong?\n<s>i love playing basketball</s>\n<s>arctic monkeys are from Manchester</s>\n<s>i study in Manchester uni</s>\nThe most probable word is<s>( 3\n20 )\nThe most probable single-word sentence is “<s>”\nThe most probable two-word sentence is “<s> <s>”\nThe most probableN-word sentence isN×“<s>”"
+            "content": "What could go wrong?\n<s>i love playing basketball</s>\n<s>arctic monkeys are from Manchester</s>\n<s>i study in Manchester uni</s>\nThe most probable word is<s>( 3\n20)\nThe most probable single-word sentence is “<s>”\nThe most probable two-word sentence is “<s> <s>”\nThe most probableN-word sentence isN×“<s>”"
         },
         {
             "page_number": 25,
-            "content": "Maximum Likelihood Estimation\nInstead of assumingindependence:\nP(x) =\nNY\nn=1\nP(x n)\nWe assume that each word isdependenton all previous ones:\nP(x) =P(x 1, ...,xN )\n=P(x 1)P(x 2...xN |x1)\n=P(x 1)P(x 2|x1)...P(x N |x1, ...,xN−1 )\n=\nNY\nn=1\nP(x n|x1, ...xn−1) (chain rule)\nWhat could go wrong?"
+            "content": "Maximum Likelihood Estimation\nInstead of assumingindependence:\nP(x) =\nNY\nn=1\nP(x n)\nWe assume that each word isdependenton all previous ones:\nP(x) =P(x 1,...,x N)\n=P(x 1)P(x 2...xN|x1)\n=P(x 1)P(x 2|x1)...P(x N|x1,...,x N−1)\n=\nNY\nn=1\nP(x n|x1,...x n−1) (chain rule)\nWhat could go wrong?"
         },
         {
             "page_number": 26,
-            "content": "Problems with MLE\nLet’s analyse this:\nP(x) =P(x 1)P(x 2|x1)P(x 3|x2,x 1)...P(x N |x1, ...,xN−1 )\nP(x n|xn−1...x1) = c(x 1...xn−1,x n)\nc(x 1...xn−1)\nAs we condition on more words, the counts becomesparser"
+            "content": "Problems with MLE\nLet’s analyse this:\nP(x) =P(x 1)P(x 2|x1)P(x 3|x2,x 1)...P(x N|x1,...,x N−1)\nP(x n|xn−1...x1) = c(x 1...xn−1,x n)\nc(x 1...xn−1)\nAs we condition on more words, the counts becomesparser"
         },
         {
             "page_number": 27,
-            "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1, ...,x1)≈P(x n|xn−1, ...,xn−k )\nwith k=1"
+            "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1,...,x 1)≈P(x n|xn−1,...,x n−k )\nwith k=1"
         },
         {
             "page_number": 28,
-            "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nP(x n−1,x n)\nP(x n−1)\n=\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1, ...,x1)≈P(x n|xn−1, ...,xn−k )\nwith k=1"
+            "content": "Bigram Language Models\nAssume that the choice of a worddepends\nonly on the one before it:\nP(x) =\nNY\nn=1\nP(x n|xn−1) =\nNY\nn=1\nP(x n−1,x n)\nP(x n−1)\n=\nNY\nn=1\nc(x n−1,x n)\nc(x n−1)\nk-th orderMarkov assumption:\nP(x n|xn−1,...,x 1)≈P(x n|xn−1,...,x n−k )\nwith k=1"
         },
         {
             "page_number": 29,
-            "content": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i−1 , cols:x i ):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0"
+            "content": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i−1, cols:x i):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0"
         },
         {
             "page_number": 30,
-            "content": "Bigram LM: From counts to probabilities\nFrom the bigram count matrix, compute probabilities by dividing\neach cell by the appropriate unigram count for its row.\nBigram probabilities (rows:x i−1 , cols:x i ):\narctic monkeys are my favourite band\narctic 0 0.1 0.02 0 0 0\nmonkeys 0 0 0.417 0.0017 0.008 0\nare 0.0008 0.0113 0 0.15 0.0063 0.00003\nmy 0 0.0007 0 0.0003 0.1 0.0017\nfavourite 0 0.002 0 0 0 0.1\nband 0 0 0.015 0.05 0 0"
+            "content": "Bigram LM: From counts to probabilities\nFrom the bigram count matrix, compute probabilities by dividing\neach cell by the appropriate unigram count for its row.\nBigram probabilities (rows:x i−1, cols:x i):\narctic monkeys are my favourite band\narctic 0 0.1 0.02 0 0 0\nmonkeys 0 0 0.417 0.0017 0.008 0\nare 0.0008 0.0113 0 0.15 0.0063 0.00003\nmy 0 0.0007 0 0.0003 0.1 0.0017\nfavourite 0 0.002 0 0 0 0.1\nband 0 0 0.015 0.05 0 0"
         },
         {
             "page_number": 31,
-            "content": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i−1 , cols:x i ):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0\nx= [arctic,monkeys,are,my,favourite,band]\nWhat isP(x)?"
+            "content": "Bigram LM: From counts to probabilities\nUnigram counts:\narctic monkeys are my favourite band\n100 600 4000 3000 500 200\nBigram counts (rows:x i−1, cols:x i):\narctic monkeys are my favourite band\narctic 0 10 2 0 0 0\nmonkeys 0 0 250 1 5 0\nare 3 45 0 600 25 1\nmy 0 2 0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0\nx= [arctic,monkeys,are,my,favourite,band]\nWhat isP(x)?"
         },
         {
             "page_number": 32,
@@ -94,7 +97,7 @@
         },
         {
             "page_number": 34,
-            "content": "Longer contexts (N-gram LMs)\nP(x|context) = P(context,x)\nP(context) = c(context,x)\nc(context)\nIn bigram LMcontextisx n−1, trigramx n−2,x n−1, etc.\nThe longer the context:\nthe more likely to capture long-range dependencies:\n“I saw a tiger that was really very ...” fierceor talkative?\nthe sparser the counts (zero probabilities)\n5-grams and training sets with billions of tokens are common."
+            "content": "Longer contexts (N-gram LMs)\nP(x|context) = P(context,x)\nP(context) = c(context,x)\nc(context)\nIn bigram LMcontextisx n−1, trigramx n−2,x n−1, etc.\nThe longer the context:\nthe more likely to capture long-range dependencies:\n“I saw a tiger that was really very ...” fierce or talkative?\nthe sparser the counts (zero probabilities)\n5-grams and training sets with billions of tokens are common."
         },
         {
             "page_number": 35,
@@ -126,7 +129,7 @@
         },
         {
             "page_number": 43,
-            "content": "Intrinsic Evaluation: Perplexity\nPerplexity: measures the ability of the model to predict word\nof an unseen text\nUnseen = not in training data, e.g., test set\nThe average negative log-likelihood of the test set\nx= [x 1, ...,xN ], normalised by the number of wordsN.\nThelowerthe better.\nPerplexity(w) = exp\n \n−\nPD\nd=1 logP(w d )PD\nd=1 Nd\n!"
+            "content": "Intrinsic Evaluation: Perplexity\nPerplexity: measures the ability of the model to predict word\nof an unseen text\nUnseen = not in training data, e.g., test set\nThe average negative log-likelihood of the test set\nx= [x 1,...,x N], normalised by the number of wordsN.\nThelowerthe better.\nPerplexity(w) = exp\n \n−\nPD\nd=1 logP(w d)PD\nd=1 Nd\n!"
         },
         {
             "page_number": 44,
@@ -142,7 +145,7 @@
         },
         {
             "page_number": 49,
-            "content": "Add-1 Smoothing\nAdd-1 (or Laplace) smoothing adds one to all counts:\nPAdd−1 (xn) = c(x n) + 1\nCorpus size+|V|\nPretend we have seen all words at least once!"
+            "content": "Add-1 Smoothing\nAdd-1 (or Laplace) smoothing adds one to all counts:\nPAdd−1(xn) = c(x n) + 1\nCorpus size+|V|\nPretend we have seen all words at least once!"
         },
         {
             "page_number": 51,
@@ -158,11 +161,11 @@
         },
         {
             "page_number": 59,
-            "content": "Backoff\nStart with n-gram order ofkbut if the counts are 0 usek−1:\nBO(x n|xn−1 . . .xn−k ) =(\nP(x n|xn−1 . . .xn−k ),ifc(x n . . .xn−k )>0\nBO(x n|xn−1 . . .xn−k+1 ),otherwise\nIs this a probability distribution?"
+            "content": "Backoff\nStart with n-gram order ofkbut if the counts are 0 usek−1:\nBO(x n|xn−1...x n−k ) =(\nP(x n|xn−1...x n−k ),ifc(x n...x n−k )>0\nBO(x n|xn−1...x n−k+1 ),otherwise\nIs this a probability distribution?"
         },
         {
             "page_number": 60,
-            "content": "Backoff\nPBO (xn|xn−1 . . .xn−k ) =(\nP ⋆(xn|xn−1 . . .xn−k ),ifc(x n . . .xn−k )>0\nαxn−1...xn−k PBO (xn|xn−1 . . .xn−k+1 ),otherwise\nwithα xn−1...xn−k the backoff weight\ncomputed so that probability distribution is respected (i.e.,\nprobs between 0 and 1 and sums to 1)\nSee [Jurafsky and Martin, 2018]"
+            "content": "Backoff\nPBO(xn|xn−1...x n−k ) =(\nP ⋆(xn|xn−1...x n−k ),ifc(x n...x n−k )>0\nαxn−1...xn−k PBO(xn|xn−1...x n−k+1 ),otherwise\nwithα xn−1...xn−k the backoff weight\ncomputed so that probability distribution is respected (i.e.,\nprobs between 0 and 1 and sums to 1)\nSee [Jurafsky and Martin, 2018]"
         },
         {
             "page_number": 61,

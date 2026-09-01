@@ -1,0 +1,1488 @@
+{
+  "provenance": {
+    "generated_utc": "2026-08-19T17:40:16+00:00",
+    "git_commit": "unknown",
+    "tokenizer": "BAAI/bge-small-en-v1.5",
+    "tokenizer_details": {
+      "name_or_path": "BAAI/bge-small-en-v1.5",
+      "class": "BertTokenizerFast",
+      "vocab_size": 30522,
+      "model_max_positions": 512,
+      "special_tokens_reserved": 2,
+      "usable_tokens": 510,
+      "counts_exclude_special_tokens": true
+    },
+    "data_dir": "/workspace/Data/All_extracted_text",
+    "python": "3.11.16"
+  },
+  "totals": {
+    "n_lectures": 13,
+    "raw_total_pages": 615,
+    "deduplicated_total_pages": 529,
+    "total_chars": 173911,
+    "total_tokens": 40970,
+    "pages_with_text": 590,
+    "empty_pages_removed": 25,
+    "pages_removed_by_dedup": 61,
+    "split_available": true,
+    "overall_reduction_pct": 14.0
+  },
+  "by_strategy": {
+    "exp1": {
+      "label": "Page-level",
+      "n_lectures": 13,
+      "n_chunks": 516,
+      "duplicate_chunk_ids": 0,
+      "total_chars": 173676,
+      "total_tokens": 40916,
+      "mean_chars": 336.6,
+      "mean_tokens": 79.3,
+      "max_chars": 2370,
+      "max_tokens": 484,
+      "chunks_over_limit": {
+        "bge-small-en-v1.5": 0
+      },
+      "chunks_per_page": 0.98
+    },
+    "exp2": {
+      "label": "Fixed-size overlap",
+      "n_lectures": 13,
+      "n_chunks": 104,
+      "duplicate_chunk_ids": 0,
+      "total_chars": 212625,
+      "total_tokens": 50067,
+      "mean_chars": 2044.5,
+      "mean_tokens": 481.4,
+      "max_chars": 2655,
+      "max_tokens": 501,
+      "chunks_over_limit": {
+        "bge-small-en-v1.5": 0
+      },
+      "chunks_per_page": 0.2
+    },
+    "exp3": {
+      "label": "Section-aware",
+      "n_lectures": 13,
+      "n_chunks": 296,
+      "duplicate_chunk_ids": 0,
+      "total_chars": 174570,
+      "total_tokens": 41001,
+      "mean_chars": 589.8,
+      "mean_tokens": 138.5,
+      "max_chars": 2370,
+      "max_tokens": 492,
+      "chunks_over_limit": {
+        "bge-small-en-v1.5": 0
+      },
+      "chunks_per_page": 0.56
+    }
+  },
+  "lectures": [
+    {
+      "folder": "Data/All_extracted_text/Data_week1",
+      "stem": "Week1_Intro_to_vector",
+      "path": "Data/All_extracted_text/Data_week1/Week1_Intro_to_vector.json",
+      "sha256": "2bd5791af600280214049fbc6201599f6f501624ed3ac49292f4fe06b716a043",
+      "filename": "Week1_Intro_to_vector.pdf",
+      "week": "Week 1",
+      "raw_total_pages": 88,
+      "pages_with_text": 88,
+      "empty_pages_removed": 0,
+      "deduplicated_total_pages": 54,
+      "pages_removed_by_dedup": 34,
+      "has_page_split": true,
+      "total_chars": 14621,
+      "total_tokens": 3687
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week2",
+      "stem": "Week2_Language_modelling",
+      "path": "Data/All_extracted_text/Data_week2/Week2_Language_modelling.json",
+      "sha256": "5e795cd193f26dd7c9afc6e699d0a2c7fc27af807eb2dd319fcd875d7c2a0257",
+      "filename": "Week2_Language_modelling.pdf",
+      "week": "Week 2",
+      "raw_total_pages": 61,
+      "pages_with_text": 61,
+      "empty_pages_removed": 0,
+      "deduplicated_total_pages": 41,
+      "pages_removed_by_dedup": 20,
+      "has_page_split": true,
+      "total_chars": 10135,
+      "total_tokens": 3084
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week3",
+      "stem": "Week3_word2vec_RNN_Transformer",
+      "path": "Data/All_extracted_text/Data_week3/Week3_word2vec_RNN_Transformer.json",
+      "sha256": "019d0a1ea910dcad78e2d2eedf44dd67b1bc25b69019e793e8e8ea124bd8537e",
+      "filename": "Week3_word2vec_RNN_Transformer.pdf",
+      "week": "Week 3",
+      "raw_total_pages": 65,
+      "pages_with_text": 65,
+      "empty_pages_removed": 0,
+      "deduplicated_total_pages": 65,
+      "pages_removed_by_dedup": 0,
+      "has_page_split": true,
+      "total_chars": 16656,
+      "total_tokens": 3955
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week4",
+      "stem": "Week4_LLM-Data",
+      "path": "Data/All_extracted_text/Data_week4/Week4_LLM-Data.json",
+      "sha256": "11fd80d2417f249ded470ab66d507c9114a5669ac8e43de2f1c59168ff730361",
+      "filename": "Week4_LLM-Data.pdf",
+      "week": "Week 4",
+      "raw_total_pages": 38,
+      "pages_with_text": 37,
+      "empty_pages_removed": 1,
+      "deduplicated_total_pages": 36,
+      "pages_removed_by_dedup": 1,
+      "has_page_split": true,
+      "total_chars": 13688,
+      "total_tokens": 3299
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week5",
+      "stem": "Week5_TRIM_LLM-pretraining",
+      "path": "Data/All_extracted_text/Data_week5/Week5_TRIM_LLM-pretraining.json",
+      "sha256": "061f0f7257ed2e556311ca4217354cfcebeabb3334c27dbb7ed63b50dad6520a",
+      "filename": "Week5_TRIM_LLM-pretraining.pdf",
+      "week": "Week 5",
+      "raw_total_pages": 26,
+      "pages_with_text": 26,
+      "empty_pages_removed": 0,
+      "deduplicated_total_pages": 26,
+      "pages_removed_by_dedup": 0,
+      "has_page_split": true,
+      "total_chars": 6347,
+      "total_tokens": 1415
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week6",
+      "stem": "Week6_TRIM_SFT_alignment",
+      "path": "Data/All_extracted_text/Data_week6/Week6_TRIM_SFT_alignment.json",
+      "sha256": "05448058f2b514fb18ef751bae3e8442948fa658803d492ab1f02af9b3aa8928",
+      "filename": "Week6_TRIM_SFT_alignment.pdf",
+      "week": "Week 6",
+      "raw_total_pages": 51,
+      "pages_with_text": 50,
+      "empty_pages_removed": 1,
+      "deduplicated_total_pages": 49,
+      "pages_removed_by_dedup": 1,
+      "has_page_split": true,
+      "total_chars": 17418,
+      "total_tokens": 3727
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week7",
+      "stem": "Week7-TRIM_Incontext-Evaluation",
+      "path": "Data/All_extracted_text/Data_week7/Week7-TRIM_Incontext-Evaluation.json",
+      "sha256": "eb8ee623a3a99927e64f806260cd70ea3d3df9d1896a176cb42e0a752ba193c2",
+      "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+      "week": "Week 7",
+      "raw_total_pages": 51,
+      "pages_with_text": 50,
+      "empty_pages_removed": 1,
+      "deduplicated_total_pages": 49,
+      "pages_removed_by_dedup": 1,
+      "has_page_split": true,
+      "total_chars": 18192,
+      "total_tokens": 4090
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week8",
+      "stem": "Week8_TRIM-Application-Multimodal",
+      "path": "Data/All_extracted_text/Data_week8/Week8_TRIM-Application-Multimodal.json",
+      "sha256": "ac9b3e5197acc8403e48a69a1c71aca8f2993baedf0f0ae1090bb1fc6f5e3a07",
+      "filename": "Week8_TRIM-Application-Multimodal.pdf",
+      "week": "Week 8",
+      "raw_total_pages": 42,
+      "pages_with_text": 41,
+      "empty_pages_removed": 1,
+      "deduplicated_total_pages": 41,
+      "pages_removed_by_dedup": 0,
+      "has_page_split": true,
+      "total_chars": 19479,
+      "total_tokens": 4496
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week9",
+      "stem": "Week9_RAG_LLM_final",
+      "path": "Data/All_extracted_text/Data_week9/Week9_RAG_LLM_final.json",
+      "sha256": "576be36a068f9411b3eb370c76d63c4988afb447be1e2a665bd9f8299cd271ed",
+      "filename": "Week9_RAG_LLM_final.pdf",
+      "week": "Week 9",
+      "raw_total_pages": 39,
+      "pages_with_text": 39,
+      "empty_pages_removed": 0,
+      "deduplicated_total_pages": 39,
+      "pages_removed_by_dedup": 0,
+      "has_page_split": true,
+      "total_chars": 11808,
+      "total_tokens": 2724
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week10",
+      "stem": "Week10_TM_last_lecture",
+      "path": "Data/All_extracted_text/Data_week10/Week10_TM_last_lecture.json",
+      "sha256": "0de2cc70e5501a997ec1ccdaed5c56865e58c3cb4992cd821dfd11bb5407d6e7",
+      "filename": "Week10_TM_last_lecture.pdf",
+      "week": "Week 10",
+      "raw_total_pages": 41,
+      "pages_with_text": 33,
+      "empty_pages_removed": 8,
+      "deduplicated_total_pages": 29,
+      "pages_removed_by_dedup": 4,
+      "has_page_split": true,
+      "total_chars": 9217,
+      "total_tokens": 2480
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week11",
+      "stem": "Week11_TRIM_BERT",
+      "path": "Data/All_extracted_text/Data_week11/Week11_TRIM_BERT.json",
+      "sha256": "bb881b8dea1c8b80a90551bd36dcd60fb935ddffa682612a64b66efa888115f8",
+      "filename": "Week11_TRIM_BERT.pdf",
+      "week": "Week 11",
+      "raw_total_pages": 22,
+      "pages_with_text": 22,
+      "empty_pages_removed": 0,
+      "deduplicated_total_pages": 22,
+      "pages_removed_by_dedup": 0,
+      "has_page_split": true,
+      "total_chars": 5661,
+      "total_tokens": 1449
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week12",
+      "stem": "Week12_TM-lastlecture-1",
+      "path": "Data/All_extracted_text/Data_week12/Week12_TM-lastlecture-1.json",
+      "sha256": "81756c0c8e7f30e6b04566ce3a6a31745592d75254a4820639bdb0fe2f77908c",
+      "filename": "Week12_TM-lastlecture-1.pdf",
+      "week": "Week 12",
+      "raw_total_pages": 66,
+      "pages_with_text": 53,
+      "empty_pages_removed": 13,
+      "deduplicated_total_pages": 53,
+      "pages_removed_by_dedup": 0,
+      "has_page_split": true,
+      "total_chars": 14043,
+      "total_tokens": 3003
+    },
+    {
+      "folder": "Data/All_extracted_text/Data_week13",
+      "stem": "Week13_revision_lecture_exam_focused",
+      "path": "Data/All_extracted_text/Data_week13/Week13_revision_lecture_exam_focused.json",
+      "sha256": "c5890267eae62a1ba023323ae9551abd2617a5f14f6805374d024e73cb542a7c",
+      "filename": "Week13_revision_lecture_exam_focused.pdf",
+      "week": "Week 13",
+      "raw_total_pages": 25,
+      "pages_with_text": 25,
+      "empty_pages_removed": 0,
+      "deduplicated_total_pages": 25,
+      "pages_removed_by_dedup": 0,
+      "has_page_split": true,
+      "total_chars": 16646,
+      "total_tokens": 3561
+    }
+  ],
+  "chunks_by_lecture": {
+    "Week1_Intro_to_vector": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week1/Week1_Intro_to_vector_exp1_chunks.json",
+        "sha256": "86c43e684da9cfd3404bec6112eee8651224b2b9eb28f33777253cc3ac103308",
+        "n_chunks": 51,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 51,
+        "chars": {
+          "n": 51,
+          "total": 14570,
+          "mean": 285.7,
+          "median": 284,
+          "sd": 165.6,
+          "min": 25,
+          "max": 627,
+          "p95": 546
+        },
+        "tokens": {
+          "n": 51,
+          "total": 3673,
+          "mean": 72.0,
+          "median": 63,
+          "sd": 48.2,
+          "min": 4,
+          "max": 195,
+          "p95": 137
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week1/Week1_Intro_to_vector_exp2_chunks.json",
+        "sha256": "3cb455403a079d1a8b3774d78a8ba158bed7d32bc4b5b695e0c6d91d0afb3c2c",
+        "n_chunks": 9,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 54,
+        "chars": {
+          "n": 9,
+          "total": 17758,
+          "mean": 1973.1,
+          "median": 1857,
+          "sd": 350.5,
+          "min": 1543,
+          "max": 2512,
+          "p95": 2459
+        },
+        "tokens": {
+          "n": 9,
+          "total": 4487,
+          "mean": 498.6,
+          "median": 500,
+          "sd": 4.3,
+          "min": 487,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week1/Week1_Intro_to_vector_exp3_chunks.json",
+        "sha256": "6ba3ba692ef492616f8e63fe43760419da31619a9593aa644a34ed048b0c09ce",
+        "n_chunks": 34,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 51,
+        "chars": {
+          "n": 34,
+          "total": 14604,
+          "mean": 429.5,
+          "median": 416.0,
+          "sd": 229.9,
+          "min": 118,
+          "max": 907,
+          "p95": 804
+        },
+        "tokens": {
+          "n": 34,
+          "total": 3673,
+          "mean": 108.0,
+          "median": 109.0,
+          "sd": 69.5,
+          "min": 22,
+          "max": 318,
+          "p95": 202
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week2_Language_modelling": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week2/Week2_Language_modelling_exp1_chunks.json",
+        "sha256": "51b206b8a9f5cf9d2498cff860cf6ccbb9ac91e60c462d513958db7db81b547f",
+        "n_chunks": 41,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 41,
+        "chars": {
+          "n": 41,
+          "total": 10135,
+          "mean": 247.2,
+          "median": 255,
+          "sd": 86.6,
+          "min": 63,
+          "max": 422,
+          "p95": 368
+        },
+        "tokens": {
+          "n": 41,
+          "total": 3084,
+          "mean": 75.2,
+          "median": 65,
+          "sd": 37.9,
+          "min": 13,
+          "max": 153,
+          "p95": 130
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week2/Week2_Language_modelling_exp2_chunks.json",
+        "sha256": "8ffbcf61055585d391cc8f62ada8a410786fab40559b650cb8901a97a627e96f",
+        "n_chunks": 8,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 41,
+        "chars": {
+          "n": 8,
+          "total": 12373,
+          "mean": 1546.6,
+          "median": 1522.0,
+          "sd": 540.2,
+          "min": 701,
+          "max": 2332,
+          "p95": 2205
+        },
+        "tokens": {
+          "n": 8,
+          "total": 3784,
+          "mean": 473,
+          "median": 500.0,
+          "sd": 76.4,
+          "min": 284,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week2/Week2_Language_modelling_exp3_chunks.json",
+        "sha256": "cfea5c966dffbe04e4cdbc67b16450d023743ddcb9aa5b15287ac61419a1ae1f",
+        "n_chunks": 31,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 41,
+        "chars": {
+          "n": 31,
+          "total": 10155,
+          "mean": 327.6,
+          "median": 256,
+          "sd": 246.9,
+          "min": 77,
+          "max": 1147,
+          "p95": 627
+        },
+        "tokens": {
+          "n": 31,
+          "total": 3084,
+          "mean": 99.5,
+          "median": 67,
+          "sd": 86.4,
+          "min": 15,
+          "max": 361,
+          "p95": 233
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week3_word2vec_RNN_Transformer": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week3/Week3_word2vec_RNN_Transformer_exp1_chunks.json",
+        "sha256": "cac158945e0dfcc3485aa5db54a48c5a9f9ce395905734d5bbb128a5440b45b0",
+        "n_chunks": 63,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 63,
+        "chars": {
+          "n": 63,
+          "total": 16617,
+          "mean": 263.8,
+          "median": 267,
+          "sd": 129.4,
+          "min": 25,
+          "max": 594,
+          "p95": 448
+        },
+        "tokens": {
+          "n": 63,
+          "total": 3946,
+          "mean": 62.6,
+          "median": 59,
+          "sd": 30.1,
+          "min": 4,
+          "max": 121,
+          "p95": 104
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week3/Week3_word2vec_RNN_Transformer_exp2_chunks.json",
+        "sha256": "e9c7d5676d6a86133735d7057b3c7ca5ec5ed0b8659da0507376fa487a924b3e",
+        "n_chunks": 10,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 65,
+        "chars": {
+          "n": 10,
+          "total": 20518,
+          "mean": 2051.8,
+          "median": 2120.5,
+          "sd": 246.8,
+          "min": 1544,
+          "max": 2308,
+          "p95": 2302
+        },
+        "tokens": {
+          "n": 10,
+          "total": 4855,
+          "mean": 485.5,
+          "median": 500.0,
+          "sd": 45.9,
+          "min": 355,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week3/Week3_word2vec_RNN_Transformer_exp3_chunks.json",
+        "sha256": "67d197e9462aa2df53a5bff14e1c4dbb182c2bebabd26a44c784c92d90e96d6e",
+        "n_chunks": 19,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 63,
+        "chars": {
+          "n": 19,
+          "total": 16798,
+          "mean": 884.1,
+          "median": 704,
+          "sd": 767.6,
+          "min": 34,
+          "max": 2081,
+          "p95": 2038
+        },
+        "tokens": {
+          "n": 19,
+          "total": 3965,
+          "mean": 208.7,
+          "median": 183,
+          "sd": 181.2,
+          "min": 4,
+          "max": 492,
+          "p95": 459
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week4_LLM-Data": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week4/Week4_LLM-Data_exp1_chunks.json",
+        "sha256": "7770112291169f85c0b0ff124faac8248b1ee9c825f8b5663e5392a098158ee3",
+        "n_chunks": 34,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 34,
+        "chars": {
+          "n": 34,
+          "total": 13669,
+          "mean": 402.0,
+          "median": 430.0,
+          "sd": 170.4,
+          "min": 30,
+          "max": 640,
+          "p95": 616
+        },
+        "tokens": {
+          "n": 34,
+          "total": 3292,
+          "mean": 96.8,
+          "median": 99.0,
+          "sd": 44.7,
+          "min": 4,
+          "max": 186,
+          "p95": 159
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week4/Week4_LLM-Data_exp2_chunks.json",
+        "sha256": "201b254805db34d224730b34a3d69a4cd2526fbb418cf76d58aa78daea68a64f",
+        "n_chunks": 8,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 36,
+        "chars": {
+          "n": 8,
+          "total": 16523,
+          "mean": 2065.4,
+          "median": 2051.0,
+          "sd": 130.8,
+          "min": 1907,
+          "max": 2277,
+          "p95": 2209
+        },
+        "tokens": {
+          "n": 8,
+          "total": 3995,
+          "mean": 499.4,
+          "median": 500.0,
+          "sd": 1.2,
+          "min": 497,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week4/Week4_LLM-Data_exp3_chunks.json",
+        "sha256": "b27cdc79e34f93acbab81dcb294e98e4453b0d2fbcd0503fc5d81c851fc47ab3",
+        "n_chunks": 10,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 34,
+        "chars": {
+          "n": 10,
+          "total": 13881,
+          "mean": 1388.1,
+          "median": 1478.0,
+          "sd": 576.4,
+          "min": 537,
+          "max": 2253,
+          "p95": 2126
+        },
+        "tokens": {
+          "n": 10,
+          "total": 3324,
+          "mean": 332.4,
+          "median": 380.5,
+          "sd": 135.8,
+          "min": 115,
+          "max": 488,
+          "p95": 478
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week5_TRIM_LLM-pretraining": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week5/Week5_TRIM_LLM-pretraining_exp1_chunks.json",
+        "sha256": "a3bb72568705892b4d407d2aac53b27f7d31f85943706d518edffb25d2c046e9",
+        "n_chunks": 26,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 26,
+        "chars": {
+          "n": 26,
+          "total": 6347,
+          "mean": 244.1,
+          "median": 200.0,
+          "sd": 120.9,
+          "min": 79,
+          "max": 533,
+          "p95": 394
+        },
+        "tokens": {
+          "n": 26,
+          "total": 1415,
+          "mean": 54.4,
+          "median": 44.5,
+          "sd": 27.5,
+          "min": 21,
+          "max": 124,
+          "p95": 89
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week5/Week5_TRIM_LLM-pretraining_exp2_chunks.json",
+        "sha256": "93f5e37c0ec05a235508052c46a0b0ac92d08c59b448fda9740d55452bc9481d",
+        "n_chunks": 4,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 26,
+        "chars": {
+          "n": 4,
+          "total": 7771,
+          "mean": 1942.8,
+          "median": 2177.0,
+          "sd": 580.6,
+          "min": 1089,
+          "max": 2328,
+          "p95": 2287
+        },
+        "tokens": {
+          "n": 4,
+          "total": 1715,
+          "mean": 428.8,
+          "median": 500.0,
+          "sd": 142.5,
+          "min": 215,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week5/Week5_TRIM_LLM-pretraining_exp3_chunks.json",
+        "sha256": "6a1dc82edc44f32eb5645b32a6a62fed9ebdba3a3789a8f49d861c3a7f3a975e",
+        "n_chunks": 19,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 26,
+        "chars": {
+          "n": 19,
+          "total": 6361,
+          "mean": 334.8,
+          "median": 318,
+          "sd": 188.4,
+          "min": 85,
+          "max": 791,
+          "p95": 699
+        },
+        "tokens": {
+          "n": 19,
+          "total": 1415,
+          "mean": 74.5,
+          "median": 67,
+          "sd": 45.7,
+          "min": 22,
+          "max": 181,
+          "p95": 163
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week6_TRIM_SFT_alignment": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week6/Week6_TRIM_SFT_alignment_exp1_chunks.json",
+        "sha256": "8c46648eb35029ab32b92f41ef225156dafc9d91fe73862c0c396cef67710102",
+        "n_chunks": 47,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 46,
+        "chars": {
+          "n": 47,
+          "total": 17368,
+          "mean": 369.5,
+          "median": 337,
+          "sd": 333.3,
+          "min": 91,
+          "max": 2370,
+          "p95": 598
+        },
+        "tokens": {
+          "n": 47,
+          "total": 3721,
+          "mean": 79.2,
+          "median": 66,
+          "sd": 70.2,
+          "min": 17,
+          "max": 484,
+          "p95": 130
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week6/Week6_TRIM_SFT_alignment_exp2_chunks.json",
+        "sha256": "68165153e5d63d4679680f6daa362848f2940e84365cff5ac02b3711b6f7c8e2",
+        "n_chunks": 10,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 49,
+        "chars": {
+          "n": 10,
+          "total": 21764,
+          "mean": 2176.4,
+          "median": 2297.5,
+          "sd": 527.4,
+          "min": 709,
+          "max": 2561,
+          "p95": 2469
+        },
+        "tokens": {
+          "n": 10,
+          "total": 4627,
+          "mean": 462.7,
+          "median": 500.0,
+          "sd": 118.0,
+          "min": 127,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week6/Week6_TRIM_SFT_alignment_exp3_chunks.json",
+        "sha256": "ba773341bdd9d8d06590d79552ca3104af8f76f5a2f436f4573762a192d46009",
+        "n_chunks": 35,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 46,
+        "chars": {
+          "n": 35,
+          "total": 17412,
+          "mean": 497.5,
+          "median": 378,
+          "sd": 463.2,
+          "min": 105,
+          "max": 2370,
+          "p95": 1510
+        },
+        "tokens": {
+          "n": 35,
+          "total": 3723,
+          "mean": 106.4,
+          "median": 70,
+          "sd": 101.5,
+          "min": 20,
+          "max": 484,
+          "p95": 337
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week7-TRIM_Incontext-Evaluation": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week7/Week7-TRIM_Incontext-Evaluation_exp1_chunks.json",
+        "sha256": "9f5b82dddb1a3482af3963384b55eab9e0ab26b431bb021d297fb1af6f4e78af",
+        "n_chunks": 48,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 48,
+        "chars": {
+          "n": 48,
+          "total": 18170,
+          "mean": 378.5,
+          "median": 422.0,
+          "sd": 185.5,
+          "min": 30,
+          "max": 665,
+          "p95": 608
+        },
+        "tokens": {
+          "n": 48,
+          "total": 4083,
+          "mean": 85.1,
+          "median": 97.5,
+          "sd": 42.9,
+          "min": 6,
+          "max": 149,
+          "p95": 137
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week7/Week7-TRIM_Incontext-Evaluation_exp2_chunks.json",
+        "sha256": "4a699d67ba2d9c5b9cd85585104aa42043a883fdc7ab84000d2fe22bc7a4c5ed",
+        "n_chunks": 10,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 49,
+        "chars": {
+          "n": 10,
+          "total": 22240,
+          "mean": 2224,
+          "median": 2265.0,
+          "sd": 94.4,
+          "min": 2036,
+          "max": 2331,
+          "p95": 2283
+        },
+        "tokens": {
+          "n": 10,
+          "total": 4990,
+          "mean": 499,
+          "median": 500.0,
+          "sd": 3.2,
+          "min": 490,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week7/Week7-TRIM_Incontext-Evaluation_exp3_chunks.json",
+        "sha256": "6277cb72a40fda80d8afb463075dc5c1d00bd868c6c8528884810376b3a9546f",
+        "n_chunks": 29,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 48,
+        "chars": {
+          "n": 29,
+          "total": 18220,
+          "mean": 628.3,
+          "median": 515,
+          "sd": 394.4,
+          "min": 85,
+          "max": 1696,
+          "p95": 1412
+        },
+        "tokens": {
+          "n": 29,
+          "total": 4084,
+          "mean": 140.8,
+          "median": 115,
+          "sd": 91.4,
+          "min": 14,
+          "max": 376,
+          "p95": 314
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week8_TRIM-Application-Multimodal": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week8/Week8_TRIM-Application-Multimodal_exp1_chunks.json",
+        "sha256": "e3c663797cc761cf48598dbcf8ea49b877248aec7aedb780be9ccd6617e52f60",
+        "n_chunks": 41,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 41,
+        "chars": {
+          "n": 41,
+          "total": 19479,
+          "mean": 475.1,
+          "median": 523,
+          "sd": 205.0,
+          "min": 25,
+          "max": 738,
+          "p95": 679
+        },
+        "tokens": {
+          "n": 41,
+          "total": 4496,
+          "mean": 109.7,
+          "median": 124,
+          "sd": 48.8,
+          "min": 3,
+          "max": 174,
+          "p95": 156
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week8/Week8_TRIM-Application-Multimodal_exp2_chunks.json",
+        "sha256": "3e219db489b044de2bea23e7673dea60b0517aba0c4e9bf93ce6e1297c86780a",
+        "n_chunks": 11,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 41,
+        "chars": {
+          "n": 11,
+          "total": 23813,
+          "mean": 2164.8,
+          "median": 2094,
+          "sd": 160.8,
+          "min": 1926,
+          "max": 2442,
+          "p95": 2389
+        },
+        "tokens": {
+          "n": 11,
+          "total": 5496,
+          "mean": 499.6,
+          "median": 500,
+          "sd": 1.2,
+          "min": 496,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week8/Week8_TRIM-Application-Multimodal_exp3_chunks.json",
+        "sha256": "ce20a5a8d4fe4c85ed85fa57af18d6ea5516677d571b0cb1ef52ca83f5422093",
+        "n_chunks": 40,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 41,
+        "chars": {
+          "n": 40,
+          "total": 19481,
+          "mean": 487.0,
+          "median": 524.5,
+          "sd": 227.5,
+          "min": 25,
+          "max": 1071,
+          "p95": 736
+        },
+        "tokens": {
+          "n": 40,
+          "total": 4496,
+          "mean": 112.4,
+          "median": 124.5,
+          "sd": 54.0,
+          "min": 3,
+          "max": 249,
+          "p95": 162
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week9_RAG_LLM_final": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week9/Week9_RAG_LLM_final_exp1_chunks.json",
+        "sha256": "83a230bc20512cbcdf48f5e6fbeb93e6a8584a78e8da5c0b80539ab09529cf09",
+        "n_chunks": 38,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 38,
+        "chars": {
+          "n": 38,
+          "total": 11793,
+          "mean": 310.3,
+          "median": 314.5,
+          "sd": 106.9,
+          "min": 79,
+          "max": 495,
+          "p95": 477
+        },
+        "tokens": {
+          "n": 38,
+          "total": 2722,
+          "mean": 71.6,
+          "median": 69.5,
+          "sd": 27.3,
+          "min": 15,
+          "max": 124,
+          "p95": 114
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week9/Week9_RAG_LLM_final_exp2_chunks.json",
+        "sha256": "17a61903dcf553e1541e624c697974fda698a952057278c39d5236d890bc897d",
+        "n_chunks": 7,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 39,
+        "chars": {
+          "n": 7,
+          "total": 14432,
+          "mean": 2061.7,
+          "median": 2093,
+          "sd": 293.4,
+          "min": 1436,
+          "max": 2314,
+          "p95": 2269
+        },
+        "tokens": {
+          "n": 7,
+          "total": 3324,
+          "mean": 474.9,
+          "median": 500,
+          "sd": 66.5,
+          "min": 324,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week9/Week9_RAG_LLM_final_exp3_chunks.json",
+        "sha256": "ba3875e793263788ed524c47387f769069eb4c87fce71d9e1b938da42c343170",
+        "n_chunks": 9,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 38,
+        "chars": {
+          "n": 9,
+          "total": 12016,
+          "mean": 1335.1,
+          "median": 1857,
+          "sd": 747.2,
+          "min": 79,
+          "max": 2021,
+          "p95": 1925
+        },
+        "tokens": {
+          "n": 9,
+          "total": 2753,
+          "mean": 305.9,
+          "median": 416,
+          "sd": 179.4,
+          "min": 15,
+          "max": 488,
+          "p95": 460
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week10_TM_last_lecture": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week10/Week10_TM_last_lecture_exp1_chunks.json",
+        "sha256": "eb05c1589c4bdc74f1065651955bd8218b76a09ab2c565ac2a600d000899bb7d",
+        "n_chunks": 29,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 29,
+        "chars": {
+          "n": 29,
+          "total": 9217,
+          "mean": 317.8,
+          "median": 306,
+          "sd": 101.1,
+          "min": 124,
+          "max": 581,
+          "p95": 440
+        },
+        "tokens": {
+          "n": 29,
+          "total": 2480,
+          "mean": 85.5,
+          "median": 72,
+          "sd": 32.0,
+          "min": 35,
+          "max": 161,
+          "p95": 148
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week10/Week10_TM_last_lecture_exp2_chunks.json",
+        "sha256": "27ad36ed8d63a3dc832145ed71342ee014a71f4772f9d5bbe5f0f22c5abfa0e7",
+        "n_chunks": 6,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 29,
+        "chars": {
+          "n": 6,
+          "total": 10906,
+          "mean": 1817.7,
+          "median": 1874.0,
+          "sd": 320.0,
+          "min": 1401,
+          "max": 2189,
+          "p95": 2080
+        },
+        "tokens": {
+          "n": 6,
+          "total": 2980,
+          "mean": 496.7,
+          "median": 500.0,
+          "sd": 8.2,
+          "min": 480,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week10/Week10_TM_last_lecture_exp3_chunks.json",
+        "sha256": "cce189df1eca34c343270662eb666b0050ee17cef0a85a41ded29234810807c3",
+        "n_chunks": 22,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 29,
+        "chars": {
+          "n": 22,
+          "total": 9231,
+          "mean": 419.6,
+          "median": 330.0,
+          "sd": 304.0,
+          "min": 205,
+          "max": 1673,
+          "p95": 531
+        },
+        "tokens": {
+          "n": 22,
+          "total": 2480,
+          "mean": 112.7,
+          "median": 87.5,
+          "sd": 87.0,
+          "min": 54,
+          "max": 468,
+          "p95": 161
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week11_TRIM_BERT": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week11/Week11_TRIM_BERT_exp1_chunks.json",
+        "sha256": "7844d4ec8e0f47eb11d2c02d15b491ef2ea2a81392a7d14cce6be86202406a94",
+        "n_chunks": 22,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 22,
+        "chars": {
+          "n": 22,
+          "total": 5661,
+          "mean": 257.3,
+          "median": 230.0,
+          "sd": 153.2,
+          "min": 25,
+          "max": 539,
+          "p95": 463
+        },
+        "tokens": {
+          "n": 22,
+          "total": 1449,
+          "mean": 65.9,
+          "median": 55.5,
+          "sd": 41.6,
+          "min": 8,
+          "max": 143,
+          "p95": 117
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week11/Week11_TRIM_BERT_exp2_chunks.json",
+        "sha256": "75e2a20f27014f717855d447fec90a1f0973213159234b217cbac704a2111733",
+        "n_chunks": 4,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 22,
+        "chars": {
+          "n": 4,
+          "total": 6823,
+          "mean": 1705.8,
+          "median": 1941.0,
+          "sd": 509.2,
+          "min": 943,
+          "max": 1998,
+          "p95": 1943
+        },
+        "tokens": {
+          "n": 4,
+          "total": 1749,
+          "mean": 437.2,
+          "median": 500.0,
+          "sd": 125.5,
+          "min": 249,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week11/Week11_TRIM_BERT_exp3_chunks.json",
+        "sha256": "52c581f37249592529533b9553afb514ebd6f15c76b2e44a1270f6984aafb261",
+        "n_chunks": 4,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 22,
+        "chars": {
+          "n": 4,
+          "total": 5697,
+          "mean": 1424.2,
+          "median": 1575.0,
+          "sd": 385.7,
+          "min": 861,
+          "max": 1686,
+          "p95": 1662
+        },
+        "tokens": {
+          "n": 4,
+          "total": 1449,
+          "mean": 362.2,
+          "median": 402.0,
+          "sd": 87.7,
+          "min": 231,
+          "max": 414,
+          "p95": 405
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week12_TM-lastlecture-1": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week12/Week12_TM-lastlecture-1_exp1_chunks.json",
+        "sha256": "fb777b0b72ed20c43c6119cdf9cb56aef5a4a67f0cbd794bb468f262b78cc37c",
+        "n_chunks": 51,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 51,
+        "chars": {
+          "n": 51,
+          "total": 14004,
+          "mean": 274.6,
+          "median": 288,
+          "sd": 102.6,
+          "min": 27,
+          "max": 565,
+          "p95": 397
+        },
+        "tokens": {
+          "n": 51,
+          "total": 2994,
+          "mean": 58.7,
+          "median": 63,
+          "sd": 22.1,
+          "min": 3,
+          "max": 105,
+          "p95": 91
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week12/Week12_TM-lastlecture-1_exp2_chunks.json",
+        "sha256": "6fa23b7e667d14f535d7f6f1796db9c9e57f21a233e66083a7453fb9e65ffcde",
+        "n_chunks": 8,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 53,
+        "chars": {
+          "n": 8,
+          "total": 17312,
+          "mean": 2164,
+          "median": 2267.5,
+          "sd": 512.8,
+          "min": 951,
+          "max": 2655,
+          "p95": 2414
+        },
+        "tokens": {
+          "n": 8,
+          "total": 3703,
+          "mean": 462.9,
+          "median": 500.0,
+          "sd": 105.0,
+          "min": 203,
+          "max": 500,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week12/Week12_TM-lastlecture-1_exp3_chunks.json",
+        "sha256": "056bcf157d45c8d4d3426f647523be32db5cf548826a96820776e6456313725f",
+        "n_chunks": 35,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 51,
+        "chars": {
+          "n": 35,
+          "total": 14036,
+          "mean": 401.0,
+          "median": 321,
+          "sd": 197.2,
+          "min": 132,
+          "max": 925,
+          "p95": 747
+        },
+        "tokens": {
+          "n": 35,
+          "total": 2994,
+          "mean": 85.5,
+          "median": 66,
+          "sd": 49.9,
+          "min": 24,
+          "max": 267,
+          "p95": 164
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    },
+    "Week13_revision_lecture_exam_focused": {
+      "exp1": {
+        "path": "Data/All_extracted_text/Data_week13/Week13_revision_lecture_exam_focused_exp1_chunks.json",
+        "sha256": "d320adf31d1fd60cc0d9376404ba4c5267029ad0e7a55ad580f003065118811a",
+        "n_chunks": 25,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 25,
+        "chars": {
+          "n": 25,
+          "total": 16646,
+          "mean": 665.8,
+          "median": 676,
+          "sd": 161.4,
+          "min": 59,
+          "max": 968,
+          "p95": 795
+        },
+        "tokens": {
+          "n": 25,
+          "total": 3561,
+          "mean": 142.4,
+          "median": 143,
+          "sd": 30.4,
+          "min": 17,
+          "max": 190,
+          "p95": 163
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp2": {
+        "path": "Data/All_extracted_text/Data_week13/Week13_revision_lecture_exam_focused_exp2_chunks.json",
+        "sha256": "dac2cf67fe611593fd3527e34b2fcc59101d1f09e34a9a1f07e95937fe841434",
+        "n_chunks": 9,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 25,
+        "chars": {
+          "n": 9,
+          "total": 20392,
+          "mean": 2265.8,
+          "median": 2382,
+          "sd": 316.8,
+          "min": 1491,
+          "max": 2525,
+          "p95": 2481
+        },
+        "tokens": {
+          "n": 9,
+          "total": 4362,
+          "mean": 484.7,
+          "median": 500,
+          "sd": 46.4,
+          "min": 361,
+          "max": 501,
+          "p95": 500
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      },
+      "exp3": {
+        "path": "Data/All_extracted_text/Data_week13/Week13_revision_lecture_exam_focused_exp3_chunks.json",
+        "sha256": "2fe87225aae039e295d550569df0a398251d667e3953f4b6087643b39197b49f",
+        "n_chunks": 9,
+        "duplicate_chunk_ids": 0,
+        "pages_covered": 25,
+        "chars": {
+          "n": 9,
+          "total": 16678,
+          "mean": 1853.1,
+          "median": 2057,
+          "sd": 695.6,
+          "min": 59,
+          "max": 2332,
+          "p95": 2272
+        },
+        "tokens": {
+          "n": 9,
+          "total": 3561,
+          "mean": 395.7,
+          "median": 444,
+          "sd": 143.1,
+          "min": 17,
+          "max": 462,
+          "p95": 459
+        },
+        "over_limit": {
+          "bge-small-en-v1.5": 0
+        }
+      }
+    }
+  }
+}

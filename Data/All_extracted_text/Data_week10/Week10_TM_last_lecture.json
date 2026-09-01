@@ -2,7 +2,10 @@
     "filename": "Week10_TM_last_lecture.pdf",
     "week": "Week 10",
     "raw_total_pages": 41,
+    "pages_with_text": 33,
+    "empty_pages_removed": 8,
     "deduplicated_total_pages": 29,
+    "pages_removed_by_dedup": 4,
     "pages": [
         {
             "page_number": 1,

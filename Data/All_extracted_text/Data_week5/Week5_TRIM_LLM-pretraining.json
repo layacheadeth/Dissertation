@@ -2,7 +2,10 @@
     "filename": "Week5_TRIM_LLM-pretraining.pdf",
     "week": "Week 5",
     "raw_total_pages": 26,
+    "pages_with_text": 26,
+    "empty_pages_removed": 0,
     "deduplicated_total_pages": 26,
+    "pages_removed_by_dedup": 0,
     "pages": [
         {
             "page_number": 1,

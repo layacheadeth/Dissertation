@@ -1,0 +1,265 @@
+token_f1,rouge_l,bleu,groundedness,context_utilisation,keyword_coverage,abstained,query_id,query,has_reference,question_type,difficulty,_prediction,_reference,bert_f1,precision@1,recall@1,ndcg@1,precision@3,recall@3,ndcg@3,precision@5,recall@5,ndcg@5,mrr,hit@1
+0.27777777777777773,0.27777777777777773,0.10508106635796581,,,0.2857142857142857,False,EXAM_001,"In a dependency analysis (Universal Dependencies style, where a noun heads its prepositional phrase), if a prepositional phrase modifies a noun rather than the verb, what dependency relation connects that noun to the noun inside the prepositional phrase?",True,conceptual,medium,"In a Universal Dependencies style, if a prepositional phrase modifies a noun rather than the verb, the dependency relation connecting the noun to the noun inside the prepositional phrase is a ""dative"" relation.","It is nmod (nominal modifier): when the phrase describes the noun rather than the action, the inner noun attaches to the modified noun as a nominal modifier, not as a verbal dependent.",0.8788774609565735,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.1694915254237288,0.1694915254237288,0.04591422733154794,,,0.2857142857142857,False,EXAM_002,"In a dependency parse, what is the root (head) of a simple declarative sentence, and what relation connects the subject to it?",True,conceptual,easy,"In a dependency parse, the root of a simple declarative sentence is the noun phrase that functions as the subject. This noun phrase is typically marked as the subject of the sentence using a specific grammatical marker, such as the definite article ""the"" or the pronoun ""it"". The relation connecting the subject to the sentence is a subject-verb agreement, where the verb agrees in number (singular or plural) with the subject.","The main verb is the root of the sentence, and the subject attaches to it directly as an nsubj (nominal subject) dependent. Other arguments and modifiers also hang off the verb as its dependents, so the verb is the single node from which the rest of the structure descends.",0.851963996887207,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.22499999999999998,0.2,0.051576250525627865,,,0.2,False,EXAM_003,How is the observed agreement between two annotators computed when they each assign a category label to the same set of items?,True,conceptual,easy,"The observed agreement between two annotators is computed by calculating the percentage of items that are correctly classified by both annotators. This is typically done by comparing the annotations made by each annotator and counting the number of items that are correctly matched.
+
+The agreement is then calculated by dividing the number of correctly matched items by the total number of items annotated by each annotator, and multiplying by 100 to get a percentage. This percentage is often referred to as the agreement coefficient or agreement rate.
+
+For example, if Annotator A correctly labels 80% of the items and Annotator B correctly labels 85% of the items, the agreement coefficient would be (80 + 85) / 2 = 82.5%.",Observed agreement is the proportion of items on which the two annotators assign the same label: count the items they agree on and divide by the total number of items.,0.8741720914840698,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.14285714285714288,0.125,0.027756814599535485,,,0.2857142857142857,False,EXAM_004,"In Cohen's Kappa, what is expected (chance) agreement and how is it computed from each annotator's label distribution?",True,conceptual,medium,"In Cohen's Kappa, the expected (chance) agreement is the maximum possible agreement between two annotators, assuming that each annotator's label distribution is independent and identically distributed (i.i.d.). It is computed as the maximum possible number of agreements between any two annotators, divided by the total number of possible pairs of annotators.
+
+The formula for Cohen's Kappa is:
+
+Kappa = 1 - (p(0,1) + p(1,0) - p(0,0)) / (p(0,0) + p(1,1) - p(0,1) - p(1,0))
+
+where p(0,1), p(1,0), p(0,0), p(1,1) are the probabilities of agreement, disagreement, and no agreement, respectively, between any two annotators.
+
+In other words, Cohen's Kappa measures the proportion of agreements that are not coincidental, relative to the total number of possible agreements.","Expected agreement is the probability the two annotators would agree purely by chance. It is computed by taking, for each category, the product of the two annotators' marginal proportions for that category, and summing those products across all categories.",0.8299065232276917,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.2741935483870968,0.25806451612903225,0.027443600988305825,,,0.5,False,EXAM_005,How is Cohen's Kappa computed from observed agreement and expected agreement?,True,conceptual,easy,"Cohen's Kappa is computed as the ratio of the observed agreement to the expected agreement, where observed agreement is the proportion of correctly classified pairs and expected agreement is the proportion of pairs that would be classified correctly based on the null hypothesis of no agreement.
+
+The formula for Cohen's Kappa is:
+
+Kappa = (O/E) - (O - E)
+
+where O is the observed agreement and E is the expected agreement.
+
+The expected agreement is calculated as the proportion of pairs that would be classified correctly based on the null hypothesis of no agreement. This is typically done using the following formula:
+
+E = (1 - (1 - r)^2) / 2
+
+where r is the correlation coefficient between the observed agreement and the expected agreement.
+
+The observed agreement is then calculated as the proportion of correctly classified pairs, which can be done using various methods such as pairwise comparison or clustering analysis.
+
+Cohen's Kappa ranges from 0 (no agreement) to 1 (perfect agreement). A value of 0 indicates no agreement, while a value of 1 indicates perfect agreement.","Kappa = (observed agreement - expected agreement) / (1 - expected agreement). It rescales the observed agreement by removing the agreement expected by chance, so 1 means perfect agreement and 0 means chance-level agreement.",0.8471815586090088,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.3272727272727273,0.16363636363636366,0.019872946386889107,,,0.4,False,EXAM_006,"What problem does inverse document frequency (IDF) solve in document representation, and what kind of term does it favour?",True,conceptual,medium,"Inverse document frequency (IDF) is used to calculate the importance of terms in a document representation, specifically to determine the weight of each term in the document. It favors terms that are less common across all documents in a given corpus, as these terms are more representative of the overall vocabulary and less likely to be irrelevant to the document's meaning.
+
+In other words, IDF helps to normalize the importance of terms by taking into account the rarity of each term across the entire corpus, rather than relying solely on the term's frequency within a single document. This allows for a more accurate representation of the document's content and relevance.","Raw term frequency alone rewards whatever occurs most often, which is dominated by function words and other terms that appear across the whole collection and therefore say nothing about what distinguishes one document from another. IDF fixes this by weighting each term according to how few documents it appears in, so terms concentrated in a small number of documents carry more weight than terms spread across all of them. The effect is that a document's representation is driven by its discriminative vocabulary rather than by its most common words.",0.8645215630531311,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.4,0.33999999999999997,0.19938460489026053,,,0.3333333333333333,False,EXAM_007,"Using idf(t)=log10(N/df(t)) with raw term frequency tf, how do you compute the tf-idf weight of a term in a document, and what does each part contribute?",True,conceptual,easy,"The tf-idf weight of a term in a document is computed as follows:
+
+tf-idf = Idf(t) * log10(N / df(t))
+
+Where:
+
+- Idf(t) is the IDF (Inverse Document Frequency) of the term t, which is the logarithm of the number of documents in the corpus divided by the number of documents containing the term.
+- N is the total number of documents in the corpus.
+- df(t) is the document frequency of the term t, which is the number of documents containing the term divided by the total number of documents in the corpus.
+
+The tf-idf weight contributes to the term's importance in the document by taking into account its rarity in the corpus (idf) and its relevance to the document (log10(N / df(t))).","tf-idf = tf * idf(t) = tf * log10(N/df(t)), where N is the total number of documents and df(t) is the number of documents containing the term. The tf part rewards terms that occur often in the document; the idf part discounts terms that occur in many documents, so a term that is frequent in this document but rare across the collection gets the highest weight.",0.8709748983383179,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.2647058823529412,0.2058823529411765,0.1491751285794938,,,0.2857142857142857,False,EXAM_008,"When computing tf-idf with idf(t)=log10(N/df(t)), why does a term that appears in more of the documents receive a smaller idf, and therefore a smaller tf-idf weight?",True,conceptual,medium,"A term that appears in more documents receives a smaller IDF because the IDF formula is based on the logarithm of the number of documents in the training set divided by the number of terms in the vocabulary. When a term appears in more documents, the denominator (N/df(t)) increases, causing the IDF to decrease. This is because the logarithm of a larger number is smaller than the logarithm of a smaller number.","Because df(t) grows as the term appears in more documents, the ratio N/df(t) shrinks toward 1, and log10 of a value near 1 is near 0. So a term occurring in most documents has a small idf and contributes little discriminative weight, even if its raw frequency is high.",0.8545674085617065,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.32,0.29333333333333333,0.024123456257719274,,,0.16666666666666666,False,EXAM_009,"In the document-word (bag-of-words) matrix used to represent a corpus, what do the rows and columns correspond to, and how is a single document represented as a vector?",True,conceptual,easy,"In the document-word (bag-of-words) matrix used to represent a corpus, rows correspond to documents and columns correspond to words. Each cell in the matrix represents the presence or absence of a particular word in a document, with a value of 1 indicating the word is present and a value of 0 indicating it is not. A single document is represented as a vector, where each element in the vector corresponds to a word in the document, with the element at the i-th position representing the word i.","The matrix X is |D| x |V|: the rows are the documents in the corpus and the columns are the vocabulary words, and each cell counts how many times that word appears in that document. A document is therefore represented by its row, i.e. its counts over the whole vocabulary, and a word by its column, i.e. its counts across all the documents.",0.868548572063446,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.045454545454545456,0.045454545454545456,0.009932610487640667,,,0.14285714285714285,False,EXAM_010,What are the disadvantages of using count-based vectors to represent word meanings?,True,conceptual,medium,"Count-based vectors, such as TF-IDF (Term Frequency-Inverse Document Frequency) or BM25 (Bloom's Similarity Measure), are commonly used in natural language processing (NLP) to represent word meanings in large corpora. However, they have several disadvantages:
+
+1. Lack of semantic information: Count-based vectors do not capture the semantic meaning of words, which can lead to poor performance in tasks that require understanding the context and relationships between words, such as question answering, sentiment analysis, or text classification.
+
+2. Over-reliance on word frequencies: The values in count-based vectors are heavily influenced by the frequency of words in the corpus, which can be misleading if the corpus is biased or if the words are not representative of the domain.
+
+3. Inability to capture nuances: Count-based vectors do not account for nuances in language, such as idioms, sarcasm, or figurative language, which can be difficult to capture using simple word frequencies.
+
+4. Limited handling of out-of-vocabulary words: Count-based vectors can struggle with words that are not present in the corpus, leading to errors or missing information.
+
+5. Difficulty in handling synonyms and related words: Count-based vectors do not differentiate between synonyms or related words, which can lead to poor performance","They are high-dimensional and sparse, which makes them hard to use effectively in machine learning, and they do not capture how a word's meaning changes across different contexts (no sense or context sensitivity).",0.8448745012283325,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.2033898305084746,0.1694915254237288,0.017305416738068645,,,0.6,False,EXAM_011,"In a named entity recognition task using the BIO tagging scheme to detect a given number of named-entity categories, how many tag classes are there in total?",True,conceptual,easy,"In the BIO tagging scheme, there are 8 tag classes:
+
+- B (beginning of a sentence)
+- I (inside a sentence)
+- I' (end of a sentence)
+- B' (beginning of a sentence)
+- I'' (inside a sentence)
+- I''' (end of a sentence)
+- I'''' (start of a sentence)
+- O (outside the sentence)
+
+These 8 tag classes are used to represent the structure of a named entity recognition output.","For k categories there are 2k + 1 tags: a B- (begin) and an I- (inside) tag for each of the k categories, plus a single O tag for tokens that are not part of any entity. (For example, 10 categories give 21 tags.)",0.8299474120140076,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.24324324324324326,0.17567567567567569,0.014529697142896371,,,0.5,False,EXAM_013,"According to the traditional symbolic approach to representing word meaning (e.g. WordNet), which explicit lexical relations are used, and what are the stated properties of meaning under this approach?",True,conceptual,easy,"In the traditional symbolic approach to representing word meaning, explicit lexical relations include:
+
+- Synonymy: the relation between two words that have the same or similar meanings
+- Antonymy: the relation between two words that have opposite meanings
+- Hyponymy: the relation between a word and a more specific word that is a subtype or a subclass of the original word
+- Hypernymy: the relation between a word and a more general word that is a superclass or a superclass of the original word
+- Meronymy: the relation between two words that are parts of a single whole
+- Holonymy: the relation between two words that are wholes that contain each other as parts
+
+The stated properties of meaning under this approach include:
+
+- Word meaning is a function of context, with meaning varying across different contexts and situations
+- Word meaning is based on shared cognitive and linguistic experiences, with meaning being learned and acquired through interaction with the environment
+- Word meaning is not fixed, but rather is subject to change and revision over time
+- Word meaning is not absolute, but rather is relative to the context in which it is used
+- Word meaning is not solely determined by the words themselves, but rather by the relationships between words and the meanings that are constructed","WordNet represents meaning through explicit symbolic relations between words, specifically synonymy (words with the same meaning) and hypernymy, which links a word to a more general category (for example dog to animal). Under this approach meaning is discrete, manually defined, and relational rather than learned from data.",0.8489524722099304,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.20183486238532108,0.18348623853211007,0.02643453973959782,,,0.5,False,EXAM_014,"What kind of NLP tasks can be addressed with sequence labelling models, and what property do such tasks share?",True,conceptual,medium,"Sequence labelling models are widely used for tasks that involve predicting the next element in a sequence, such as:
+
+1. Sentiment analysis: predicting the sentiment or emotional tone of a piece of text, such as whether a review is positive or negative.
+2. Named entity recognition: identifying specific entities such as people, organizations, or locations in a text.
+3. Part-of-speech tagging: identifying the grammatical category of each word in a sentence, such as noun, verb, adjective, etc.
+4. Machine translation: predicting the next word in a sentence to translate it from one language to another.
+5. Text classification: categorizing text into predefined categories, such as spam vs. non-spam emails.
+
+These tasks share a common property: they involve predicting the next element in a sequence, which is a key characteristic of sequence labelling models.","Sequence labelling suits tasks that assign one label to each token in a sequence, in order. Named Entity Recognition is formulated this way, with each token tagged for whether it is inside an entity and which type, and Part-of-Speech tagging follows the same pattern, assigning one tag per token.",0.8516606688499451,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.31034482758620696,0.27586206896551724,0.12277957157466632,,,0.2,False,EXAM_015,"In BERT's Masked Language Modelling, of the tokens chosen for masking, how are they split between the [MASK] token, a random token, and being left unchanged?",True,conceptual,medium,"In BERT's Masked Language Modelling, the tokens chosen for masking are split between the [MASK] token, a random token, and being left unchanged as follows:
+
+- The [MASK] token is randomly selected from the set of all tokens in the input sequence.
+- A random token from the set of all tokens in the input sequence is randomly selected from the remaining tokens.
+- The remaining tokens are left unchanged.
+
+This process is repeated for each masked token in the input sequence.","Of the tokens selected for masking, 80% are replaced with the [MASK] token, 10% are replaced with a random token, and 10% are left unchanged.",0.8702535033226013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.12820512820512822,0.07692307692307691,0.007798147589879698,,,0.5714285714285714,False,EXAM_016,"What are the key architectural properties of the Transformer, and how does it handle token order without recurrence?",True,conceptual,medium,"The Transformer architecture is a type of neural network that uses self-attention mechanisms to process sequential data. Key architectural properties of the Transformer include:
+
+1. Self-attention mechanism: The Transformer uses a self-attention mechanism to weigh the importance of different input elements relative to each other. This allows the model to capture complex relationships between input elements.
+2. Multi-head attention: The Transformer uses a multi-head attention mechanism, which allows the model to consider multiple perspectives on an input element.
+3. Positional encoding: The Transformer uses positional encoding to provide a fixed shift to the input elements based on their position in the sequence.
+4. Embeddings: The Transformer uses embeddings to convert input elements into dense vectors that can be processed by the model.
+
+The Transformer handles token order without recurrence by using a sliding window approach. The model processes the input sequence in a window of size `h` (the hidden size), where `h` is typically 128. The model then moves the window to the right by one element, processing the next `h` elements in the sequence. This process is repeated until the end of the sequence is reached, at which point the model returns to the beginning of the sequence and starts processing the next window.
+
+The Transformer also uses a ""masking"" mechanism","A Transformer is built from stacked layers of self-attention and feed-forward networks, and it can process all tokens in a sequence in parallel during training. Because it has no recurrence, it adds positional encodings so the model still knows the order of the tokens; self-attention then models dependencies between all tokens.",0.8505791425704956,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.19753086419753085,0.13580246913580246,0.024841946038272097,,,0.14285714285714285,False,EXAM_017,"How does the self-attention mechanism work, and which tokens can each token attend to?",True,conceptual,medium,"The self-attention mechanism is a key component of transformer models, which are widely used in natural language processing tasks such as machine translation and question-answering. It allows the model to weigh the importance of different input tokens when generating a response.
+
+In self-attention, each input token is represented as a vector, and the attention mechanism computes the similarity between each token and every other token. The similarity is determined by the dot product of the two vectors, normalized by the square root of the sum of the squares of their magnitudes.
+
+Each input token attends to every other token, and the attention weights are computed as follows:
+
+* For a token i, the attention weights w_ij are computed as:
+ + w_ij = softmax(σ(x_i, x_j)), where σ is the sigmoid function and x_i and x_j are the input vectors.
+* The attention weights w_ij represent the importance of token j in the context of token i.
+
+In terms of token representation, each token is typically represented as a vector of size D, where D is the dimensionality of the input data. The attention mechanism computes the similarity between each token and every other token, and the attention weights are computed as a matrix of size D x D.
+
+The self-attention mechanism is typically implemented","Self-attention derives a query, key and value vector for each token by multiplying the input embeddings with learned weight matrices. Attention scores are the scaled dot products between queries and keys, passed through a softmax to give a distribution, which is then used to take a weighted sum of the value vectors. Each token can attend to every other token in the sequence, not just its neighbours, producing an updated contextualised representation.",0.8313102126121521,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.10588235294117647,0.07058823529411765,0.011336808739650997,,,0.2857142857142857,False,EXAM_018,"What are the key properties of BERT, including how it is trained and how it uses context?",True,conceptual,medium,"BERT (Bidirectional Encoder Representations from Transformers) is a deep learning model developed by Google that is primarily used for natural language processing tasks such as text classification, sentiment analysis, and question answering. It is a type of neural network that uses self-supervised learning and attention mechanisms to learn contextual representations of words in a sentence.
+
+BERT is trained on a large corpus of text data, typically a combination of training texts and a validation set. The training process involves two main steps: masked language modeling and next sentence prediction. In masked language modeling, the model is given a sentence with a masked word and must predict the missing word. In next sentence prediction, the model is given two sentences and must predict whether the two sentences are related or not.
+
+BERT uses a multi-layer bidirectional transformer encoder to process the input text. The encoder consists of an encoder layer and a decoder layer. The encoder layer takes in the input text and outputs a sequence of vectors representing the input text. The decoder layer takes in the output vectors from the encoder layer and outputs a sequence of vectors representing the output text.
+
+BERT uses a contextualized embedding layer to represent each word in the input text. This layer maps each word to a vector in a high-dimensional space, where the vector represents the word's meaning and","BERT is trained with Masked Language Modelling and encodes each token using bidirectional context (both left and right), rather than predicting tokens strictly left to right. It uses token embeddings, and its special [CLS] token gives a summary representation that can be used for classification tasks.",0.8335469961166382,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.12173913043478259,0.10434782608695653,0.01109286377251967,,,0.14285714285714285,False,EXAM_019,"Given a table of bigram probabilities, how do you compute the probability of a sentence under a bigram model, and what tokens must be included?",True,procedural,medium,"To compute the probability of a sentence under a bigram model, you can use the formula:
+
+P(sentence) = ∑(P(bigram) \* P(token1) \* P(token2))
+
+where P(bigram) is the probability of a bigram, P(token1) and P(token2) are the probabilities of the tokens preceding and following the bigram, respectively.
+
+In a bigram model, the tokens are typically words or subwords. The bigrams are pairs of tokens, such as (word1, word2).
+
+To compute the probabilities, you need to know the following:
+
+- The bigram probabilities: These are the probabilities of each bigram in the table.
+- The token frequencies: These are the counts of each token in the training data.
+- The token types: These are the types of each token (e.g., word, subword, punctuation).
+
+The tokens that must be included in the computation are:
+
+- The bigrams
+- The token types (e.g., word, subword, punctuation)
+- The token frequencies
+
+The formula above assumes that the token frequencies are normalized to sum to 1. If the token frequencies are not normalized, you need to divide the probabilities by the sum of the token frequencies.
+
+Note","You multiply together the bigram probabilities of each consecutive word pair in the sentence, including the transition from the start token <s> to the first word and from the last word to the end token </s>.",0.823347270488739,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.078125,0.078125,0.014036023176939945,,,0.14285714285714285,False,EXAM_020,"Under a bigram model (including <s> and </s>), how do you determine which of several candidate sentences has the highest probability?",True,procedural,medium,"To determine which of several candidate sentences has the highest probability under a bigram model, you can use a scoring function that assigns a score to each sentence based on its likelihood of being the next word in the original sentence. The score can be calculated using the following formula:
+
+score = log(p(X|Y)) + log(p(Y|X))
+
+where p(X|Y) is the probability of the bigram X|Y, and p(Y|X) is the probability of the bigram Y|X.
+
+The score can be maximized by finding the sentence with the highest probability of being the next word in the original sentence. This can be done by iterating over all possible sentences and calculating their scores, and then selecting the sentence with the highest score.
+
+Alternatively, you can use a scoring function that is specifically designed for bigram models, such as the following:
+
+score = -sum(log(p(X|Y)) + log(p(Y|X)))
+
+where p(X|Y) is the probability of the bigram X|Y, and p(Y|X) is the probability of the bigram Y|X.
+
+The score can be maximized by finding the sentence with the highest probability of being the next word in the original sentence.","For each candidate sentence, compute its probability as the product of its consecutive bigram probabilities (including the <s> and </s> transitions), then pick the sentence with the largest resulting product.",0.8173960447311401,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.16326530612244897,0.10884353741496598,0.009650861889394522,,,0.4,False,EXAM_021,"What is perplexity in language modelling, what does it measure, and does a higher or lower value indicate a better model?",True,conceptual,medium,"Perplexity is a measure of a language model's ability to generate text that is coherent and meaningful. It is defined as the ratio of the probability of the model's output given the input to the probability of the true input given the output. In other words, it measures how well the model can predict the next word in a sequence of words.
+
+Perplexity is typically calculated using the formula:
+
+P(y|x) = P(x|y) / P(y)
+
+where P(y|x) is the perplexity of the model given the input x, P(x|y) is the probability of the input x given the output y, and P(y) is the probability of the output y.
+
+A higher value of perplexity indicates that the model is generating text that is more coherent and meaningful, while a lower value indicates that the model is generating text that is less coherent and meaningful. However, it's worth noting that perplexity is not a perfect measure of a model's performance, as it does not take into account factors such as the model's ability to handle out-of-vocabulary words or to generate text that is grammatically correct.
+
+In practice, perplexity is often used as a benchmark to evaluate the performance of language models, and models with lower perplexity values are","Perplexity measures how 'surprised' a language model is by a sequence; it is computed from the probabilities the model assigns to the tokens, and equals the exponentiated average negative log-likelihood per token. Lower perplexity means the model assigns higher probability to the data, so lower is better.",0.846683919429779,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.34146341463414637,0.34146341463414637,0.0917172238007213,,,0.2857142857142857,False,EXAM_022,"Consider the sentence 'The boy saw the man with a telescope.' Assume a dependency analysis in which nouns are the heads of prepositional phrases, as in Universal Dependencies. Under the interpretation 'the boy saw the man who had a telescope', which dependency relation holds between the tokens 'man' and 'telescope'?",True,conceptual,medium,"In the sentence 'The boy saw the man with a telescope', the dependency relation between the tokens'man' and 'telescope' is Subject-Object.
+
+The subject of the sentence is 'the man', which is the head of the prepositional phrase 'with a telescope'. The object of the sentence is 'the man', which is the head of the prepositional phrase 'who had a telescope'.","The relation is nmod: 'telescope' is a nominal modifier of 'man', because in this reading the prepositional phrase 'with a telescope' attaches to the noun 'man' rather than to the verb.",0.8804126977920532,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.43902439024390244,0.3414634146341463,0.10164675054799659,,,0.14285714285714285,False,EXAM_023,"Consider the sentence 'The boy saw the man with a telescope.' interpreted as meaning that the boy saw the man who had a telescope. In the dependency graph for this interpretation, which tokens are dependents of the head of the sentence?",True,conceptual,medium,"In the dependency graph for the sentence 'The boy saw the man with a telescope', the head of the sentence is 'The boy saw the man'. The tokens dependents of 'The boy saw the man' are 'the man' and 'with a telescope'.","The head of the sentence is the verb 'saw', and its direct dependents are 'boy' as the subject and 'man' as the object. 'telescope' is not a dependent of 'saw', because under this reading the prepositional phrase attaches to the noun 'man' instead.",0.8773993253707886,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.21238938053097345,0.1592920353982301,0.033912434156742194,,,0.6,False,EXAM_024,"Two annotators independently label four social media posts as POSITIVE, NEGATIVE or NEUTRAL. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the observed agreement used in the Kappa coefficient?",True,calculation,easy,"To calculate the observed agreement, we need to first calculate the inter-rater reliability (IRR) for each annotator. IRR is calculated as the number of agreements divided by the number of possible agreements.
+
+For Annotator 1, the possible agreements are: POSITIVE, NEGATIVE, NEUTRAL. The possible agreements for Annotator 2 are: POSITIVE, NEGATIVE, POSITIVE. 
+
+IRR for Annotator 1 = (2 agreements) / (3 possible agreements) = 2/3 = 0.67
+
+For Annotator 2, the possible agreements are: POSITIVE, NEGATIVE, POSITIVE. The possible agreements for Annotator 1 are: POSITIVE, NEGATIVE, NEUTRAL. 
+
+IRR for Annotator 2 = (3 agreements) / (4 possible agreements) = 3/4 = 0.75
+
+The observed agreement (OAE) is the average of the IRRs for each annotator:
+
+OAE = (0.67 + 0.75) / 2 = 0.69
+
+The Kappa coefficient (κ) is then calculated as:
+
+κ = OAE - (1 - OAE) / 2
+κ =","The observed agreement is 0.75, because the two annotators assign the same label on 3 of the 4 posts (they differ only on the third post, NEUTRAL vs POSITIVE), and 3/4 = 0.75.",0.8290553092956543,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.13559322033898305,0.13559322033898305,0.0014106778224941008,,,0.16666666666666666,False,EXAM_025,"Two annotators label four posts. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the expected (chance) agreement used in the Kappa coefficient?",True,calculation,medium,The expected (chance) agreement used in the Kappa coefficient is 0.25.,"The expected agreement is 0.438. Annotator 1 uses POSITIVE 2/4, NEGATIVE 1/4, NEUTRAL 1/4; Annotator 2 uses POSITIVE 3/4, NEGATIVE 1/4, NEUTRAL 0. Summing the products per category gives (0.5 x 0.75) + (0.25 x 0.25) + (0.25 x 0) = 0.4375, which rounds to 0.438.",0.835728645324707,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.32142857142857145,0.28571428571428575,0.020607374396724595,,,0.3333333333333333,False,EXAM_026,"For a set of four annotated posts, the observed agreement between two annotators is 0.75 and the expected agreement is 0.438. What is the value of the Kappa coefficient?",True,calculation,easy,"The Kappa coefficient (κ) is defined as the ratio of the observed agreement (O) to the expected agreement (E), i.e., κ = O/E.
+
+Given O = 0.75 and E = 0.438, we can calculate κ as follows:
+
+κ = O/E = 0.75 / 0.438 ≈ 1.707","Kappa is about 0.556. Using Kappa = (observed - expected) / (1 - expected), this is (0.75 - 0.4375) / (1 - 0.4375) = 0.3125 / 0.5625 = 0.5556, which rounds to 0.556.",0.8544833660125732,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.4225352112676056,0.36619718309859156,0.13242098117210144,,,0.2857142857142857,False,EXAM_027,"Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('bark', Doc1) to three decimal places?",True,calculation,medium,"To calculate tf-idf('bark', Doc1), we first need to find the term frequency tf for 'bark' in Doc1. 
+
+Doc1:'my cat meow all the time while my dog doesn't bark.'
+- 'bark' appears once in the document.
+
+The document frequency df(t) is 1 since 'bark' appears only once in the document.
+
+tf-idf('bark', Doc1) = log10(1/1) = 0.0","tf-idf('bark', Doc1) = 0.301. The term 'bark' occurs once in Doc1 (tf = 1) and appears in 2 of the 4 documents (Doc1 and Doc3), so idf = log10(4/2) = 0.301, and 1 x 0.301 = 0.301.",0.8815962672233582,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.20800000000000002,0.16,0.03588605002814141,,,0.2857142857142857,False,EXAM_028,"Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('dog', Doc3) to three decimal places?",True,calculation,medium,"To calculate tf-idf('dog', Doc3), we first need to find the term frequency tf for 'dog' in Doc3. 
+
+Doc3: 'i don't know why my dog always bark at squirrel.'
+- 'dog' appears 2 times in Doc3.
+- The total number of words in Doc3 is 24.
+- The total number of documents is 4.
+- The number of documents where 'dog' appears is 2.
+- The number of documents where 'dog' appears and 'bark' appears is 1.
+- The number of documents where 'dog' appears and'squirrel' appears is 1.
+- The number of documents where 'dog' appears and 'being' appears is 1.
+- The number of documents where 'dog' appears and 'alone' appears is 1.
+- The number of documents where 'dog' appears is 2.
+- The number of documents where 'dog' appears and'squirrel' appears is 1.
+- The number of documents where 'dog' appears and 'being' appears is 1.
+- The number of documents where 'dog' appears and 'alone' appears is 1.
+- The number of documents where 'dog' appears and","tf-idf('dog', Doc3) = 0.125. The term 'dog' occurs once in Doc3 (tf = 1) and appears in 3 of the 4 documents (Doc1, Doc3, Doc4), so idf = log10(4/3) = 0.125, and 1 x 0.125 = 0.125.",0.8266900181770325,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.4383561643835616,0.3561643835616438,0.05982793195354618,,,0.8333333333333334,False,EXAM_029,"In a document-word matrix built from 4 documents, the term 'battle' occurs 7 times in Document 2 and appears in 3 of the 4 documents. Using idf(t) = log10(N/df(t)) with raw term frequency tf, what is the tf-idf value of 'battle' in Document 2?",True,calculation,medium,"To calculate the tf-idf value of 'battle' in Document 2, we first need to determine the raw term frequency (tf) and the document frequency (df).
+
+Document 2:
+- 'battle' occurs 7 times
+- Total documents = 4
+- Document frequency (df) = 3
+
+tf = 7 / 3 ≈ 2.33
+
+idf(t) = log10(7/3) ≈ 0.52
+
+tf-idf = 2.33 - 0.52 ≈ 1.81","tf-idf('battle', Document 2) = 0.875. With tf = 7 and df = 3 out of N = 4 documents, idf = log10(4/3) = 0.125, so 7 x 0.125 = 0.875.",0.8616030812263489,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0.35593220338983045,0.33898305084745767,0.01806419499355152,,,0.4,False,EXAM_030,"A bigram model gives the following probabilities: P(arctic | <s>) = 0.6, P(monkeys | arctic) = 0.1, P(are | monkeys) = 0.417, P(my | are) = 0.15, P(favourite | my) = 0.1, P(band | favourite) = 0.1, P(</s> | band) = 0.9. Using this model, what is the probability of the sentence 'arctic monkeys are my favourite band', including the start token <s> and end token </s>, rounded to 5 decimal places?",True,calculation,easy,"To calculate the probability of the sentence 'arctic monkeys are my favourite band', we need to apply the bigram model to each word in the sentence and then sum the probabilities.
+
+The sentence can be broken down into the following words: 'arctic','monkeys', 'are','my', 'favourite', 'band'.
+
+- P(arctic | <s>) = 0.6
+- P(monkeys | arctic) = 0.1
+- P(are | monkeys) = 0.417
+- P(my | are) = 0.15
+- P(favourite | my) = 0.1
+- P(band | favourite) = 0.1
+- P(<s>) = 0.1
+- P(</s>) = 0.9
+
+We can calculate the probability of each word in the sentence by multiplying the probability of the bigram by the probability of the word following the bigram.
+
+P(arctic | <s>) * P(<s>) = 0.6 * 0.1 = 0.06
+P(monkeys | arctic) * P(<s>) = 0.1 * 0.1 = 0.01","The probability is 0.00003. It is computed as the product of the seven bigram probabilities along the sentence: 0.6 * 0.1 * 0.417 * 0.15 * 0.1 * 0.1 * 0.9 = 0.000033777, which rounds to 0.00003 to 5 decimal places.",0.8341251015663147,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

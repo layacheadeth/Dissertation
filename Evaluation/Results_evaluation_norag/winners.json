@@ -1,0 +1,93 @@
+{
+  "best_retriever": {
+    "winner": "norag",
+    "ranking": [
+      {
+        "name": "norag",
+        "mean_rank": Infinity,
+        "scores": {}
+      }
+    ],
+    "significance": "only one candidate"
+  },
+  "best_generator": {
+    "winner": "360m",
+    "ranking": [
+      {
+        "name": "360m",
+        "mean_rank": 1.333,
+        "scores": {
+          "token_f1": 0.2533,
+          "bert_f1": 0.8567,
+          "keyword_coverage": 0.2542
+        }
+      },
+      {
+        "name": "1b",
+        "mean_rank": 1.667,
+        "scores": {
+          "token_f1": 0.244,
+          "bert_f1": 0.8507,
+          "keyword_coverage": 0.3346
+        }
+      },
+      {
+        "name": "05b",
+        "mean_rank": 3.0,
+        "scores": {
+          "token_f1": 0.1993,
+          "bert_f1": 0.8408,
+          "keyword_coverage": 0.2488
+        }
+      }
+    ],
+    "significance": "significant on: keyword_coverage"
+  },
+  "best_combination": {
+    "winner": "norag_360m",
+    "ranking": [
+      {
+        "name": "norag_360m",
+        "mean_rank": 1.333
+      },
+      {
+        "name": "norag_1b",
+        "mean_rank": 1.667
+      },
+      {
+        "name": "norag_05b",
+        "mean_rank": 3.0
+      }
+    ]
+  },
+  "per_metric_winners": {
+    "mrr": {
+      "cell": "norag_05b",
+      "value": 0.0
+    },
+    "hit@1": {
+      "cell": "norag_05b",
+      "value": 0.0
+    },
+    "recall@5": {
+      "cell": "norag_05b",
+      "value": 0.0
+    },
+    "ndcg@5": {
+      "cell": "norag_05b",
+      "value": 0.0
+    },
+    "token_f1": {
+      "cell": "norag_360m",
+      "value": 0.2533
+    },
+    "bert_f1": {
+      "cell": "norag_360m",
+      "value": 0.8567
+    },
+    "keyword_coverage": {
+      "cell": "norag_1b",
+      "value": 0.3346
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "run": {
+    "benchmark": "Data/Benchmark/latest_benchmark_qa.json",
+    "k": 10,
+    "bert": true,
+    "score_threshold": null,
+    "n_questions": 29,
+    "n_cells": 9
+  },
+  "overall": {
+    "token_f1": 0.2602,
+    "rouge_l": 0.214,
+    "bert_f1": 0.8557,
+    "groundedness": 0.6185,
+    "context_utilisation": 0.5105,
+    "n_queries": 261,
+    "n_abstained": 8,
+    "recall@10": 0.6724,
+    "keyword_recall@10": 0.6823,
+    "ndcg@10": 0.4923,
+    "mrr@10": 0.4855,
+    "hit@1": 0.3448,
+    "n_scored": 261
+  }
+}

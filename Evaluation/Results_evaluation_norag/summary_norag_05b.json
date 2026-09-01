@@ -1,0 +1,31 @@
+{
+  "n_queries": 29,
+  "n_with_reference": 29,
+  "n_abstained": 2,
+  "generation": {
+    "token_f1": 0.1993,
+    "rouge_l": 0.1563,
+    "bleu": 0.0239,
+    "bert_f1": 0.8408,
+    "groundedness": null,
+    "context_utilisation": null,
+    "keyword_coverage": 0.2488
+  },
+  "coverage": {
+    "bleu_scored": 29,
+    "bert_f1_scored": 29
+  },
+  "retrieval": {
+    "precision@1": 0.0,
+    "precision@3": 0.0,
+    "precision@5": 0.0,
+    "recall@1": 0.0,
+    "recall@3": 0.0,
+    "recall@5": 0.0,
+    "ndcg@1": 0.0,
+    "ndcg@3": 0.0,
+    "ndcg@5": 0.0,
+    "mrr": 0.0,
+    "hit@1": 0.0
+  }
+}

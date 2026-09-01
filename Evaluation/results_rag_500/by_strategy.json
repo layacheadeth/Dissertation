@@ -1,0 +1,273 @@
+{
+  "run": {
+    "benchmark": "Data/Benchmark/latest_benchmark_qa.json",
+    "k": 10,
+    "bert": true,
+    "score_threshold": null,
+    "n_questions": 29,
+    "n_cells": 9
+  },
+  "by_strategy": [
+    {
+      "strategy": "exp1_bge_combo2",
+      "budget": 500,
+      "n_models": 3,
+      "retrieval": {
+        "recall@10": 0.7414,
+        "keyword_recall@10": 0.7203,
+        "ndcg@10": 0.5796,
+        "mrr@10": 0.5883,
+        "hit@1": 0.4138,
+        "n_scored": 87
+      },
+      "generation": {
+        "token_f1": 0.28,
+        "rouge_l": 0.2292,
+        "bert_f1": 0.8586,
+        "groundedness": 0.6459,
+        "context_utilisation": 0.6298,
+        "n_queries": 87,
+        "n_abstained": 1
+      },
+      "models": [
+        {
+          "model": "05b",
+          "cell": "exp1_bge_combo2_05b_budget500",
+          "generation": {
+            "token_f1": 0.2646,
+            "rouge_l": 0.2009,
+            "bert_f1": 0.8466,
+            "groundedness": 0.5602,
+            "context_utilisation": 0.7745,
+            "n_queries": 29,
+            "n_abstained": 0
+          },
+          "retrieval": {
+            "recall@10": 0.7414,
+            "keyword_recall@10": 0.7203,
+            "ndcg@10": 0.5796,
+            "mrr@10": 0.5883,
+            "hit@1": 0.4138,
+            "n_scored": 29
+          }
+        },
+        {
+          "model": "1b",
+          "cell": "exp1_bge_combo2_1b_budget500",
+          "generation": {
+            "token_f1": 0.3522,
+            "rouge_l": 0.2962,
+            "bert_f1": 0.8761,
+            "groundedness": 0.7526,
+            "context_utilisation": 0.5559,
+            "n_queries": 29,
+            "n_abstained": 0
+          },
+          "retrieval": {
+            "recall@10": 0.7414,
+            "keyword_recall@10": 0.7203,
+            "ndcg@10": 0.5796,
+            "mrr@10": 0.5883,
+            "hit@1": 0.4138,
+            "n_scored": 29
+          }
+        },
+        {
+          "model": "360m",
+          "cell": "exp1_bge_combo2_360m_budget500",
+          "generation": {
+            "token_f1": 0.2231,
+            "rouge_l": 0.1904,
+            "bert_f1": 0.8531,
+            "groundedness": 0.6249,
+            "context_utilisation": 0.559,
+            "n_queries": 29,
+            "n_abstained": 1
+          },
+          "retrieval": {
+            "recall@10": 0.7414,
+            "keyword_recall@10": 0.7203,
+            "ndcg@10": 0.5796,
+            "mrr@10": 0.5883,
+            "hit@1": 0.4138,
+            "n_scored": 29
+          }
+        }
+      ]
+    },
+    {
+      "strategy": "exp2_bge_combo2",
+      "budget": 500,
+      "n_models": 3,
+      "retrieval": {
+        "recall@10": 0.6034,
+        "keyword_recall@10": 0.6782,
+        "ndcg@10": 0.3072,
+        "mrr@10": 0.2443,
+        "hit@1": 0.069,
+        "n_scored": 87
+      },
+      "generation": {
+        "token_f1": 0.2431,
+        "rouge_l": 0.201,
+        "bert_f1": 0.8522,
+        "groundedness": 0.6057,
+        "context_utilisation": 0.3219,
+        "n_queries": 87,
+        "n_abstained": 4
+      },
+      "models": [
+        {
+          "model": "05b",
+          "cell": "exp2_bge_combo2_05b_budget500",
+          "generation": {
+            "token_f1": 0.25,
+            "rouge_l": 0.2026,
+            "bert_f1": 0.8469,
+            "groundedness": 0.5059,
+            "context_utilisation": 0.4138,
+            "n_queries": 29,
+            "n_abstained": 0
+          },
+          "retrieval": {
+            "recall@10": 0.6034,
+            "keyword_recall@10": 0.6782,
+            "ndcg@10": 0.3072,
+            "mrr@10": 0.2443,
+            "hit@1": 0.069,
+            "n_scored": 29
+          }
+        },
+        {
+          "model": "1b",
+          "cell": "exp2_bge_combo2_1b_budget500",
+          "generation": {
+            "token_f1": 0.2914,
+            "rouge_l": 0.2388,
+            "bert_f1": 0.8675,
+            "groundedness": 0.7543,
+            "context_utilisation": 0.2759,
+            "n_queries": 29,
+            "n_abstained": 0
+          },
+          "retrieval": {
+            "recall@10": 0.6034,
+            "keyword_recall@10": 0.6782,
+            "ndcg@10": 0.3072,
+            "mrr@10": 0.2443,
+            "hit@1": 0.069,
+            "n_scored": 29
+          }
+        },
+        {
+          "model": "360m",
+          "cell": "exp2_bge_combo2_360m_budget500",
+          "generation": {
+            "token_f1": 0.188,
+            "rouge_l": 0.1615,
+            "bert_f1": 0.8423,
+            "groundedness": 0.557,
+            "context_utilisation": 0.2759,
+            "n_queries": 29,
+            "n_abstained": 4
+          },
+          "retrieval": {
+            "recall@10": 0.6034,
+            "keyword_recall@10": 0.6782,
+            "ndcg@10": 0.3072,
+            "mrr@10": 0.2443,
+            "hit@1": 0.069,
+            "n_scored": 29
+          }
+        }
+      ]
+    },
+    {
+      "strategy": "exp3_bge_combo2",
+      "budget": 500,
+      "n_models": 3,
+      "retrieval": {
+        "recall@10": 0.6724,
+        "keyword_recall@10": 0.6483,
+        "ndcg@10": 0.59,
+        "mrr@10": 0.6239,
+        "hit@1": 0.5517,
+        "n_scored": 87
+      },
+      "generation": {
+        "token_f1": 0.2575,
+        "rouge_l": 0.212,
+        "bert_f1": 0.8563,
+        "groundedness": 0.604,
+        "context_utilisation": 0.5797,
+        "n_queries": 87,
+        "n_abstained": 3
+      },
+      "models": [
+        {
+          "model": "05b",
+          "cell": "exp3_bge_combo2_05b_budget500",
+          "generation": {
+            "token_f1": 0.254,
+            "rouge_l": 0.2011,
+            "bert_f1": 0.8486,
+            "groundedness": 0.5304,
+            "context_utilisation": 0.6753,
+            "n_queries": 29,
+            "n_abstained": 0
+          },
+          "retrieval": {
+            "recall@10": 0.6724,
+            "keyword_recall@10": 0.6483,
+            "ndcg@10": 0.59,
+            "mrr@10": 0.6239,
+            "hit@1": 0.5517,
+            "n_scored": 29
+          }
+        },
+        {
+          "model": "1b",
+          "cell": "exp3_bge_combo2_1b_budget500",
+          "generation": {
+            "token_f1": 0.297,
+            "rouge_l": 0.2473,
+            "bert_f1": 0.8663,
+            "groundedness": 0.7271,
+            "context_utilisation": 0.5201,
+            "n_queries": 29,
+            "n_abstained": 0
+          },
+          "retrieval": {
+            "recall@10": 0.6724,
+            "keyword_recall@10": 0.6483,
+            "ndcg@10": 0.59,
+            "mrr@10": 0.6239,
+            "hit@1": 0.5517,
+            "n_scored": 29
+          }
+        },
+        {
+          "model": "360m",
+          "cell": "exp3_bge_combo2_360m_budget500",
+          "generation": {
+            "token_f1": 0.2216,
+            "rouge_l": 0.1875,
+            "bert_f1": 0.8541,
+            "groundedness": 0.5544,
+            "context_utilisation": 0.5437,
+            "n_queries": 29,
+            "n_abstained": 3
+          },
+          "retrieval": {
+            "recall@10": 0.6724,
+            "keyword_recall@10": 0.6483,
+            "ndcg@10": 0.59,
+            "mrr@10": 0.6239,
+            "hit@1": 0.5517,
+            "n_scored": 29
+          }
+        }
+      ]
+    }
+  ]
+}

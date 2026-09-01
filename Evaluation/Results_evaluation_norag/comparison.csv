@@ -1,0 +1,4 @@
+cell,strategy,model,n,abstained,token_f1,rouge_l,bleu,bert_f1,groundedness,context_utilisation,keyword_coverage,recall@5,ndcg@5,mrr,hit@1
+norag_05b,norag,05b,29,2,0.1993,0.1563,0.0239,0.8408,,,0.2488,0.0,0.0,0.0,0.0
+norag_1b,norag,1b,29,0,0.244,0.2049,0.0488,0.8507,,,0.3346,0.0,0.0,0.0,0.0
+norag_360m,norag,360m,29,0,0.2533,0.2118,0.0397,0.8567,,,0.2542,0.0,0.0,0.0,0.0

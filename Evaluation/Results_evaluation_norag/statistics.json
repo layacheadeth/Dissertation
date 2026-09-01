@@ -1,0 +1,449 @@
+{
+  "cells": [
+    "norag_05b",
+    "norag_1b",
+    "norag_360m"
+  ],
+  "strategies": [
+    "norag"
+  ],
+  "models": [
+    "05b",
+    "1b",
+    "360m"
+  ],
+  "metrics": {
+    "token_f1": {
+      "cell_means": {
+        "norag_05b": 0.1993,
+        "norag_1b": 0.244,
+        "norag_360m": 0.2533
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": -0.0446,
+          "ci95": [
+            -0.0891,
+            -0.0018
+          ],
+          "p_value": 0.0584,
+          "p_holm": 0.1752,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.0539,
+          "ci95": [
+            -0.1134,
+            -0.0006
+          ],
+          "p_value": 0.075,
+          "p_holm": 0.1752,
+          "significant_05": false
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.0093,
+          "ci95": [
+            -0.0497,
+            0.0268
+          ],
+          "p_value": 0.6578,
+          "p_holm": 0.6578,
+          "significant_05": false
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "360m",
+            "1b",
+            "05b"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    },
+    "rouge_l": {
+      "cell_means": {
+        "norag_05b": 0.1563,
+        "norag_1b": 0.2049,
+        "norag_360m": 0.2118
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": -0.0486,
+          "ci95": [
+            -0.0889,
+            -0.0104
+          ],
+          "p_value": 0.0218,
+          "p_holm": 0.0654,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.0555,
+          "ci95": [
+            -0.1109,
+            -0.0069
+          ],
+          "p_value": 0.0423,
+          "p_holm": 0.0846,
+          "significant_05": false
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.0069,
+          "ci95": [
+            -0.0473,
+            0.0295
+          ],
+          "p_value": 0.7405,
+          "p_holm": 0.7405,
+          "significant_05": false
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "360m",
+            "1b",
+            "05b"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    },
+    "bleu": {
+      "cell_means": {
+        "norag_05b": 0.0239,
+        "norag_1b": 0.0488,
+        "norag_360m": 0.0397
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": -0.025,
+          "ci95": [
+            -0.0455,
+            -0.006
+          ],
+          "p_value": 0.0176,
+          "p_holm": 0.0528,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.0159,
+          "ci95": [
+            -0.0397,
+            0.0034
+          ],
+          "p_value": 0.1763,
+          "p_holm": 0.3526,
+          "significant_05": false
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0091,
+          "ci95": [
+            -0.008,
+            0.0252
+          ],
+          "p_value": 0.3182,
+          "p_holm": 0.3526,
+          "significant_05": false
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "1b",
+            "360m",
+            "05b"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    },
+    "bert_f1": {
+      "cell_means": {
+        "norag_05b": 0.8408,
+        "norag_1b": 0.8507,
+        "norag_360m": 0.8567
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": -0.0099,
+          "ci95": [
+            -0.0199,
+            -0.0002
+          ],
+          "p_value": 0.0657,
+          "p_holm": 0.1314,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.0159,
+          "ci95": [
+            -0.0276,
+            -0.0047
+          ],
+          "p_value": 0.0131,
+          "p_holm": 0.0393,
+          "significant_05": true
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.006,
+          "ci95": [
+            -0.0128,
+            0.0005
+          ],
+          "p_value": 0.0992,
+          "p_holm": 0.1314,
+          "significant_05": false
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "360m",
+            "1b",
+            "05b"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    },
+    "keyword_coverage": {
+      "cell_means": {
+        "norag_05b": 0.2488,
+        "norag_1b": 0.3346,
+        "norag_360m": 0.2542
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": -0.0859,
+          "ci95": [
+            -0.1688,
+            -0.0112
+          ],
+          "p_value": 0.0412,
+          "p_holm": 0.0824,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": -0.0054,
+          "ci95": [
+            -0.0578,
+            0.0489
+          ],
+          "p_value": 0.849,
+          "p_holm": 0.849,
+          "significant_05": false
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0805,
+          "ci95": [
+            0.0213,
+            0.1453
+          ],
+          "p_value": 0.0146,
+          "p_holm": 0.0438,
+          "significant_05": true
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "1b",
+            "360m",
+            "05b"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    },
+    "mrr": {
+      "cell_means": {
+        "norag_05b": 0.0,
+        "norag_1b": 0.0,
+        "norag_360m": 0.0
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "05b",
+            "1b",
+            "360m"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    },
+    "hit@1": {
+      "cell_means": {
+        "norag_05b": 0.0,
+        "norag_1b": 0.0,
+        "norag_360m": 0.0
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "05b",
+            "1b",
+            "360m"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    },
+    "recall@5": {
+      "cell_means": {
+        "norag_05b": 0.0,
+        "norag_1b": 0.0,
+        "norag_360m": 0.0
+      },
+      "model_effect": {
+        "05b vs 1b": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        },
+        "05b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        },
+        "1b vs 360m": {
+          "n": 29,
+          "mean_diff": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "p_value": 1.0,
+          "p_holm": 1.0,
+          "significant_05": false
+        }
+      },
+      "strategy_effect": {},
+      "interaction": {
+        "model_ranking_by_strategy": {
+          "norag": [
+            "05b",
+            "1b",
+            "360m"
+          ]
+        },
+        "mean_kendall_tau": null,
+        "consistent": false
+      }
+    }
+  }
+}

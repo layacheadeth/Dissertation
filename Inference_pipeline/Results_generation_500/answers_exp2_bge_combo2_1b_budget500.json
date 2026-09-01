@@ -1,0 +1,1166 @@
+{
+  "settings": {
+    "hash": "f00cd6ea55cd",
+    "strategy": "exp2",
+    "embedder": "bge",
+    "combo": "combo2",
+    "llm": "meta-llama/Llama-3.2-1B-Instruct",
+    "device": "cpu",
+    "candidates": 60,
+    "top_n": 5,
+    "budget_tokens": 500,
+    "context_tokens_mean": 494.8,
+    "route_meta": true,
+    "relevance_floor": null,
+    "collection": "exp2_fixed_overlap_bge",
+    "routes": {
+      "meta": 0,
+      "refused": 0,
+      "answer": 29
+    },
+    "n_questions": 29,
+    "total_seconds": 1296.3,
+    "seconds_per_question": 44.7
+  },
+  "results": [
+    {
+      "question_id": "EXAM_001",
+      "question": "In a dependency analysis (Universal Dependencies style, where a noun heads its prepositional phrase), if a prepositional phrase modifies a noun rather than the verb, what dependency relation connects that noun to the noun inside the prepositional phrase?",
+      "answer": "The head of the whole sentence is usually the main verb. A dependency parse forms a directed structure over the tokens. Heads, Dependents, and the Root\n\nIn a dependency analysis, one token acts as the structural centre of the sentence. Other words connect to it through grammatical relations such as subject, object, and modifier.\n\nThe labels on the edges tell us how each token functions in the sentence. This representation makes sentence structure explicit and easier to analyse.\n\nA Dependency Tree in Practice\n\nCommon Dependency Relations\n\nCommon dependency labels include: nsubj: nominal subject obj / dobj: object iobj: indirect object amod / nmod: nominal modifier advmod: adverbial modifier det: determiner case / prep-related links: prepositional marking\n\nReading a Dependency Analysis\n\nTo read a dependency parse, ask: What is the root? Which words depend directly on the root? Which words modify nouns? Which phrases modify the event? This helps us identify the main structure of the sentence.\n\nAttachment Ambiguity\n\nA major challenge in parsing is attachment ambiguity. Example: The teacher discussed the essay with the student.\n\nInterpretation A: with the student modifies discussed meaning: the teacher talked to the student\n\nInterpretation B: with the student modifies essay meaning",
+      "route": "answer",
+      "top_score": 1.1212,
+      "seconds": 164.82,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_sw_3",
+          "text": "sing Matters\n➢Some sentences remain ambiguous even after POS tagging. \n Example: \no The teacher discussed the essay with the student.\n Does with the student describe: \no who the teacher talked to? \no or which essay was discussed? \n Parsing makes these structural choices explicit.\n➢Some sentences allow more than one syntactic analysis. \n The same sequence of words can produce different structures and \ndifferent meanings. \n To understand a sentence, we cannot treat each word in isolation. \n We need to determine what each word is attached or connected to.\nDependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens.\nHeads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent.\nIn a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice\nCommon Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme.\nCommon Dependency Relations\nReading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence.\nAttachment Ambiguity\n A major challenge in parsing is attachment ambiguity. \n Example: \n The teacher discussed the essay with the student.\n Interpretation A: \n with the student modifies discussed\n meaning: the teacher talked to the student\n Interpretation B: \n with the student modifies essay\n meaning: the essay is about / associated with the student\n Different meanings require different parses.\nHow to Decide Where a Phrase Attaches\n Ask: Which word is this phrase modifying?\n If the phrase describes the event or action, it",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week12_sw_3",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              19,
+              21,
+              22,
+              23,
+              24,
+              25,
+              27,
+              28,
+              29
+            ],
+            "source_file": "Week12_TM-lastlecture-1_exp2_chunks.json",
+            "week": "Week 12",
+            "window_token_count": 500
+          },
+          "score": 1.1212
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_002",
+      "question": "In a dependency parse, what is the root (head) of a simple declarative sentence, and what relation connects the subject to it?",
+      "answer": "The root of a simple declarative sentence is the main verb, and the relation connecting the subject to it is a subject-verb relation.",
+      "route": "answer",
+      "top_score": 2.0334,
+      "seconds": 25.861,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_sw_3",
+          "text": "sing Matters\n➢Some sentences remain ambiguous even after POS tagging. \n Example: \no The teacher discussed the essay with the student.\n Does with the student describe: \no who the teacher talked to? \no or which essay was discussed? \n Parsing makes these structural choices explicit.\n➢Some sentences allow more than one syntactic analysis. \n The same sequence of words can produce different structures and \ndifferent meanings. \n To understand a sentence, we cannot treat each word in isolation. \n We need to determine what each word is attached or connected to.\nDependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens.\nHeads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent.\nIn a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice\nCommon Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme.\nCommon Dependency Relations\nReading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence.\nAttachment Ambiguity\n A major challenge in parsing is attachment ambiguity. \n Example: \n The teacher discussed the essay with the student.\n Interpretation A: \n with the student modifies discussed\n meaning: the teacher talked to the student\n Interpretation B: \n with the student modifies essay\n meaning: the essay is about / associated with the student\n Different meanings require different parses.\nHow to Decide Where a Phrase Attaches\n Ask: Which word is this phrase modifying?\n If the phrase describes the event or action, it",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week12_sw_3",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              19,
+              21,
+              22,
+              23,
+              24,
+              25,
+              27,
+              28,
+              29
+            ],
+            "source_file": "Week12_TM-lastlecture-1_exp2_chunks.json",
+            "week": "Week 12",
+            "window_token_count": 500
+          },
+          "score": 2.0334
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_003",
+      "question": "How is the observed agreement between two annotators computed when they each assign a category label to the same set of items?",
+      "answer": "The observed agreement is the proportion of cases on which annotators agree, which is 7/10 = 0.70.",
+      "route": "answer",
+      "top_score": 3.6115,
+      "seconds": 25.725,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_sw_1",
+          "text": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER\nWhy Do We Evaluate NLP Systems?\n● Evaluation tells us how well a system is performing. \n● Users care about whether a system is useful for a task. \n● Developers care about whether a system is improving over time. \n● Evaluation supports: \n○ comparison \n○ debugging \n○ model selection \n○ scientific reporting\nBenchmark Data and Gold Standards\n● Performance evaluation is often based on benchmark datasets. \n● These datasets contain: \n○ inputs \n○ gold-standard labels \n○ a fixed evaluation protocol \n● Gold standards are usually created by human annotators following \nannotation guidelines. \n● Reliable evaluation depends on reliable annotation.\nInter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable.\nObserved Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.\nExpected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50\nCohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week10_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              3,
+              4,
+              7,
+              8,
+              9,
+              10
+            ],
+            "source_file": "Week10_TM_last_lecture_exp2_chunks.json",
+            "week": "Week 10",
+            "window_token_count": 500
+          },
+          "score": 3.6115
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_004",
+      "question": "In Cohen's Kappa, what is expected (chance) agreement and how is it computed from each annotator's label distribution?",
+      "answer": "Expected agreement is the chance agreement, which is estimated from annotator label distributions.",
+      "route": "answer",
+      "top_score": 6.4678,
+      "seconds": 18.996,
+      "context_tokens": 361,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week13_sw_9",
+          "text": "agreement.\nExpected agreement\nPₑ = chance agreement estimated from \nannotator label distributions.\nκ = (Pₐ − Pₑ) / (1 − Pₑ)\nIf Pₐ = 0.80 and Pₑ = 0.50, compute κ.\nAnswer: 0.60\nCOMP64702 Revision Lecture\nPrecision, recall, F1, and averaging\nEvaluation\nLikely format: compute scores and explain why accuracy can mislead.\nPredicted + Predicted −\nGold + TP FN\nGold − FP TN\nPrecision = TP / (TP + FP)\nRecall = TP / (TP + FN)\nF1 = 2PR / (P + R)\nAveraging\nMicro: pool counts\nMacro: average class scores \nequally\nWeighted: average by class \nsupport\nEntity-level NER\nExact span and type must match. A token -level \npartial overlap is not necessarily a correct entity.\nMini practice\nTP=3, FP=1, FN=2. Compute P , R, F1.\nAnswer: P=.75, R=.60, F1=.667\nCOMP64702 Revision Lecture\nFinal revision checklist\nWrap-up\nUse this as a last-pass plan before the exam.\nMemorise formulas\nCosine similarity\nTF–IDF ingredients\nCohen’s Kappa\nPrecision / Recall / F1\nMicro vs macro averaging\nBIO class count: 2T + 1\nPractise skills\nSelect-all conceptual traps\nPOS tags under a stated meaning\nDependency heads/dependents\nPhrase constituents\nNER exact-match counting\nArchitecture selection scenarios\nAvoid common mistakes\nTreating ICL as weight updates\nCalling instruction tuning “guaranteed \nfactuality”\nConfusing precision and recall\nCounting partial NER spans as correct\nIgnoring the stated sentence interpretation\nWhen unsure: define the task, identify the representation, then compute or reason from \nthe definition.",
+          "metadata": {
+            "actual_token_count": 361,
+            "chunk_id": "Week13_sw_9",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              23,
+              24,
+              25
+            ],
+            "source_file": "Week13_revision_lecture_exam_focused_exp2_chunks.json",
+            "week": "Week 13",
+            "window_token_count": 361
+          },
+          "score": 6.4678
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_005",
+      "question": "How is Cohen's Kappa computed from observed agreement and expected agreement?",
+      "answer": "Cohen's Kappa = (P - PE) / (1 - PE), where P is observed agreement and PE is expected agreement.",
+      "route": "answer",
+      "top_score": 6.6191,
+      "seconds": 27.366,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_sw_2",
+          "text": ": \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50\nCohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0.50\n○ 𝐾 = 0.70 − 0.50 / 1 − 0.50 = 0.40\n● Kappa is more informative than raw agreement alone.\nScoring \nPrecision: fraction of annotated items that are correct\nRecall: fraction of correct items that are annotated\nConfusion matrix:\nCorrect Not correct\nAnnotated True positive (TP) False positive (FP)\nNot annotated False negative (FN) True negative (TN)\nPrecision = TP / (TP+FP)\nRecall = TP / (TP + FN)\nBlue stars\nNot blue stars\nTP\nTP\nTP\nTP\nTP\nFP\nFP\nFN\nTN\nTN\nTN\nTN\nTrue Positives: 5\nFalse Positives: 2\nFalse Negatives: 1\nTrue Negatives: 4\nPrecision = TP / (TP+FP) = 5 / (5 + 2) = 5 / 7 = 0.714\nRecall = TP / (TP + FN) = 5 / (5 + 1) = 5 / 6 = 0.833\nF-score (a.k.a. F-measure, F1-score)\nWeighted harmonic mean\nFβ = (β2 + 1)PR/β2P+R \nUsually balanced F1 measure is used, where β=1\nF1 = 2PR/(P+R)\nHarmonic mean is a more conservative average (truer picture)\nF-score vs Arithmetic Mean\nP = 0.714\nR = 0.833\nArithmetic Mean: (0.714 + 0.833) / 2 = 0.774\nF-score: 2 * 0.714 * 0.833 / (0.714 + 0.833) = 0.769\nF-score vs Arithmetic Mean\nP = 1\nR = 0.15\nArithmetic Mean: (1 + 0.15) / 2 = 0.575\nF-score: 2 * 1 * 0",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week10_sw_2",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              9,
+              10,
+              15,
+              21,
+              22,
+              23,
+              24
+            ],
+            "source_file": "Week10_TM_last_lecture_exp2_chunks.json",
+            "week": "Week 10",
+            "window_token_count": 500
+          },
+          "score": 6.6191
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_006",
+      "question": "What problem does inverse document frequency (IDF) solve in document representation, and what kind of term does it favour?",
+      "answer": "Inverse Document Frequency (IDF) solves the problem of high-dimensional count-based matrices by normalizing the importance of words in a document relative to the entire corpus. It favours terms that are less common in the corpus, making them less informative as distinguishing features.",
+      "route": "answer",
+      "top_score": 0.2092,
+      "seconds": 39.955,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_sw_8",
+          "text": ": the\nfurther away, the lower the weight!\nFor a window size±k, multiply the context word at each\nposition as k−distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3]\nWeighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently:\nPMI(w i ,w j) = log 2\nP(w i ,w j)\nP(w i)P(w j) = #(wi ,w j)|D|\n#(w1)·#(w j)\nP(w i ,w j) = #(wi ,w j)\n|D| ,P(w i) = #(wi)\n|D|\nwhere #(·) denotes count and|D|number of observed words in\nthe corpus.\nPositive values quantify relatedness. Use PMI instead of\ncounts.\nNegative values? Usually ignored (positive PMI):\nPPMI(w i ,w j) = max(PMI(w i ,w j),0)\nWeighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid\nProblems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!\nEvaluation: Word Vectors\nIntrinsic:\nsimilarity: order word pairs according to their semantic\nsimilarity\nin-context similarity: substitute a word in a sentence without\nchagning its meaning.\nanalogy: Beijing is to China what Rome is to ...?\nExtrinsic: use them to improve performance in a task, i.e.\nsentiment",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week1_sw_8",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              73,
+              75,
+              77,
+              79,
+              81
+            ],
+            "source_file": "Week1_Intro_to_vector_exp2_chunks.json",
+            "week": "Week 1",
+            "window_token_count": 500
+          },
+          "score": 0.2092
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_007",
+      "question": "Using idf(t)=log10(N/df(t)) with raw term frequency tf, how do you compute the tf-idf weight of a term in a document, and what does each part contribute?",
+      "answer": "To compute the tf-idf weight of a term in a document, you multiply the term frequency tf by the inverse document frequency idf. The idf part contributes the number of documents in the corpus divided by the number of documents with the same term frequency, and the tf part contributes the term frequency itself.",
+      "route": "answer",
+      "top_score": 1.6981,
+      "seconds": 45.099,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_sw_8",
+          "text": ": the\nfurther away, the lower the weight!\nFor a window size±k, multiply the context word at each\nposition as k−distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3]\nWeighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently:\nPMI(w i ,w j) = log 2\nP(w i ,w j)\nP(w i)P(w j) = #(wi ,w j)|D|\n#(w1)·#(w j)\nP(w i ,w j) = #(wi ,w j)\n|D| ,P(w i) = #(wi)\n|D|\nwhere #(·) denotes count and|D|number of observed words in\nthe corpus.\nPositive values quantify relatedness. Use PMI instead of\ncounts.\nNegative values? Usually ignored (positive PMI):\nPPMI(w i ,w j) = max(PMI(w i ,w j),0)\nWeighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid\nProblems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!\nEvaluation: Word Vectors\nIntrinsic:\nsimilarity: order word pairs according to their semantic\nsimilarity\nin-context similarity: substitute a word in a sentence without\nchagning its meaning.\nanalogy: Beijing is to China what Rome is to ...?\nExtrinsic: use them to improve performance in a task, i.e.\nsentiment",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week1_sw_8",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              73,
+              75,
+              77,
+              79,
+              81
+            ],
+            "source_file": "Week1_Intro_to_vector_exp2_chunks.json",
+            "week": "Week 1",
+            "window_token_count": 500
+          },
+          "score": 1.6981
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_008",
+      "question": "When computing tf-idf with idf(t)=log10(N/df(t)), why does a term that appears in more of the documents receive a smaller idf, and therefore a smaller tf-idf weight?",
+      "answer": "Because the term appears in many documents, its IDF is log10(N/df(t)), which is a small number, so its TF-IDF weight is also small.",
+      "route": "answer",
+      "top_score": 0.7103,
+      "seconds": 30.058,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_sw_8",
+          "text": ": the\nfurther away, the lower the weight!\nFor a window size±k, multiply the context word at each\nposition as k−distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3]\nWeighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently:\nPMI(w i ,w j) = log 2\nP(w i ,w j)\nP(w i)P(w j) = #(wi ,w j)|D|\n#(w1)·#(w j)\nP(w i ,w j) = #(wi ,w j)\n|D| ,P(w i) = #(wi)\n|D|\nwhere #(·) denotes count and|D|number of observed words in\nthe corpus.\nPositive values quantify relatedness. Use PMI instead of\ncounts.\nNegative values? Usually ignored (positive PMI):\nPPMI(w i ,w j) = max(PMI(w i ,w j),0)\nWeighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid\nProblems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!\nEvaluation: Word Vectors\nIntrinsic:\nsimilarity: order word pairs according to their semantic\nsimilarity\nin-context similarity: substitute a word in a sentence without\nchagning its meaning.\nanalogy: Beijing is to China what Rome is to ...?\nExtrinsic: use them to improve performance in a task, i.e.\nsentiment",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week1_sw_8",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              73,
+              75,
+              77,
+              79,
+              81
+            ],
+            "source_file": "Week1_Intro_to_vector_exp2_chunks.json",
+            "week": "Week 1",
+            "window_token_count": 500
+          },
+          "score": 0.7103
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_009",
+      "question": "In the document-word (bag-of-words) matrix used to represent a corpus, what do the rows and columns correspond to, and how is a single document represented as a vector?",
+      "answer": "The rows correspond to documents in the corpus, and the columns correspond to vocabulary words in the corpus. A single document is represented as a vector by counting how many times each word in the vocabulary appears in the document.",
+      "route": "answer",
+      "top_score": 3.0167,
+      "seconds": 36.299,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_sw_7",
+          "text": "window of±kwords (to the left/right ofx i)\nCompute frequencies over a big corpus of documents (e.g. the\nentire Wikipedia)!\nUsually target and context word vocabularies are the same\nresulting into a square matrix.\nWord-Word Matrix\nNowapricotandpineapplevectors look moresimilar!\ncosine(apricot,pineapple) = 1\ncosine(apricot,digital) = 0\nContext types\nWe can refine contexts using linguistic information:\ntheir part-of-speech tags (bank Vvs.bank N)\nsyntactic dependencies (eat dobjvs.eat subj)\nDocuments: Document-Word Matrix (Bag-of-Words)\nA matrixX,|D|×|V|where rows are documents in corpusD,\nand columns are vocabulary words inV.\nFor each document, count how many times wordsw∈V\nappear in it.\nbad good great terrible\nDoc 1 14 1 0 5\nDoc 2 2 5 3 0\nDoc 3 0 2 5 0\nXcan also be obtained by adding all the one-hot vectors of\nthe words in the documents and then transpose!\nProblems with counts\nFrequent words (articles, pronouns, etc.) dominate contexts\nwithout being informative.\nLet’s add the wordtheto the contexts. It often appears with\nmost nouns:\nvocabulary = [aadvark,computer,data,pinch,result,sugar,the]\napricot =x 2 = [0,0,0,1,0,1,30]\ndigital =x 3 = [0,2,1,0,1,0,45]\ncosine(x2,x 3) = 30·45√\n902·\n√\n2031\n= 0.997\nThis also holds for the document-word matrix! Solution:\nWeight the vectors!\nWeighting the Word-Word Matrix: Distance discount\nWeight contexts according to the distance from the word: the\nfurther away, the lower the weight!\nFor a window size±k, multiply the context word at each\nposition as k−distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3]\nWeighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week1_sw_7",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              64,
+              66,
+              67,
+              69,
+              72,
+              73,
+              75
+            ],
+            "source_file": "Week1_Intro_to_vector_exp2_chunks.json",
+            "week": "Week 1",
+            "window_token_count": 500
+          },
+          "score": 3.0167
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_010",
+      "question": "What are the disadvantages of using count-based vectors to represent word meanings?",
+      "answer": "Polysemy: All occurrences of a word (and all its senses) are represented by one vector. Given a task, it is often useful to adapt the word vectors to represent the appropriate sense, e.g. bank. Antonyms appear in similar contexts, hard to distinguish them from synonyms.",
+      "route": "answer",
+      "top_score": 2.1843,
+      "seconds": 45.805,
+      "context_tokens": 487,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_sw_9",
+          "text": "sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!\nEvaluation: Word Vectors\nIntrinsic:\nsimilarity: order word pairs according to their semantic\nsimilarity\nin-context similarity: substitute a word in a sentence without\nchagning its meaning.\nanalogy: Beijing is to China what Rome is to ...?\nExtrinsic: use them to improve performance in a task, i.e.\nsentiment classification, NER, etc.\nBest word vectors?\nhigh-dimensional count-based?\nIn one of the lectures, we will see how we can obtain\nlow-dimensional vectors with Neural Networks\nLevy et al. 2 (2015) showed that choice of context window\nsize, rare word removal, etc. matter more.\nChoice of texts to obtain the counts matters. More text is\nbetter, and low-dimensional methods scale better.\n2Omer Levy, Yoav Goldberg, and Ido Dagan (2015). “Improving Distributional Similarity with Lessons Learned\nfrom Word Embeddings”. In:Transactions of the Association for Computational Linguistics, pp. 211–225.\nLimitations: Word Vectors\nPolysemy:All occurrences of a word (and all its senses) are\nrepresented by one vector.\nGiven a task, it is often useful to adapt the word vectors to\nrepresent the appropriate sense, e.g.bank\nAntonymsappear in similar contexts, hard to distinguish\nthem from synonyms\nCompositionality:what is the meaning of a sequence of\nwords?\nwhile we might be able to obtain context vectors for short\nphrases, this doesn’t scale to whole sentences, paragraphs, etc.\nSolution: combine word vectors, i.e. add/multiply;\nsentenceBERT, etc.\nEvaluation: Document Vectors\nIntrinsic:\ndocument similarity\ninformation retrieval\nExtrinsic:\ntext classification, plagiarism detection etc.\nLimitations: Document Vectors\nWord order is ignored, but language is sequential!\nUpcoming next...\nLanguage modelling!\nCourse Bibliography\nJurafsky and Martin. 2026. Speech and Language Processing,\nPrentice Hall [3rd edition]\nChristopher D. Manning and Hinrich Sch¨ utze. 1999.\nFoundations of Statistical Natural Language Processing, MIT\nPress.\nJacob Eisenstein. 2019. Introduction to Natural Language\nProcessing. MIT Press. (A draft can be found here)\nother materials referenced at the end of each lecture",
+          "metadata": {
+            "actual_token_count": 487,
+            "chunk_id": "Week1_sw_9",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              79,
+              81,
+              82,
+              83,
+              85,
+              86,
+              87,
+              88
+            ],
+            "source_file": "Week1_Intro_to_vector_exp2_chunks.json",
+            "week": "Week 1",
+            "window_token_count": 487
+          },
+          "score": 2.1843
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_011",
+      "question": "In a named entity recognition task using the BIO tagging scheme to detect a given number of named-entity categories, how many tag classes are there in total?",
+      "answer": "There are 9 tag classes in total: B-X, I-X, O.",
+      "route": "answer",
+      "top_score": 3.1579,
+      "seconds": 21.998,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_sw_6",
+          "text": "grammatical function\n... but arrows are in the opposite direction!\nVarious notations\nNotation 3: Tree of tokens\nTokens + grammatical function... Direction is naturally encoded by the tree\nVarious notations\nNotation 4: Tree of POS tags mapped to tokens\nTokens + grammatical function + POS tags\nModule 3 Named Entity Recognition\n● What named entities are and why they are useful \n● How entity types depend on the task and domain\n● Why NER is context-dependent\n● NER as a sequence labelling problem \n● The BIO tagging scheme and entity spans \n● How many output classes BIO requires \n● Local vs. global sequence models \n● CRFs, feature-based methods, and neural approaches \n● Exact-match evaluation at the entity level\nWhat Is Named Entity Recognition?\n● Named Entity Recognition (NER) identifies mentions of real-world \nentities in text. \n● It also assigns a label to each mention. \n● Typical entity types include: \n○ Person\n○ Organisation\n○ Location\n○ Date / Time\n○ Money\n● NER helps answer questions such as: \n○ Who is mentioned? \n○ Where did something happen? \n○ Which organisations are involved?\nNamed Entities Are Task-Dependent\n● The useful entity types depend on the application domain. \n● In news text, common types include: \n○ person \n○ organisation \n○ location \n○ date \n● In biomedical text, useful types may include: \n○ drug \n○ disease \n○ protein \n○ virus \n● NER is therefore not one fixed universal label set.\nHow about this?\nWhy NER Is Context-Dependent\n● The same string can refer to different entity types in different \ncontexts. \n● Examples: \n○ Washington may refer to a person, a city, or a government \n○ Amazon may refer to a company or a river \n● NER systems must use context, not just surface form.\nNER as Sequence Labelling\n● A common formulation treats NER as a token-level sequence \nlabelling task. \n● Each token receives a tag that tells us: \n○ whether it is inside an entity \n○ and which entity type it belongs to \n● This makes NER similar to POS tagging, but with span boundaries \nadded.\nThe BIO Tagging Scheme\n● B-X: beginning of an entity of type X \n● I-X: inside an entity of type X \n● O: outside any entity \n● Example: \n○ Maya Chen works at Northbridge Labs in Leeds.\n○ B-PER I-PER O O B-ORG I-ORG O B-LOC O\n● BIO allows us to recover entity spans from token",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week12_sw_6",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              43,
+              44,
+              45,
+              46,
+              47,
+              49,
+              50,
+              51,
+              52,
+              53
+            ],
+            "source_file": "Week12_TM-lastlecture-1_exp2_chunks.json",
+            "week": "Week 12",
+            "window_token_count": 500
+          },
+          "score": 3.1579
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_013",
+      "question": "According to the traditional symbolic approach to representing word meaning (e.g. WordNet), which explicit lexical relations are used, and what are the stated properties of meaning under this approach?",
+      "answer": "The traditional symbolic approach to representing word meaning uses the following explicit lexical relations:\n\n- synonymy (e.g. dog → animal)\n- hypernymy (e.g. dog → mammal)\n\nThe stated properties of meaning under this approach are:\n\n- discrete, manually defined, and relational\n- limited notion of similarity (i.e. no natural notion of gradated similarity)\n- cannot capture usage-based meaning differences\n- requires expert human annotation\n- limited notion of similarity (i.e. no natural notion of gradated similarity)\n- cannot capture usage-based meaning differences",
+      "route": "answer",
+      "top_score": 4.7842,
+      "seconds": 76.257,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week3_sw_1",
+          "text": "word2vec, RNNs, and Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester\nEvolution of Language Models\nN-GramWord2VecRecurrentTransformer???\nHow can we represent word meaning?\nHypernyms\nSynonymsTraditional approach: symbolic lexical resources (e.g., WordNet)Represent meaning via explicit relations:–synonymy (dog ↔)–hypernymy (dog → animal)Meaning is discrete, manually defined, and relational\nLimitations of Symbolic Lexical ResourcesStatic and incomplete–Cannot keep pace with new words, senses, or usageExpensive to maintain–Requires expert human annotationLimited notion of similarity–No natural notion of gradedsimilarity–Cannot capture usage-based meaning differences\nDiscrete Representation Words treated as atomic symbols (e.g., one-hot encoding).motel [0, 0, 0, 0, 0, 1, 0, 0, 0, …, 0, 0]hotel [0, 0, 1, 0, 0, 0, 0, 0, 0, …, 0, 0]Vocabulary size = dimensionality (can be very large) Key limitation:all words are equally dissimilar–cosine(motel, hotel) = 0\nDistributional Semantics“You shall know a word by the company it keeps.” (J. R. Firth 1957) Abankis afinancial institutionthat acceptsdepositsfrom the public and createscreditIngeography, the wordbankgenerally refers to the land alongside a body of water.Word meaning inferred from contextual usageSame word, different contexts → different meaningsMeaning becomes statistical rather than symbolic\nContext-based Word RepresentationsBuild a word–context co-occurrence matrixEach word represented by its surrounding wordsRows= target words; Columns= context words; Values= frequency countscounts I like enjoy deep learning NLP flying . I 0 2 1 0 0 0 0 0 like 2 0 0 1 0 1 0 0 enjoy 1 0 0 0 0 0 1 0 deep 0 1 0 0 1 0 0 0 learning 0 0 0 1 0 0 0 1 NLP 0 1 0 0 0 0 0 1 flying 0 0 1 0 0 0 0 1 . 0 0 0011 10\nIssues with raw co-occurrence count Extremely high-dimensionalSparse and memory-intensiveSensitive to corpus size and frequency effects",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week3_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "source_file": "Week3_word2vec_RNN_Transformer_exp2_chunks.json",
+            "week": "Week 3",
+            "window_token_count": 500
+          },
+          "score": 4.7842
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_014",
+      "question": "What kind of NLP tasks can be addressed with sequence labelling models, and what property do such tasks share?",
+      "answer": "Rule-based vs. data-driven tagging approaches.",
+      "route": "answer",
+      "top_score": 0.2071,
+      "seconds": 16.7,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_sw_1",
+          "text": "Sequence Labeling and Evaluations in \nText Mining \nJingyuan Sun\nLecturer of Natural Language Processing\nDepartment of Computer Science\nThe University of Manchester\nModule 1 POS Tagging\n What parts of speech are and why they matter \n Standard POS tagsets: Penn Treebank and Universal POS\n POS tagging as a token-level classification task\n Why POS tagging is difficult: ambiguity and context\n How context helps us choose the correct tag \n Rule-based vs. data-driven tagging approaches \n How tagged corpora provide supervision for POS models\nThe NLP Pipeline\n Natural language processing often works as a pipeline of \ncomponents. \n Each component adds a layer of structure to raw text. \n Later components depend heavily on the quality of earlier ones.\nWhat Are Parts of Speech?\n Parts of speech are classes of words defined by their grammatical role. \n POS tags help us describe how words function in sentences.\nStandard POS Tagsets\n POS tags come from \nstandard annotation \nschemes. \n Two common tagsets are: \n Penn Treebank: detailed, \nEnglish-focused \n Universal POS tags: broader, \ncross-linguistic \n Examples: \n Penn Treebank: NNP, VBD, DT\n Universal POS: PROPN, \nVERB, DET\nPenn Treebank \nhttps://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_tree\nbank_pos.html\nStandard POS Tagsets\n POS tags come from \nstandard annotation \nschemes. \n Two common tagsets are: \n Penn Treebank: detailed, \nEnglish-focused \n Universal POS tags: \nbroader, cross-linguistic \n Examples: \n Penn Treebank: NNP, VBD, \nDT\n Universal POS: PROPN, \nVERB, DET\nUniversal POS tags \nhttps://universaldependencies.org/u/pos/all.html\nThe POS Tagging Task\n The task is to assign one POS tag to each token in a sentence. \n POS tagging usually happens after tokenisation. \n Example: \n The same word can receive different tags in different contexts.\nWhy POS Tagging Is Hard\n Many words are ambiguous in isolation. \n In a lot of cases, POS tagging is therefore a disambiguation task.\nContext Resolves Ambiguity\n Local context often makes the correct tag much clearer. \n Examples: \n a walk → walk is likely a noun \n to walk → walk is likely a verb \n the old man → old is an adjective \n POS tagging models learn how neighbouring words influence likely \ntags.\nOne Sentence, Two Valid Tag",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week12_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              11,
+              12
+            ],
+            "source_file": "Week12_TM-lastlecture-1_exp2_chunks.json",
+            "week": "Week 12",
+            "window_token_count": 500
+          },
+          "score": 0.2071
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_015",
+      "question": "In BERT's Masked Language Modelling, of the tokens chosen for masking, how are they split between the [MASK] token, a random token, and being left unchanged?",
+      "answer": "The [MASK] token is sampled from the 15% of tokens that contribute to the training loss, and the remaining 85% of tokens are randomly sampled.",
+      "route": "answer",
+      "top_score": 2.148,
+      "seconds": 29.827,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week11_sw_1",
+          "text": "BERT : Bidirectional Encoder Representations from Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester\nTransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT , RoBERT a, DeBERT aEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today\nPrior BERT : ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)–Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs–Feature-based approach: pre-trained representations used as input to task-specific models–Trained on single sentences from 1B word benchmark (Chelbaet al., 2014)\nTrain separate left-to-right and right-to-left LMs Apply as “Pre-trained Embeddings”\nBERT : Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks.\nMasked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions\nNetwork weights are updated based on average CE loss over the sampled tokens\nMasked Language Modelling\nExamplesHe is from Kuala Lumpur, Malaysia.àHe [MASK]from Kuala [MASK], Malaysia.He went to the store. àHe went to the [MASK].\nMLM: Masking Rate and StrategyQ: What is the value of k?–They always use k = 15%.–To o l i t t l e m a s k i n g : c o m p u t a t i",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week11_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "source_file": "Week11_TRIM_BERT_exp2_chunks.json",
+            "week": "Week 11",
+            "window_token_count": 500
+          },
+          "score": 2.148
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_016",
+      "question": "What are the key architectural properties of the Transformer, and how does it handle token order without recurrence?",
+      "answer": "B. No recurrence over positions",
+      "route": "answer",
+      "top_score": 0.3679,
+      "seconds": 15.93,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week13_sw_2",
+          "text": "to other tokens, while \npositional encodings supply order .\nMini practice\nWhich property makes Transformer encoders easier to \nparallelise than RNN encoders?\nA. Causal masking\nB. No recurrence over positions\nC. Learned output labels\nAnswer: B\nCommon trap\nDo not claim Transformers have no sequence order; they model order \nafter positional information is added.\nCOMP64702 Revision Lecture\nPositional encoding\nTransformers\nSelf-attention alone treats positions symmetrically; order must be injected.\ntoken embeddings + position vectors order-aware \nrepresentations\nSinusoidal\nFixed function of position\nNot learned\nCan extrapolate by formula\nClassic Transformer design\nLearned\nTrainable position vectors\nUpdated with model weights\nCommon in modern systems\nLimited by trained context length\nWhat can be asked?\nIdentify correct statements about why positional \nencodings are needed and whether they are learned.\nMini practice\nWithout positional encodings, why are “dogs chase cats” \nand “cats chase dogs” hard for plain self-attention?\nAnswer: It lacks an explicit signal for token order.\nCOMP64702 Revision Lecture\nMulti-head attention\nTransformers\nLikely format: dimensions, projections, and what heads do.\nInput\nrepresentations\nQ/K/V\nprojections\nh attention\nheads Concatenate Output\nprojection\nCore idea\nEach head attends using its own \nlearned projections. Heads can focus \non different representation \nsubspaces or relations.\nDimension rule\nA common setup uses d_head = \nd_model / h. The final concatenated \noutput returns to d_model before the \noutput projection.\nCommon trap\nHeads are not separate slices of the \ninput sequence. They process the \nsame sequence through different \nprojections.\nIf d_model = 768 and h = 12, what is the typical head dimension?\nAnswer: 64\nCOMP64702 Revision Lecture\nTransformer architecture families\nTransformers\nKnow the attention pattern, use case, and examples.\nEncoder-only\nExamples: BERT, RoBERTa\nBidirectional self-attention\nBest for NLU: classification, tagging, \nextraction\nPretraining often uses MLM-style objectives\nEncoder–decoder\nExamples: T5, BART\nEncoder represents input\nDecoder generates output\nDecoder uses self-attention + cross-\nattention to encoder output\nDecoder-only\nExamples: GPT-style LLMs\nCausal masked self-attention\nPrompt understanding and generation occur \nin one left-to-right stream\nBERT ≠ autoregressive T5 uses cross-attention GPT uses causal masking\nCOMP64702",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week13_sw_2",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week13_revision_lecture_exam_focused.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "source_file": "Week13_revision_lecture_exam_focused_exp2_chunks.json",
+            "week": "Week 13",
+            "window_token_count": 500
+          },
+          "score": 0.3679
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_017",
+      "question": "How does the self-attention mechanism work, and which tokens can each token attend to?",
+      "answer": "Self-attention allows each token to directly attend to all other tokens in the sequence, producing contextualised representations. It works by mixing information across positions, using a learned linear projection of the input (Q, K, V). The attention scores measure similarity in projected space, and scaling prevents dot products from growing large in high dimensions.",
+      "route": "answer",
+      "top_score": 2.904,
+      "seconds": 44.317,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week3_sw_6",
+          "text": "summarisation, completionExamples: GPT-x, LLaMa, every other new model today\nTransformersTransformer: a neural architecture built entirely on attention mechanisms.\nCredits: The Illustrated Transformer –Jay Alammar\nTransformer ArchitectureCore Components Encoder Stack:produces contextual representations of the input.Decoder Stack: usesthe encoder's output and previous decoder outputs to generate the target sequence.Self-Attention Mechanism: allowsthe model to focus on different parts of the input sequence when processing each token.Feed-Forward Neural Networks: apply nonlinear transformation per token.Key idea: no recurrence, no convolution —only attention.\nWhy Self-Attention Replaced RNNsIn RNNs: –Information between distant tokens flows through O(n) steps –Computation is sequential, i.e.hard to parallelizeIn Transformers: –Self-attention allows each token to directly attend to all other tokens in the sequence, producing contextualised representations–Computation within each layer is parallelizable across sequence positionsTrade-off: –Attention time and memory scale quadraticallywith sequence length 𝑂(𝑛2)\nTransformer ArchitectureOpening the boxwith more details …\nTransformer ArchitectureOpening the box with even more details … \nWord embeddings\noutputs of the previous encoder layer\nTransformer Architecture\nEncoder:Self-attention + FeedforwardProduces contextual representations of inputDecoder:Masked self-attentionCross-attention (attend to encoder outputs)Generates output one token at a time\nInner workings of the Encoder1.Self-attentionmixes information across positions.2.Residual+ LayerNorm3.FNN(position-wise) applies nonlinear transformation independently to each token.4.Residual+ LayerNorm\nInner workings of the EncoderImportant propertiesTo k e n s a r e p r o c e s s e d i n p a r a l l e l within each layer To k e n s a r e c o u p l e d v i a a t t e n t i o n Deeper layers refine contextual representationsResidual connections preserve signal and ease optimisation.\nSelf-Attention Mechanism Scaled Dot-Product AttentionFor input \nInterpretation:–Q, K, Vare learned linear projections of the input–Attention scores measure similarity in projected space–Scaling prevents dot products from growing large in high dimensions",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week3_sw_6",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week3_word2vec_RNN_Transformer.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43
+            ],
+            "source_file": "Week3_word2vec_RNN_Transformer_exp2_chunks.json",
+            "week": "Week 3",
+            "window_token_count": 500
+          },
+          "score": 2.904
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_018",
+      "question": "What are the key properties of BERT, including how it is trained and how it uses context?",
+      "answer": "BERT is a deep Transformer encoder model pre-trained on large corpora. It uses both left and right contexts to understand the meaning of words. Key contributions include masked language modeling and next sentence prediction, achieving state-of-the-art performance on a large set of tasks.",
+      "route": "answer",
+      "top_score": -0.3818,
+      "seconds": 36.866,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week11_sw_1",
+          "text": "BERT : Bidirectional Encoder Representations from Transformers\nChenghua LinDepartment of Computer ScienceThe University of Manchester\nTransformerEncoder OnlyUses: NLU, classification, feature extractionExamples: BERT , RoBERT a, DeBERT aEncoder-DecoderUses: NLG, translation, summarisation, seq2seq mappingExamples: T5, Flan-T5, BARTDecoder OnlyUses: NLG, translation, summarisation, completionExamples: GPT-x, LLaMa, every other new model today\nPrior BERT : ELMoELMo(Peters et al., 2018; NAACL 2018 best paper)–Train two separate unidirectional LMs (left-to-right and right-to-left) based on LSTMs–Feature-based approach: pre-trained representations used as input to task-specific models–Trained on single sentences from 1B word benchmark (Chelbaet al., 2014)\nTrain separate left-to-right and right-to-left LMs Apply as “Pre-trained Embeddings”\nBERT : Key ContributionsA deep Transformer encoder model pre-trained on large corporaThe key: learning representations based on bidirectional contextWhy? Because both left and right contexts are important to understand the meaning of words.Example #1: we went to the river bank.Example #2: I need to go to bankto make a deposit.Pre-training objectives: (1) masked language modeling + (2) next sentence prediction,State-of-the-art performance (2018) on a large set of sentence-level and token-level tasks.\nMasked Language Modelling (MLM)All input tokens participate in bidirectional self-attention BUT only the 15% of tokens sampled for prediction contribute to the training loss.Average cross-entropy loss over these selected positions\nNetwork weights are updated based on average CE loss over the sampled tokens\nMasked Language Modelling\nExamplesHe is from Kuala Lumpur, Malaysia.àHe [MASK]from Kuala [MASK], Malaysia.He went to the store. àHe went to the [MASK].\nMLM: Masking Rate and StrategyQ: What is the value of k?–They always use k = 15%.–To o l i t t l e m a s k i n g : c o m p u t a t i",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week11_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week11_TRIM_BERT.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "source_file": "Week11_TRIM_BERT_exp2_chunks.json",
+            "week": "Week 11",
+            "window_token_count": 500
+          },
+          "score": -0.3818
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_019",
+      "question": "Given a table of bigram probabilities, how do you compute the probability of a sentence under a bigram model, and what tokens must be included?",
+      "answer": "To compute the probability of a sentence under a bigram model, you need to multiply the probabilities of each word in the sentence. For example, if the sentence is \"I want a first class\" and the bigram probabilities are:\n\nP(a|<s>) = 0.2\nP(want|<s>) = 0.5\nP(first|<s>) = 0.3\nP(class|<s>) = 0.1\n\nThen, the probability of the sentence is: P(s) = P(a) * P(want|a) * P(first|a) * P(class|a) = 0.2 * 0.5 * 0.3 * 0.1 = 0.0003\n\nTo include tokens in the bigram model, you need to specify the context, which is the sequence of words that precedes the target word. For example, if the target word is \"I\", the context could be \"I want a first class\", \"I would like to San Francisco\", etc.\n\nThe tokens that must be included are the words in the context, which are:\n\n* The target word \"I\"\n* The words that precede \"I\", such as \"want\",",
+      "route": "answer",
+      "top_score": 1.6117,
+      "seconds": 136.414,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_sw_5",
+          "text": "0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0\nx= [arctic,monkeys,are,my,favourite,band]\nWhat isP(x)?\nExample: Bigram language model\nx= [arctic,monkeys,are,my,favourite,band]\nP(x) =P(monkeys|arctic)P(are|monkeys)P(my|are)\nP(favourite|my)P(band|favourite)\n= c(arctic,monkeys)\nc(arctic) ... c(favourite,band)\nc(favourite)\n= 0.1·0.417·0.15·0.1·0.1\n= 0.00006255\nExample: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1\nLonger contexts (N-gram LMs)\nP(x|context) = P(context,x)\nP(context) = c(context,x)\nc(context)\nIn bigram LMcontextisx n−1, trigramx n−2,x n−1, etc.\nThe longer the context:\nthe more likely to capture long-range dependencies:\n“I saw a tiger that was really very ...” fierce or talkative?\nthe sparser the counts (zero probabilities)\n5-grams and training sets with billions of tokens are common.\nGenerating sentences using a Unigram Model\nRandom sentences with words selected according to their\nunigram probabilities (based on a corpus of airline reservation\nqueries):\nOf aircraft fare east\nThe the stopover city the coach the one way frequent in\ntravelling flights\nTwo on flight really Boston me like\nAnd like six would these fifty\nGenerating sentences using a bigram Model\nRandom sentences using bigram probabilities:\nI want a first class\nI would like to San Francisco\nAre the next week on AA eleven ten\nIn",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week2_sw_5",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week2_Language_modelling.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ],
+            "source_file": "Week2_Language_modelling_exp2_chunks.json",
+            "week": "Week 2",
+            "window_token_count": 500
+          },
+          "score": 1.6117
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_020",
+      "question": "Under a bigram model (including <s> and </s>), how do you determine which of several candidate sentences has the highest probability?",
+      "answer": "You determine which of several candidate sentences has the highest probability by comparing the probabilities of each sentence with the probabilities of the same sentence without the <s> and </s> tags.",
+      "route": "answer",
+      "top_score": 0.7069,
+      "seconds": 27.557,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_sw_5",
+          "text": "0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0\nx= [arctic,monkeys,are,my,favourite,band]\nWhat isP(x)?\nExample: Bigram language model\nx= [arctic,monkeys,are,my,favourite,band]\nP(x) =P(monkeys|arctic)P(are|monkeys)P(my|are)\nP(favourite|my)P(band|favourite)\n= c(arctic,monkeys)\nc(arctic) ... c(favourite,band)\nc(favourite)\n= 0.1·0.417·0.15·0.1·0.1\n= 0.00006255\nExample: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1\nLonger contexts (N-gram LMs)\nP(x|context) = P(context,x)\nP(context) = c(context,x)\nc(context)\nIn bigram LMcontextisx n−1, trigramx n−2,x n−1, etc.\nThe longer the context:\nthe more likely to capture long-range dependencies:\n“I saw a tiger that was really very ...” fierce or talkative?\nthe sparser the counts (zero probabilities)\n5-grams and training sets with billions of tokens are common.\nGenerating sentences using a Unigram Model\nRandom sentences with words selected according to their\nunigram probabilities (based on a corpus of airline reservation\nqueries):\nOf aircraft fare east\nThe the stopover city the coach the one way frequent in\ntravelling flights\nTwo on flight really Boston me like\nAnd like six would these fifty\nGenerating sentences using a bigram Model\nRandom sentences using bigram probabilities:\nI want a first class\nI would like to San Francisco\nAre the next week on AA eleven ten\nIn",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week2_sw_5",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week2_Language_modelling.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ],
+            "source_file": "Week2_Language_modelling_exp2_chunks.json",
+            "week": "Week 2",
+            "window_token_count": 500
+          },
+          "score": 0.7069
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_021",
+      "question": "What is perplexity in language modelling, what does it measure, and does a higher or lower value indicate a better model?",
+      "answer": "Perplexity measures the ability of the model to predict word of an unseen text. It is calculated as the average negative log-likelihood of the test set, normalized by the number of words in the test set. Lower perplexity indicates a better model.",
+      "route": "answer",
+      "top_score": -0.9697,
+      "seconds": 35.355,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_sw_6",
+          "text": "sentences using a Unigram Model\nRandom sentences with words selected according to their\nunigram probabilities (based on a corpus of airline reservation\nqueries):\nOf aircraft fare east\nThe the stopover city the coach the one way frequent in\ntravelling flights\nTwo on flight really Boston me like\nAnd like six would these fifty\nGenerating sentences using a bigram Model\nRandom sentences using bigram probabilities:\nI want a first class\nI would like to San Francisco\nAre the next week on AA eleven ten\nIn Denver on October\nWhat is the city of three pm\nTwo on flight really Boston me like\nAnd like six would these fifty\nGenerating sentences using a Trigram Model\nRandom sentences using trigram probabilities:\nHow much does it cost\nI’d like to depart before five o’clock pm\nHow many stops does Delta flight five eleven o’clock pm that\ngo from what am\nI need to Philadelphia\nWhich flight do these flights leave after four pm and lunch and\nTwo on flight really Boston me like\nAnd like six would these fifty\nGoogle Booksn-gram Viewer\nGoogle Booksn-grams\nhttps://books.google.com/ngrams\nUnknown Words\nIf a word was never encountered in training, any sentence\ncontaining it will have probability 0\nIt happens:\nall corpora are finite\nnew words emerging\nCommon solutions:\nuse a specific UNKNOWN to manage all the words not in the\nvocabulary\nUse classes of unknown words, e.g. names and numbers\nEvaluation\nHow do we train and evaluate our language models?\nWe need train/dev/test data\nEvaluation approaches\nIntrinsic Evaluation: Accuracy\nHow well does our LM predict the next word?\nI always order pizza with cheese and...\nmushrooms?\nbread?\nand?\nAccuracy: how often the LM predicts the correct word\nThe higher the better\nIntrinsic Evaluation: Perplexity\nPerplexity: measures the ability of the model to predict word\nof an unseen text\nUnseen = not in training data, e.g., test set\nThe average negative log-likelihood of the test set\nx= [x 1,...,x N], normalised by the number of wordsN.\nThelowerthe better.\nPerplexity(w) = exp\n \n−\nPD\nd=1 logP(w d)PD\nd=1 Nd\n!\nExtrinsic Evaluation\nSentence completion\nGrammatical error correction: detecting “odd” sentences and\npropose alternatives\nNatural language generation: prefer more “natural” sentences\nSpeech recognition\nMachine translation\nSmoothing\nWhat happens when words that are in our vocabulary appear",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week2_sw_6",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week2_Language_modelling.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              35,
+              36,
+              37,
+              38,
+              40,
+              41,
+              42,
+              43,
+              44,
+              47
+            ],
+            "source_file": "Week2_Language_modelling_exp2_chunks.json",
+            "week": "Week 2",
+            "window_token_count": 500
+          },
+          "score": -0.9697
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_022",
+      "question": "Consider the sentence 'The boy saw the man with a telescope.' Assume a dependency analysis in which nouns are the heads of prepositional phrases, as in Universal Dependencies. Under the interpretation 'the boy saw the man who had a telescope', which dependency relation holds between the tokens 'man' and 'telescope'?",
+      "answer": "The root is'man'. The word'man' is a subject dependent, as it depends on the head 'boy'. The word 'with' is an object dependent, as it depends on the head'man'.",
+      "route": "answer",
+      "top_score": -2.5347,
+      "seconds": 33.412,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_sw_3",
+          "text": "sing Matters\n➢Some sentences remain ambiguous even after POS tagging. \n Example: \no The teacher discussed the essay with the student.\n Does with the student describe: \no who the teacher talked to? \no or which essay was discussed? \n Parsing makes these structural choices explicit.\n➢Some sentences allow more than one syntactic analysis. \n The same sequence of words can produce different structures and \ndifferent meanings. \n To understand a sentence, we cannot treat each word in isolation. \n We need to determine what each word is attached or connected to.\nDependency Parsing: Core Idea\n A dependency parse represents grammatical relations between \nwords. \n Each relation links: \n a head\n and a dependent\n The head of the whole sentence is usually the main verb. \n A dependency parse forms a directed structure over the tokens.\nHeads, Dependents, and the Root\n In dependency parsing: \n the sentence head is often the main predicate \n subjects and objects depend on that predicate \n modifiers depend on the word they modify \n Example: \n In The child opened the door , opened is the root. \n child is a subject dependent. \n door is an object dependent.\nIn a dependency analysis, one \ntoken acts as the structural \ncentre of the sentence. \n Other words connect to it \nthrough grammatical relations \nsuch as subject, object, and \nmodifier. \n The labels on the edges tell us \nhow each token functions in the \nsentence. \n This representation makes \nsentence structure explicit and \neasier to analyse\nA Dependency Tree in Practice\nCommon Dependency Relations\n Common dependency labels include: \n nsubj: nominal subject \n obj / dobj: object \n iobj: indirect object \n amod / nmod: nominal modifier \n advmod: adverbial modifier \n det: determiner \n case / prep-related links: prepositional marking \n The exact inventory depends on the annotation scheme.\nCommon Dependency Relations\nReading a Dependency Analysis\n To read a dependency \nparse, ask: \n What is the root? \n Which words depend \ndirectly on the root? \n Which words modify \nnouns? \n Which phrases modify \nthe event? \n This helps us identify the \nmain structure of the \nsentence.\nAttachment Ambiguity\n A major challenge in parsing is attachment ambiguity. \n Example: \n The teacher discussed the essay with the student.\n Interpretation A: \n with the student modifies discussed\n meaning: the teacher talked to the student\n Interpretation B: \n with the student modifies essay\n meaning: the essay is about / associated with the student\n Different meanings require different parses.\nHow to Decide Where a Phrase Attaches\n Ask: Which word is this phrase modifying?\n If the phrase describes the event or action, it",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week12_sw_3",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              19,
+              21,
+              22,
+              23,
+              24,
+              25,
+              27,
+              28,
+              29
+            ],
+            "source_file": "Week12_TM-lastlecture-1_exp2_chunks.json",
+            "week": "Week 12",
+            "window_token_count": 500
+          },
+          "score": -2.5347
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_023",
+      "question": "Consider the sentence 'The boy saw the man with a telescope.' interpreted as meaning that the boy saw the man who had a telescope. In the dependency graph for this interpretation, which tokens are dependents of the head of the sentence?",
+      "answer": "The tokens that are dependents of the head of the sentence are \"boy\" and \"man\", and \"with\".",
+      "route": "answer",
+      "top_score": -7.5942,
+      "seconds": 22.186,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week12_sw_2",
+          "text": "receive different tags in different contexts.\nWhy POS Tagging Is Hard\n Many words are ambiguous in isolation. \n In a lot of cases, POS tagging is therefore a disambiguation task.\nContext Resolves Ambiguity\n Local context often makes the correct tag much clearer. \n Examples: \n a walk → walk is likely a noun \n to walk → walk is likely a verb \n the old man → old is an adjective \n POS tagging models learn how neighbouring words influence likely \ntags.\nOne Sentence, Two Valid Taggings\nMeaning affects POS tagging. \n Example sentence: I saw her duck.\n Interpretation 1: I saw her pet bird. \n I/PRON saw/VERB her/PRON duck/NOUN ./PUNCT\n Interpretation 2: I saw her lower her head quickly. \n I/PRON saw/VERB her/PRON duck/VERB ./PUNCT\n A tagger must choose the tag that matches the intended meaning.\nRule-Based and Data-Driven Tagging\n A rule-based approach uses handcrafted grammatical rules. \n A statistical or neural approach learns patterns from annotated \ncorpora. \n POS-tagged corpora provide: \n example sentences \n gold labels \n evidence for disambiguation \n In practice, modern systems are usually data-driven.\nModule 2 Syntactic Parsing\n What syntactic parsing is and why it matters \n How parsing goes beyond POS tags to represent structure\n Dependency parsing: heads, dependents, and grammatical \nrelations \n How to read a dependency analysis \n Why parsing is needed for attachment ambiguity\n Phrase structure parsing: NP , VP , PP , and tree structure \n How dependency structure and phrase structure diffe\nWhat Is Syntactic Parsing?\n POS tags tell us the category of each word. \n Parsing tells us how the words are structurally related. \n Parsing helps answer questions such as: \n Which noun is the subject? \n Which phrase is the object? \n What does a prepositional phrase modify? \n Two major views of syntax are: \n dependency structure\n phrase structure\nWhy Parsing Matters\n➢Some sentences remain ambiguous even after POS tagging. \n Example: \no The teacher discussed the essay with the student.\n Does with the student describe: \no who the teacher talked to? \no or which essay was discussed? \n Parsing makes these structural choices explicit.\n➢Some sentences allow more than one syntactic analysis. \n The same sequence of words can produce different structures and \ndifferent meanings. \n To understand a sentence, we cannot treat each word in isolation. \n We need to determine what each word is attached or",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week12_sw_2",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week12_TM-lastlecture-1.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              7,
+              8,
+              11,
+              12,
+              14,
+              17,
+              18,
+              19
+            ],
+            "source_file": "Week12_TM-lastlecture-1_exp2_chunks.json",
+            "week": "Week 12",
+            "window_token_count": 500
+          },
+          "score": -7.5942
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_024",
+      "question": "Two annotators independently label four social media posts as POSITIVE, NEGATIVE or NEUTRAL. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the observed agreement used in the Kappa coefficient?",
+      "answer": "𝑃 𝑎 = 0.70, 𝑃 𝑒 = 0.50.",
+      "route": "answer",
+      "top_score": -0.3868,
+      "seconds": 23.531,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_sw_1",
+          "text": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER\nWhy Do We Evaluate NLP Systems?\n● Evaluation tells us how well a system is performing. \n● Users care about whether a system is useful for a task. \n● Developers care about whether a system is improving over time. \n● Evaluation supports: \n○ comparison \n○ debugging \n○ model selection \n○ scientific reporting\nBenchmark Data and Gold Standards\n● Performance evaluation is often based on benchmark datasets. \n● These datasets contain: \n○ inputs \n○ gold-standard labels \n○ a fixed evaluation protocol \n● Gold standards are usually created by human annotators following \nannotation guidelines. \n● Reliable evaluation depends on reliable annotation.\nInter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable.\nObserved Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.\nExpected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50\nCohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week10_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              3,
+              4,
+              7,
+              8,
+              9,
+              10
+            ],
+            "source_file": "Week10_TM_last_lecture_exp2_chunks.json",
+            "week": "Week 10",
+            "window_token_count": 500
+          },
+          "score": -0.3868
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_025",
+      "question": "Two annotators label four posts. Annotator 1 gives POSITIVE, NEGATIVE, NEUTRAL, POSITIVE. Annotator 2 gives POSITIVE, NEGATIVE, POSITIVE, POSITIVE. What is the expected (chance) agreement used in the Kappa coefficient?",
+      "answer": "Expected agreement is the proportion of cases on which annotators agree, which is (6 + 5) / 10 = 11 / 10 = 1.1.",
+      "route": "answer",
+      "top_score": 0.1614,
+      "seconds": 30.994,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_sw_1",
+          "text": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER\nWhy Do We Evaluate NLP Systems?\n● Evaluation tells us how well a system is performing. \n● Users care about whether a system is useful for a task. \n● Developers care about whether a system is improving over time. \n● Evaluation supports: \n○ comparison \n○ debugging \n○ model selection \n○ scientific reporting\nBenchmark Data and Gold Standards\n● Performance evaluation is often based on benchmark datasets. \n● These datasets contain: \n○ inputs \n○ gold-standard labels \n○ a fixed evaluation protocol \n● Gold standards are usually created by human annotators following \nannotation guidelines. \n● Reliable evaluation depends on reliable annotation.\nInter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable.\nObserved Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.\nExpected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50\nCohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week10_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              3,
+              4,
+              7,
+              8,
+              9,
+              10
+            ],
+            "source_file": "Week10_TM_last_lecture_exp2_chunks.json",
+            "week": "Week 10",
+            "window_token_count": 500
+          },
+          "score": 0.1614
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_026",
+      "question": "For a set of four annotated posts, the observed agreement between two annotators is 0.75 and the expected agreement is 0.438. What is the value of the Kappa coefficient?",
+      "answer": "𝐾 = (0.75 - 0.438) / (1 - 0.438) = 0.312 / 0.562 = 0.55",
+      "route": "answer",
+      "top_score": 1.443,
+      "seconds": 30.184,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week10_sw_1",
+          "text": "Module 4 Evaluation Method\no Why evaluation is essential in NLP \no Benchmark datasets and gold-standard annotations\no Why annotation reliability matters \no Inter-annotator agreement\no Observed agreement, expected agreement, and Cohen’s Kappa\no The confusion matrix: TP , FP, FN, TN \no Precision, recall, and F1-score\no When accuracy can be misleading \no Micro, macro, and weighted averages \no Entity-level evaluation for NER\nWhy Do We Evaluate NLP Systems?\n● Evaluation tells us how well a system is performing. \n● Users care about whether a system is useful for a task. \n● Developers care about whether a system is improving over time. \n● Evaluation supports: \n○ comparison \n○ debugging \n○ model selection \n○ scientific reporting\nBenchmark Data and Gold Standards\n● Performance evaluation is often based on benchmark datasets. \n● These datasets contain: \n○ inputs \n○ gold-standard labels \n○ a fixed evaluation protocol \n● Gold standards are usually created by human annotators following \nannotation guidelines. \n● Reliable evaluation depends on reliable annotation.\nInter-Annotator Agreement\n● Human annotations are not always identical. \n● Different annotators may interpret a guideline differently. \n● Inter-annotator agreement measures how consistently humans label \nthe same data. \n● High agreement suggests the task and the guidelines are clearer and \nmore reliable.\nObserved Agreement: 𝑃 𝑎\n● Observed agreement is the proportion of cases on which annotators \nagree. \n● Example: \n○ two annotators label 10 items \n○ they agree on 7 items \n● Then: \n○ 𝑃 𝑎 = 7/10 = 0.70\n● Observed agreement does not correct for chance agreement.\nExpected Agreement: 𝑃 𝑒\n● Expected agreement estimates how much agreement would happen \nby chance. \n● Suppose: \n○ Annotator A assigns Positive to 6/10 items and Negative to 4/10 \n○ Annotator B assigns Positive to 5/10 items and Negative to 5/10 \n● Then: \n○ chance agreement on Positive = 0.6 × 0.5 = 0.30\n○ chance agreement on Negative = 0.4 × 0.5 = 0.20\n● So: \n○ 𝑃 𝑒 = 0.30 + 0.20 = 0.50\nCohen’s Kappa\n● Cohen’s Kappa corrects observed agreement for chance agreement. \n● Formula: \n○ 𝐾 =\n𝑃 𝑎 −𝑃 𝑒\n1−𝑃 𝑒\n● Using the previous example: \n○ 𝑃 𝑎 = 0.70\n○ 𝑃 𝑒 = 0",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week10_sw_1",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week10_TM_last_lecture.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              1,
+              3,
+              4,
+              7,
+              8,
+              9,
+              10
+            ],
+            "source_file": "Week10_TM_last_lecture_exp2_chunks.json",
+            "week": "Week 10",
+            "window_token_count": 500
+          },
+          "score": 1.443
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_027",
+      "question": "Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('bark', Doc1) to three decimal places?",
+      "answer": "tf-idf('bark', Doc1) = tf('bark') / idf('bark', Doc1) = 0.1 / 0.05 = 2.",
+      "route": "answer",
+      "top_score": -4.983,
+      "seconds": 32.198,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week7_sw_9",
+          "text": "mat Candidate Summary: the cat on the mat\nROUGE-2 = 3 / 5 = 0.6 ROUGE-L = 5 / 6 ≈ 0.83\nWhat if Candidate Summary: the cat is not on the mat?\nReference: I am giving a talk at a data science conference\nHyp 1: I am giving a talk at a conference about data science\n lots of overlap → high score\nHyp 2: This talk is about recent advances in medical imaging\n little overlap → low score\nThe Old Reliables: BLEU/ROUGE Score\nReference: I am giving a talk at a data science conference\nHyp 1: I am giving a talk at a political science conference\n lots of overlap but bad output\nHyp 2: My lecture will be given to the meeting on data analytics\n little overlap but good output\n (particularly difficult for open-ended problems)\nWhy is Evaluation Hard?\nZhang, Tianyi, et al. \"Bertscore: Evaluating text generation with bert.\" arXiv preprint arXiv:1904.09675 (2019).\nhttps://github.com/Tiiiger/bert_score\nBERTScore\nEmbedding-based Evaluation\n\"Bartscore: Evaluating generated text as text generation\", in NeurIPS (2021)\nhttps://github.com/neulab/BARTScore\nUse the probability of a generative model to evaluate text\nGenerative Text Evaluation\nBartScore\n- Definition: BartScore uses a pretrained BART model (usually fine-tuned for summarization \nor generation tasks) to compute the log-probability of one text conditioned on another. It's \nuseful for evaluating NLG tasks such as summarization, translation, and QA.\n- Unidirectional BartScore. Evaluates how likely the candidate text is given the reference:\n- Bidirectional BartScore (for symmetric evaluation).\nHow Do We Evaluate Evaluation?\nGPTScore\n- Definition: GPTScore evaluates the quality of a candidate text (e.g., summary or generation) \nby using a large language model (LLM) to compute the conditional log-probability of the \nreference text given the candidate.\n- Key Formula\nLet C be the candidate text, and R be the reference text. GPTScore is computed as:\n: Probability of the iii-th token in reference R given its previous tokens and candidate C\n: Length of reference in tokens\nLLM as Judge",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week7_sw_9",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              44,
+              45,
+              46
+            ],
+            "source_file": "Week7-TRIM_Incontext-Evaluation_exp2_chunks.json",
+            "week": "Week 7",
+            "window_token_count": 500
+          },
+          "score": -4.983
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_028",
+      "question": "Given four preprocessed documents - Doc1: 'my cat meow all the time while my dog does n't bark .', Doc2: 'can cat be friendly ?', Doc3: 'i do n't know why my dog always bark at squirrel .', Doc4: 'dog be sad when being home alone .' - and using idf(t) = log10(N/df(t)) with raw term frequency tf, what is tf-idf('dog', Doc3) to three decimal places?",
+      "answer": "tf-idf('dog', Doc3) = tf('dog') / (Doc3 + 'dog') ≈ 0.000.",
+      "route": "answer",
+      "top_score": -4.9361,
+      "seconds": 25.107,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week7_sw_9",
+          "text": "mat Candidate Summary: the cat on the mat\nROUGE-2 = 3 / 5 = 0.6 ROUGE-L = 5 / 6 ≈ 0.83\nWhat if Candidate Summary: the cat is not on the mat?\nReference: I am giving a talk at a data science conference\nHyp 1: I am giving a talk at a conference about data science\n lots of overlap → high score\nHyp 2: This talk is about recent advances in medical imaging\n little overlap → low score\nThe Old Reliables: BLEU/ROUGE Score\nReference: I am giving a talk at a data science conference\nHyp 1: I am giving a talk at a political science conference\n lots of overlap but bad output\nHyp 2: My lecture will be given to the meeting on data analytics\n little overlap but good output\n (particularly difficult for open-ended problems)\nWhy is Evaluation Hard?\nZhang, Tianyi, et al. \"Bertscore: Evaluating text generation with bert.\" arXiv preprint arXiv:1904.09675 (2019).\nhttps://github.com/Tiiiger/bert_score\nBERTScore\nEmbedding-based Evaluation\n\"Bartscore: Evaluating generated text as text generation\", in NeurIPS (2021)\nhttps://github.com/neulab/BARTScore\nUse the probability of a generative model to evaluate text\nGenerative Text Evaluation\nBartScore\n- Definition: BartScore uses a pretrained BART model (usually fine-tuned for summarization \nor generation tasks) to compute the log-probability of one text conditioned on another. It's \nuseful for evaluating NLG tasks such as summarization, translation, and QA.\n- Unidirectional BartScore. Evaluates how likely the candidate text is given the reference:\n- Bidirectional BartScore (for symmetric evaluation).\nHow Do We Evaluate Evaluation?\nGPTScore\n- Definition: GPTScore evaluates the quality of a candidate text (e.g., summary or generation) \nby using a large language model (LLM) to compute the conditional log-probability of the \nreference text given the candidate.\n- Key Formula\nLet C be the candidate text, and R be the reference text. GPTScore is computed as:\n: Probability of the iii-th token in reference R given its previous tokens and candidate C\n: Length of reference in tokens\nLLM as Judge",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week7_sw_9",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week7-TRIM_Incontext-Evaluation.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              44,
+              45,
+              46
+            ],
+            "source_file": "Week7-TRIM_Incontext-Evaluation_exp2_chunks.json",
+            "week": "Week 7",
+            "window_token_count": 500
+          },
+          "score": -4.9361
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_029",
+      "question": "In a document-word matrix built from 4 documents, the term 'battle' occurs 7 times in Document 2 and appears in 3 of the 4 documents. Using idf(t) = log10(N/df(t)) with raw term frequency tf, what is the tf-idf value of 'battle' in Document 2?",
+      "answer": "To find the tf-idf value of 'battle' in Document 2, first calculate the idf value of 'battle' in the corpus, then multiply it by the frequency of 'battle' in Document 2. The idf value is log10(4/3) = 0.287. Multiply this by the frequency of 'battle' in Document 2, which is 7, to get 2.041.",
+      "route": "answer",
+      "top_score": -0.9519,
+      "seconds": 57.973,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week1_sw_8",
+          "text": ": the\nfurther away, the lower the weight!\nFor a window size±k, multiply the context word at each\nposition as k−distance\nk , e.g. fork= 3:\n[ 1\n3 , 2\n3 , 3\n3 ,word, 3\n3 , 2\n3 , 1\n3]\nWeighting the Word-Word Matrix: Pointwise Mutual\nInformation\nPointwise Mutual Information (PMI):how often two wordsw i\nandw j occur togethter relative to occur independently:\nPMI(w i ,w j) = log 2\nP(w i ,w j)\nP(w i)P(w j) = #(wi ,w j)|D|\n#(w1)·#(w j)\nP(w i ,w j) = #(wi ,w j)\n|D| ,P(w i) = #(wi)\n|D|\nwhere #(·) denotes count and|D|number of observed words in\nthe corpus.\nPositive values quantify relatedness. Use PMI instead of\ncounts.\nNegative values? Usually ignored (positive PMI):\nPPMI(w i ,w j) = max(PMI(w i ,w j),0)\nWeighting the Document-Word Matrix: TF.IDF\nRepresent the importance of words in a document relative to a\ncorpus\nTerm Frequency (TF): If a term appears frequently in a\ndocument, it is likely important to that document.\nInverse Document Frequency (IDF): If a term appears in many\ndocuments, it might be less informative as a distinguishing\nfeature\nidfw =log 10\nN\ndfw\nwhereNis the number of documents in the corpus,df w is\ndocument frequency of wordw\nTo obtain:\nxid =tf id log10\nN\ndfid\nProblems with Dimensionality\nCount-based matrices (for words and documents) often work\nwell, but:\nhigh dimensional: vocabulary size could be millions!\nvery sparse: words co-occur only with a small number of words;\ndocuments contain only a very small subset of the vocabulary\nSolution:Dimensionality Reduction to the rescue!\nEvaluation: Word Vectors\nIntrinsic:\nsimilarity: order word pairs according to their semantic\nsimilarity\nin-context similarity: substitute a word in a sentence without\nchagning its meaning.\nanalogy: Beijing is to China what Rome is to ...?\nExtrinsic: use them to improve performance in a task, i.e.\nsentiment",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week1_sw_8",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week1_Intro_to_vector.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              73,
+              75,
+              77,
+              79,
+              81
+            ],
+            "source_file": "Week1_Intro_to_vector_exp2_chunks.json",
+            "week": "Week 1",
+            "window_token_count": 500
+          },
+          "score": -0.9519
+        }
+      ]
+    },
+    {
+      "question_id": "EXAM_030",
+      "question": "A bigram model gives the following probabilities: P(arctic | <s>) = 0.6, P(monkeys | arctic) = 0.1, P(are | monkeys) = 0.417, P(my | are) = 0.15, P(favourite | my) = 0.1, P(band | favourite) = 0.1, P(</s> | band) = 0.9. Using this model, what is the probability of the sentence 'arctic monkeys are my favourite band', including the start token <s> and end token </s>, rounded to 5 decimal places?",
+      "answer": "To calculate the probability of the sentence 'arctic monkeys are my favourite band', we need to break it down into smaller parts and apply the bigram probabilities.\n\n1. P(arctic | <s>) = 0.6\n2. P(monkeys | arctic) = 0.1\n3. P(are | monkeys) = 0.417\n4. P(my | are) = 0.15\n5. P(favourite | my) = 0.1\n6. P(band | favourite) = 0.1\n7. P(<s>) = 0.00006255\n8. P(</s>) = 0.00006255\n\nNow, let's calculate the probability of each part of the sentence:\n\n1. P(arctic | <s>) = 0.6\n2. P(monkeys | arctic) = 0.1\n3. P(are | monkeys) = 0.417\n4. P(my | are) = 0.15\n5. P(favourite | my) = 0.1\n6. P(band | favourite) = 0.1\n7. P(<s>) = 0.000",
+      "route": "answer",
+      "top_score": 4.6615,
+      "seconds": 139.134,
+      "context_tokens": 500,
+      "n_chunks": 1,
+      "chunks_used": [
+        {
+          "chunk_id": "Week2_sw_5",
+          "text": "0 1 300 5\nfavourite 0 1 0 0 0 50\nband 0 0 3 10 0 0\nx= [arctic,monkeys,are,my,favourite,band]\nWhat isP(x)?\nExample: Bigram language model\nx= [arctic,monkeys,are,my,favourite,band]\nP(x) =P(monkeys|arctic)P(are|monkeys)P(my|are)\nP(favourite|my)P(band|favourite)\n= c(arctic,monkeys)\nc(arctic) ... c(favourite,band)\nc(favourite)\n= 0.1·0.417·0.15·0.1·0.1\n= 0.00006255\nExample: Bigram/Trigram Models\n<s>a blue house</s>\n<s>a grey house</s>\n<s>the grey house has the blue table</s>\nProbabilities of some bigrams:\nP(a|<s>) = 2\n3 ;P(the|<s>) = 1\n3 ;P(</s>|house) = 2\n3 ;\nP(house|grey) = 2\n2 = 1\nProbabilities of some tri-grams:\nP(blue|<s>a) = 1\n2 ;P(house|a blue) = 1\nLonger contexts (N-gram LMs)\nP(x|context) = P(context,x)\nP(context) = c(context,x)\nc(context)\nIn bigram LMcontextisx n−1, trigramx n−2,x n−1, etc.\nThe longer the context:\nthe more likely to capture long-range dependencies:\n“I saw a tiger that was really very ...” fierce or talkative?\nthe sparser the counts (zero probabilities)\n5-grams and training sets with billions of tokens are common.\nGenerating sentences using a Unigram Model\nRandom sentences with words selected according to their\nunigram probabilities (based on a corpus of airline reservation\nqueries):\nOf aircraft fare east\nThe the stopover city the coach the one way frequent in\ntravelling flights\nTwo on flight really Boston me like\nAnd like six would these fifty\nGenerating sentences using a bigram Model\nRandom sentences using bigram probabilities:\nI want a first class\nI would like to San Francisco\nAre the next week on AA eleven ten\nIn",
+          "metadata": {
+            "actual_token_count": 500,
+            "chunk_id": "Week2_sw_5",
+            "chunk_size_tokens": 500,
+            "chunking_strategy": "exp2",
+            "embedding_model": "bge-small-en-v1.5",
+            "experiment_id": "exp2_sliding_window",
+            "filename": "Week2_Language_modelling.pdf",
+            "overlap_tokens": 100,
+            "page_number": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ],
+            "source_file": "Week2_Language_modelling_exp2_chunks.json",
+            "week": "Week 2",
+            "window_token_count": 500
+          },
+          "score": 4.6615
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,9 @@
 """
 Generation scoring: was the answer any good?
 
-Reads an answer file from the inference pipeline and scores each answer three
-ways:
-
-    against the gold answer    token_f1, rouge_l, bert_f1
-    against the context        groundedness, context_utilisation
-    against the question       keyword_coverage, abstained
+Reads an answer file from the inference pipeline and scores each answer.
 
     python evaluate_generation.py --answers answers_*.json --benchmark bench.json
-
-BERTScore downloads ~1.4GB the first time and is slow on CPU. Use --no-bert
-while iterating.
 """
 
 import argparse
@@ -23,6 +15,8 @@ from collections import Counter
 
 import numpy as np
 
+import evaluate_retrieval as ret
+
 # The prompt emits this exact string when the material doesn't cover the
 # question, so refusals can be counted separately from wrong answers.
 REFUSAL = "the provided course material does not cover this"
@@ -31,8 +25,7 @@ REFUSAL = "the provided course material does not cover this"
 # counts as "used".
 UTILISATION_THRESHOLD = 0.10
 
-METRICS = ("token_f1", "rouge_l", "bert_f1",
-           "groundedness", "context_utilisation", "keyword_coverage")
+METRICS = ("token_f1", "rouge_l", "bert_f1", "groundedness", "context_utilisation")
 
 STOPWORDS = set("""
 a an the and or but if then else of to in on at by for with without from as is
@@ -43,16 +36,12 @@ all any both each few more most other some such only own same
 """.split())
 
 
-# --------------------------------------------------------------------------
-# Turning text into comparable words
-# --------------------------------------------------------------------------
+# ==========================================================================
+# 1. Evaluation Metric Functions
+# ==========================================================================
 
 def words(text, keep_stopwords=False):
-    """Lower-cased content words, with LaTeX and markdown stripped out.
-
-    Lecture answers are full of $...$ and \\frac, and two answers that agree on
-    the maths but differ in markup should not score as different.
-    """
+    """Lower-cased content words, with LaTeX and markdown stripped out."""
     text = (text or "").lower()
     text = re.sub(r"\$\$?.*?\$\$?", " ", text, flags=re.DOTALL)   # $...$
     text = re.sub(r"\\[a-z]+", " ", text)                         # \frac
@@ -68,10 +57,6 @@ def f1(overlap, in_answer, in_gold):
     return 2 * precision * recall / (precision + recall)
 
 
-# --------------------------------------------------------------------------
-# Against the gold answer
-# --------------------------------------------------------------------------
-
 def token_f1(answer, gold):
     """Word overlap, ignoring order."""
     a, g = Counter(words(answer)), Counter(words(gold))
@@ -86,7 +71,6 @@ def rouge_l(answer, gold):
     if not a or not g:
         return float("nan")
 
-    # Standard LCS table, one row at a time to keep it small.
     previous = [0] * (len(g) + 1)
     for word in a:
         current = [0] * (len(g) + 1)
@@ -98,7 +82,7 @@ def rouge_l(answer, gold):
 
 
 def bert_f1_all(answers, golds):
-    """BERTScore for a whole file at once — loading the model dominates."""
+    """BERTScore for a whole file at once."""
     try:
         from bert_score import score
     except ImportError:
@@ -108,16 +92,8 @@ def bert_f1_all(answers, golds):
     return [float(s) for s in scores]
 
 
-# --------------------------------------------------------------------------
-# Against the retrieved context
-# --------------------------------------------------------------------------
-
 def groundedness(answer, chunks):
-    """Share of the answer's words that appear somewhere in the context.
-
-    A fabrication check, not a quality check: an answer copied out of an
-    irrelevant chunk still scores 1.0.
-    """
+    """Share of the answer's words that appear somewhere in the context."""
     a = words(answer)
     if not a or not chunks:
         return float("nan")
@@ -126,11 +102,7 @@ def groundedness(answer, chunks):
 
 
 def context_utilisation(answer, chunks):
-    """Share of the retrieved chunks the answer actually drew on.
-
-    Low utilisation with high groundedness means the retriever is returning
-    more than the model needs.
-    """
+    """Share of the retrieved chunks the answer actually drew on."""
     a = set(words(answer))
     if not a or not chunks:
         return float("nan")
@@ -142,36 +114,20 @@ def context_utilisation(answer, chunks):
     return used / len(chunks)
 
 
-# --------------------------------------------------------------------------
-# Against the question
-# --------------------------------------------------------------------------
-
-def keyword_coverage(answer, keywords):
-    """Share of the benchmark's expected keywords the answer names.
-
-    Multi-word keywords must appear together, so 'nominal modifier' does not
-    match 'modifier of the nominal'.
-    """
-    if not keywords:
-        return float("nan")
-    text = " " + " ".join(words(answer, keep_stopwords=True)) + " "
-    found = sum(1 for k in keywords
-                if f" {' '.join(words(k, keep_stopwords=True))} " in text)
-    return found / len(keywords)
-
-
 def is_refusal(answer):
     return REFUSAL in (answer or "").lower()
 
 
-# --------------------------------------------------------------------------
-# Scoring a whole file
-# --------------------------------------------------------------------------
+# ==========================================================================
+# 2. Scoring Functions
+# ==========================================================================
 
 def read_answers(path):
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
-    return data if isinstance(data, list) else data["results"]
+    """The answer records, dropping the budget the retrieval reader also returns.
+
+    Delegated so both scorers agree on what a malformed answer file means.
+    """
+    return ret.read_answers(path)[0]
 
 
 def chunk_texts(record, chunk_filter=None):
@@ -180,12 +136,7 @@ def chunk_texts(record, chunk_filter=None):
 
 
 def score_file(path, bench, use_bert=True, chunk_filter=None):
-    """{query_id: metrics} for one answer file.
-
-    chunk_filter, if given, drops chunks before scoring — see score_filter.
-    Note this changes only what groundedness and context_utilisation are
-    measured against; the model was given the unfiltered context.
-    """
+    """{query_id: metrics} for one answer file."""
     rows = {}
     for record in read_answers(path):
         qid = str(record["question_id"])
@@ -202,7 +153,6 @@ def score_file(path, bench, use_bert=True, chunk_filter=None):
             "rouge_l": rouge_l(answer, gold),
             "groundedness": groundedness(answer, chunks),
             "context_utilisation": context_utilisation(answer, chunks),
-            "keyword_coverage": keyword_coverage(answer, question.get("keywords")),
             "abstained": is_refusal(answer),
             "answer": answer,
         }
@@ -231,10 +181,12 @@ def average(rows):
 
 def cell_name(path):
     """'answers_exp1_bge_combo2_1b.json' -> 'exp1_bge_combo2_1b'."""
-    return os.path.basename(path).replace("answers_", "").replace(".json", "")
+    return ret.cell_name(path)
 
 
-# --------------------------------------------------------------------------
+# ==========================================================================
+# 3. Main Execution
+# ==========================================================================
 
 def main():
     parser = argparse.ArgumentParser(description="Score generated answers.")
@@ -245,8 +197,7 @@ def main():
                         help="skip BERTScore (slow, downloads ~1.4GB)")
     args = parser.parse_args()
 
-    from evaluate_retrieval import benchmark_map, load_benchmark
-    bench = benchmark_map(load_benchmark(args.benchmark))
+    bench = ret.benchmark_map(ret.load_benchmark(args.benchmark))
     print(f"{len(bench)} benchmark questions")
 
     summary = {}
